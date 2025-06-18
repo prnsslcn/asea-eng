@@ -1,0 +1,27 @@
+{
+  "basic": {
+    "name": "ASEA Aviation Vocational School",
+    "nameKo": "아세아항공직업전문학교",
+    "founded": "1998",
+    "totalStudents": 1200,
+    "employmentRate": 91,
+    "location": {
+      "address": "Seoul, South Korea",
+      "addressKo": "서울특별시",
+      "coordinates": {
+        "lat": 37.5665,
+        "lng": 126.9780
+      }
+    }
+  },
+  "contact": {
+    "phone": "+82-2-XXXX-XXXX",
+    "email": "info@asea.ac.kr",
+    "website": "https://asea.ac.kr"
+  },
+  "stats": {
+    "totalGraduates": 15000,
+    "partnerCompanies": 120,
+    "coursesOffered": 8
+  }
+}
