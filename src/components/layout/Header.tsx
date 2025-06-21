@@ -15,67 +15,67 @@ interface EducationMenu {
 }
 
 const menuStructure = {
-    "학교소개": [
-        { name: "학교연혁", link: "/about/history" },
-        { name: "총장인사말", link: "/about/greeting" },
-        { name: "조직도", link: "/about/organization" },
-        { name: "시설안내", link: "/about/facilities" },
-        { name: "오시는길", link: "/about/location" }
+    "About (학교소개)": [
+        { name: "History (학교연혁)", link: "/about/history" },
+        { name: "President's Message (총장인사말)", link: "/about/greeting" },
+        { name: "Organization (조직도)", link: "/about/organization" },
+        { name: "Facilities (시설안내)", link: "/about/facilities" },
+        { name: "Location (오시는길)", link: "/about/location" }
     ],
-    "교육과정": {
-        "항공정비계열": [
-            { name: "항공정비사과정", link: "/curriculum/01/01" },
-            { name: "항공기계과정", link: "/curriculum/01/02" },
-            { name: "항공부사관과정", link: "/curriculum/01/03" },
-            { name: "드론(조종.정비)과정", link: "/curriculum/01/04" },
-            { name: "항공정비공학사과정[3년제]", link: "/curriculum/01/05" }
+    "Programs (교육과정)": {
+        "Aviation Maintenance (항공정비계열)": [
+            { name: "Aircraft Maintenance Course (항공정비사과정)", link: "/curriculum/01/01" },
+            { name: "Aviation Mechanical Course (항공기계과정)", link: "/curriculum/01/02" },
+            { name: "Aviation NCO Course (항공부사관과정)", link: "/curriculum/01/03" },
+            { name: "Drone Operation & Maintenance Course (드론(조종.정비)과정)", link: "/curriculum/01/04" },
+            { name: "Aviation Maintenance Engineering [3-Year] (항공정비공학사과정[3년제])", link: "/curriculum/01/05" }
         ],
-        "스마트안전진단계열": [
-            { name: "초음파진단과정", link: "/curriculum/02/01" },
-            { name: "항공비파괴검사과정", link: "/curriculum/02/02" },
-            { name: "금속공학사과정[3년제]", link: "/curriculum/02/03" }
+        "Smart Safety Diagnostics (스마트안전진단계열)": [
+            { name: "Ultrasonic Diagnostics Course (초음파진단과정)", link: "/curriculum/02/01" },
+            { name: "Aviation NDT Course (항공비파괴검사과정)", link: "/curriculum/02/02" },
+            { name: "Metallurgical Engineering [3-Year] (금속공학사과정[3년제])", link: "/curriculum/02/03" }
         ],
-        "항공관광계열": [
-            { name: "승무원과정", link: "/curriculum/03/01" },
-            { name: "리조트관광전문가과정", link: "/curriculum/03/05" },
-            { name: "실시설전문가과정", link: "/curriculum/03/03" }
+        "Aviation Tourism (항공관광계열)": [
+            { name: "Flight Attendant Course (승무원과정)", link: "/curriculum/03/01" },
+            { name: "Resort Tourism Specialist Course (리조트관광전문가과정)", link: "/curriculum/03/05" },
+            { name: "Facility Management Specialist Course (실시설전문가과정)", link: "/curriculum/03/03" }
         ],
-        "관광경영계열": [
-            { name: "관광서비스과정", link: "/curriculum/04/01" },
-            { name: "리조트·외식과정", link: "/curriculum/04/02" },
-            { name: "카지노딜러과정", link: "/curriculum/04/03" },
-            { name: "크루즈승무원과정", link: "/curriculum/04/04" }
+        "Tourism Management (관광경영계열)": [
+            { name: "Tourism Service Course (관광서비스과정)", link: "/curriculum/04/01" },
+            { name: "Resort & F&B Course (리조트·외식과정)", link: "/curriculum/04/02" },
+            { name: "Casino Dealer Course (카지노딜러과정)", link: "/curriculum/04/03" },
+            { name: "Cruise Staff Course (크루즈승무원과정)", link: "/curriculum/04/04" }
         ],
-        "항공보안계열": [
-            { name: "항공보안과정", link: "/curriculum/05/01" },
-            { name: "의전경비과정", link: "/curriculum/05/02" },
-            { name: "PMC경비과정", link: "/curriculum/05/05" },
-            { name: "암실연기과정", link: "/curriculum/05/04" },
-            { name: "스카치콘서트엔터테인먼트과정", link: "/curriculum/05/06" }
+        "Aviation Security (항공보안계열)": [
+            { name: "Airport Security Course (항공보안과정)", link: "/curriculum/05/01" },
+            { name: "VIP Security Course (의전경비과정)", link: "/curriculum/05/02" },
+            { name: "PMC Security Course (PMC경비과정)", link: "/curriculum/05/05" },
+            { name: "Acting Course (암실연기과정)", link: "/curriculum/05/04" },
+            { name: "Entertainment Course (스카치콘서트엔터테인먼트과정)", link: "/curriculum/05/06" }
         ],
-        "국방경찰AI계열": [
-            { name: "국방사관과정", link: "/curriculum/06/01" },
-            { name: "국방부사관과정", link: "/curriculum/06/02" },
-            { name: "국방AI과정", link: "/curriculum/06/03" },
-            { name: "경찰공무원과정", link: "/curriculum/06/04" }
+        "Defense & Police AI (국방경찰AI계열)": [
+            { name: "Military Officer Course (국방사관과정)", link: "/curriculum/06/01" },
+            { name: "Military NCO Course (국방부사관과정)", link: "/curriculum/06/02" },
+            { name: "Defense AI Course (국방AI과정)", link: "/curriculum/06/03" },
+            { name: "Police Officer Course (경찰공무원과정)", link: "/curriculum/06/04" }
         ]
     },
-    "입학안내": [
-        { name: "모집요강", link: "/admission/guide" },
-        { name: "전형일정", link: "/admission/schedule" },
-        { name: "입학상담", link: "/admission/consultation" },
-        { name: "장학제도", link: "/admission/scholarship" }
+    "Admissions (입학안내)": [
+        { name: "Admission Guide (모집요강)", link: "/admission/guide" },
+        { name: "Schedule (전형일정)", link: "/admission/schedule" },
+        { name: "Consultation (입학상담)", link: "/admission/consultation" },
+        { name: "Scholarships (장학제도)", link: "/admission/scholarship" }
     ],
-    "취업지원": [
-        { name: "취업현황", link: "/employment/status" },
-        { name: "산학협력", link: "/employment/partnership" },
-        { name: "취업프로그램", link: "/employment/programs" }
+    "Career Support (취업지원)": [
+        { name: "Employment Status (취업현황)", link: "/employment/status" },
+        { name: "Industry Partnership (산학협력)", link: "/employment/partnership" },
+        { name: "Career Programs (취업프로그램)", link: "/employment/programs" }
     ],
-    "커뮤니티": [
-        { name: "공지사항", link: "/community/notice" },
-        { name: "보도자료", link: "/community/news" },
-        { name: "갤러리", link: "/community/gallery" },
-        { name: "취업현황", link: "/community/employment" }
+    "Community (커뮤니티)": [
+        { name: "Announcements (공지사항)", link: "/community/notice" },
+        { name: "News (보도자료)", link: "/community/news" },
+        { name: "Gallery (갤러리)", link: "/community/gallery" },
+        { name: "Employment News (취업현황)", link: "/community/employment" }
     ]
 };
 
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
     }, []);
 
     const renderEducationMegaMenu = () => {
-        const educationData = menuStructure["교육과정"] as EducationMenu;
+        const educationData = menuStructure["Programs (교육과정)"] as EducationMenu;
 
         return (
             <div
@@ -149,20 +149,20 @@ const Header: React.FC = () => {
                         ))}
                     </div>
 
-                    {/* 교육과정 하단 특별 섹션 */}
+                    {/* Programs Section Highlights */}
                     <div className="mt-8 pt-6 border-t border-gray-200">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-blue-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-blue-900 mb-2">🏆 91% 취업률</h4>
-                                <p className="text-sm text-blue-700">전국 항공분야 최다 취업자 배출</p>
+                                <h4 className="font-semibold text-blue-900 mb-2">🏆 91% Employment Rate (91% 취업률)</h4>
+                                <p className="text-sm text-blue-700">Korea's Leading Aviation Career Producer (전국 항공분야 최다 취업자 배출)</p>
                             </div>
                             <div className="bg-green-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-green-900 mb-2">🏢 120개 이상 협력업체</h4>
-                                <p className="text-sm text-green-700">산학협력을 통한 취업보장</p>
+                                <h4 className="font-semibold text-green-900 mb-2">🏢 120+ Industry Partners (120개 이상 협력업체)</h4>
+                                <p className="text-sm text-green-700">Guaranteed Employment Through Industry Partnership (산학협력을 통한 취업보장)</p>
                             </div>
                             <div className="bg-purple-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-purple-900 mb-2">📅 25년 교육경험</h4>
-                                <p className="text-sm text-purple-700">1993년 설립, 15,000명 이상 졸업생</p>
+                                <h4 className="font-semibold text-purple-900 mb-2">📅 25 Years of Excellence (25년 교육경험)</h4>
+                                <p className="text-sm text-purple-700">Since 1993, 15,000+ Graduates (1993년 설립, 15,000명 이상 졸업생)</p>
                             </div>
                         </div>
                     </div>
@@ -198,7 +198,7 @@ const Header: React.FC = () => {
     const renderMegaMenu = () => {
         if (!activeMenu) return null;
 
-        if (activeMenu === "교육과정") {
+        if (activeMenu === "Programs (교육과정)") {
             return renderEducationMegaMenu();
         }
 
@@ -213,26 +213,10 @@ const Header: React.FC = () => {
 
     return (
         <header className="bg-white shadow-lg sticky top-0 z-40">
-            {/* 상단 정보 바 */}
-            <div className="bg-blue-900 text-white py-2">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center text-sm">
-                        <div className="flex space-x-6">
-                            <span>📞 입학상담: 1588-1234</span>
-                            <span>📍 서울캠퍼스 | 이천캠퍼스</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="/admission/consultation" className="hover:text-blue-200">입학상담</a>
-                            <a href="/employment/status" className="hover:text-blue-200">취업현황</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {/* 메인 헤더 */}
             <div className="relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center py-4">
+                    <div className="flex justify-between items-center py-6">
                         {/* 로고 */}
                         <div className="flex-shrink-0">
                             <a href="/" className="flex items-center">
@@ -241,7 +225,7 @@ const Header: React.FC = () => {
                                 </div>
                                 <div>
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
-                                    <p className="text-sm text-gray-600">아세아항공직업전문학교</p>
+                                    <p className="text-sm text-gray-600">Korea Aviation Technical College (아세아항공직업전문학교)</p>
                                 </div>
                             </a>
                         </div>
