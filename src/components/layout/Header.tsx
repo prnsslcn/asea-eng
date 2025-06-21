@@ -5,10 +5,13 @@ interface Course {
     link: string;
 }
 
-interface Department {
-    id: number;
+interface MenuItem {
     name: string;
-    courses: Course[];
+    link: string;
+}
+
+interface EducationMenu {
+    [key: string]: Course[];
 }
 
 const menuStructure = {
@@ -79,7 +82,7 @@ const menuStructure = {
 const Header: React.FC = () => {
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const timeoutRef = useRef<number | null>(null);
 
     const handleMenuEnter = (menuName: string) => {
         if (timeoutRef.current) {
@@ -89,7 +92,7 @@ const Header: React.FC = () => {
     };
 
     const handleMenuLeave = () => {
-        timeoutRef.current = setTimeout(() => {
+        timeoutRef.current = window.setTimeout(() => {
             setActiveMenu(null);
         }, 150);
     };
@@ -101,7 +104,7 @@ const Header: React.FC = () => {
     };
 
     const handleMegaMenuLeave = () => {
-        timeoutRef.current = setTimeout(() => {
+        timeoutRef.current = window.setTimeout(() => {
             setActiveMenu(null);
         }, 150);
     };
@@ -114,67 +117,61 @@ const Header: React.FC = () => {
         };
     }, []);
 
-    const renderMegaMenu = () => {
-        if (!activeMenu) return null;
+    const renderEducationMegaMenu = () => {
+        const educationData = menuStructure["교육과정"] as EducationMenu;
 
-        const menuContent = menuStructure[activeMenu as keyof typeof menuStructure];
+        return (
+            <div
+                className="absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-200 z-50"
+                onMouseEnter={handleMegaMenuEnter}
+                onMouseLeave={handleMegaMenuLeave}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {Object.entries(educationData).map(([deptName, courses]: [string, Course[]]) => (
+                            <div key={deptName} className="space-y-4">
+                                <h3 className="font-bold text-lg text-gray-900 border-b border-blue-200 pb-2">
+                                    {deptName}
+                                </h3>
+                                <ul className="space-y-2">
+                                    {courses.map((course: Course, index: number) => (
+                                        <li key={index}>
+                                            <a
+                                                href={course.link}
+                                                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-2 py-1 rounded transition-colors text-sm"
+                                            >
+                                                {course.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
 
-        if (!menuContent) return null;
-
-        // 교육과정의 경우 (계열별 구조)
-        if (activeMenu === "교육과정") {
-            return (
-                <div
-                    className="absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-200 z-50"
-                    onMouseEnter={handleMegaMenuEnter}
-                    onMouseLeave={handleMegaMenuLeave}
-                >
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {Object.entries(menuContent).map(([deptName, courses]) => (
-                                <div key={deptName} className="space-y-4">
-                                    <h3 className="font-bold text-lg text-gray-900 border-b border-blue-200 pb-2">
-                                        {deptName}
-                                    </h3>
-                                    <ul className="space-y-2">
-                                        {courses.map((course, index) => (
-                                            <li key={index}>
-                                                <a
-                                                    href={course.link}
-                                                    className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-2 py-1 rounded transition-colors text-sm"
-                                                >
-                                                    {course.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* 교육과정 하단 특별 섹션 */}
-                        <div className="mt-8 pt-6 border-t border-gray-200">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="bg-blue-50 p-4 rounded-lg">
-                                    <h4 className="font-semibold text-blue-900 mb-2">🏆 91% 취업률</h4>
-                                    <p className="text-sm text-blue-700">전국 항공분야 최다 취업자 배출</p>
-                                </div>
-                                <div className="bg-green-50 p-4 rounded-lg">
-                                    <h4 className="font-semibold text-green-900 mb-2">🏢 120개 이상 협력업체</h4>
-                                    <p className="text-sm text-green-700">산학협력을 통한 취업보장</p>
-                                </div>
-                                <div className="bg-purple-50 p-4 rounded-lg">
-                                    <h4 className="font-semibold text-purple-900 mb-2">📅 25년 교육경험</h4>
-                                    <p className="text-sm text-purple-700">1993년 설립, 15,000명 이상 졸업생</p>
-                                </div>
+                    {/* 교육과정 하단 특별 섹션 */}
+                    <div className="mt-8 pt-6 border-t border-gray-200">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-blue-50 p-4 rounded-lg">
+                                <h4 className="font-semibold text-blue-900 mb-2">🏆 91% 취업률</h4>
+                                <p className="text-sm text-blue-700">전국 항공분야 최다 취업자 배출</p>
+                            </div>
+                            <div className="bg-green-50 p-4 rounded-lg">
+                                <h4 className="font-semibold text-green-900 mb-2">🏢 120개 이상 협력업체</h4>
+                                <p className="text-sm text-green-700">산학협력을 통한 취업보장</p>
+                            </div>
+                            <div className="bg-purple-50 p-4 rounded-lg">
+                                <h4 className="font-semibold text-purple-900 mb-2">📅 25년 교육경험</h4>
+                                <p className="text-sm text-purple-700">1993년 설립, 15,000명 이상 졸업생</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            );
-        }
+            </div>
+        );
+    };
 
-        // 일반 메뉴의 경우
+    const renderGeneralMegaMenu = (menuItems: MenuItem[]) => {
         return (
             <div
                 className="absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-200 z-50"
@@ -183,7 +180,7 @@ const Header: React.FC = () => {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        {menuContent.map((item, index) => (
+                        {menuItems.map((item: MenuItem, index: number) => (
                             <a
                                 key={index}
                                 href={item.link}
@@ -196,6 +193,22 @@ const Header: React.FC = () => {
                 </div>
             </div>
         );
+    };
+
+    const renderMegaMenu = () => {
+        if (!activeMenu) return null;
+
+        if (activeMenu === "교육과정") {
+            return renderEducationMegaMenu();
+        }
+
+        // 일반 메뉴 처리
+        const menuItems = menuStructure[activeMenu as keyof typeof menuStructure] as MenuItem[];
+        if (menuItems && Array.isArray(menuItems)) {
+            return renderGeneralMegaMenu(menuItems);
+        }
+
+        return null;
     };
 
     return (
@@ -235,7 +248,7 @@ const Header: React.FC = () => {
 
                         {/* 데스크톱 네비게이션 */}
                         <nav className="hidden lg:flex space-x-8">
-                            {Object.keys(menuStructure).map((menuName) => (
+                            {Object.keys(menuStructure).map((menuName: string) => (
                                 <div
                                     key={menuName}
                                     className="relative"
@@ -274,7 +287,7 @@ const Header: React.FC = () => {
                 {isMobileMenuOpen && (
                     <div className="lg:hidden bg-white border-t border-gray-200">
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            {Object.keys(menuStructure).map((menuName) => (
+                            {Object.keys(menuStructure).map((menuName: string) => (
                                 <div key={menuName}>
                                     <button className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left">
                                         {menuName}
