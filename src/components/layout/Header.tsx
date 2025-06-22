@@ -220,9 +220,11 @@ const Header: React.FC = () => {
                         {/* 로고 */}
                         <div className="flex-shrink-0">
                             <a href="/" className="flex items-center">
-                                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                                    <span className="text-white font-bold text-xl">A</span>
-                                </div>
+                                <img
+                                    src="/asea-eng/images/asea-em-1.png"
+                                    alt="ASEA Logo"
+                                    className="w-16 h-16 mr-3 object-contain"
+                                />
                                 <div>
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
                                     <p className="text-sm text-gray-600">Korea Aviation Technical College (아세아항공직업전문학교)</p>
