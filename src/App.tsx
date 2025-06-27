@@ -8,8 +8,9 @@ import StatsSection from './components/sections/StatsSection';
 import ContactSection from './components/sections/ContactSection';
 import CurriculumPage from './components/curriculum/CurriculumPage';
 
-// About 관련 컴포넌트들 (새로 추가)
+// About 관련 컴포넌트들
 import AboutLayout from './components/about/shared/AboutLayout';
+import AseaPage from './components/about/asea/AseaPage';
 
 // HomePage 컴포넌트 (기존 섹션들을 조합)
 const HomePage: React.FC = () => {
@@ -24,31 +25,6 @@ const HomePage: React.FC = () => {
 };
 
 // About 페이지들 (임시 구현)
-const AseaPage: React.FC = () => (
-    <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">ASEA</h1>
-        <div className="prose max-w-none">
-            <p className="text-lg text-gray-600 mb-4">
-                Welcome to ASEA Korea Aviation Technical College - your gateway to a successful aviation career.
-            </p>
-            <p className="text-gray-600 mb-4">
-                Since 1993, ASEA has been Korea's leading aviation education institution,
-                committed to providing excellence in aviation training and education.
-            </p>
-            <div className="bg-blue-50 p-6 rounded-lg mt-6">
-                <h3 className="text-xl font-semibold text-blue-900 mb-3">About ASEA</h3>
-                <ul className="space-y-2 text-blue-800">
-                    <li>• Founded in 1993</li>
-                    <li>• Korea's Leading Aviation Education Institution</li>
-                    <li>• Seoul & Icheon Campus</li>
-                    <li>• Comprehensive Aviation Programs</li>
-                    <li>• Industry-Focused Training</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-);
-
 const GoalsPage: React.FC = () => (
     <div>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Educational Goals (교육목표)</h1>
