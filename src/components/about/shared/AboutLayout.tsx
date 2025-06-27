@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import AboutSidebar from './AboutSidebar.tsx';
-import AboutBreadcrumb from './AboutBreadcrumb.tsx';
+import AboutSidebar from './AboutSidebar';
+import AboutBreadcrumb from './AboutBreadcrumb';
 
 const AboutLayout: React.FC = () => {
     return (
@@ -18,7 +18,7 @@ const AboutLayout: React.FC = () => {
                         </h1>
                         <p className="text-xl text-blue-100 max-w-3xl mx-auto">
                             Since 1993, we have been Korea's leading aviation education institution,
-                            producing over 15,000 graduates with a 91% employment rate.
+                            dedicated to excellence in aviation training and education.
                         </p>
                     </div>
                 </div>

@@ -33,16 +33,16 @@ const AseaPage: React.FC = () => (
             </p>
             <p className="text-gray-600 mb-4">
                 Since 1993, ASEA has been Korea's leading aviation education institution,
-                producing over 15,000 graduates with an outstanding 91% employment rate.
+                committed to providing excellence in aviation training and education.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg mt-6">
-                <h3 className="text-xl font-semibold text-blue-900 mb-3">Quick Facts</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">About ASEA</h3>
                 <ul className="space-y-2 text-blue-800">
                     <li>• Founded in 1993</li>
-                    <li>• 91% Employment Rate</li>
-                    <li>• 15,000+ Graduates</li>
-                    <li>• 120+ Industry Partners</li>
+                    <li>• Korea's Leading Aviation Education Institution</li>
                     <li>• Seoul & Icheon Campus</li>
+                    <li>• Comprehensive Aviation Programs</li>
+                    <li>• Industry-Focused Training</li>
                 </ul>
             </div>
         </div>

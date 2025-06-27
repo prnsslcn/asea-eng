@@ -162,16 +162,16 @@ const Header: React.FC = () => {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-blue-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-blue-900 mb-2">🏆 91% Employment Rate (91% 취업률)</h4>
-                                <p className="text-sm text-blue-700">Korea's Leading Aviation Career Producer (전국 항공분야 최다 취업자 배출)</p>
+                                <h4 className="font-semibold text-blue-900 mb-2">🎓 Aviation Excellence (항공 전문교육)</h4>
+                                <p className="text-sm text-blue-700">Korea's Leading Aviation Education Institution (한국 최고의 항공교육기관)</p>
                             </div>
                             <div className="bg-green-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-green-900 mb-2">🏢 120+ Industry Partners (120개 이상 협력업체)</h4>
-                                <p className="text-sm text-green-700">Guaranteed Employment Through Industry Partnership (산학협력을 통한 취업보장)</p>
+                                <h4 className="font-semibold text-green-900 mb-2">🏢 Industry Partnership (산학협력)</h4>
+                                <p className="text-sm text-green-700">Strong Industry Connections & Career Support (강력한 산업계 연결 및 취업지원)</p>
                             </div>
                             <div className="bg-purple-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-purple-900 mb-2">📅 25 Years of Excellence (25년 교육경험)</h4>
-                                <p className="text-sm text-purple-700">Since 1993, 15,000+ Graduates (1993년 설립, 15,000명 이상 졸업생)</p>
+                                <h4 className="font-semibold text-purple-900 mb-2">📅 Since 1993 (1993년 설립)</h4>
+                                <p className="text-sm text-purple-700">Over 30 Years of Aviation Education Excellence (30년 이상의 항공교육 우수성)</p>
                             </div>
                         </div>
                     </div>
@@ -228,13 +228,13 @@ const Header: React.FC = () => {
                     <div className="flex justify-between items-center py-6">
                         {/* 로고 */}
                         <div className="flex-shrink-0">
-                            <button onClick={() => handleNavigation('/')} className="flex items-center text-left">
+                            <button onClick={() => handleNavigation('/')} className="flex items-center">
                                 <img
                                     src="/asea-eng/images/asea-em-1.png"
                                     alt="ASEA Logo"
-                                    className="w-16 h-16 mr-3 object-contain"
+                                    className="w-12 h-12 mr-3 object-contain"
                                 />
-                                <div className="flex flex-col">
+                                <div>
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
                                     <p className="text-sm text-gray-600">Korea Aviation Technical College (아세아항공직업전문학교)</p>
                                 </div>

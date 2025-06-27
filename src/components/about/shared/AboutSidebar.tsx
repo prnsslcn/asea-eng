@@ -97,17 +97,10 @@ const AboutSidebar: React.FC = () => {
             {/* 사이드바 푸터 */}
             <div className="p-4 border-t border-gray-200 bg-gray-50 rounded-b-lg">
                 <div className="text-center">
-                    <div className="text-sm font-medium text-gray-900">Quick Stats</div>
-                    <div className="grid grid-cols-2 gap-2 mt-2 text-xs">
-                        <div className="bg-white p-2 rounded">
-                            <div className="font-semibold text-blue-600">91%</div>
-                            <div className="text-gray-600">Employment</div>
-                        </div>
-                        <div className="bg-white p-2 rounded">
-                            <div className="font-semibold text-green-600">15K+</div>
-                            <div className="text-gray-600">Graduates</div>
-                        </div>
-                    </div>
+                    <div className="text-sm font-medium text-gray-900">ASEA Aviation</div>
+                    <p className="text-xs text-gray-600 mt-1">
+                        Leading aviation education since 1993
+                    </p>
                 </div>
             </div>
         </div>
