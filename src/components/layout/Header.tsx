@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Course {
     name: string;
@@ -84,6 +85,13 @@ const Header: React.FC = () => {
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const timeoutRef = useRef<number | null>(null);
+    const navigate = useNavigate();
+
+    const handleNavigation = (path: string) => {
+        navigate(path);
+        setActiveMenu(null);
+        setIsMobileMenuOpen(false);
+    };
 
     const handleMenuEnter = (menuName: string) => {
         if (timeoutRef.current) {
@@ -137,12 +145,12 @@ const Header: React.FC = () => {
                                 <ul className="space-y-2">
                                     {courses.map((course: Course, index: number) => (
                                         <li key={index}>
-                                            <a
-                                                href={course.link}
-                                                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-2 py-1 rounded transition-colors text-sm"
+                                            <button
+                                                onClick={() => handleNavigation(course.link)}
+                                                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-2 py-1 rounded transition-colors text-sm w-full text-left"
                                             >
                                                 {course.name}
-                                            </a>
+                                            </button>
                                         </li>
                                     ))}
                                 </ul>
@@ -182,13 +190,13 @@ const Header: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         {menuItems.map((item: MenuItem, index: number) => (
-                            <a
+                            <button
                                 key={index}
-                                href={item.link}
-                                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 rounded-lg transition-colors"
+                                onClick={() => handleNavigation(item.link)}
+                                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 rounded-lg transition-colors text-left"
                             >
                                 {item.name}
-                            </a>
+                            </button>
                         ))}
                     </div>
                 </div>
@@ -220,17 +228,17 @@ const Header: React.FC = () => {
                     <div className="flex justify-between items-center py-6">
                         {/* 로고 */}
                         <div className="flex-shrink-0">
-                            <a href="/" className="flex items-center">
+                            <button onClick={() => handleNavigation('/')} className="flex items-center">
                                 <img
                                     src="/asea-eng/images/asea-em-1.png"
                                     alt="ASEA Logo"
-                                    className="w-12 h-12 mr-3 object-contain"
+                                    className="w-16 h-16 mr-3 object-contain"
                                 />
                                 <div>
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
                                     <p className="text-sm text-gray-600">Korea Aviation Technical College (아세아항공직업전문학교)</p>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
                         {/* 데스크톱 네비게이션 */}
@@ -276,7 +284,18 @@ const Header: React.FC = () => {
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {Object.keys(menuStructure).map((menuName: string) => (
                                 <div key={menuName}>
-                                    <button className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left">
+                                    <button
+                                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left"
+                                        onClick={() => {
+                                            // 모바일에서는 첫 번째 서브메뉴로 이동하거나 토글 기능 구현
+                                            const firstSubmenu = Array.isArray(menuStructure[menuName as keyof typeof menuStructure])
+                                                ? (menuStructure[menuName as keyof typeof menuStructure] as MenuItem[])[0]?.link
+                                                : null;
+                                            if (firstSubmenu) {
+                                                handleNavigation(firstSubmenu);
+                                            }
+                                        }}
+                                    >
                                         {menuName}
                                     </button>
                                 </div>
