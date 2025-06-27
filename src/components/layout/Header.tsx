@@ -15,12 +15,13 @@ interface EducationMenu {
 }
 
 const menuStructure = {
-    "About (학교소개)": [
-        { name: "History (학교연혁)", link: "/about/history" },
-        { name: "President's Message (총장인사말)", link: "/about/greeting" },
-        { name: "Organization (조직도)", link: "/about/organization" },
+    "About Us (학교소개)": [
+        { name: "ASEA", link: "/about/asea" },
+        { name: "Educational Goals (교육목표)", link: "/about/goals" },
         { name: "Facilities (시설안내)", link: "/about/facilities" },
-        { name: "Location (오시는길)", link: "/about/location" }
+        { name: "President's Message (인사말)", link: "/about/greeting" },
+        { name: "Campus Directory (교내 안내 전화)", link: "/about/directory" },
+        { name: "Location & Directions (오시는 길)", link: "/about/location" }
     ],
     "Programs (교육과정)": {
         "Aviation Maintenance (항공정비계열)": [
@@ -223,7 +224,7 @@ const Header: React.FC = () => {
                                 <img
                                     src="/asea-eng/images/asea-em-1.png"
                                     alt="ASEA Logo"
-                                    className="w-16 h-16 mr-3 object-contain"
+                                    className="w-12 h-12 mr-3 object-contain"
                                 />
                                 <div>
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
