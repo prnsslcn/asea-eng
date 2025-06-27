@@ -228,13 +228,13 @@ const Header: React.FC = () => {
                     <div className="flex justify-between items-center py-6">
                         {/* 로고 */}
                         <div className="flex-shrink-0">
-                            <button onClick={() => handleNavigation('/')} className="flex items-center">
+                            <button onClick={() => handleNavigation('/')} className="flex items-center text-left">
                                 <img
                                     src="/asea-eng/images/asea-em-1.png"
                                     alt="ASEA Logo"
                                     className="w-16 h-16 mr-3 object-contain"
                                 />
-                                <div>
+                                <div className="flex flex-col">
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
                                     <p className="text-sm text-gray-600">Korea Aviation Technical College (아세아항공직업전문학교)</p>
                                 </div>
