@@ -1,5 +1,6 @@
 import React from 'react';
-import { aseaData, getDepartmentColorClasses, DepartmentProgram, Benefit, ContactInfo } from '../../../data/about/aseaData';
+import aseaData, { getDepartmentColorClasses } from '../../../data/about/aseaData';
+import type { DepartmentProgram, Benefit, ContactInfo } from '../../../data/about/aseaData';
 
 const AseaPage: React.FC = () => {
     return (
