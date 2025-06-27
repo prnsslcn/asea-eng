@@ -1,31 +1,69 @@
 import React from 'react';
 import aseaData, { getDepartmentColorClasses } from '../../../data/about/aseaData';
-import type { DepartmentProgram, Benefit, ContactInfo } from '../../../data/about/aseaData';
+
+// 타입 정의 (aseaData.ts와 동일)
+interface DepartmentProgram {
+    name: string;
+    englishName: string;
+    color: string;
+    bgColor: string;
+    textColor: string;
+    programs: Array<{
+        title: string;
+        description: string;
+        highlights: string[];
+    }>;
+}
+
+interface Benefit {
+    icon: string;
+    title: string;
+    subtitle: string;
+    description: string;
+}
+
+interface ContactInfo {
+    type: string;
+    title: string;
+    phone: string;
+    description: string;
+}
 
 const AseaPage: React.FC = () => {
     return (
         <div className="space-y-12">
             {/* Hero Section */}
             <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
-                    <span className="text-3xl">✈️</span>
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6">
+                    <span className="text-4xl">✈️</span>
                 </div>
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                <h1 className="text-4xl font-bold text-blue-600 mb-2">
                     {aseaData.hero.title}
                 </h1>
-                <h2 className="text-2xl font-semibold text-blue-600 mb-4">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                     {aseaData.hero.subtitle}
                 </h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                <div className="text-3xl font-bold text-blue-800 mb-4">
+                    ASEA AVIATION
+                </div>
+                <p className="text-lg text-gray-600 max-w-4xl mx-auto">
                     {aseaData.hero.description}
                 </p>
             </div>
 
             {/* Department Programs Grid */}
             <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                    전공별 특성화 교육과정
-                </h3>
+                <div className="text-center mb-12">
+                    <h3 className="text-3xl font-bold text-blue-800 mb-4">
+                        ASEA AVIATION
+                    </h3>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">
+                        아세아의 계열 및 과정
+                    </h4>
+                    <p className="text-lg text-gray-600">
+                        33년 뿌리 깊은 역사를 자랑하는 아세아항공직업전문학교에서 운영중인 계열입니다.
+                    </p>
+                </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {aseaData.departments.map((department: DepartmentProgram, index: number) => {
                         const colorClasses = getDepartmentColorClasses(department.color);
@@ -74,25 +112,63 @@ const AseaPage: React.FC = () => {
 
             {/* Special Benefits */}
             <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                    아세아의 특별한 혜택
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="text-center mb-12">
+                    <h3 className="text-3xl font-bold text-blue-800 mb-4">
+                        ASEA AVIATION
+                    </h3>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">
+                        아세아의 특별한 혜택
+                    </h4>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {aseaData.benefits.map((benefit: Benefit, index: number) => (
                         <div
                             key={index}
-                            className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow text-center"
+                            className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow"
                         >
-                            <div className="text-4xl mb-4">{benefit.icon}</div>
-                            <h4 className="font-bold text-gray-900 mb-2 text-sm leading-tight">
-                                {benefit.title}
-                            </h4>
-                            <p className="text-blue-600 font-medium text-sm mb-3">
-                                {benefit.subtitle}
-                            </p>
-                            <p className="text-gray-600 text-sm">
-                                {benefit.description}
-                            </p>
+                            <div className="flex items-start space-x-4">
+                                <div className="text-4xl flex-shrink-0 mt-1">{benefit.icon}</div>
+                                <div className="flex-1 min-w-0">
+                                    <h4 className="font-bold text-gray-900 mb-3 text-lg leading-tight">
+                                        {benefit.title}
+                                    </h4>
+                                    <p className="text-blue-600 font-medium text-sm mb-4 leading-relaxed">
+                                        {benefit.subtitle}
+                                    </p>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        {benefit.description}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* 추가 상세 정보 (특정 혜택에 대해) */}
+                            {index === 0 && (
+                                <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                                        <div className="bg-white p-3 rounded border border-blue-200">
+                                            <div className="font-semibold text-blue-900">전문학사 학위</div>
+                                            <div className="text-blue-700 text-xs mt-1">취업 or 4년제 대학 3학년 편입</div>
+                                        </div>
+                                        <div className="bg-white p-3 rounded border border-blue-200">
+                                            <div className="font-semibold text-blue-900">학사 학위</div>
+                                            <div className="text-blue-700 text-xs mt-1">취업 or 대학원 진학</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {index === 1 && (
+                                <div className="mt-6 space-y-2">
+                                    <div className="flex items-center space-x-2 text-sm text-gray-700">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        <span>국토교통부 지정 국내유일, 국내 최초 기종교육 3개부문 동시인가</span>
+                                    </div>
+                                    <div className="flex items-center space-x-2 text-sm text-gray-700">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        <span>대학 포함 전국 최초/유일 (B737NG, C172, B737NG 교관과정)</span>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
