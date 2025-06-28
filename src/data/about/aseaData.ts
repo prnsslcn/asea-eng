@@ -50,13 +50,13 @@ export const aseaData: AseaData = {
     hero: {
         title: "Your First Step to the Sky",
         subtitle: "Turn Your Aviation Dreams into Reality!",
-        description: "ASEA Korea Aviation Technical College is Korea's leading aviation specialized educational institution with the highest number of graduates employed in the aviation industry."
+        description: "ASEA Aviation College is Korea's leading aviation specialized educational institution with the highest number of graduates employed in the aviation industry."
     },
 
     departments: [
         {
             name: "Aviation Maintenance",
-            englishName: "항공정비계열",
+            englishName: "Aviation Maintenance",
             color: "blue",
             bgColor: "bg-blue-600",
             textColor: "text-blue-900",
@@ -84,7 +84,7 @@ export const aseaData: AseaData = {
         },
         {
             name: "Aviation Security",
-            englishName: "항공보안계열",
+            englishName: "Aviation Security",
             color: "navy",
             bgColor: "bg-slate-700",
             textColor: "text-slate-900",
@@ -112,7 +112,7 @@ export const aseaData: AseaData = {
         },
         {
             name: "Aviation Tourism",
-            englishName: "항공관광계열",
+            englishName: "Aviation Tourism",
             color: "pink",
             bgColor: "bg-pink-500",
             textColor: "text-pink-900",
@@ -141,7 +141,7 @@ export const aseaData: AseaData = {
         },
         {
             name: "Smart Safety Diagnostics",
-            englishName: "스마트안전진단계열",
+            englishName: "Smart Safety Diagnostics",
             color: "green",
             bgColor: "bg-green-600",
             textColor: "text-green-900",
@@ -169,7 +169,7 @@ export const aseaData: AseaData = {
         },
         {
             name: "Defense & Police AI",
-            englishName: "국방경찰AI계열",
+            englishName: "Defense & Police AI",
             color: "gray",
             bgColor: "bg-gray-600",
             textColor: "text-gray-900",
@@ -241,7 +241,7 @@ export const aseaData: AseaData = {
 
     location: {
         address: "16, Dangsan-ro 32-gil, Yeongdeungpo-gu, Seoul, South Korea",
-        schoolName: "ASEA Korea Aviation Technical College",
+        schoolName: "ASEA Aviation College",
         mapInfo: "5-minute walk from Yeouido-gu Office Station (Line 2, Exit 4)"
     }
 };
@@ -251,57 +251,57 @@ export const getDepartmentColorClasses = (color: string) => {
     switch (color) {
         case 'blue':
             return {
-                bg: 'bg-blue-600',
+                bg: 'bg-blue-800',
                 bgLight: 'bg-blue-50',
                 text: 'text-blue-900',
-                textLight: 'text-blue-700',
-                border: 'border-blue-200',
-                hover: 'hover:bg-blue-700'
+                textLight: 'text-blue-800',
+                border: 'border-blue-300',
+                hover: 'hover:bg-blue-900'
             };
         case 'navy':
             return {
-                bg: 'bg-slate-700',
+                bg: 'bg-slate-800',
                 bgLight: 'bg-slate-50',
                 text: 'text-slate-900',
-                textLight: 'text-slate-700',
-                border: 'border-slate-200',
-                hover: 'hover:bg-slate-800'
+                textLight: 'text-slate-800',
+                border: 'border-slate-300',
+                hover: 'hover:bg-slate-900'
             };
         case 'pink':
             return {
-                bg: 'bg-pink-500',
-                bgLight: 'bg-pink-50',
-                text: 'text-pink-900',
-                textLight: 'text-pink-700',
-                border: 'border-pink-200',
-                hover: 'hover:bg-pink-600'
+                bg: 'bg-rose-700',
+                bgLight: 'bg-rose-50',
+                text: 'text-rose-900',
+                textLight: 'text-rose-800',
+                border: 'border-rose-300',
+                hover: 'hover:bg-rose-800'
             };
         case 'green':
             return {
-                bg: 'bg-green-600',
-                bgLight: 'bg-green-50',
-                text: 'text-green-900',
-                textLight: 'text-green-700',
-                border: 'border-green-200',
-                hover: 'hover:bg-green-700'
+                bg: 'bg-emerald-700',
+                bgLight: 'bg-emerald-50',
+                text: 'text-emerald-900',
+                textLight: 'text-emerald-800',
+                border: 'border-emerald-300',
+                hover: 'hover:bg-emerald-800'
             };
         case 'gray':
             return {
-                bg: 'bg-gray-600',
+                bg: 'bg-gray-700',
                 bgLight: 'bg-gray-50',
                 text: 'text-gray-900',
-                textLight: 'text-gray-700',
-                border: 'border-gray-200',
-                hover: 'hover:bg-gray-700'
+                textLight: 'text-gray-800',
+                border: 'border-gray-300',
+                hover: 'hover:bg-gray-800'
             };
         default:
             return {
-                bg: 'bg-blue-600',
+                bg: 'bg-blue-800',
                 bgLight: 'bg-blue-50',
                 text: 'text-blue-900',
-                textLight: 'text-blue-700',
-                border: 'border-blue-200',
-                hover: 'hover:bg-blue-700'
+                textLight: 'text-blue-800',
+                border: 'border-blue-300',
+                hover: 'hover:bg-blue-900'
             };
     }
 };
