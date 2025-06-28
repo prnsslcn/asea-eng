@@ -236,7 +236,7 @@ const Header: React.FC = () => {
                                 />
                                 <div className="flex flex-col">
                                     <h1 className="text-2xl font-bold text-gray-900">ASEA</h1>
-                                    <p className="text-sm text-gray-600">Korea Aviation Technical College (아세아항공직업전문학교)</p>
+                                    <p className="text-lg text-gray-600">Aviation College</p>
                                 </div>
                             </button>
                         </div>

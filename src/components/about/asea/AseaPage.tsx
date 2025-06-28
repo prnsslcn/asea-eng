@@ -51,7 +51,7 @@ const AseaPage: React.FC = () => {
                         Discover the departments operated by ASEA Aviation College, proudly serving with 33 years of deep-rooted history.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-4 sm:px-0">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-0 sm:px-8">
                     {aseaData.departments.map((department: DepartmentProgram, index: number) => {
                         const colorClasses = getDepartmentColorClasses(department.color);
 
@@ -104,7 +104,7 @@ const AseaPage: React.FC = () => {
                         Our Special Benefits
                     </h4>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-4 sm:px-0">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-0 sm:px-8">
                     {aseaData.benefits.map((benefit: Benefit, index: number) => (
                         <div
                             key={index}
