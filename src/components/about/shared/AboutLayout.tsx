@@ -1,6 +1,5 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import AboutSidebar from './AboutSidebar';
 import AboutBreadcrumb from './AboutBreadcrumb';
 
 const AboutLayout: React.FC = () => {
@@ -29,18 +28,8 @@ const AboutLayout: React.FC = () => {
 
             {/* 메인 컨텐츠 영역 */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="flex flex-col lg:flex-row gap-8">
-                    {/* 사이드바 */}
-                    <div className="lg:w-1/4">
-                        <AboutSidebar />
-                    </div>
-
-                    {/* 메인 컨텐츠 */}
-                    <div className="lg:w-3/4">
-                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <Outlet />
-                        </div>
-                    </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                    <Outlet />
                 </div>
             </div>
         </div>
