@@ -48,149 +48,149 @@ export interface AseaData {
 
 export const aseaData: AseaData = {
     hero: {
-        title: "하늘을 향한 첫 걸음",
-        subtitle: "항공 전문가 꿈을 현실로!",
-        description: "아세아항공직업전문학교는 전국 항공전문학교 중 역대 '최다 취업자'를 배출한 항공특성화 교육기관입니다."
+        title: "Your First Step to the Sky",
+        subtitle: "Turn Your Aviation Dreams into Reality!",
+        description: "ASEA Korea Aviation Technical College is Korea's leading aviation specialized educational institution with the highest number of graduates employed in the aviation industry."
     },
 
     departments: [
         {
-            name: "항공정비계열",
-            englishName: "Aviation Maintenance",
+            name: "Aviation Maintenance",
+            englishName: "항공정비계열",
             color: "blue",
             bgColor: "bg-blue-600",
             textColor: "text-blue-900",
             programs: [
                 {
-                    title: "교육과정",
-                    description: "항공정비사/ 항공기계/ 항공부사관/ 드론(조종•정비)/ 항공정비공학사[3년제]",
+                    title: "Programs",
+                    description: "Aviation Maintenance Technician / Aircraft Mechanical / Aviation NCO / Drone (Pilot & Maintenance) / Aviation Maintenance Engineering [3-year program]",
                     highlights: [
-                        "2년 과정 • 2년제 전문학사 학위",
-                        "4년 과정 • 4년제 학사 학위"
+                        "2-year program • Associate Degree",
+                        "4-year program • Bachelor's Degree"
                     ]
                 },
                 {
-                    title: "계열 특•장점",
-                    description: "대한민국 항공정비 산업분야 항공정비사 인재 양성 목표 현장 실무 중심의 취업 맞춤 항공정비 교육과정",
+                    title: "Department Features & Advantages",
+                    description: "Aimed at cultivating aviation maintenance professionals for Korea's aviation maintenance industry with hands-on, employment-focused aviation maintenance education",
                     highlights: [
-                        "국토교통부 지정 항공정비사(면허)과정 전문교육기관 (국토교통부 모집정원 전국 교육기관 중 최다규모 인가) *420명",
-                        "국내 유일! 국내 최초 항공훈련 기종교육 3개부문 동시 인가 (B737NG/ C172/ B737NG 교관과정)",
-                        "국내 초대형 규모 항공정비 전문 실습시설",
-                        "육군•해군•공군•해병대 항공기 정비 부사관 양성 (육해군장학부사관)",
-                        "항공정비계열 취업 특성화 (항공사 취업군부사관 드론 기계 등)"
+                        "Ministry of Land, Infrastructure and Transport designated aviation maintenance technician (license) program specialized educational institution (largest enrollment quota among national educational institutions approved by MOLIT) *420 students",
+                        "Domestic first and only! Simultaneous authorization for 3 aviation training aircraft type education programs (B737NG / C172 / B737NG Instructor Course)",
+                        "Korea's largest-scale aviation maintenance specialized training facilities",
+                        "Training Army, Navy, Air Force, and Marine Corps aviation maintenance NCOs (Army & Navy scholarship NCOs)",
+                        "Aviation maintenance specialization for employment (airline employment, military NCOs, drones, machinery, etc.)"
                     ]
                 }
             ]
         },
         {
-            name: "항공보안계열",
-            englishName: "Aviation Security",
+            name: "Aviation Security",
+            englishName: "항공보안계열",
             color: "navy",
             bgColor: "bg-slate-700",
             textColor: "text-slate-900",
             programs: [
                 {
-                    title: "교육과정",
-                    description: "항공보안 / 의전경호 / PMC경호 / 스포츠재활컨디셔닝 / 액션연기",
+                    title: "Programs",
+                    description: "Aviation Security / VIP Security / PMC Security / Sports Rehabilitation Conditioning / Action Acting",
                     highlights: [
-                        "2년 과정 • 2년제 전문학사 학위"
+                        "2-year program • Associate Degree"
                     ]
                 },
                 {
-                    title: "계열 특•장점",
-                    description: "항공산업 분야 안전을 위한 항공보안 전문인력 양성, 공항, 항만, 철도 등 국가중요시설 전문 보안검색요원 양성",
+                    title: "Department Features & Advantages",
+                    description: "Training aviation security professionals for safety in the aviation industry, specialized security screening personnel for airports, ports, railways and other national critical facilities",
                     highlights: [
-                        "항공보안분야 전국 교육기관 중 역대 최다 취업자 배출",
-                        "국내최초 AI (인공지능) 보안검색 교육과정 학습 지원",
-                        "신변보호사 합격자 배출 전국 교육기관 중 8년 연속 1위 달성",
-                        "민간 교육기관 최초 사제폭발물(IED) 테러대응 교육 프로그램 운영",
-                        "각종 무도단증 취득 가능 (태권도 유도 합기도 경호무술 용무도 등)",
-                        "보안 및 무도관련 실무 훈련 실습실 운영 (중기조작실습실, 레펠트레이닝센터 등)"
+                        "Highest number of graduates employed in aviation security field among all national educational institutions",
+                        "Korea's first AI (Artificial Intelligence) security screening education program support",
+                        "8 consecutive years ranked #1 nationally among educational institutions for bodyguard license exam pass rates",
+                        "First private educational institution to operate IED (Improvised Explosive Device) terrorism response education program",
+                        "Various martial arts certifications available (Taekwondo, Judo, Hapkido, Security Martial Arts, Yongmudo, etc.)",
+                        "Security and martial arts practical training facilities (Heavy equipment operation training room, Rappelling training center, etc.)"
                     ]
                 }
             ]
         },
         {
-            name: "항공관광계열",
-            englishName: "Aviation Tourism",
+            name: "Aviation Tourism",
+            englishName: "항공관광계열",
             color: "pink",
             bgColor: "bg-pink-500",
             textColor: "text-pink-900",
             programs: [
                 {
-                    title: "교육과정",
-                    description: "승무원 / 호텔관광전문가 / 식음료전문가",
+                    title: "Programs",
+                    description: "Flight Attendant / Hotel Tourism Expert / Food & Beverage Expert",
                     highlights: [
-                        "2년 과정 • 2년제 전문학사 학위"
+                        "2-year program • Associate Degree"
                     ]
                 },
                 {
-                    title: "계열 특•장점",
-                    description: "국제매너와 서비스 전문성을 갖춘 항공관광 글로벌 인재양성",
+                    title: "Department Features & Advantages",
+                    description: "Cultivating global aviation tourism talent with international manners and service expertise",
                     highlights: [
-                        "학기중 3+2제도를 통한 취업 특화 프로그램 운영 (3일 이론교육 + 2일 산학 실무교육)",
-                        "전용 공항실습장 & 기내실습실 & 호텔식음료실습실 운영",
-                        "재학생 대상 외국어 어학연수/ 해외 호텔실습 기회 제공",
-                        "호텔서비스 인력양성 우수기관 선정(한국관광공사)",
-                        "5성급 호텔연계 인턴십 운영 (계절인턴, 학기중 주말인턴)",
-                        "수도권 유일 크루즈전문인력 양성기관 2회연속 선정(해양수산부)",
-                        "칵테일, 커피, 와인 자격증 필기 실기 시험장 지정"
+                        "Employment-focused program through 3+2 system during semester (3 days theory + 2 days industry-academia practical education)",
+                        "Dedicated airport training facility & aircraft cabin training room & hotel food & beverage training room",
+                        "Foreign language study abroad & overseas hotel internship opportunities for enrolled students",
+                        "Selected as excellent hotel service workforce training institution (Korea Tourism Organization)",
+                        "5-star hotel partnership internship programs (seasonal internships, weekend internships during semester)",
+                        "Metropolitan area's only cruise professional workforce training institution selected twice (Ministry of Oceans and Fisheries)",
+                        "Designated examination center for cocktail, coffee, and wine certifications (written & practical exams)"
                     ]
                 }
             ]
         },
         {
-            name: "스마트안전진단계열",
-            englishName: "Smart Safety Diagnostics",
+            name: "Smart Safety Diagnostics",
+            englishName: "스마트안전진단계열",
             color: "green",
             bgColor: "bg-green-600",
             textColor: "text-green-900",
             programs: [
                 {
-                    title: "교육과정",
-                    description: "초음파진단/ 항공비파괴검사/ 금속공학사[3년제]",
+                    title: "Programs",
+                    description: "Ultrasonic Testing / Aviation Non-Destructive Testing / Metallurgical Engineering [3-year program]",
                     highlights: [
-                        "2년 과정 • 2년제 전문학사 학위",
-                        "3년 과정 • 4년제 학사 학위"
+                        "2-year program • Associate Degree",
+                        "3-year program • Bachelor's Degree"
                     ]
                 },
                 {
-                    title: "계열 특•장점",
-                    description: "첨단산업계 안전전문가 및 초음파검사기술 전문인 양성",
+                    title: "Department Features & Advantages",
+                    description: "Training safety experts and ultrasonic testing technology specialists for advanced industries",
                     highlights: [
-                        "졸업 전 취업확정 시스템으로 취업고민 해결",
-                        "2023년 교내 캠퍼스리쿠르팅 참가자 100% 전원 채용합격",
-                        "항공/철도/건설/조선업계 등 안전진단 전문가로 취업",
-                        "캐나다 비파괴 산업연수 및 프로그램 운영 → 해외취업 적극 연계",
-                        "2024학년도 계열 신입생 전원 산학연 장학금 지급"
+                        "Pre-graduation job guarantee system solves employment concerns",
+                        "100% employment success rate for 2023 on-campus recruitment fair participants",
+                        "Employment as safety diagnosis experts in aviation, railway, construction, and shipbuilding industries",
+                        "Canada non-destructive industry training & program operations → active overseas employment connections",
+                        "Full industry-academia scholarship provided to all 2024 academic year freshmen"
                     ]
                 }
             ]
         },
         {
-            name: "국방경찰AI계열",
-            englishName: "Defense & Police AI",
+            name: "Defense & Police AI",
+            englishName: "국방경찰AI계열",
             color: "gray",
             bgColor: "bg-gray-600",
             textColor: "text-gray-900",
             programs: [
                 {
-                    title: "교육과정",
-                    description: "국방사관/ 국방부사관/ 국방AI/ 경찰공무원",
+                    title: "Programs",
+                    description: "Defense Officer / Defense NCO / Defense AI / Police Civil Service",
                     highlights: [
-                        "2년 과정 • 2년제 전문학사 학위"
+                        "2-year program • Associate Degree"
                     ]
                 },
                 {
-                    title: "계열 특•장점",
-                    description: "우수한 리더십을 갖춘 군 장교 및 부사관, 경찰공무원 양성",
+                    title: "Department Features & Advantages",
+                    description: "Training military officers, NCOs, and police civil servants with excellent leadership",
                     highlights: [
-                        "육군3사관학교 배출 10년 연속 전국 1위 달성 (전국 4년제 대학교 및 직업전문학교 누적 합격자 기준)",
-                        "군 장학생(군 가산복무 부사관) 합격자 6년연속 서울/수도권 지역 1위 달성",
-                        "영관급 장교 및 경찰간부 출신 전문 교수진 편성",
-                        "졸업생 평균 합격률 최근 9년간 91% 달성 (장교, 부사관 등)",
-                        "국내 최초 가상현실(VR) 영상사격훈련 실습실 운영",
-                        "육군3사관학교 편입학 최우선 교육지원"
+                        "10 consecutive years ranked #1 nationally for Korea Army Academy at Yeongcheon admissions (based on cumulative successful candidates among national 4-year universities and vocational colleges)",
+                        "6 consecutive years ranked #1 in Seoul/metropolitan area for military scholarship students (military additional service NCOs)",
+                        "Faculty composed of field-grade officers and police executive alumni",
+                        "Average graduation success rate of 91% over the past 9 years (officers, NCOs, etc.)",
+                        "Korea's first Virtual Reality (VR) shooting training facility",
+                        "Priority educational support for Korea Army Academy at Yeongcheon transfer admissions"
                     ]
                 }
             ]
@@ -200,55 +200,49 @@ export const aseaData: AseaData = {
     benefits: [
         {
             icon: "🏛️",
-            title: "국내 최대규모 항공특성화 전문 교육기관",
-            subtitle: "전문학사 학위 및 4년제 학사학위 수여 (교육부장관)",
-            description: "국토교통부 지정 항공전문 교육기관으로 전국 항공전문학교 중 재학생 수 1위, 국내 최대규모 항공정비사 과정 운영 (모집정원 420명)"
+            title: "Korea's Largest Aviation Specialized Educational Institution",
+            subtitle: "Associate and Bachelor's Degrees Conferred by Minister of Education",
+            description: "Ministry of Land, Infrastructure and Transport designated aviation specialized educational institution, #1 in enrolled students among national aviation colleges, operating Korea's largest aviation maintenance program (420 student enrollment quota)"
         },
         {
             icon: "💼",
-            title: "취업에 강한 실무중심 교육",
-            subtitle: "전국 항공전문학교 역대 최다 취업자 배출 교육기관",
-            description: "2023년 교내 취업박람회 참가자 100% 전원채용 합격, 대한항공•아시아나항공 등 대형/LCC 항공사 매년 취업자 배출"
+            title: "Employment-Focused Practical Education",
+            subtitle: "Educational institution with the highest number of graduates employed among national aviation colleges",
+            description: "100% employment success for 2023 on-campus job fair participants, annual graduate employment at major airlines including Korean Air and Asiana Airlines, and low-cost carriers"
         },
         {
             icon: "🌏",
-            title: "해외어학연수 및 유학 프로그램",
-            subtitle: "글로벌 역량 강화를 위한 다양한 해외 프로그램",
-            description: "방학 중 해외 어학연수•호텔실습, 미국FAA•캐나다TC 항공정비사 유학 프로그램, 캐나다 NDT 비파괴검사 국가자격 취득 지원"
+            title: "Overseas Language Training & Study Abroad Programs",
+            subtitle: "Various overseas programs to enhance global competency",
+            description: "Overseas language training & hotel internships during vacations, US FAA & Canada TC aviation maintenance study abroad programs, support for Canada NDT non-destructive testing national certification"
         },
         {
             icon: "🎓",
-            title: "학생중심 아세아의 장점!",
-            subtitle: "최적의 교육환경과 학생 지원 시스템",
-            description: "아세아 전용 생활관(기숙사), 다양한 장학제도, 영등포구청역 도보 1분 교통편의, 맞춤형 학생관리 시스템&책임지도 교수제 운영"
+            title: "Student-Centered ASEA Advantages!",
+            subtitle: "Optimal educational environment and student support systems",
+            description: "ASEA exclusive dormitories, various scholarship programs, 1-minute walk from Yeouido-gu Office Station for transportation convenience, customized student management system & dedicated advisor professor system"
         },
         {
             icon: "🪖",
-            title: "육군3사관학교 편입 & 부사관 양성 전문 교육기관",
-            subtitle: "육군3사관학교 배출 10년 연속 전국 1위 달성",
-            description: "여자생도 7년 연속 배출, 군 장학생 합격자 7년 연속 서울/수도권 1위, 최근 9년간 졸업생 91% 장교/부사관 진출"
+            title: "Korea Army Academy at Yeongcheon Transfer & NCO Training Specialized Institution",
+            subtitle: "10 consecutive years ranked #1 nationally for Korea Army Academy at Yeongcheon admissions",
+            description: "Female cadets produced for 7 consecutive years, military scholarship students ranked #1 in Seoul/metropolitan area for 7 consecutive years, 91% of graduates entered as officers/NCOs over the past 9 years"
         }
     ],
 
     contacts: [
         {
-            type: "입학 전문상담",
-            title: "입학 상담",
-            phone: "02-717-8811",
-            description: "입학 관련 모든 문의사항을 전문 상담사가 친절히 안내해드립니다."
-        },
-        {
-            type: "취업 전문상담",
-            title: "취업 상담",
-            phone: "02-717-8811",
-            description: "졸업 후 취업 관련 상담 및 진로지도를 전문적으로 제공합니다."
+            type: "general_inquiry",
+            title: "General Inquiry",
+            phone: "+82-2-717-8811",
+            description: "For all admissions, career guidance, and general inquiries, our professional counselors provide friendly assistance."
         }
     ],
 
     location: {
-        address: "서울특별시 영등포구 당산로 32길 16",
-        schoolName: "아세아항공직업전문학교",
-        mapInfo: "당산역 2호선 2번 출구에서 도보 5분 거리"
+        address: "16, Dangsan-ro 32-gil, Yeongdeungpo-gu, Seoul, South Korea",
+        schoolName: "ASEA Korea Aviation Technical College",
+        mapInfo: "5-minute walk from Yeouido-gu Office Station (Line 2, Exit 4)"
     }
 };
 
