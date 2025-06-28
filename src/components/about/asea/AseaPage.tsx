@@ -51,7 +51,7 @@ const AseaPage: React.FC = () => {
                         Discover the departments operated by ASEA Aviation College, proudly serving with 33 years of deep-rooted history.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:px-8">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-4 sm:px-0">
                     {aseaData.departments.map((department: DepartmentProgram, index: number) => {
                         const colorClasses = getDepartmentColorClasses(department.color);
 
@@ -62,12 +62,9 @@ const AseaPage: React.FC = () => {
                             >
                                 {/* Department Header */}
                                 <div className={`${colorClasses.bg} text-white rounded-lg p-3 sm:p-4 mb-4 sm:mb-6 text-center`}>
-                                    <h4 className="text-lg sm:text-xl font-bold mb-1">
+                                    <h4 className="text-lg sm:text-xl font-bold">
                                         {department.name}
                                     </h4>
-                                    <p className="text-xs sm:text-sm opacity-90">
-                                        {department.englishName}
-                                    </p>
                                 </div>
 
                                 {/* Programs List */}
@@ -77,14 +74,14 @@ const AseaPage: React.FC = () => {
                                             <h5 className={`font-semibold ${colorClasses.text} mb-2 text-base sm:text-lg`}>
                                                 {program.title}
                                             </h5>
-                                            <p className="text-gray-600 text-base sm:text-xl mb-3">
+                                            <p className="text-gray-600 text-lg sm:text-xl mb-3">
                                                 {program.description}
                                             </p>
                                             <div className="space-y-1">
                                                 {program.highlights.map((highlight, highlightIndex) => (
                                                     <div key={highlightIndex} className="flex items-start space-x-2">
                                                         <span className={`w-1.5 h-1.5 rounded-full ${colorClasses.bg} mt-2 flex-shrink-0`}></span>
-                                                        <span className="text-base sm:text-xl text-gray-700">{highlight}</span>
+                                                        <span className="text-lg sm:text-xl text-gray-700">{highlight}</span>
                                                     </div>
                                                 ))}
                                             </div>
@@ -107,7 +104,7 @@ const AseaPage: React.FC = () => {
                         Our Special Benefits
                     </h4>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-0 sm:px-8">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 px-4 sm:px-0">
                     {aseaData.benefits.map((benefit: Benefit, index: number) => (
                         <div
                             key={index}
@@ -122,7 +119,7 @@ const AseaPage: React.FC = () => {
                                     <p className="text-blue-600 font-medium text-xs sm:text-sm mb-4 leading-relaxed">
                                         {benefit.subtitle}
                                     </p>
-                                    <p className="text-gray-600 text-base sm:text-xl leading-relaxed">
+                                    <p className="text-gray-600 text-lg sm:text-lg leading-relaxed">
                                         {benefit.description}
                                     </p>
                                 </div>
