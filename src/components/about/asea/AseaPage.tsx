@@ -22,13 +22,6 @@ interface Benefit {
     description: string;
 }
 
-interface ContactInfo {
-    type: string;
-    title: string;
-    phone: string;
-    description: string;
-}
-
 const AseaPage: React.FC = () => {
     return (
         <div className="space-y-12">
@@ -58,10 +51,10 @@ const AseaPage: React.FC = () => {
                         ASEA AVIATION
                     </h3>
                     <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                        아세아의 계열 및 과정
+                        Our Departments & Programs
                     </h4>
                     <p className="text-lg text-gray-600">
-                        33년 뿌리 깊은 역사를 자랑하는 아세아항공직업전문학교에서 운영중인 계열입니다.
+                        Discover the departments operated by ASEA Korea Aviation Technical College, proudly serving with 33 years of deep-rooted history.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -117,7 +110,7 @@ const AseaPage: React.FC = () => {
                         ASEA AVIATION
                     </h3>
                     <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                        아세아의 특별한 혜택
+                        Our Special Benefits
                     </h4>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -146,12 +139,12 @@ const AseaPage: React.FC = () => {
                                 <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                                         <div className="bg-white p-3 rounded border border-blue-200">
-                                            <div className="font-semibold text-blue-900">전문학사 학위</div>
-                                            <div className="text-blue-700 text-xs mt-1">취업 or 4년제 대학 3학년 편입</div>
+                                            <div className="font-semibold text-blue-900">Associate Degree</div>
+                                            <div className="text-blue-700 text-xs mt-1">Employment or Transfer to 4-year University (3rd year)</div>
                                         </div>
                                         <div className="bg-white p-3 rounded border border-blue-200">
-                                            <div className="font-semibold text-blue-900">학사 학위</div>
-                                            <div className="text-blue-700 text-xs mt-1">취업 or 대학원 진학</div>
+                                            <div className="font-semibold text-blue-900">Bachelor's Degree</div>
+                                            <div className="text-blue-700 text-xs mt-1">Employment or Graduate School Admission</div>
                                         </div>
                                     </div>
                                 </div>
@@ -161,11 +154,11 @@ const AseaPage: React.FC = () => {
                                 <div className="mt-6 space-y-2">
                                     <div className="flex items-center space-x-2 text-sm text-gray-700">
                                         <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                                        <span>국토교통부 지정 국내유일, 국내 최초 기종교육 3개부문 동시인가</span>
+                                        <span>Ministry of Land, Infrastructure and Transport designated - Korea's only and first simultaneous authorization for 3 aircraft type education programs</span>
                                     </div>
                                     <div className="flex items-center space-x-2 text-sm text-gray-700">
                                         <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                                        <span>대학 포함 전국 최초/유일 (B737NG, C172, B737NG 교관과정)</span>
+                                        <span>National first/only including universities (B737NG, C172, B737NG Instructor Course)</span>
                                     </div>
                                 </div>
                             )}
@@ -174,38 +167,33 @@ const AseaPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Contact Information */}
+            {/* Contact Information - 중앙 정렬 */}
             <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                    전문 상담 안내
+                    Professional Consultation
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    {aseaData.contacts.map((contact: ContactInfo, index: number) => (
-                        <div
-                            key={index}
-                            className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6 text-center"
-                        >
-                            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
-                                <span className="text-xl">📞</span>
-                            </div>
-                            <h4 className="font-bold text-blue-900 mb-2">
-                                {contact.title}
-                            </h4>
-                            <div className="text-2xl font-bold text-blue-600 mb-3">
-                                {contact.phone}
-                            </div>
-                            <p className="text-blue-800 text-sm">
-                                {contact.description}
-                            </p>
+                <div className="flex justify-center">
+                    <div className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6 text-center max-w-md w-full">
+                        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+                            <span className="text-xl">📞</span>
                         </div>
-                    ))}
+                        <h4 className="font-bold text-blue-900 mb-2">
+                            {aseaData.contacts[0].title}
+                        </h4>
+                        <div className="text-2xl font-bold text-blue-600 mb-3">
+                            {aseaData.contacts[0].phone}
+                        </div>
+                        <p className="text-blue-800 text-sm">
+                            {aseaData.contacts[0].description}
+                        </p>
+                    </div>
                 </div>
             </div>
 
             {/* Location Information */}
             <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                    오시는 길
+                    Location & Directions
                 </h3>
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-2xl mx-auto">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600 text-white rounded-full mb-6">
@@ -229,17 +217,17 @@ const AseaPage: React.FC = () => {
             {/* Call to Action */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">
-                    아세아에서 여러분의 꿈을 실현하세요!
+                    Realize Your Dreams at ASEA!
                 </h3>
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                    33년의 경험과 노하우로 여러분의 성공적인 항공업계 진출을 지원합니다.
+                    With 33 years of experience and expertise, we support your successful entry into the aviation industry.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                        입학 상담 신청
+                        Apply for Admission Consultation
                     </button>
                     <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                        교육과정 보기
+                        View Programs
                     </button>
                 </div>
             </div>
