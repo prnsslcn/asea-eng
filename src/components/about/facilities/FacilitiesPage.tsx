@@ -133,9 +133,8 @@ const FacilitiesPage: React.FC = () => {
     }, [facilitiesData, activeCampus, activeDepartment]);
 
     // 이미지 경로 생성 함수
-    const getImagePath = useCallback((department: string, filename: string, isFullSize: boolean = false) => {
-        const folder = isFullSize ? 'full' : 'thumbnails';
-        return `/asea-eng/images/facilities/${folder}/${activeCampus}/${department}/${filename}`;
+    const getImagePath = useCallback((department: string, filename: string) => {
+        return `/asea-eng/images/facilities/${activeCampus}/${department}/${filename}`;
     }, [activeCampus]);
 
     // 라이트박스 열기
@@ -301,13 +300,9 @@ const FacilitiesPage: React.FC = () => {
                             </svg>
                         </button>
                         <img
-                            src={getImagePath(lightboxImage.department, lightboxImage.image.filename, true)}
+                            src={getImagePath(lightboxImage.department, lightboxImage.image.filename)}
                             alt={lightboxImage.image.title}
                             className="max-w-full max-h-full object-contain"
-                            onError={(e) => {
-                                const target = e.target as HTMLImageElement;
-                                target.src = getImagePath(lightboxImage.department, lightboxImage.image.filename);
-                            }}
                         />
                         <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 text-white p-4">
                             <h3 className="text-lg font-semibold">{lightboxImage.image.title}</h3>
