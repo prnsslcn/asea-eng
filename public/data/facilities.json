@@ -1,0 +1,16 @@
+{
+  "seoul": {
+    "aviation-maintenance": [
+      {
+        "filename": "electronics-lab.jpg",
+        "title": "전자실습실",
+        "description": "최신 전자장비를 활용한 실습실"
+      },
+      {
+        "filename": "engine-room.jpg",
+        "title": "발동기실습실",
+        "description": "항공기 엔진 정비 실습 공간"
+      }
+    ]
+  }
+}

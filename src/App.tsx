@@ -12,6 +12,7 @@ import CurriculumPage from './components/curriculum/CurriculumPage';
 import AboutLayout from './components/about/shared/AboutLayout';
 import AseaPage from './components/about/asea/AseaPage';
 import EducationalGoalsPage from "./components/about/goals/EducationalGoalsPage";
+import FacilitiesPage from "./components/about/facilities/FacilitiesPage";
 
 // HomePage 컴포넌트 (기존 섹션들을 조합)
 const HomePage: React.FC = () => {
@@ -26,13 +27,6 @@ const HomePage: React.FC = () => {
 };
 
 // About 페이지들 (임시 구현)
-const FacilitiesPage: React.FC = () => (
-    <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">Facilities (시설안내)</h1>
-        <p className="text-lg text-gray-600">Facilities page coming soon...</p>
-    </div>
-);
-
 const GreetingPage: React.FC = () => (
     <div>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">President's Message (인사말)</h1>
