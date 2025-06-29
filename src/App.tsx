@@ -11,6 +11,7 @@ import CurriculumPage from './components/curriculum/CurriculumPage';
 // About 관련 컴포넌트들
 import AboutLayout from './components/about/shared/AboutLayout';
 import AseaPage from './components/about/asea/AseaPage';
+import EducationalGoalsPage from "./components/about/goals/EducationalGoalsPage";
 
 // HomePage 컴포넌트 (기존 섹션들을 조합)
 const HomePage: React.FC = () => {
@@ -25,13 +26,6 @@ const HomePage: React.FC = () => {
 };
 
 // About 페이지들 (임시 구현)
-const GoalsPage: React.FC = () => (
-    <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">Educational Goals (교육목표)</h1>
-        <p className="text-lg text-gray-600">Educational goals page coming soon...</p>
-    </div>
-);
-
 const FacilitiesPage: React.FC = () => (
     <div>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Facilities (시설안내)</h1>
@@ -117,7 +111,7 @@ function App() {
                         {/* About Us 중첩 라우팅 */}
                         <Route path="/about" element={<AboutLayout />}>
                             <Route path="asea" element={<AseaPage />} />
-                            <Route path="goals" element={<GoalsPage />} />
+                            <Route path="goals" element={<EducationalGoalsPage />} />
                             <Route path="facilities" element={<FacilitiesPage />} />
                             <Route path="greeting" element={<GreetingPage />} />
                             <Route path="directory" element={<DirectoryPage />} />
