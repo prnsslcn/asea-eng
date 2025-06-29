@@ -20,7 +20,8 @@ const menuStructure = {
         { name: "ASEA", link: "/about/asea" },
         { name: "Educational Goals (교육목표)", link: "/about/goals" },
         { name: "Facilities (시설안내)", link: "/about/facilities" },
-        { name: "President's Message (인사말)", link: "/about/greeting" },
+        { name: "Chairman's Message (이사장 인사말)", link: "/about/chairman" },
+        { name: "President's Message (학장 인사말)", link: "/about/president" },
         { name: "Campus Directory (교내 안내 전화)", link: "/about/directory" },
         { name: "Location & Directions (오시는 길)", link: "/about/location" }
     ],
