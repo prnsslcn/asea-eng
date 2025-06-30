@@ -16,6 +16,7 @@ import FacilitiesPage from "./components/about/facilities/FacilitiesPage";
 import DirectoryPage from "./components/about/directory/DirectoryPage";
 import ChairmanPage from "./components/about/chairman/ChairmanPage";
 import PresidentPage from "./components/about/president/PresidentPage";
+import LocationPage from "./components/about/location/LocationPage";
 
 // HomePage 컴포넌트 (기존 섹션들을 조합)
 const HomePage: React.FC = () => {
@@ -30,12 +31,7 @@ const HomePage: React.FC = () => {
 };
 
 // About 페이지들 (임시 구현)
-const LocationPage: React.FC = () => (
-    <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">Location & Directions</h1>
-        <p className="text-lg text-gray-600">Location page coming soon...</p>
-    </div>
-);
+// 모든 About 페이지가 완성되었습니다!
 
 // 기존 임시 페이지 컴포넌트들
 const AdmissionPage: React.FC = () => (
