@@ -1,5 +1,5 @@
 import React from 'react';
-import aseaData, { getDepartmentColorClasses } from '../../../data/about/aseaData';
+import aseaData, { getDepartmentColorClasses } from '../../data/about/aseaData.ts';
 
 // 타입 정의 (aseaData.ts와 동일)
 interface DepartmentProgram {

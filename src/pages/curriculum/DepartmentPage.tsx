@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { curriculumData, getColorClasses } from './CurriculumData';
+import { curriculumData, getColorClasses } from '../../data/curriculum/CurriculumData.ts';
 
-const CurriculumPage: React.FC = () => {
+const DepartmentPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 
@@ -294,4 +294,4 @@ const CurriculumPage: React.FC = () => {
     );
 };
 
-export default CurriculumPage;
+export default DepartmentPage;
