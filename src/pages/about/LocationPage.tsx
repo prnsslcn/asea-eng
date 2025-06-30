@@ -102,7 +102,7 @@ const LocationPage: React.FC = () => {
 
                     <div className="flex flex-col lg:flex-row">
                         {/* Map */}
-                        <div className="lg:w-3/5 h-96 lg:h-auto p-4">
+                        <div className="lg:w-3/5 h-96 lg:h-[500px] p-4">
                             <div className="w-full h-full rounded-lg overflow-hidden shadow-md">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.9547524377!2d127.3093494760744!3d37.2266434269075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f9a7b9b9b9b%3A0x9b9b9b9b9b9b9b9b!2s74%20Imosan-ro%20362beon-gil%2C%20Yul-myeon%2C%20Icheon-si%2C%20Gyeonggi-do%2C%20South%20Korea!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
@@ -125,24 +125,6 @@ const LocationPage: React.FC = () => {
                                     <p className="text-gray-700">
                                         74, Imosan-ro 362beon-gil, Yul-myeon,<br />
                                         Icheon-si, Gyeonggi-do, South Korea
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-lg font-semibold text-blue-900 mb-2">Facilities</h3>
-                                    <ul className="text-gray-700 space-y-1">
-                                        <li>• Aircraft Maintenance Training Center</li>
-                                        <li>• Aviation Equipment Workshop</li>
-                                        <li>• Practical Training Facilities</li>
-                                        <li>• Specialized Laboratory</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-lg font-semibold text-blue-900 mb-2">Transportation</h3>
-                                    <p className="text-gray-700">
-                                        Access by private vehicle recommended.<br />
-                                        Campus shuttle service available from Seoul Campus.
                                     </p>
                                 </div>
                             </div>
