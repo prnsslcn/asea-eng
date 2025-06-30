@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ROUTES } from './routes';
+import ScrollToTop from '../components/common/ScrollToTop';
 
 // Page Components
 import HomePage from '../pages/HomePage';
@@ -75,42 +76,45 @@ const NotFoundPage: React.FC = () => (
 
 const Router: React.FC = () => {
     return (
-        <Routes>
-            {/* 메인 페이지 */}
-            <Route path={ROUTES.HOME} element={<HomePage />} />
+        <>
+            <ScrollToTop />
+            <Routes>
+                {/* 메인 페이지 */}
+                <Route path={ROUTES.HOME} element={<HomePage />} />
 
-            {/* About Us 중첩 라우팅 */}
-            <Route path={ROUTES.ABOUT.ROOT} element={<AboutLayout />}>
-                <Route path="asea" element={<AseaPage />} />
-                <Route path="goals" element={<EducationalGoalsPage />} />
-                <Route path="facilities" element={<FacilitiesPage />} />
-                <Route path="chairman" element={<ChairmanPage />} />
-                <Route path="president" element={<PresidentPage />} />
-                <Route path="directory" element={<DirectoryPage />} />
-                <Route path="location" element={<LocationPage />} />
-            </Route>
+                {/* About Us 중첩 라우팅 */}
+                <Route path={ROUTES.ABOUT.ROOT} element={<AboutLayout />}>
+                    <Route path="asea" element={<AseaPage />} />
+                    <Route path="goals" element={<EducationalGoalsPage />} />
+                    <Route path="facilities" element={<FacilitiesPage />} />
+                    <Route path="chairman" element={<ChairmanPage />} />
+                    <Route path="president" element={<PresidentPage />} />
+                    <Route path="directory" element={<DirectoryPage />} />
+                    <Route path="location" element={<LocationPage />} />
+                </Route>
 
-            {/* 교육과정 라우팅 */}
-            <Route path="/curriculum/:id" element={<DepartmentPage />} />
+                {/* 교육과정 라우팅 */}
+                <Route path="/curriculum/:id" element={<DepartmentPage />} />
 
-            {/* 세부 과정 라우팅 (추후 구현) */}
-            <Route path="/curriculum/:deptId/:courseId" element={<CourseDetailPage />} />
+                {/* 세부 과정 라우팅 (추후 구현) */}
+                <Route path="/curriculum/:deptId/:courseId" element={<CourseDetailPage />} />
 
-            {/* 입학안내 라우팅 */}
-            <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionPage />} />
-            <Route path={ROUTES.ADMISSION.WILDCARD} element={<AdmissionPage />} />
+                {/* 입학안내 라우팅 */}
+                <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionPage />} />
+                <Route path={ROUTES.ADMISSION.WILDCARD} element={<AdmissionPage />} />
 
-            {/* 취업지원 라우팅 */}
-            <Route path={ROUTES.EMPLOYMENT.ROOT} element={<EmploymentPage />} />
-            <Route path={ROUTES.EMPLOYMENT.WILDCARD} element={<EmploymentPage />} />
+                {/* 취업지원 라우팅 */}
+                <Route path={ROUTES.EMPLOYMENT.ROOT} element={<EmploymentPage />} />
+                <Route path={ROUTES.EMPLOYMENT.WILDCARD} element={<EmploymentPage />} />
 
-            {/* 커뮤니티 라우팅 */}
-            <Route path={ROUTES.COMMUNITY.ROOT} element={<CommunityPage />} />
-            <Route path={ROUTES.COMMUNITY.WILDCARD} element={<CommunityPage />} />
+                {/* 커뮤니티 라우팅 */}
+                <Route path={ROUTES.COMMUNITY.ROOT} element={<CommunityPage />} />
+                <Route path={ROUTES.COMMUNITY.WILDCARD} element={<CommunityPage />} />
 
-            {/* 404 페이지 */}
-            <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+                {/* 404 페이지 */}
+                <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+        </>
     );
 };
 
