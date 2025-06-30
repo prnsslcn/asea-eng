@@ -16,14 +16,14 @@ interface EducationMenu {
 }
 
 const menuStructure = {
-    "About Us (학교소개)": [
+    "About Us": [
         { name: "ASEA", link: "/about/asea" },
-        { name: "Educational Goals (교육목표)", link: "/about/goals" },
-        { name: "Facilities (시설안내)", link: "/about/facilities" },
-        { name: "Chairman's Message (이사장 인사말)", link: "/about/chairman" },
-        { name: "President's Message (학장 인사말)", link: "/about/president" },
-        { name: "Campus Directory (교내 안내 전화)", link: "/about/directory" },
-        { name: "Location & Directions (오시는 길)", link: "/about/location" }
+        { name: "Educational Goals", link: "/about/goals" },
+        { name: "Facilities", link: "/about/facilities" },
+        { name: "Chairman's Message", link: "/about/chairman" },
+        { name: "President's Message", link: "/about/president" },
+        { name: "Campus Directory", link: "/about/directory" },
+        { name: "Location & Directions", link: "/about/location" }
     ],
     "Programs (교육과정)": {
         "Aviation Maintenance (항공정비계열)": [
@@ -163,16 +163,16 @@ const Header: React.FC = () => {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-blue-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-blue-900 mb-2">🎓 Aviation Excellence (항공 전문교육)</h4>
-                                <p className="text-sm text-blue-700">Korea's Leading Aviation Education Institution (한국 최고의 항공교육기관)</p>
+                                <h4 className="font-semibold text-blue-900 mb-2">🎓 Aviation Excellence</h4>
+                                <p className="text-sm text-blue-700">Korea's Leading Aviation Education Institution</p>
                             </div>
                             <div className="bg-green-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-green-900 mb-2">🏢 Industry Partnership (산학협력)</h4>
-                                <p className="text-sm text-green-700">Strong Industry Connections & Career Support (강력한 산업계 연결 및 취업지원)</p>
+                                <h4 className="font-semibold text-green-900 mb-2">🏢 Industry Partnership</h4>
+                                <p className="text-sm text-green-700">Strong Industry Connections & Career Support</p>
                             </div>
                             <div className="bg-purple-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-purple-900 mb-2">📅 Since 1993 (1993년 설립)</h4>
-                                <p className="text-sm text-purple-700">Over 30 Years of Aviation Education Excellence (30년 이상의 항공교육 우수성)</p>
+                                <h4 className="font-semibold text-purple-900 mb-2">📅 Since 1993</h4>
+                                <p className="text-sm text-purple-700">Over 30 Years of Aviation Education Excellence</p>
                             </div>
                         </div>
                     </div>
