@@ -1,3 +1,4 @@
+// 라우트 경로 상수 정의
 export const ROUTES = {
     HOME: '/',
     ABOUT: {
@@ -17,6 +18,10 @@ export const ROUTES = {
     },
     ADMISSION: {
         ROOT: '/admission',
+        GUIDE: '/admission/guide',
+        PROCESS: '/admission/process',
+        ROADMAP: '/admission/roadmap',
+        SCHOLARSHIP: '/admission/scholarship',
         WILDCARD: '/admission/*',
     },
     EMPLOYMENT: {

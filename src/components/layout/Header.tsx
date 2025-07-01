@@ -25,6 +25,12 @@ const menuStructure = {
         { name: "Campus Directory", link: "/about/directory" },
         { name: "Location & Directions", link: "/about/location" }
     ],
+    "Admissions": [
+        { name: "Admission Guide", link: "/admission/guide" },
+        { name: "Application Process", link: "/admission/process" },
+        { name: "Career Roadmap", link: "/admission/roadmap" },
+        { name: "Freshman Scholarships", link: "/admission/scholarship" }
+    ],
     "Programs (교육과정)": {
         "Aviation Maintenance (항공정비계열)": [
             { name: "Aircraft Maintenance Course (항공정비사과정)", link: "/curriculum/01/01" },
@@ -63,12 +69,6 @@ const menuStructure = {
             { name: "Police Officer Course (경찰공무원과정)", link: "/curriculum/06/04" }
         ]
     },
-    "Admissions (입학안내)": [
-        { name: "Admission Guide (모집요강)", link: "/admission/guide" },
-        { name: "Schedule (전형일정)", link: "/admission/schedule" },
-        { name: "Consultation (입학상담)", link: "/admission/consultation" },
-        { name: "Scholarships (장학제도)", link: "/admission/scholarship" }
-    ],
     "Career Support (취업지원)": [
         { name: "Employment Status (취업현황)", link: "/employment/status" },
         { name: "Industry Partnership (산학협력)", link: "/employment/partnership" },
