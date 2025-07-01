@@ -6,6 +6,9 @@ import ScrollToTop from '../components/common/ScrollToTop';
 // Page Components
 import HomePage from '../pages/HomePage';
 
+// Admission Pages
+import AdmissionGuidePage from '../pages/admission/AdmissionGuidePage';
+
 // About 관련 컴포넌트들
 import {
     AboutLayout,
@@ -22,15 +25,6 @@ import {
 import { DepartmentPage } from '../pages/curriculum';
 
 // 임시 페이지 컴포넌트들
-const AdmissionGuidePage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">Admission Guide</h1>
-            <p className="text-lg text-gray-600">모집요강 페이지가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
 const ApplicationProcessPage: React.FC = () => (
     <div className="min-h-screen py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
