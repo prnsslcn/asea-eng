@@ -71,137 +71,38 @@ const CareerRoadmapPage: React.FC = () => {
                     <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
                         <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">Career Path Overview</h2>
 
-                        {/* Desktop Layout */}
-                        <div className="hidden lg:block">
-                            <div className="relative max-w-6xl mx-auto">
-                                {/* Top Row - Employment Goal, 본교입학, Transfer Goal */}
-                                <div className="relative mb-4">
-                                    <div className="flex items-center justify-center">
-                                        {/* Employment Goal */}
-                                        <div className="flex flex-col items-center">
-                                            <div className="w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                                                <div className="text-center text-white">
-                                                    <h3 className="text-2xl font-bold">Employment</h3>
-                                                    <h3 className="text-2xl font-bold">Goal</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Horizontal line from Employment Goal to Center */}
-                                        <div className="w-32 h-0.5 bg-gray-400 mx-4"></div>
-
-                                        {/* Center Circle - 본교입학 */}
-                                        <div className="flex flex-col items-center">
-                                            <div className="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center shadow-lg">
-                                                <div className="text-center text-gray-700">
-                                                    <h3 className="text-xl font-bold">ASEA</h3>
-                                                    <h3 className="text-xl font-bold">Education</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Horizontal line from Center to Transfer Goal */}
-                                        <div className="w-32 h-0.5 bg-gray-400 mx-4"></div>
-
-                                        {/* Transfer Goal */}
-                                        <div className="flex flex-col items-center">
-                                            <div className="w-48 h-48 bg-rose-600 rounded-full flex items-center justify-center shadow-lg">
-                                                <div className="text-center text-white">
-                                                    <h3 className="text-2xl font-bold">Transfer</h3>
-                                                    <h3 className="text-2xl font-bold">Goal</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Vertical line from center down */}
-                                <div className="flex justify-center mb-4">
-                                    <div className="w-0.5 h-24 bg-gray-400"></div>
-                                </div>
-
-                                {/* Department Career Roadmaps Section */}
-                                <div className="text-center mb-6">
-                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Department Career Roadmaps</h3>
-                                </div>
-
-                                {/* Department List */}
-                                <div className="space-y-4 max-w-md mx-auto">
-                                    {departments.map((dept, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => handleDepartmentClick(dept.link)}
-                                            className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-gray-300 rounded-lg transition-all duration-200 group"
-                                        >
-                                            <div className="text-left">
-                                                <span className="text-lg font-medium text-gray-700 group-hover:text-gray-900 block">
-                                                    {dept.name}
-                                                </span>
-                                            </div>
-                                            <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all duration-200" />
-                                        </button>
-                                    ))}
-                                </div>
+                        {/* Image Section - Career Path Illustration */}
+                        <div className="mt-16 flex justify-center">
+                            <div className="w-full">
+                                <img
+                                    src="/asea-eng/images/career-path-diagram/career-path-diagram.png"
+                                    alt="Career Path Diagram"
+                                    className="w-full h-auto rounded-lg"
+                                />
                             </div>
                         </div>
 
-                        {/* Mobile Layout */}
-                        <div className="lg:hidden space-y-8">
-                            {/* Employment Goal */}
-                            <div className="flex flex-col items-center">
-                                <div className="w-40 h-40 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                                    <div className="text-center text-white">
-                                        <h3 className="text-lg font-bold">Employment</h3>
-                                        <h3 className="text-lg font-bold">Goal</h3>
-                                    </div>
-                                </div>
-                                <div className="w-0.5 h-8 bg-gray-400 mt-4"></div>
-                            </div>
+                        {/* Department Career Roadmaps Section */}
+                        <div className="text-center mb-6">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Department Career Roadmaps</h3>
+                        </div>
 
-                            {/* 본교입학 */}
-                            <div className="flex flex-col items-center">
-                                <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center shadow-lg">
-                                    <div className="text-center text-gray-700">
-                                        <h3 className="text-sm font-bold">ASEA</h3>
-                                        <h3 className="text-sm font-bold">Education</h3>
+                        {/* Department List */}
+                        <div className="space-y-4 max-w-md mx-auto">
+                            {departments.map((dept, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleDepartmentClick(dept.link)}
+                                    className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-gray-300 rounded-lg transition-all duration-200 group"
+                                >
+                                    <div className="text-left">
+                                        <span className="text-lg font-medium text-gray-700 group-hover:text-gray-900 block">
+                                            {dept.name}
+                                        </span>
                                     </div>
-                                </div>
-                                <div className="w-0.5 h-8 bg-gray-400 mt-4"></div>
-                            </div>
-
-                            {/* Transfer Goal */}
-                            <div className="flex flex-col items-center">
-                                <div className="w-40 h-40 bg-rose-600 rounded-full flex items-center justify-center shadow-lg">
-                                    <div className="text-center text-white">
-                                        <h3 className="text-lg font-bold">Transfer</h3>
-                                        <h3 className="text-lg font-bold">Goal</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Department Career Roadmaps */}
-                            <div className="mt-12">
-                                <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">Department Career Roadmaps</h3>
-                                <div className="space-y-3">
-                                    {departments.map((dept, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => handleDepartmentClick(dept.link)}
-                                            className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-gray-300 rounded-lg transition-all duration-200 group"
-                                        >
-                                            <div className="text-left">
-                                                <span className="text-base font-medium text-gray-700 group-hover:text-gray-900 block">
-                                                    {dept.name}
-                                                </span>
-                                                <span className="text-sm text-gray-500">
-                                                    {dept.korean}
-                                                </span>
-                                            </div>
-                                            <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all duration-200" />
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
+                                    <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all duration-200" />
+                                </button>
+                            ))}
                         </div>
                     </div>
                 </section>
