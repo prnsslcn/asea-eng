@@ -79,7 +79,7 @@ const CareerRoadmapPage: React.FC = () => {
                                     <div className="flex items-center justify-center">
                                         {/* Employment Goal */}
                                         <div className="flex flex-col items-center">
-                                            <div className="w-48 h-48 bg-blue-700 rounded-full flex items-center justify-center shadow-lg">
+                                            <div className="w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
                                                 <div className="text-center text-white">
                                                     <h3 className="text-2xl font-bold">Employment</h3>
                                                     <h3 className="text-2xl font-bold">Goal</h3>
@@ -92,7 +92,7 @@ const CareerRoadmapPage: React.FC = () => {
 
                                         {/* Center Circle - 본교입학 */}
                                         <div className="flex flex-col items-center">
-                                            <div className="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center shadow-lg border-4 border-gray-300">
+                                            <div className="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center shadow-lg">
                                                 <div className="text-center text-gray-700">
                                                     <h3 className="text-xl font-bold">ASEA</h3>
                                                     <h3 className="text-xl font-bold">Education</h3>
@@ -105,7 +105,7 @@ const CareerRoadmapPage: React.FC = () => {
 
                                         {/* Transfer Goal */}
                                         <div className="flex flex-col items-center">
-                                            <div className="w-48 h-48 bg-sky-500 rounded-full flex items-center justify-center shadow-lg">
+                                            <div className="w-48 h-48 bg-rose-600 rounded-full flex items-center justify-center shadow-lg">
                                                 <div className="text-center text-white">
                                                     <h3 className="text-2xl font-bold">Transfer</h3>
                                                     <h3 className="text-2xl font-bold">Goal</h3>
@@ -149,7 +149,7 @@ const CareerRoadmapPage: React.FC = () => {
                         <div className="lg:hidden space-y-8">
                             {/* Employment Goal */}
                             <div className="flex flex-col items-center">
-                                <div className="w-40 h-40 bg-blue-700 rounded-full flex items-center justify-center shadow-lg">
+                                <div className="w-40 h-40 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
                                     <div className="text-center text-white">
                                         <h3 className="text-lg font-bold">Employment</h3>
                                         <h3 className="text-lg font-bold">Goal</h3>
@@ -160,7 +160,7 @@ const CareerRoadmapPage: React.FC = () => {
 
                             {/* 본교입학 */}
                             <div className="flex flex-col items-center">
-                                <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center shadow-lg border-4 border-gray-300">
+                                <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center shadow-lg">
                                     <div className="text-center text-gray-700">
                                         <h3 className="text-sm font-bold">ASEA</h3>
                                         <h3 className="text-sm font-bold">Education</h3>
@@ -171,7 +171,7 @@ const CareerRoadmapPage: React.FC = () => {
 
                             {/* Transfer Goal */}
                             <div className="flex flex-col items-center">
-                                <div className="w-40 h-40 bg-sky-500 rounded-full flex items-center justify-center shadow-lg">
+                                <div className="w-40 h-40 bg-rose-600 rounded-full flex items-center justify-center shadow-lg">
                                     <div className="text-center text-white">
                                         <h3 className="text-lg font-bold">Transfer</h3>
                                         <h3 className="text-lg font-bold">Goal</h3>
