@@ -11,6 +11,7 @@ import AdmissionGuidePage from '../pages/admission/AdmissionGuidePage';
 import ApplicationProcessPage from '../pages/admission/ApplicationProcessPage';
 import CareerRoadmapPage from '../pages/admission/CareerRoadmapPage';
 import FreshmanScholarshipsPage from '../pages/admission/FreshmanScholarshipsPage';
+import AdmissionLayout from '../pages/admission/shared/AdmissionLayout';
 
 // About 관련 컴포넌트들
 import {
@@ -105,12 +106,13 @@ const Router: React.FC = () => {
                 {/* 세부 과정 라우팅 (추후 구현) */}
                 <Route path="/curriculum/:deptId/:courseId" element={<CourseDetailPage />} />
 
-                {/* 입학안내 라우팅 */}
-                <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionPage />} />
-                <Route path={ROUTES.ADMISSION.GUIDE} element={<AdmissionGuidePage />} />
-                <Route path={ROUTES.ADMISSION.PROCESS} element={<ApplicationProcessPage />} />
-                <Route path={ROUTES.ADMISSION.ROADMAP} element={<CareerRoadmapPage />} />
-                <Route path={ROUTES.ADMISSION.SCHOLARSHIP} element={<FreshmanScholarshipsPage />} />
+                {/* 입학안내 중첩 라우팅 */}
+                <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionLayout />}>
+                    <Route path="guide" element={<AdmissionGuidePage />} />
+                    <Route path="process" element={<ApplicationProcessPage />} />
+                    <Route path="roadmap" element={<CareerRoadmapPage />} />
+                    <Route path="scholarships" element={<FreshmanScholarshipsPage />} />
+                </Route>
                 <Route path={ROUTES.ADMISSION.WILDCARD} element={<AdmissionPage />} />
 
                 {/* 취업지원 라우팅 */}
