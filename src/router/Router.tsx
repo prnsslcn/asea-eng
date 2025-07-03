@@ -111,7 +111,7 @@ const Router: React.FC = () => {
                     <Route path="guide" element={<AdmissionGuidePage />} />
                     <Route path="process" element={<ApplicationProcessPage />} />
                     <Route path="roadmap" element={<CareerRoadmapPage />} />
-                    <Route path="scholarships" element={<FreshmanScholarshipsPage />} />
+                    <Route path="scholarship" element={<FreshmanScholarshipsPage />} />
                 </Route>
                 <Route path={ROUTES.ADMISSION.WILDCARD} element={<AdmissionPage />} />
 

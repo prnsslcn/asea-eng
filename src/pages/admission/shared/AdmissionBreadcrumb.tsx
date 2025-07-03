@@ -11,7 +11,7 @@ const breadcrumbMap: { [key: string]: string } = {
     '/admission/guide': 'Admission Guide',
     '/admission/process': 'Application Process',
     '/admission/roadmap': 'Career Roadmap',
-    '/admission/scholarships': 'Freshman Scholarships'
+    '/admission/scholarship': 'Freshman Scholarships'
 };
 
 const AdmissionBreadcrumb: React.FC = () => {
