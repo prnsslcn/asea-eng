@@ -31,54 +31,48 @@ const menuStructure = {
         { name: "Career Roadmap", link: "/admission/roadmap" },
         { name: "Freshman Scholarships", link: "/admission/scholarship" }
     ],
-    "Programs (교육과정)": {
-        "Aviation Maintenance (항공정비계열)": [
-            { name: "Aircraft Maintenance Course (항공정비사과정)", link: "/curriculum/01/01" },
-            { name: "Aviation Mechanical Course (항공기계과정)", link: "/curriculum/01/02" },
-            { name: "Aviation NCO Course (항공부사관과정)", link: "/curriculum/01/03" },
-            { name: "Drone Operation & Maintenance Course (드론(조종.정비)과정)", link: "/curriculum/01/04" },
-            { name: "Aviation Maintenance Engineering [3-Year] (항공정비공학사과정[3년제])", link: "/curriculum/01/05" }
+    "Departments": {
+        "Aviation Maintenance": [
+            { name: "Aircraft Maintenance Course", link: "/departments/aviation-maintenance/programs/aircraft-maintenance" },
+            { name: "Aviation Mechanical Course", link: "/departments/aviation-maintenance/programs/aircraft-mechanic" },
+            { name: "Aviation NCO Course", link: "/departments/aviation-maintenance/programs/military-nco" },
+            { name: "Drone Operation & Maintenance Course", link: "/departments/aviation-maintenance/programs/drone" },
+            { name: "Aviation Maintenance Engineering [3-Year]", link: "/departments/aviation-maintenance/programs/aviation-engineering" }
         ],
-        "Smart Safety Diagnostics (스마트안전진단계열)": [
-            { name: "Ultrasonic Diagnostics Course (초음파진단과정)", link: "/curriculum/02/01" },
-            { name: "Aviation NDT Course (항공비파괴검사과정)", link: "/curriculum/02/02" },
-            { name: "Metallurgical Engineering [3-Year] (금속공학사과정[3년제])", link: "/curriculum/02/03" }
+        "Smart Safety Diagnostics": [
+            { name: "Ultrasonic Diagnostics Course", link: "/departments/smart-safety/programs/ultrasonic-inspection" },
+            { name: "Aviation NDT Course", link: "/departments/smart-safety/programs/ndt-inspection" },
+            { name: "Metallurgical Engineering [3-Year]", link: "/departments/smart-safety/programs/metallurgy-engineering" }
         ],
-        "Aviation Tourism (항공관광계열)": [
-            { name: "Flight Attendant Course (승무원과정)", link: "/curriculum/03/01" },
-            { name: "Resort Tourism Specialist Course (리조트관광전문가과정)", link: "/curriculum/03/05" },
-            { name: "Facility Management Specialist Course (실시설전문가과정)", link: "/curriculum/03/03" }
+        "Aviation Tourism": [
+            { name: "Flight Attendant Course", link: "/departments/aviation-tourism/programs/cabin-crew" },
+            { name: "Hotel Tourism Specialist Course", link: "/departments/aviation-tourism/programs/hotel-tourism" },
+            { name: "Food & Beverage Specialist Course", link: "/departments/aviation-tourism/programs/food-beverage" }
         ],
-        "Tourism Management (관광경영계열)": [
-            { name: "Tourism Service Course (관광서비스과정)", link: "/curriculum/04/01" },
-            { name: "Resort & F&B Course (리조트·외식과정)", link: "/curriculum/04/02" },
-            { name: "Casino Dealer Course (카지노딜러과정)", link: "/curriculum/04/03" },
-            { name: "Cruise Staff Course (크루즈승무원과정)", link: "/curriculum/04/04" }
+        "Aviation Security": [
+            { name: "Airport Security Course", link: "/departments/aviation-security/programs/aviation-security" },
+            { name: "VIP Security Course", link: "/departments/aviation-security/programs/security-escort" },
+            { name: "PMC Security Course", link: "/departments/aviation-security/programs/pmc-security" },
+            { name: "Action Acting Course", link: "/departments/aviation-security/programs/action-acting" },
+            { name: "Sports Conditioning Course", link: "/departments/aviation-security/programs/sports-conditioning" }
         ],
-        "Aviation Security (항공보안계열)": [
-            { name: "Airport Security Course (항공보안과정)", link: "/curriculum/05/01" },
-            { name: "VIP Security Course (의전경비과정)", link: "/curriculum/05/02" },
-            { name: "PMC Security Course (PMC경비과정)", link: "/curriculum/05/05" },
-            { name: "Acting Course (암실연기과정)", link: "/curriculum/05/04" },
-            { name: "Entertainment Course (스카치콘서트엔터테인먼트과정)", link: "/curriculum/05/06" }
-        ],
-        "Defense & Police AI (국방경찰AI계열)": [
-            { name: "Military Officer Course (국방사관과정)", link: "/curriculum/06/01" },
-            { name: "Military NCO Course (국방부사관과정)", link: "/curriculum/06/02" },
-            { name: "Defense AI Course (국방AI과정)", link: "/curriculum/06/03" },
-            { name: "Police Officer Course (경찰공무원과정)", link: "/curriculum/06/04" }
+        "Defense & Police AI": [
+            { name: "Military Officer Course", link: "/departments/defense-police-ai/programs/military-academy" },
+            { name: "Military NCO Course", link: "/departments/defense-police-ai/programs/military-nco" },
+            { name: "Defense AI Course", link: "/departments/defense-police-ai/programs/defense-ai" },
+            { name: "Police Officer Course", link: "/departments/defense-police-ai/programs/police-officer" }
         ]
     },
-    "Career Support (취업지원)": [
-        { name: "Employment Status (취업현황)", link: "/employment/status" },
-        { name: "Industry Partnership (산학협력)", link: "/employment/partnership" },
-        { name: "Career Programs (취업프로그램)", link: "/employment/programs" }
+    "Career Support": [
+        { name: "Employment Status", link: "/employment/status" },
+        { name: "Industry Partnership", link: "/employment/partnership" },
+        { name: "Career Programs", link: "/employment/programs" }
     ],
-    "Community (커뮤니티)": [
-        { name: "Announcements (공지사항)", link: "/community/notice" },
-        { name: "News (보도자료)", link: "/community/news" },
-        { name: "Gallery (갤러리)", link: "/community/gallery" },
-        { name: "Employment News (취업현황)", link: "/community/employment" }
+    "Community": [
+        { name: "Announcements", link: "/community/notice" },
+        { name: "News", link: "/community/news" },
+        { name: "Gallery", link: "/community/gallery" },
+        { name: "Employment News", link: "/community/employment" }
     ]
 };
 
@@ -128,7 +122,7 @@ const Header: React.FC = () => {
     }, []);
 
     const renderEducationMegaMenu = () => {
-        const educationData = menuStructure["Programs (교육과정)"] as EducationMenu;
+        const educationData = menuStructure["Departments"] as EducationMenu;
 
         return (
             <div
@@ -137,11 +131,27 @@ const Header: React.FC = () => {
                 onMouseLeave={handleMegaMenuLeave}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    {/* Department Overview Link */}
+                    <div className="mb-6 p-4 bg-blue-50 rounded-lg">
+                        <button
+                            onClick={() => handleNavigation('/departments')}
+                            className="text-blue-900 hover:text-blue-700 font-semibold text-lg transition-colors"
+                        >
+                            🎓 View All Departments Overview
+                        </button>
+                        <p className="text-sm text-blue-700 mt-1">Explore our comprehensive academic programs</p>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {Object.entries(educationData).map(([deptName, courses]: [string, Course[]]) => (
                             <div key={deptName} className="space-y-4">
                                 <h3 className="font-bold text-lg text-gray-900 border-b border-blue-200 pb-2">
-                                    {deptName}
+                                    <button
+                                        onClick={() => handleNavigation(`/departments/${getDepartmentSlug(deptName)}`)}
+                                        className="hover:text-blue-600 transition-colors text-left w-full"
+                                    >
+                                        {deptName}
+                                    </button>
                                 </h3>
                                 <ul className="space-y-2">
                                     {courses.map((course: Course, index: number) => (
@@ -159,7 +169,7 @@ const Header: React.FC = () => {
                         ))}
                     </div>
 
-                    {/* Programs Section Highlights */}
+                    {/* Department Section Highlights */}
                     <div className="mt-8 pt-6 border-t border-gray-200">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-blue-50 p-4 rounded-lg">
@@ -208,7 +218,7 @@ const Header: React.FC = () => {
     const renderMegaMenu = () => {
         if (!activeMenu) return null;
 
-        if (activeMenu === "Programs (교육과정)") {
+        if (activeMenu === "Departments") {
             return renderEducationMegaMenu();
         }
 
@@ -219,6 +229,18 @@ const Header: React.FC = () => {
         }
 
         return null;
+    };
+
+    // Department name을 URL slug로 변환하는 헬퍼 함수
+    const getDepartmentSlug = (deptName: string): string => {
+        const slugMap: { [key: string]: string } = {
+            "Aviation Maintenance": "aviation-maintenance",
+            "Smart Safety Diagnostics": "smart-safety",
+            "Aviation Tourism": "aviation-tourism",
+            "Aviation Security": "aviation-security",
+            "Defense & Police AI": "defense-police-ai"
+        };
+        return slugMap[deptName] || deptName.toLowerCase().replace(/\s+/g, '-');
     };
 
     return (
@@ -289,11 +311,15 @@ const Header: React.FC = () => {
                                         className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left"
                                         onClick={() => {
                                             // 모바일에서는 첫 번째 서브메뉴로 이동하거나 토글 기능 구현
-                                            const firstSubmenu = Array.isArray(menuStructure[menuName as keyof typeof menuStructure])
-                                                ? (menuStructure[menuName as keyof typeof menuStructure] as MenuItem[])[0]?.link
-                                                : null;
-                                            if (firstSubmenu) {
-                                                handleNavigation(firstSubmenu);
+                                            if (menuName === "Departments") {
+                                                handleNavigation("/departments");
+                                            } else {
+                                                const firstSubmenu = Array.isArray(menuStructure[menuName as keyof typeof menuStructure])
+                                                    ? (menuStructure[menuName as keyof typeof menuStructure] as MenuItem[])[0]?.link
+                                                    : null;
+                                                if (firstSubmenu) {
+                                                    handleNavigation(firstSubmenu);
+                                                }
                                             }
                                         }}
                                     >
