@@ -32,7 +32,12 @@ const breadcrumbMap: { [key: string]: string } = {
     '/departments/aviation-security/pmc-security': 'PMC Security Program',
     '/departments/aviation-security/action-acting': 'Action Acting Program',
     '/departments/aviation-security/sports-rehabilitation': 'Sports Rehabilitation Program',
-    // Programs - Defense Police AI
+    // Programs 중간 경로 매핑 추가
+    '/departments/aviation-maintenance/programs': 'Programs',
+    '/departments/smart-safety/programs': 'Programs',
+    '/departments/aviation-tourism/programs': 'Programs',
+    '/departments/aviation-security/programs': 'Programs',
+    '/departments/defense-police-ai/programs': 'Programs',
     '/departments/defense-police-ai/national-defense-officer': 'National Defense Officer Program',
     '/departments/defense-police-ai/national-defense-nco': 'National Defense NCO Program',
     '/departments/defense-police-ai/national-defense-ai': 'National Defense AI Program',
@@ -42,6 +47,15 @@ const breadcrumbMap: { [key: string]: string } = {
 const DepartmentsBreadcrumb: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
+
+    // 클릭 불가능한 중간 경로들 정의 (programs는 실제 페이지가 없음)
+    const nonClickablePaths = [
+        '/departments/aviation-maintenance/programs',
+        '/departments/smart-safety/programs',
+        '/departments/aviation-tourism/programs',
+        '/departments/aviation-security/programs',
+        '/departments/defense-police-ai/programs'
+    ];
 
     const generateBreadcrumbs = (): BreadcrumbItem[] => {
         const pathnames = location.pathname.split('/').filter(x => x);
@@ -91,8 +105,13 @@ const DepartmentsBreadcrumb: React.FC = () => {
                                 <span className="text-blue-600 font-medium">
                                     {breadcrumb.name}
                                 </span>
+                            ) : nonClickablePaths.includes(breadcrumb.path) ? (
+                                // 클릭 불가능한 중간 경로 (programs 등)
+                                <span className="text-gray-400 cursor-not-allowed">
+                                    {breadcrumb.name}
+                                </span>
                             ) : (
-                                // 이전 페이지들 (클릭 가능)
+                                // 클릭 가능한 이전 페이지들
                                 <button
                                     onClick={() => navigate(breadcrumb.path)}
                                     className="text-gray-500 hover:text-blue-600 transition-colors"
