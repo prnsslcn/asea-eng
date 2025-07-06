@@ -6,11 +6,11 @@ const CareerRoadmapPage: React.FC = () => {
     const navigate = useNavigate();
 
     const departments = [
-        { name: 'Aviation Maintenance', link: '/curriculum/01', korean: '항공정비계열' },
-        { name: 'Smart Safety Diagnostics', link: '/curriculum/02', korean: '스마트안전진단계열' },
-        { name: 'Aviation Tourism', link: '/curriculum/03', korean: '항공관광계열' },
-        { name: 'Aviation Security', link: '/curriculum/05', korean: '항공보안계열' },
-        { name: 'Defense & Police AI', link: '/curriculum/06', korean: '국방경찰AI계열' }
+        { name: 'Aviation Maintenance', link: '/departments/aviation-maintenance', korean: '항공정비계열' },
+        { name: 'Smart Safety Diagnostics', link: '/departments/smart-safety', korean: '스마트안전진단계열' },
+        { name: 'Aviation Tourism', link: '/departments/aviation-tourism', korean: '항공관광계열' },
+        { name: 'Aviation Security', link: '/departments/aviation-security', korean: '항공보안계열' },
+        { name: 'Defense & Police AI', link: '/departments/defense-police-ai', korean: '국방경찰AI계열' }
     ];
 
     const handleDepartmentClick = (link: string) => {
