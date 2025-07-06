@@ -165,9 +165,9 @@ const DepartmentsSection: React.FC = () => {
         }
     };
 
-    const handleDepartmentClick = (departmentId: string) => {
-        navigate(`/departments/${departmentId}`);
-    };
+    // const handleDepartmentClick = (departmentId: string) => {
+    //     navigate(`/departments/${departmentId}`);
+    // };
 
     return (
         <section className="py-16 bg-gray-50">
@@ -192,8 +192,8 @@ const DepartmentsSection: React.FC = () => {
                         return (
                             <div
                                 key={department.id}
-                                onClick={() => handleDepartmentClick(department.id)}
-                                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+                                // onClick={() => handleDepartmentClick(department.id)}
+                                className="bg-white rounded-2xl shadow-lg"
                             >
                                 {/* Card Header */}
                                 <div className={`${colors.bg} text-white p-6 rounded-t-2xl`}>
