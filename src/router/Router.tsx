@@ -27,7 +27,7 @@ import {
 
 // Departments (기존 Curriculum)
 // import DepartmentLayout from '../pages/departments/shared/DepartmentLayout';
-// import DepartmentsOverviewPage from '../pages/departments/DepartmentsOverviewPage';
+import DepartmentsOverviewPage from '../pages/departments/DepartmentsOverviewPage';
 import AviationMaintenancePage from '../pages/departments/AviationMaintenancePage';
 import SmartSafetyPage from '../pages/departments/SmartSafetyPage';
 import AviationTourismPage from '../pages/departments/AviationTourismPage';
@@ -94,7 +94,7 @@ const Router: React.FC = () => {
                 {/* Departments (교육과정) 중첩 라우팅 */}
                 <Route path={ROUTES.DEPARTMENTS.ROOT} >
                     {/*element={<DepartmentLayout />}*/}
-                    {/*<Route index element={<DepartmentsOverviewPage />} />*/}
+                    <Route index element={<DepartmentsOverviewPage />} />
                     <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />
                     <Route path="smart-safety" element={<SmartSafetyPage />} />
                     <Route path="aviation-tourism" element={<AviationTourismPage />} />
