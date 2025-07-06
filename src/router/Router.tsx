@@ -26,16 +26,16 @@ import {
 } from '../pages/about';
 
 // Departments (기존 Curriculum)
-import DepartmentLayout from '../pages/departments/shared/DepartmentLayout';
-import DepartmentsOverviewPage from '../pages/departments/DepartmentsOverviewPage';
-import AviationMaintenancePage from '../pages/departments/AviationMaintenancePage';
-import SmartSafetyPage from '../pages/departments/SmartSafetyPage';
-import AviationTourismPage from '../pages/departments/AviationTourismPage';
-import AviationSecurityPage from '../pages/departments/AviationSecurityPage';
-import DefensePoliceAIPage from '../pages/departments/DefensePoliceAIPage';
+// import DepartmentLayout from '../pages/departments/shared/DepartmentLayout';
+// import DepartmentsOverviewPage from '../pages/departments/DepartmentsOverviewPage';
+// import AviationMaintenancePage from '../pages/departments/AviationMaintenancePage';
+// import SmartSafetyPage from '../pages/departments/SmartSafetyPage';
+// import AviationTourismPage from '../pages/departments/AviationTourismPage';
+// import AviationSecurityPage from '../pages/departments/AviationSecurityPage';
+// import DefensePoliceAIPage from '../pages/departments/DefensePoliceAIPage';
 
 // Programs (세부 전공)
-import ProgramDetailPage from '../pages/departments/programs/ProgramDetailPage';
+// import ProgramDetailPage from '../pages/departments/programs/ProgramDetailPage';
 
 // 임시 페이지 컴포넌트들
 const EmploymentPage: React.FC = () => (
@@ -92,20 +92,20 @@ const Router: React.FC = () => {
                 </Route>
 
                 {/* Departments (교육과정) 중첩 라우팅 */}
-                <Route path={ROUTES.DEPARTMENTS.ROOT} element={<DepartmentLayout />}>
-                    <Route index element={<DepartmentsOverviewPage />} />
-                    <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />
-                    <Route path="smart-safety" element={<SmartSafetyPage />} />
-                    <Route path="aviation-tourism" element={<AviationTourismPage />} />
-                    <Route path="aviation-security" element={<AviationSecurityPage />} />
-                    <Route path="defense-police-ai" element={<DefensePoliceAIPage />} />
-                </Route>
+                {/*<Route path={ROUTES.DEPARTMENTS.ROOT} element={<DepartmentLayout />}>*/}
+                {/*    <Route index element={<DepartmentsOverviewPage />} />*/}
+                {/*    <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />*/}
+                {/*    <Route path="smart-safety" element={<SmartSafetyPage />} />*/}
+                {/*    <Route path="aviation-tourism" element={<AviationTourismPage />} />*/}
+                {/*    <Route path="aviation-security" element={<AviationSecurityPage />} />*/}
+                {/*    <Route path="defense-police-ai" element={<DefensePoliceAIPage />} />*/}
+                {/*</Route>*/}
 
-                {/* 세부 프로그램 라우팅 */}
-                <Route
-                    path="/departments/:departmentId/programs/:programId"
-                    element={<ProgramDetailPage />}
-                />
+                {/*/!* 세부 프로그램 라우팅 *!/*/}
+                {/*<Route*/}
+                {/*    path="/departments/:departmentId/programs/:programId"*/}
+                {/*    element={<ProgramDetailPage />}*/}
+                {/*/>*/}
 
                 {/* 입학안내 중첩 라우팅 */}
                 <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionLayout />}>
