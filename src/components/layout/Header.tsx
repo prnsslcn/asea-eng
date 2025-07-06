@@ -134,11 +134,10 @@ const Header: React.FC = () => {
                     <div className="mb-6 p-4 bg-blue-50 rounded-lg">
                         <button
                             onClick={() => handleNavigation('/departments')}
-                            className="text-blue-900 hover:text-blue-700 font-semibold text-lg transition-colors"
+                            className="text-blue-900 hover:text-blue-700 font-semibold text-xl transition-colors"
                         >
                             🎓 View All Departments Overview
                         </button>
-                        <p className="text-sm text-blue-700 mt-1">Explore our comprehensive academic programs</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -166,24 +165,6 @@ const Header: React.FC = () => {
                                 </ul>
                             </div>
                         ))}
-                    </div>
-
-                    {/* Department Section Highlights */}
-                    <div className="mt-8 pt-6 border-t border-gray-200">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-blue-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-blue-900 mb-2">🎓 Aviation Excellence</h4>
-                                <p className="text-sm text-blue-700">Korea's Leading Aviation Education Institution</p>
-                            </div>
-                            <div className="bg-green-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-green-900 mb-2">🏢 Industry Partnership</h4>
-                                <p className="text-sm text-green-700">Strong Industry Connections & Career Support</p>
-                            </div>
-                            <div className="bg-purple-50 p-4 rounded-lg">
-                                <h4 className="font-semibold text-purple-900 mb-2">📅 Since 1993</h4>
-                                <p className="text-sm text-purple-700">Over 30 Years of Aviation Education Excellence</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
