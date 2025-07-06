@@ -44,45 +44,6 @@ const AviationTourismPage: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Breadcrumb */}
-            <div className="bg-gray-50 py-4">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex" aria-label="Breadcrumb">
-                        <ol className="flex items-center space-x-4">
-                            <li>
-                                <button
-                                    onClick={() => navigate('/')}
-                                    className="text-gray-500 hover:text-gray-700"
-                                >
-                                    Home
-                                </button>
-                            </li>
-                            <li>
-                                <div className="flex items-center">
-                                    <svg className="flex-shrink-0 h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                    <button
-                                        onClick={() => navigate('/departments')}
-                                        className="ml-4 text-gray-500 hover:text-gray-700"
-                                    >
-                                        Departments
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="flex items-center">
-                                    <svg className="flex-shrink-0 h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                    <span className="ml-4 text-blue-900 font-medium">Aviation Tourism</span>
-                                </div>
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-
             {/* Hero Section */}
             <div className="relative bg-gradient-to-r from-blue-900 to-blue-800 text-white">
                 <div className="absolute inset-0 bg-black opacity-20"></div>

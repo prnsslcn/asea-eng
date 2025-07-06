@@ -34,29 +34,6 @@ const ProgramDetailPage: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Breadcrumb */}
-            <div className="bg-white border-b">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <nav className="flex items-center space-x-2 text-sm text-gray-600">
-                        <button
-                            onClick={() => navigate('/departments')}
-                            className="hover:text-blue-900 transition-colors"
-                        >
-                            Departments
-                        </button>
-                        <span>/</span>
-                        <button
-                            onClick={() => navigate(`/departments/${departmentId}`)}
-                            className="hover:text-blue-900 transition-colors"
-                        >
-                            {department.name}
-                        </button>
-                        <span>/</span>
-                        <span className="text-gray-900 font-medium">{program.name}</span>
-                    </nav>
-                </div>
-            </div>
-
             {/* Hero Section */}
             <div className="bg-blue-900 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
