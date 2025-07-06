@@ -34,32 +34,31 @@ const menuStructure = {
     "Departments": {
         "Aviation Maintenance": [
             { name: "Aircraft Maintenance Course", link: "/departments/aviation-maintenance/programs/aircraft-maintenance" },
-            { name: "Aviation Mechanical Course", link: "/departments/aviation-maintenance/programs/aircraft-mechanic" },
-            { name: "Aviation NCO Course", link: "/departments/aviation-maintenance/programs/military-nco" },
-            { name: "Drone Operation & Maintenance Course", link: "/departments/aviation-maintenance/programs/drone" },
-            { name: "Aviation Maintenance Engineering [3-Year]", link: "/departments/aviation-maintenance/programs/aviation-engineering" }
+            { name: "Aviation Mechanical Course", link: "/departments/aviation-maintenance/programs/aviation-mechanical" },
+            { name: "Aviation NCO Course", link: "/departments/aviation-maintenance/programs/aviation-nco" },
+            { name: "Drone Operation & Maintenance Course", link: "/departments/aviation-maintenance/programs/drone-operation" }
         ],
         "Smart Safety Diagnostics": [
-            { name: "Ultrasonic Diagnostics Course", link: "/departments/smart-safety/programs/ultrasonic-inspection" },
-            { name: "Aviation NDT Course", link: "/departments/smart-safety/programs/ndt-inspection" },
-            { name: "Metallurgical Engineering [3-Year]", link: "/departments/smart-safety/programs/metallurgy-engineering" }
+            { name: "Aviation NDT Course", link: "/departments/smart-safety/programs/aviation-ndt" },
+            { name: "Ultrasonic Diagnostics Course", link: "/departments/smart-safety/programs/ultrasonic-diagnostics" },
+            { name: "Metallurgical Engineering [3-Year]", link: "/departments/smart-safety/programs/metallurgical-engineering" }
         ],
         "Aviation Tourism": [
-            { name: "Flight Attendant Course", link: "/departments/aviation-tourism/programs/cabin-crew" },
-            { name: "Hotel Tourism Specialist Course", link: "/departments/aviation-tourism/programs/hotel-tourism" },
-            { name: "Food & Beverage Specialist Course", link: "/departments/aviation-tourism/programs/food-beverage" }
+            { name: "Flight Attendant Course", link: "/departments/aviation-tourism/programs/flight-attendant" },
+            { name: "Food & Beverage Specialist Course", link: "/departments/aviation-tourism/programs/food-beverage-specialist" },
+            { name: "Tourism Specialist Course", link: "/departments/aviation-tourism/programs/tourism-specialist" }
         ],
         "Aviation Security": [
-            { name: "Airport Security Course", link: "/departments/aviation-security/programs/aviation-security" },
-            { name: "VIP Security Course", link: "/departments/aviation-security/programs/security-escort" },
+            { name: "Airport Security Course", link: "/departments/aviation-security/programs/airport-security" },
+            { name: "VIP Security Course", link: "/departments/aviation-security/programs/vip-security" },
             { name: "PMC Security Course", link: "/departments/aviation-security/programs/pmc-security" },
             { name: "Action Acting Course", link: "/departments/aviation-security/programs/action-acting" },
-            { name: "Sports Conditioning Course", link: "/departments/aviation-security/programs/sports-conditioning" }
+            { name: "Sports Rehabilitation Course", link: "/departments/aviation-security/programs/sports-rehabilitation" }
         ],
         "Defense & Police AI": [
-            { name: "Military Officer Course", link: "/departments/defense-police-ai/programs/military-academy" },
-            { name: "Military NCO Course", link: "/departments/defense-police-ai/programs/military-nco" },
-            { name: "Defense AI Course", link: "/departments/defense-police-ai/programs/defense-ai" },
+            { name: "National Defense Officer Course", link: "/departments/defense-police-ai/programs/national-defense-officer" },
+            { name: "National Defense NCO Course", link: "/departments/defense-police-ai/programs/national-defense-nco" },
+            { name: "National Defense AI Course", link: "/departments/defense-police-ai/programs/national-defense-ai" },
             { name: "Police Officer Course", link: "/departments/defense-police-ai/programs/police-officer" }
         ]
     },
@@ -238,7 +237,7 @@ const Header: React.FC = () => {
             "Smart Safety Diagnostics": "smart-safety",
             "Aviation Tourism": "aviation-tourism",
             "Aviation Security": "aviation-security",
-            "Defense & Police AI": "defense-police-ai"
+            "Defense & Police AI": "defense-police-ai"  // 여기가 중요한 수정점
         };
         return slugMap[deptName] || deptName.toLowerCase().replace(/\s+/g, '-');
     };
