@@ -28,7 +28,7 @@ import {
 // Departments (기존 Curriculum)
 // import DepartmentLayout from '../pages/departments/shared/DepartmentLayout';
 // import DepartmentsOverviewPage from '../pages/departments/DepartmentsOverviewPage';
-// import AviationMaintenancePage from '../pages/departments/AviationMaintenancePage';
+import AviationMaintenancePage from '../pages/departments/AviationMaintenancePage';
 // import SmartSafetyPage from '../pages/departments/SmartSafetyPage';
 // import AviationTourismPage from '../pages/departments/AviationTourismPage';
 // import AviationSecurityPage from '../pages/departments/AviationSecurityPage';
@@ -92,14 +92,15 @@ const Router: React.FC = () => {
                 </Route>
 
                 {/* Departments (교육과정) 중첩 라우팅 */}
-                {/*<Route path={ROUTES.DEPARTMENTS.ROOT} element={<DepartmentLayout />}>*/}
-                {/*    <Route index element={<DepartmentsOverviewPage />} />*/}
-                {/*    <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />*/}
-                {/*    <Route path="smart-safety" element={<SmartSafetyPage />} />*/}
-                {/*    <Route path="aviation-tourism" element={<AviationTourismPage />} />*/}
-                {/*    <Route path="aviation-security" element={<AviationSecurityPage />} />*/}
-                {/*    <Route path="defense-police-ai" element={<DefensePoliceAIPage />} />*/}
-                {/*</Route>*/}
+                <Route path={ROUTES.DEPARTMENTS.ROOT} >
+                    {/*element={<DepartmentLayout />}*/}
+                    {/*<Route index element={<DepartmentsOverviewPage />} />*/}
+                    <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />
+                    {/*<Route path="smart-safety" element={<SmartSafetyPage />} />*/}
+                    {/*<Route path="aviation-tourism" element={<AviationTourismPage />} />*/}
+                    {/*<Route path="aviation-security" element={<AviationSecurityPage />} />*/}
+                    {/*<Route path="defense-police-ai" element={<DefensePoliceAIPage />} />*/}
+                </Route>
 
                 {/* 세부 프로그램 라우팅 */}
                 <Route
