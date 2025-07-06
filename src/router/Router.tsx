@@ -25,8 +25,10 @@ import {
     LocationPage
 } from '../pages/about';
 
-// Departments (기존 Curriculum)
-// import DepartmentLayout from '../pages/departments/shared/DepartmentLayout';
+// Departments Layout
+import DepartmentsLayout from '../pages/departments/shared/DepartmentsLayout';
+
+// Departments Pages
 import DepartmentsOverviewPage from '../pages/departments/DepartmentsOverviewPage';
 import AviationMaintenancePage from '../pages/departments/AviationMaintenancePage';
 import SmartSafetyPage from '../pages/departments/SmartSafetyPage';
@@ -91,22 +93,18 @@ const Router: React.FC = () => {
                     <Route path="location" element={<LocationPage />} />
                 </Route>
 
-                {/* Departments (교육과정) 중첩 라우팅 */}
-                <Route path={ROUTES.DEPARTMENTS.ROOT} >
-                    {/*element={<DepartmentLayout />}*/}
+                {/* Departments (교육과정) 중첩 라우팅 - DepartmentsLayout 적용 */}
+                <Route path={ROUTES.DEPARTMENTS.ROOT} element={<DepartmentsLayout />}>
                     <Route index element={<DepartmentsOverviewPage />} />
                     <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />
                     <Route path="smart-safety" element={<SmartSafetyPage />} />
                     <Route path="aviation-tourism" element={<AviationTourismPage />} />
                     <Route path="aviation-security" element={<AviationSecurityPage />} />
                     <Route path="defense-police-ai" element={<DefensePoliceAIPage />} />
-                </Route>
 
-                {/* 세부 프로그램 라우팅 */}
-                <Route
-                    path="/departments/:departmentId/programs/:programId"
-                    element={<ProgramDetailPage />}
-                />
+                    {/* 세부 프로그램들도 DepartmentsLayout 내부로 이동 */}
+                    <Route path=":departmentId/programs/:programId" element={<ProgramDetailPage />} />
+                </Route>
 
                 {/* 입학안내 중첩 라우팅 */}
                 <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionLayout />}>
