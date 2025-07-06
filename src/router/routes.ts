@@ -41,54 +41,44 @@ export const ROUTES = {
     },
 } as const;
 
-// Department ID 매핑 (기존 숫자 ID와 새로운 문자열 ID 연결)
+// Department ID 매핑 (URL ID → ProgramData.ts ID)
 export const DEPARTMENT_ID_MAP = {
-    '01': 'aviation-maintenance',
-    '02': 'smart-safety',
-    '03': 'aviation-tourism',
-    '04': 'aviation-security',
-    '05': 'defense-police-ai',
+    'aviation-maintenance': 'aviation-maintenance',
+    'smart-safety': 'smart-safety',
+    'aviation-tourism': 'aviation-tourism',
+    'aviation-security': 'aviation-security',
+    'defense-police-ai': 'national-defense-police-ai',  // ✅ 수정됨
 } as const;
 
-// 역방향 매핑 (문자열 ID → 숫자 ID)
-export const REVERSE_DEPARTMENT_ID_MAP = {
-    'aviation-maintenance': '01',
-    'smart-safety': '02',
-    'aviation-tourism': '03',
-    'aviation-security': '04',
-    'defense-police-ai': '05',
-} as const;
-
-// Program ID 매핑 (항공정비계열 예시)
+// Program ID 매핑 (ProgramData.ts와 정확히 일치)
 export const PROGRAM_ID_MAP = {
     'aviation-maintenance': {
         '01': 'aircraft-maintenance',     // 항공정비사과정
-        '02': 'aircraft-mechanic',        // 항공기계과정
-        '03': 'military-nco',            // 항공부사관과정
-        '04': 'drone',                   // 드론과정
-        '05': 'aviation-engineering',    // 항공정비공학사과정[3년제]
+        '02': 'aviation-mechanical',      // ✅ 수정됨
+        '03': 'aviation-nco',            // ✅ 수정됨
+        '04': 'drone-operation',         // ✅ 수정됨
     },
     'smart-safety': {
-        '01': 'ultrasonic-inspection',   // 초음파진단과정
-        '02': 'ndt-inspection',          // 항공비파괴검사과정
-        '03': 'metallurgy-engineering',  // 금속공학사과정[3년제]
+        '01': 'aviation-ndt',            // ✅ 수정됨 (항공비파괴검사과정)
+        '02': 'ultrasonic-diagnostics',  // ✅ 수정됨 (초음파진단과정)
+        '03': 'metallurgical-engineering', // ✅ 수정됨 (금속공학사과정[3년제])
     },
     'aviation-tourism': {
-        '01': 'cabin-crew',              // 승무원과정
-        '02': 'hotel-tourism',           // 호텔관광전문가과정
-        '03': 'food-beverage',           // 식음료전문가과정
+        '01': 'flight-attendant',        // ✅ 수정됨 (승무원과정)
+        '02': 'food-beverage-specialist', // ✅ 수정됨 (식음료전문가과정)
+        '03': 'tourism-specialist',      // ✅ 수정됨 (관광전문가과정)
     },
     'aviation-security': {
-        '01': 'aviation-security',       // 항공보안과정
-        '02': 'security-escort',         // 의전경비과정
+        '01': 'airport-security',        // ✅ 수정됨 (항공보안과정)
+        '02': 'vip-security',           // ✅ 수정됨 (의전경비과정)
         '03': 'pmc-security',           // PMC경비과정
         '04': 'action-acting',          // 액션연기과정
-        '05': 'sports-conditioning',     // 스포츠재활컨디셔닝과정
+        '05': 'sports-rehabilitation',   // ✅ 수정됨 (스포츠재활컨디셔닝과정)
     },
     'defense-police-ai': {
-        '01': 'military-academy',        // 국방사관과정
-        '02': 'military-nco',           // 국방부사관과정
-        '03': 'defense-ai',             // 국방AI과정
+        '01': 'national-defense-officer', // ✅ 수정됨 (국방사관과정)
+        '02': 'national-defense-nco',    // ✅ 수정됨 (국방부사관과정)
+        '03': 'national-defense-ai',     // ✅ 수정됨 (국방AI과정)
         '04': 'police-officer',         // 경찰공무원과정
     },
 } as const;
@@ -96,3 +86,13 @@ export const PROGRAM_ID_MAP = {
 // 타입 정의
 export type DepartmentId = keyof typeof PROGRAM_ID_MAP;
 export type ProgramId<T extends DepartmentId> = keyof typeof PROGRAM_ID_MAP[T];
+
+// 역방향 매핑 함수들
+export const getDepartmentIdFromUrl = (urlId: string): string | undefined => {
+    return DEPARTMENT_ID_MAP[urlId as keyof typeof DEPARTMENT_ID_MAP];
+};
+
+export const getProgramIdFromUrl = (departmentUrlId: string, programUrlId: string): string | undefined => {
+    const programMap = PROGRAM_ID_MAP[departmentUrlId as keyof typeof PROGRAM_ID_MAP];
+    return programMap ? programMap[programUrlId as keyof typeof programMap] : undefined;
+};
