@@ -193,7 +193,7 @@ const DepartmentsSection: React.FC = () => {
                             <div
                                 key={department.id}
                                 onClick={() => handleDepartmentClick(department.id)}
-                                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 border-2 border-transparent hover:border-gray-200"
+                                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
                             >
                                 {/* Card Header */}
                                 <div className={`${colors.bg} text-white p-6 rounded-t-2xl`}>
