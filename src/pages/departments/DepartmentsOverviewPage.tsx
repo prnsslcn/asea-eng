@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { departmentsData } from '../../data/departments/ProgramData';
+import type { Department } from '../../data/departments/ProgramData';
 import { ROUTES } from '../../router/routes';
 
-const getDepartmentDisplayData = (dept: any) => {
+const getDepartmentDisplayData = (dept: Department) => {
     const iconMap: { [key: string]: string } = {
         'aviation-maintenance': '✈️',
         'smart-safety': '🔬',
@@ -20,11 +21,40 @@ const getDepartmentDisplayData = (dept: any) => {
         'defense-police-ai': 'amber'
     };
 
+    // Department별 기본 highlights 제공
+    const defaultHighlights: { [key: string]: string[] } = {
+        'aviation-maintenance': [
+            'MOLIT Designated Training Institution',
+            'Largest Enrollment Capacity (420 students)',
+            'Advanced Simulator Training'
+        ],
+        'smart-safety': [
+            '100% Campus Recruiting Success (2023)',
+            'Advanced NDT Technology Training',
+            'Industry Partnership with Canada'
+        ],
+        'aviation-tourism': [
+            '3+2 System Operation',
+            'Only Cruise Specialist Training in Seoul Area',
+            'International Hotel Management'
+        ],
+        'aviation-security': [
+            '8 Years Consecutive #1 in Personal Protection',
+            'AI Security Screening Education',
+            'Specialized IED Detection Training'
+        ],
+        'defense-police-ai': [
+            '10 Years Consecutive #1-2 at Military Academy',
+            '91% Officer/NCO Commission Rate (Recent 9 Years)',
+            'AI Technology Integration'
+        ]
+    };
+
     return {
         ...dept,
         icon: iconMap[dept.id] || '📚',
         color: colorMap[dept.id] || 'blue',
-        highlights: dept.highlights || [
+        highlights: defaultHighlights[dept.id] || [
             'Industry-leading curriculum',
             'Expert faculty with real-world experience',
             'High employment success rate'
@@ -203,7 +233,7 @@ const DepartmentsOverviewPage: React.FC = () => {
                                                 Key Highlights
                                             </h4>
                                             <ul className="space-y-2">
-                                                {(department.highlights || displayData.highlights).slice(0, 3).map((highlight, index) => (
+                                                {displayData.highlights.slice(0, 3).map((highlight: string, index: number) => (
                                                     <li key={index} className="text-sm text-gray-600 flex items-start">
                                                         <span className="text-blue-900 mr-2 mt-1">•</span>
                                                         {highlight}
