@@ -165,9 +165,9 @@ const DepartmentsSection: React.FC = () => {
         }
     };
 
-    // const handleDepartmentClick = (departmentId: string) => {
-    //     navigate(`/departments/${departmentId}`);
-    // };
+    const handleDepartmentClick = (departmentId: string) => {
+        navigate(`/departments/${departmentId}`);
+    };
 
     return (
         <section className="py-16 bg-gray-50">
@@ -192,7 +192,7 @@ const DepartmentsSection: React.FC = () => {
                         return (
                             <div
                                 key={department.id}
-                                // onClick={() => handleDepartmentClick(department.id)}
+                                onClick={() => handleDepartmentClick(department.id)}
                                 className="bg-white rounded-2xl shadow-lg"
                             >
                                 {/* Card Header */}
