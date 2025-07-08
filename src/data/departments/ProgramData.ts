@@ -825,7 +825,7 @@ const smartSafetyData: Department = {
 // Aviation Tourism Department - Complete Data Structure
 const aviationTourismData: Department = {
     id: 'aviation-tourism',
-    name: 'Aviation Tourism Management',
+    name: 'Aviation Tourism',
     koreanName: '항공관광계열',
     description: 'Professional tourism and hospitality training with 3+2 system and international certification programs',
     educationalGoals: 'Training global tourism professionals with specialized knowledge in aviation, hospitality, and tourism services',
