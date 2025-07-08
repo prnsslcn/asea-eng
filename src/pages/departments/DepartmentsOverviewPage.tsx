@@ -216,10 +216,10 @@ const DepartmentsOverviewPage: React.FC = () => {
                                 <div
                                     key={department.id}
                                     onClick={() => handleDepartmentClick(department.id)}
-                                    className="bg-white rounded-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 max-w-sm mx-auto"
+                                    className="bg-white rounded-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 max-w-sm mx-auto h-full flex flex-col"
                                 >
-                                    {/* Card Header */}
-                                    <div className={`${colors.bg} text-white p-6 rounded-t-2xl`}>
+                                    {/* Card Header - 고정 높이 */}
+                                    <div className={`${colors.bg} text-white p-6 rounded-t-2xl h-48 flex flex-col`}>
                                         <div className="flex items-center justify-between mb-4">
                                             <span className="text-white">
                                                 {getDepartmentIcon(department.id)}
@@ -229,13 +229,15 @@ const DepartmentsOverviewPage: React.FC = () => {
                                                 <p className="text-sm opacity-90">{department.koreanName}</p>
                                             </div>
                                         </div>
-                                        <p className="text-sm leading-relaxed opacity-95">
-                                            {department.description}
-                                        </p>
+                                        <div className="flex-1 flex items-center">
+                                            <p className="text-sm leading-relaxed opacity-95">
+                                                {department.description}
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    {/* Card Body */}
-                                    <div className="p-6">
+                                    {/* Card Body - flex-1로 남은 공간 채우기 */}
+                                    <div className="p-6 flex-1 flex flex-col">
                                         {/* Key Highlights */}
                                         <div className="mb-6">
                                             <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
@@ -275,20 +277,22 @@ const DepartmentsOverviewPage: React.FC = () => {
                                             </div>
                                         </div>
 
-                                        {/* CTA Button */}
-                                        <button
-                                            className={`w-full py-3 px-6 rounded-lg border-2 ${colors.border} ${colors.text} ${colors.hover} hover:text-white font-semibold transition-all duration-300 flex items-center justify-center group`}
-                                        >
-                                            <span>Explore Department</span>
-                                            <svg
-                                                className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
+                                        {/* CTA Button - 하단 고정 */}
+                                        <div className="mt-auto">
+                                            <button
+                                                className={`w-full py-3 px-6 rounded-lg border-2 ${colors.border} ${colors.text} ${colors.hover} hover:text-white font-semibold transition-all duration-300 flex items-center justify-center group`}
                                             >
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </button>
+                                                <span>Explore Department</span>
+                                                <svg
+                                                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             );
