@@ -206,8 +206,8 @@ const DepartmentsOverviewPage: React.FC = () => {
                         <div className="mt-8 w-24 h-1 bg-blue-900 mx-auto"></div>
                     </div>
 
-                    {/* Departments Grid - DepartmentsSection 스타일 */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Departments Grid - 5개 계열만 표시, 2-2-1 레이아웃 */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 justify-center">
                         {Object.values(departmentsData).map((department) => {
                             const colors = getColorClasses(department.id);
                             const highlights = getDefaultHighlights(department.id);
@@ -216,7 +216,7 @@ const DepartmentsOverviewPage: React.FC = () => {
                                 <div
                                     key={department.id}
                                     onClick={() => handleDepartmentClick(department.id)}
-                                    className="bg-white rounded-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                                    className="bg-white rounded-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 max-w-sm mx-auto"
                                 >
                                     {/* Card Header */}
                                     <div className={`${colors.bg} text-white p-6 rounded-t-2xl`}>
@@ -293,23 +293,6 @@ const DepartmentsOverviewPage: React.FC = () => {
                                 </div>
                             );
                         })}
-
-                        {/* Coming Soon Card (for visual balance in 3-column grid) */}
-                        <div className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-lg overflow-hidden border-2 border-dashed border-gray-300">
-                            <div className="p-8 text-center h-full flex flex-col justify-center">
-                                <div className="text-6xl mb-4 text-gray-400">🚀</div>
-                                <h3 className="text-xl font-bold text-gray-600 mb-2">More Departments</h3>
-                                <p className="text-gray-500 mb-4">
-                                    We're continuously expanding our programs to meet industry demands.
-                                </p>
-                                <button
-                                    onClick={() => navigate('/about/asea')}
-                                    className="bg-gray-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
-                                >
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
