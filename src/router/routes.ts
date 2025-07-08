@@ -47,39 +47,39 @@ export const DEPARTMENT_ID_MAP = {
     'smart-safety': 'smart-safety',
     'aviation-tourism': 'aviation-tourism',
     'aviation-security': 'aviation-security',
-    'defense-police-ai': 'national-defense-police-ai',  // ✅ 수정됨
+    'defense-police-ai': 'defense-police-ai',  // ✅ 매핑 제거, 완전 통일
 } as const;
 
 // Program ID 매핑 (ProgramData.ts와 정확히 일치)
 export const PROGRAM_ID_MAP = {
     'aviation-maintenance': {
-        '01': 'aircraft-maintenance',     // 항공정비사과정
-        '02': 'aviation-mechanical',      // ✅ 수정됨
-        '03': 'aviation-nco',            // ✅ 수정됨
-        '04': 'drone-operation',         // ✅ 수정됨
+        '01': 'aircraft-maintenance',
+        '02': 'aviation-mechanical',
+        '03': 'aviation-nco',
+        '04': 'drone-operation',
     },
     'smart-safety': {
-        '01': 'aviation-ndt',            // ✅ 수정됨 (항공비파괴검사과정)
-        '02': 'ultrasonic-diagnostics',  // ✅ 수정됨 (초음파진단과정)
-        '03': 'metallurgical-engineering', // ✅ 수정됨 (금속공학사과정[3년제])
+        '01': 'aviation-ndt',
+        '02': 'ultrasonic-diagnostics',
+        '03': 'metallurgical-engineering',
     },
     'aviation-tourism': {
-        '01': 'flight-attendant',        // ✅ 수정됨 (승무원과정)
-        '02': 'food-beverage-specialist', // ✅ 수정됨 (식음료전문가과정)
-        '03': 'tourism-specialist',      // ✅ 수정됨 (관광전문가과정)
+        '01': 'flight-attendant',
+        '02': 'food-beverage-specialist',
+        '03': 'tourism-specialist',
     },
     'aviation-security': {
-        '01': 'airport-security',        // ✅ 수정됨 (항공보안과정)
-        '02': 'vip-security',           // ✅ 수정됨 (의전경비과정)
-        '03': 'pmc-security',           // PMC경비과정
-        '04': 'action-acting',          // 액션연기과정
-        '05': 'sports-rehabilitation',   // ✅ 수정됨 (스포츠재활컨디셔닝과정)
+        '01': 'airport-security',
+        '02': 'vip-security',
+        '03': 'pmc-security',
+        '04': 'action-acting',
+        '05': 'sports-rehabilitation',
     },
-    'defense-police-ai': {
-        '01': 'national-defense-officer', // ✅ 수정됨 (국방사관과정)
-        '02': 'national-defense-nco',    // ✅ 수정됨 (국방부사관과정)
-        '03': 'national-defense-ai',     // ✅ 수정됨 (국방AI과정)
-        '04': 'police-officer',         // 경찰공무원과정
+    'defense-police-ai': {  // ✅ 키 변경
+        '01': 'national-defense-officer',  // 프로그램 ID는 유지
+        '02': 'national-defense-nco',
+        '03': 'national-defense-ai',
+        '04': 'police-officer',
     },
 } as const;
 

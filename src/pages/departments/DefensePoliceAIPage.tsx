@@ -5,14 +5,14 @@ import { ROUTES } from '../../router/routes';
 
 const DefensePoliceAIPage: React.FC = () => {
     const navigate = useNavigate();
-    const department = getDepartmentById('national-defense-police-ai');
+    const department = getDepartmentById('defense-police-ai');  // ✅ 변경
 
     if (!department) {
         return <div>Department not found</div>;
     }
 
     const handleProgramClick = (programId: string) => {
-        navigate(ROUTES.DEPARTMENTS.PROGRAM('national-defense-police-ai', programId));
+        navigate(ROUTES.DEPARTMENTS.PROGRAM('defense-police-ai', programId));  // ✅ 변경
     };
 
     const employmentAreas = [

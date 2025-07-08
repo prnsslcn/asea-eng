@@ -1735,9 +1735,9 @@ const aviationSecurityData: Department = {
 };
 
 // National Defense & Police AI Department - Complete Data Structure (Phase 5)
-const nationalDefensePoliceAIData: Department = {
-    id: 'national-defense-police-ai',
-    name: 'National Defense & Police AI',
+const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData → defensePoliceAIData
+    id: 'defense-police-ai',  // ✅ 'national-defense-police-ai' → 'defense-police-ai'
+    name: 'Defense & Police AI',  // ✅ 'National Defense & Police AI' → 'Defense & Police AI'
     koreanName: '국방경찰AI계열',
     description: 'Elite national defense and police training with 10 consecutive years #1 ranking at Army 3rd Officer Candidate School and 91% officer/NCO advancement rate',
     educationalGoals: 'Training elite defense professionals and police officers for national security and public safety with advanced AI technology integration',
@@ -2132,7 +2132,7 @@ export const departmentsData = {
     'smart-safety': smartSafetyData,
     'aviation-tourism': aviationTourismData,
     'aviation-security': aviationSecurityData,
-    'national-defense-police-ai': nationalDefensePoliceAIData
+    'defense-police-ai': defensePoliceAIData  // ✅ 'national-defense-police-ai' → 'defense-police-ai'
 };
 
 // Helper function to get department by ID
