@@ -29,6 +29,7 @@ import FreshmanScholarshipsPage from '../pages/campus-life/FreshmanScholarshipsP
 import FacilitiesPage from '../pages/campus-life/FacilitiesPage'; // 이동됨
 import EnrolledScholarshipsPage from "../pages/campus-life/EnrolledScholarshipsPage.tsx";
 import DormitoryPage from "../pages/campus-life/DormitoryPage.tsx";
+import TrainingLabsPage from "../pages/campus-life/TrainingLabsPage.tsx";
 
 // Departments Layout
 import DepartmentsLayout from '../pages/departments/shared/DepartmentsLayout';
@@ -77,16 +78,6 @@ const ArmyAcademyAdmissionPage: React.FC = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold text-amber-700 mb-8">Army Academy Admission</h1>
             <p className="text-lg text-gray-600">육군3사관학교 합격현황 페이지가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
-// Campus Life Pages - 임시 개별 컴포넌트들
-const TrainingLabsPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-purple-700 mb-8">Practical Training Facilities</h1>
-            <p className="text-lg text-gray-600">실습시설 정보가 곧 업데이트됩니다.</p>
         </div>
     </div>
 );
