@@ -28,6 +28,7 @@ import CampusLifeLayout from "../pages/campus-life/shared/CampusLifeLayout.tsx";
 import FreshmanScholarshipsPage from '../pages/campus-life/FreshmanScholarshipsPage'; // 이동됨
 import FacilitiesPage from '../pages/campus-life/FacilitiesPage'; // 이동됨
 import EnrolledScholarshipsPage from "../pages/campus-life/EnrolledScholarshipsPage.tsx";
+import DormitoryPage from "../pages/campus-life/DormitoryPage.tsx";
 
 // Departments Layout
 import DepartmentsLayout from '../pages/departments/shared/DepartmentsLayout';
@@ -86,15 +87,6 @@ const TrainingLabsPage: React.FC = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold text-purple-700 mb-8">Practical Training Facilities</h1>
             <p className="text-lg text-gray-600">실습시설 정보가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
-const DormitoryPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-slate-700 mb-8">Student Housing</h1>
-            <p className="text-lg text-gray-600">생활관 정보가 곧 업데이트됩니다.</p>
         </div>
     </div>
 );
