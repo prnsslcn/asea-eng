@@ -26,6 +26,7 @@ import {
 // Campus Life Pages (이동된 페이지들)
 import FreshmanScholarshipsPage from '../pages/campus-life/FreshmanScholarshipsPage'; // 이동됨
 import FacilitiesPage from '../pages/campus-life/FacilitiesPage'; // 이동됨
+import EnrolledScholarshipsPage from "../pages/campus-life/EnrolledScholarshipsPage.tsx";
 
 // Departments Layout
 import DepartmentsLayout from '../pages/departments/shared/DepartmentsLayout';
@@ -79,15 +80,6 @@ const ArmyAcademyAdmissionPage: React.FC = () => (
 );
 
 // Campus Life Pages - 임시 개별 컴포넌트들
-const EnrolledScholarshipsPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-emerald-700 mb-8">Scholarships for Enrolled Students</h1>
-            <p className="text-lg text-gray-600">재학생 장학금 정보가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
 const TrainingLabsPage: React.FC = () => (
     <div className="min-h-screen py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

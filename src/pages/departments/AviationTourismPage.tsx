@@ -299,7 +299,7 @@ const AviationTourismPage: React.FC = () => {
                             <p className="text-lg text-gray-600">실습실 소개</p>
                         </div>
                         <button
-                            onClick={() => navigate('/about/facilities')}
+                            onClick={() => navigate('/campus-life/facilities')}
                             className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors flex items-center space-x-2"
                         >
                             <span>View All Facilities</span>
