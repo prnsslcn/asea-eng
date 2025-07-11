@@ -24,6 +24,7 @@ import {
 } from '../pages/about';
 
 // Campus Life Pages (이동된 페이지들)
+import CampusLifeLayout from "../pages/campus-life/shared/CampusLifeLayout.tsx";
 import FreshmanScholarshipsPage from '../pages/campus-life/FreshmanScholarshipsPage'; // 이동됨
 import FacilitiesPage from '../pages/campus-life/FacilitiesPage'; // 이동됨
 import EnrolledScholarshipsPage from "../pages/campus-life/EnrolledScholarshipsPage.tsx";
@@ -158,12 +159,14 @@ const Router: React.FC = () => {
                 <Route path={ROUTES.CAREER.NCO_ADMISSION} element={<NCOAdmissionPage />} />
                 <Route path={ROUTES.CAREER.ARMY_ACADEMY_ADMISSION} element={<ArmyAcademyAdmissionPage />} />
 
-                {/* Campus Life 라우팅 (이동된 페이지 + 새 페이지들) */}
-                <Route path={ROUTES.CAMPUS_LIFE.FRESHMAN_SCHOLARSHIPS} element={<FreshmanScholarshipsPage />} />
-                <Route path={ROUTES.CAMPUS_LIFE.ENROLLED_SCHOLARSHIPS} element={<EnrolledScholarshipsPage />} />
-                <Route path={ROUTES.CAMPUS_LIFE.FACILITIES} element={<FacilitiesPage />} />
-                <Route path={ROUTES.CAMPUS_LIFE.TRAINING_LABS} element={<TrainingLabsPage />} />
-                <Route path={ROUTES.CAMPUS_LIFE.DORMITORY} element={<DormitoryPage />} />
+                // Campus Life 중첩 라우팅 추가
+                <Route path={ROUTES.CAMPUS_LIFE.ROOT} element={<CampusLifeLayout />}>
+                    <Route path="freshman-scholarships" element={<FreshmanScholarshipsPage />} />
+                    <Route path="enrolled-scholarships" element={<EnrolledScholarshipsPage />} />
+                    <Route path="facilities" element={<FacilitiesPage />} />
+                    <Route path="training-labs" element={<TrainingLabsPage />} />
+                    <Route path="dormitory" element={<DormitoryPage />} />
+                </Route>
 
                 {/* 404 페이지 */}
                 <Route path="*" element={<NotFoundPage />} />
