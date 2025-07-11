@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDepartmentById } from '../../data/departments/ProgramData';
 import { ROUTES } from '../../router/routes';
+import DepartmentsBreadcrumb from "./shared/DepartmentsBreadcrumb.tsx";
 
 const SmartSafetyPage: React.FC = () => {
     const navigate = useNavigate();
@@ -45,8 +46,8 @@ const SmartSafetyPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative bg-gradient-to-r from-blue-900 to-blue-800 text-white">
-                <div className="absolute inset-0 bg-black opacity-20"></div>
+            <div className="relative bg-emerald-700 text-white">
+                {/*<div className="absolute inset-0 bg-black opacity-20"></div>*/}
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -81,6 +82,8 @@ const SmartSafetyPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <DepartmentsBreadcrumb />
 
             {/* Programs Section */}
             <div className="py-16 bg-gray-50">

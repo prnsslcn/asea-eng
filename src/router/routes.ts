@@ -5,7 +5,6 @@ export const ROUTES = {
         ROOT: '/about',
         ASEA: '/about/asea',
         GOALS: '/about/goals',
-        FACILITIES: '/about/facilities',
         CHAIRMAN: '/about/chairman',
         PRESIDENT: '/about/president',
         DIRECTORY: '/about/directory',
@@ -28,16 +27,24 @@ export const ROUTES = {
         GUIDE: '/admission/guide',
         PROCESS: '/admission/process',
         ROADMAP: '/admission/roadmap',
-        SCHOLARSHIP: '/admission/scholarship',
         WILDCARD: '/admission/*',
     },
-    EMPLOYMENT: {
-        ROOT: '/employment',
-        WILDCARD: '/employment/*',
+    CAREER: {
+        ROOT: '/career',
+        JOB_PLACEMENT: '/career/job-placement',
+        TRANSFER_RESULTS: '/career/transfer-results',
+        NCO_ADMISSION: '/career/nco-admission',
+        ARMY_ACADEMY_ADMISSION: '/career/army-academy-admission',
+        WILDCARD: '/career/*',
     },
-    COMMUNITY: {
-        ROOT: '/community',
-        WILDCARD: '/community/*',
+    CAMPUS_LIFE: {
+        ROOT: '/campus-life',
+        FRESHMAN_SCHOLARSHIPS: '/campus-life/freshman-scholarships',
+        ENROLLED_SCHOLARSHIPS: '/campus-life/enrolled-scholarships',
+        FACILITIES: '/campus-life/facilities',
+        TRAINING_LABS: '/campus-life/training-labs',
+        DORMITORY: '/campus-life/dormitory',
+        WILDCARD: '/campus-life/*',
     },
 } as const;
 
@@ -47,7 +54,7 @@ export const DEPARTMENT_ID_MAP = {
     'smart-safety': 'smart-safety',
     'aviation-tourism': 'aviation-tourism',
     'aviation-security': 'aviation-security',
-    'defense-police-ai': 'defense-police-ai',  // ✅ 매핑 제거, 완전 통일
+    'defense-police-ai': 'defense-police-ai',
 } as const;
 
 // Program ID 매핑 (ProgramData.ts와 정확히 일치)
@@ -75,8 +82,8 @@ export const PROGRAM_ID_MAP = {
         '04': 'action-acting',
         '05': 'sports-rehabilitation',
     },
-    'defense-police-ai': {  // ✅ 키 변경
-        '01': 'national-defense-officer',  // 프로그램 ID는 유지
+    'defense-police-ai': {
+        '01': 'national-defense-officer',
         '02': 'national-defense-nco',
         '03': 'national-defense-ai',
         '04': 'police-officer',

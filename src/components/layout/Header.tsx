@@ -19,7 +19,6 @@ const menuStructure = {
     "About Us": [
         { name: "ASEA", link: "/about/asea" },
         { name: "Educational Goals", link: "/about/goals" },
-        { name: "Facilities", link: "/about/facilities" },
         { name: "Chairman's Message", link: "/about/chairman" },
         { name: "President's Message", link: "/about/president" },
         { name: "Campus Directory", link: "/about/directory" },
@@ -28,8 +27,7 @@ const menuStructure = {
     "Admissions": [
         { name: "Admission Guide", link: "/admission/guide" },
         { name: "Application Process", link: "/admission/process" },
-        { name: "Career Roadmap", link: "/admission/roadmap" },
-        { name: "Freshman Scholarships", link: "/admission/scholarship" }
+        { name: "Career Roadmap", link: "/admission/roadmap" }
     ],
     "Departments": {
         "Aviation Maintenance": [
@@ -62,16 +60,18 @@ const menuStructure = {
             { name: "Police Officer Course", link: "/departments/defense-police-ai/programs/police-officer" }
         ]
     },
-    "Career Support": [
-        { name: "Employment Status", link: "/employment/status" },
-        { name: "Industry Partnership", link: "/employment/partnership" },
-        { name: "Career Programs", link: "/employment/programs" }
+    "Career Outcomes": [
+        { name: "Job Placement", link: "/career/job-placement" },
+        { name: "Transfer Results", link: "/career/transfer-results" },
+        { name: "NCO Admission", link: "/career/nco-admission" },
+        { name: "Army Academy Admission", link: "/career/army-academy-admission" }
     ],
-    "Community": [
-        { name: "Announcements", link: "/community/notice" },
-        { name: "News", link: "/community/news" },
-        { name: "Gallery", link: "/community/gallery" },
-        { name: "Employment News", link: "/community/employment" }
+    "Campus Life": [
+        { name: "Scholarships for Freshmen", link: "/campus-life/freshman-scholarships" },
+        { name: "Scholarships for Enrolled Students", link: "/campus-life/enrolled-scholarships" },
+        { name: "Campus Facilities", link: "/campus-life/facilities" },
+        { name: "Practical Training Facilities", link: "/campus-life/training-labs" },
+        { name: "Student Housing", link: "/campus-life/dormitory" }
     ]
 };
 
@@ -218,7 +218,7 @@ const Header: React.FC = () => {
             "Smart Safety Diagnostics": "smart-safety",
             "Aviation Tourism": "aviation-tourism",
             "Aviation Security": "aviation-security",
-            "Defense & Police AI": "defense-police-ai"  // 여기가 중요한 수정점
+            "Defense & Police AI": "defense-police-ai"
         };
         return slugMap[deptName] || deptName.toLowerCase().replace(/\s+/g, '-');
     };

@@ -1,7 +1,6 @@
 // About 페이지들 export
 export { default as AseaPage } from './AseaPage';
 export { default as EducationalGoalsPage } from './EducationalGoalsPage';
-export { default as FacilitiesPage } from './FacilitiesPage';
 export { default as DirectoryPage } from './DirectoryPage';
 export { default as ChairmanPage } from './ChairmanPage';
 export { default as PresidentPage } from './PresidentPage';
