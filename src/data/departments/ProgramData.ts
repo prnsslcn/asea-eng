@@ -900,6 +900,7 @@ const aviationMechanicalCertifications: CertificationItem[] = [
     }
 ];
 
+// 항공부사관과정 교육과정
 const aviationNCOCurriculum: CurriculumItem[] = [
     // === 1st Semester (1-1학기) ===
     // Credit-bearing Program
@@ -1276,7 +1277,7 @@ const aviationNCOCurriculum: CurriculumItem[] = [
     }
 ];
 
-// ✅ 항공부사관과정 자격증 데이터 (7개 - 동일)
+// 항공부사관과정 자격증 데이터 (7개 - 동일)
 const aviationNCOCertifications: CertificationItem[] = [
     {
         name: 'Aircraft Maintenance Technician (Airplane) [License]',
@@ -1322,7 +1323,7 @@ const aviationNCOCertifications: CertificationItem[] = [
     }
 ];
 
-// ✅ 드론과정 실제 데이터 (59개 과목 - 동일 구조)
+// 드론과정 실제 데이터 (59개 과목 - 동일 구조)
 const droneOperationCurriculum: CurriculumItem[] = [
     // === 1st Semester (1-1학기) ===
     // Credit-bearing Program
@@ -1699,7 +1700,7 @@ const droneOperationCurriculum: CurriculumItem[] = [
     }
 ];
 
-// ✅ 드론과정 자격증 데이터 (7개 - 동일)
+// 드론과정 자격증 데이터 (7개 - 동일)
 const droneOperationCertifications: CertificationItem[] = [
     {
         name: 'Aircraft Maintenance Technician (Airplane) [License]',
@@ -1741,6 +1742,793 @@ const droneOperationCertifications: CertificationItem[] = [
         name: 'Information Processing Industrial Engineer',
         authority: 'Korea Human Resources Development Service',
         description: 'To effectively utilize computers, not only hardware but also sophisticated software is required. Accordingly, this certification was established with the purpose of training people with professional knowledge and skills in computers to develop excellent programs, improve work efficiency, and ultimately contribute to national development.',
+        website: 'http://www.hrdkorea.or.kr'
+    }
+];
+
+// 스마트진단안전계열 -----------------------------------------------------------------------------------------------
+
+const aviationNDTCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Penetrant Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Radiographic Testing',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Magnetic Particle Testing',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Metal Materials Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Non-Destructive Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '1st Semester',
+        courseName: 'Basic Magnetic Particle Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Basic Penetrant Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Magnetic Particle Testing Practice I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Ultrasonic Testing',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Penetrant Testing Practice',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Welding Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Non-Ferrous Materials',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '2nd Semester',
+        courseName: 'Nuclear Basic Theory I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Industrial Safety Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Ultrasonic Testing Practice I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Radiation Safety Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Visual Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Advanced Materials Engineering',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Metal Microstructure',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Materials Processing Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Materials Science',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Casting Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Iron and Steel Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '3rd Semester',
+        courseName: 'Metal Materials Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Basic Radiographic Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Capstone Design',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Eddy Current Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Leak Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Radiographic Testing Practice I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Destructive and Non-Destructive Testing',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Materials Heat Treatment Engineering',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Composite Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Non-Ferrous Metallurgy',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Magnetic Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Materials Evaluation',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Iron and Steel Manufacturing Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '4th Semester',
+        courseName: 'Phased Array Ultrasonic',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'NDT Professional Basic Skills I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Capstone Design',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 항공비파괴검사과정 자격증 데이터 (9개)
+const aviationNDTCertifications: CertificationItem[] = [
+    {
+        name: 'Eddy Current Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'When alternating current is brought close to a test specimen such as metal, eddy currents are induced in the conductor, and the magnitude and distribution of these eddy currents change due to the influence of defects or materials. This is a testing method that detects discontinuities on the surface and near-surface of the test specimen by measuring this amount of change. Eddy current testing is applicable when the test object is a conductor, is a non-contact method, and can perform high-speed testing, so it is widely used for inspection of relatively simple-shaped products such as tubes and rods, and for maintenance inspection of power plant and chemical plant piping.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Leak Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'This refers to the leakage of fluids from airtight containers, storage facilities, and piping that contain gases or liquids due to pressure differences inside and outside the test specimen, or the infiltration of other fluids, which occurs due to discontinuities in the test specimen. This is a method to inspect whether fluid leaks or infiltrates, or to detect the amount of leakage. Leak non-destructive testing is a non-destructive testing method mainly used to inspect water tightness, oil tightness, and air tightness in welded parts of pipelines, storage tanks, and pressure vessels.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Metal Materials Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Based on technical basic knowledge and advanced skilled functions related to metal materials, performs material testing, defect testing, metal heat treatment, etc. to make metals and alloys into useful shapes, or performs related guidance functions. Most companies prefer to hire people with publicly recognized abilities, so obtaining a certification is advantageous for employment, and many working professionals also obtain certifications to have their experience and skills recognized.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Welding Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Mainly performs welding work necessary for the product process to complete one product or structure, and performs tasks such as welding design and drafting, cost calculation, and material preparation according to this. The application range of welding is becoming wider, and high-adhesion and high-speed welding techniques are being developed through technological development. Accordingly, an increase in demand for technical personnel is expected, and fields that still require manual work, such as shipbuilding or construction, are influenced by the growth of the relevant industries.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Industrial Safety Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Assigned to various industrial sites such as manufacturing and service industries, performs tasks related to establishing industrial accident prevention plans, inspecting and improving work environments, preventing hazards and risks, analyzing and improving accident cases, and safety education and training for workers. The social awareness of continuous investment in this area is increasing as the safety level is a measure of advanced countries, and our country\'s accident rate is still at the level of developing countries.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Ultrasonic Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Mainly used for detecting internal defects in test specimens, this is a testing method that transmits ultrasonic waves to the test specimen and displays and analyzes the energy amount of ultrasonic waves reflected from discontinuities existing inside and the travel time of ultrasonic waves on a CRT screen to determine the location and size of discontinuities. It has superior detection capability for cracks and other planar defects compared to radiographic testing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Magnetic Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A method of magnetizing ferromagnetic materials to detect discontinuities on the surface or sub-surface, applying magnetic particles to form the outline of discontinuities by magnetic particles gathering or sticking due to leakage magnetic fields, and inspecting their location, size, shape, and width. Although it has the disadvantage of being applicable only to ferromagnetic metals, it has the advantage of being able to perform testing regardless of the size and shape of the test specimen as a non-destructive testing method that is easy to detect fine surface cracks.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Penetrant Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A testing method that applies penetrant to the surface of a test specimen, allows sufficient time for the penetrant to penetrate into discontinuities open to the surface, removes excess penetrant remaining on the test specimen surface that could not penetrate into discontinuities, and then applies developer to draw up the penetrant in the discontinuities, thereby detecting the location, size, and indication pattern of discontinuities.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Radiographic Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A method of detecting defects by recording the change in transmitted radiation intensity, that is, the density difference on film as a two-dimensional image due to the difference in transmitted dose between sound and defective parts when radiation (X-rays or γ-rays) is irradiated to a test specimen. This is a method for detecting defects in welded parts, castings, etc. The radiographic non-destructive testing field currently has the largest number of personnel and is the most used non-destructive testing method by companies.',
+        website: 'http://www.hrdkorea.or.kr'
+    }
+];
+
+// 초음파진단과정
+const ultrasonicDiagnosticsCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Penetrant Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Radiographic Testing',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Magnetic Particle Testing',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Metal Materials Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Non-Destructive Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '1st Semester',
+        courseName: 'Basic Magnetic Particle Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Basic Penetrant Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Magnetic Particle Testing Practice I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Ultrasonic Testing',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Penetrant Testing Practice',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Welding Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Non-Ferrous Materials',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '2nd Semester',
+        courseName: 'Nuclear Basic Theory I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Industrial Safety Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Ultrasonic Testing Practice I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Radiation Safety Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Visual Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Advanced Materials Engineering',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Metal Microstructure',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Materials Processing Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Materials Science',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Casting Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Iron and Steel Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '3rd Semester',
+        courseName: 'Metal Materials Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Basic Radiographic Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Capstone Design',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Eddy Current Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Leak Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Radiographic Testing Practice I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Destructive and Non-Destructive Testing',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Materials Heat Treatment Engineering',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Composite Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Non-Ferrous Metallurgy',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Magnetic Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Materials Evaluation',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Iron and Steel Manufacturing Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '4th Semester',
+        courseName: 'Phased Array Ultrasonic',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'NDT Professional Basic Skills I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Capstone Design',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 초음파진단과정 자격증
+const ultrasonicDiagnosticsCertifications: CertificationItem[] = [
+    {
+        name: 'Eddy Current Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'When alternating current is brought close to a test specimen such as metal, eddy currents are induced in the conductor, and the magnitude and distribution of these eddy currents change due to the influence of defects or materials. This is a testing method that detects discontinuities on the surface and near-surface of the test specimen by measuring this amount of change. Eddy current testing is applicable when the test object is a conductor, is a non-contact method, and can perform high-speed testing, so it is widely used for inspection of relatively simple-shaped products such as tubes and rods, and for maintenance inspection of power plant and chemical plant piping.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Leak Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'This refers to the leakage of fluids from airtight containers, storage facilities, and piping that contain gases or liquids due to pressure differences inside and outside the test specimen, or the infiltration of other fluids, which occurs due to discontinuities in the test specimen. This is a method to inspect whether fluid leaks or infiltrates, or to detect the amount of leakage. Leak non-destructive testing is a non-destructive testing method mainly used to inspect water tightness, oil tightness, and air tightness in welded parts of pipelines, storage tanks, and pressure vessels.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Metal Materials Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Based on technical basic knowledge and advanced skilled functions related to metal materials, performs material testing, defect testing, metal heat treatment, etc. to make metals and alloys into useful shapes, or performs related guidance functions. Most companies prefer to hire people with publicly recognized abilities, so obtaining a certification is advantageous for employment, and many working professionals also obtain certifications to have their experience and skills recognized.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Welding Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Mainly performs welding work necessary for the product process to complete one product or structure, and performs tasks such as welding design and drafting, cost calculation, and material preparation according to this. The application range of welding is becoming wider, and high-adhesion and high-speed welding techniques are being developed through technological development. Accordingly, an increase in demand for technical personnel is expected, and fields that still require manual work, such as shipbuilding or construction, are influenced by the growth of the relevant industries.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Industrial Safety Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Assigned to various industrial sites such as manufacturing and service industries, performs tasks related to establishing industrial accident prevention plans, inspecting and improving work environments, preventing hazards and risks, analyzing and improving accident cases, and safety education and training for workers. The social awareness of continuous investment in this area is increasing as the safety level is a measure of advanced countries, and our country\'s accident rate is still at the level of developing countries.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Ultrasonic Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Mainly used for detecting internal defects in test specimens, this is a testing method that transmits ultrasonic waves to the test specimen and displays and analyzes the energy amount of ultrasonic waves reflected from discontinuities existing inside and the travel time of ultrasonic waves on a CRT screen to determine the location and size of discontinuities. It has superior detection capability for cracks and other planar defects compared to radiographic testing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Magnetic Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A method of magnetizing ferromagnetic materials to detect discontinuities on the surface or sub-surface, applying magnetic particles to form the outline of discontinuities by magnetic particles gathering or sticking due to leakage magnetic fields, and inspecting their location, size, shape, and width. Although it has the disadvantage of being applicable only to ferromagnetic metals, it has the advantage of being able to perform testing regardless of the size and shape of the test specimen as a non-destructive testing method that is easy to detect fine surface cracks.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Penetrant Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A testing method that applies penetrant to the surface of a test specimen, allows sufficient time for the penetrant to penetrate into discontinuities open to the surface, removes excess penetrant remaining on the test specimen surface that could not penetrate into discontinuities, and then applies developer to draw up the penetrant in the discontinuities, thereby detecting the location, size, and indication pattern of discontinuities.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Radiographic Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A method of detecting defects by recording the change in transmitted radiation intensity, that is, the density difference on film as a two-dimensional image due to the difference in transmitted dose between sound and defective parts when radiation (X-rays or γ-rays) is irradiated to a test specimen. This is a method for detecting defects in welded parts, castings, etc. The radiographic non-destructive testing field currently has the largest number of personnel and is the most used non-destructive testing method by companies.',
+        website: 'http://www.hrdkorea.or.kr'
+    }
+];
+
+// ✅ 금속공학사과정[3년제] 5-6학기 추가 데이터 (15개 과목)
+// 1-4학기는 항공비파괴검사과정과 동일하고, 5-6학기만 추가
+
+const metallurgicalEngineeringCurriculum: CurriculumItem[] = [
+    // === 5th Semester (3-1학기) ===
+    {
+        semester: '5th Semester',
+        courseName: 'Metal Microstructure',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Materials Science',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Non-Ferrous Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Materials Processing Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Advanced Materials Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Welding Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Magnetic Materials',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Composite Materials',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Iron and Steel Manufacturing Engineering',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '5th Semester',
+        courseName: 'Materials Evaluation',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    // === 6th Semester (3-2학기) ===
+    {
+        semester: '6th Semester',
+        courseName: 'Materials Mechanics I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '6th Semester',
+        courseName: 'Materials Heat Treatment Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '6th Semester',
+        courseName: 'Casting Engineering',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '6th Semester',
+        courseName: 'Iron and Steel Materials',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '6th Semester',
+        courseName: 'Destructive and Non-Destructive Testing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    }
+];
+
+// ✅ 금속공학사과정 자격증 데이터 (항공비파괴검사과정과 동일한 9개)
+const metallurgicalEngineeringCertifications: CertificationItem[] = [
+    {
+        name: 'Eddy Current Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'When alternating current is brought close to a test specimen such as metal, eddy currents are induced in the conductor, and the magnitude and distribution of these eddy currents change due to the influence of defects or materials. This is a testing method that detects discontinuities on the surface and near-surface of the test specimen by measuring this amount of change. Eddy current testing is applicable when the test object is a conductor, is a non-contact method, and can perform high-speed testing, so it is widely used for inspection of relatively simple-shaped products such as tubes and rods, and for maintenance inspection of power plant and chemical plant piping.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Leak Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'This refers to the leakage of fluids from airtight containers, storage facilities, and piping that contain gases or liquids due to pressure differences inside and outside the test specimen, or the infiltration of other fluids, which occurs due to discontinuities in the test specimen. This is a method to inspect whether fluid leaks or infiltrates, or to detect the amount of leakage. Leak non-destructive testing is a non-destructive testing method mainly used to inspect water tightness, oil tightness, and air tightness in welded parts of pipelines, storage tanks, and pressure vessels.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Metal Materials Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Based on technical basic knowledge and advanced skilled functions related to metal materials, performs material testing, defect testing, metal heat treatment, etc. to make metals and alloys into useful shapes, or performs related guidance functions. Most companies prefer to hire people with publicly recognized abilities, so obtaining a certification is advantageous for employment, and many working professionals also obtain certifications to have their experience and skills recognized.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Welding Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Mainly performs welding work necessary for the product process to complete one product or structure, and performs tasks such as welding design and drafting, cost calculation, and material preparation according to this. The application range of welding is becoming wider, and high-adhesion and high-speed welding techniques are being developed through technological development. Accordingly, an increase in demand for technical personnel is expected, and fields that still require manual work, such as shipbuilding or construction, are influenced by the growth of the relevant industries.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Industrial Safety Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Assigned to various industrial sites such as manufacturing and service industries, performs tasks related to establishing industrial accident prevention plans, inspecting and improving work environments, preventing hazards and risks, analyzing and improving accident cases, and safety education and training for workers. The social awareness of continuous investment in this area is increasing as the safety level is a measure of advanced countries, and our country\'s accident rate is still at the level of developing countries.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Ultrasonic Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'Mainly used for detecting internal defects in test specimens, this is a testing method that transmits ultrasonic waves to the test specimen and displays and analyzes the energy amount of ultrasonic waves reflected from discontinuities existing inside and the travel time of ultrasonic waves on a CRT screen to determine the location and size of discontinuities. It has superior detection capability for cracks and other planar defects compared to radiographic testing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Magnetic Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A method of magnetizing ferromagnetic materials to detect discontinuities on the surface or sub-surface, applying magnetic particles to form the outline of discontinuities by magnetic particles gathering or sticking due to leakage magnetic fields, and inspecting their location, size, shape, and width. Although it has the disadvantage of being applicable only to ferromagnetic metals, it has the advantage of being able to perform testing regardless of the size and shape of the test specimen as a non-destructive testing method that is easy to detect fine surface cracks.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Penetrant Non-Destructive Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A testing method that applies penetrant to the surface of a test specimen, allows sufficient time for the penetrant to penetrate into discontinuities open to the surface, removes excess penetrant remaining on the test specimen surface that could not penetrate into discontinuities, and then applies developer to draw up the penetrant in the discontinuities, thereby detecting the location, size, and indication pattern of discontinuities.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Radiographic Testing',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A method of detecting defects by recording the change in transmitted radiation intensity, that is, the density difference on film as a two-dimensional image due to the difference in transmitted dose between sound and defective parts when radiation (X-rays or γ-rays) is irradiated to a test specimen. This is a method for detecting defects in welded parts, castings, etc. The radiographic non-destructive testing field currently has the largest number of personnel and is the most used non-destructive testing method by companies.',
         website: 'http://www.hrdkorea.or.kr'
     }
 ];
@@ -2174,6 +2962,8 @@ const smartSafetyData: Department = {
                 'Advanced PAUT (Phased Array Ultrasonic Testing) training',
                 'Air Force Academy and military technical training'
             ],
+            curriculum: aviationNDTCurriculum,
+            detailedCertifications: aviationNDTCertifications,
             certifications: [
                 'NDT Professional Degree (Associate)',
                 'License exemption for qualified candidates through additional evaluation',
@@ -2277,6 +3067,8 @@ const smartSafetyData: Department = {
                 'PAUT specialization for employment in companies requiring ultrasonic testing',
                 'Recognition as inspector with new technology for employment in PAUT-specialized companies'
             ],
+            curriculum: ultrasonicDiagnosticsCurriculum,
+            detailedCertifications: ultrasonicDiagnosticsCertifications,
             certifications: [
                 'NDT Professional Degree (Associate)',
                 'License exemption for qualified candidates through additional evaluation',
@@ -2383,6 +3175,8 @@ const smartSafetyData: Department = {
                 'Advanced PAUT (Phased Array Ultrasonic Testing) training',
                 'Air Force Academy and military technical training opportunities'
             ],
+            curriculum: metallurgicalEngineeringCurriculum,
+            detailedCertifications: metallurgicalEngineeringCertifications,
             certifications: [
                 'Metallurgical Engineering Bachelor\'s Degree (4-year equivalent)',
                 'NDT Professional certifications',
