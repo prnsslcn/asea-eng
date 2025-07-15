@@ -2533,6 +2533,775 @@ const metallurgicalEngineeringCertifications: CertificationItem[] = [
     }
 ];
 
+// 항공관광계열 ---------------------------------------------------------------------------------------------------
+
+// 승무원과정 교육과정
+const flightAttendantCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Tourism',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Cultural Tourism Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Tourism Chinese I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Practical English',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Cabin Service Theory',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '1st Semester',
+        courseName: 'English Conversation Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Passenger Ticketing General',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Aircraft Cabin Structure',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Tourism Laws and Regulations',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'World Tourism Geography',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Casino Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Tourism English I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Flight Safety Practice',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '2nd Semester',
+        courseName: 'Chinese Conversation Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'First Aid',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aviation Service Practical Skills',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Service Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Food and Beverage Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Hotel Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Marketing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Image Making',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '3rd Semester',
+        courseName: 'NCS Professional Basic Skills',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Recreation',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aviation Cabin Service Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Travel Agency Practice',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Hotel Front Office and Guest Room Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aviation Practical English',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'International Conference Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Emergency Nursing',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '4th Semester',
+        courseName: 'Aviation Field Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'In-flight Announcement',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Comprehensive In-flight Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 승무원과정 자격증
+const flightAttendantCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Service Practical Skills Level 1, 2',
+        authority: 'Korea Service Promotion Association',
+        description: 'The only domestic certification system in Korea that tests the ability to perform service operation/management, practical work, and guidance in aviation or tourism industry-related organizations such as airlines, travel agencies, and hotels, with professional knowledge required in the aviation transportation service industry based on NCS. Registration Number: (Ministry of Land, Infrastructure and Transport) No. 2016-000972. Test subjects: 1. Aviation Service Introduction, 2. Aviation Service General, 3. Aviation Service Practice.',
+        website: 'https://www.kspa.or.kr'
+    },
+    {
+        name: 'CS Instructor',
+        authority: 'Korea Service Promotion Association',
+        description: 'A certification system that tests general-level job performance ability to develop and manage service human resources through service education planning and CS lectures for customer satisfaction management. Registration Number: (Ministry of Trade, Industry and Energy) No. 2013-0381. Test subjects: 1. Understanding of Service and Customer Satisfaction Management, 2. CS Instructor Theory, 3. CS Instructor Practical Theory.',
+        website: 'https://www.kspa.or.kr'
+    },
+    {
+        name: 'National Certified CS Manager (CS Leaders)',
+        authority: 'Korea Information Assessment Association',
+        description: 'A certification system that evaluates practical knowledge ability to maximize CS planning, customer response, and customer satisfaction based on professional knowledge of customer satisfaction service to achieve efficiency and practicality in real life and business, and evaluates the ability to quickly and accurately perform tasks related to situation analysis and solution presentation when customer dissatisfaction occurs. Test subjects: 1. CS Introduction, 2. CS Strategy Theory, 3. Customer Management Practice Theory.',
+        website: 'https://www.kaa.or.kr'
+    },
+    {
+        name: 'CRS Certification',
+        authority: 'Asiana Abacus, Topas Travel Information Co., Ltd.',
+        description: 'A certification system operated with the goal of training competent professionals who can effectively learn the program system for airline reservation/ticketing and immediately apply it in practice.',
+        website: 'https://www.abacus.co.kr'
+    },
+    {
+        name: 'First Aid (CPR)',
+        authority: 'Korean Red Cross',
+        description: 'An important training course necessary to protect oneself from life-threatening emergency situations that may occur at home or in external life, reduce additional damage by providing appropriate treatment to patients until they receive professional treatment when accidents occur, and prevent accidents and protect precious lives. Test subjects: CPR and automatic defibrillator operation, airway obstruction treatment, etc.',
+        website: 'https://www.redcross.or.kr'
+    },
+    {
+        name: 'Secretary National Technical Qualification Level 1, 2, 3',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'A national technical qualification system that evaluates the overall practical ability of secretaries who assist management so that executives can focus on important decision-making by being freed from administrative work. Test subjects: 1. Secretary Practice, 2. Business General, 3. Business English, 4. Office Information Management, 5. Practical Test.',
+        website: 'https://www.kcci.or.kr'
+    }
+];
+
+// 호텔관광전문가과정 교육과정
+const hotelTourismSpecialistCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Tourism',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Cultural Tourism Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Tourism Chinese I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Practice Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Cabin Service Theory',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '1st Semester',
+        courseName: 'English Conversation Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Hotel Service History',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Tourism Recreation',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Tourism Laws and Regulations',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'World Tourism Geography',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Casino Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Tourism English I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Flight Safety Practice',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '2nd Semester',
+        courseName: 'Chinese Conversation Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'First Aid',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Hotelier Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Service Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Food and Beverage Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Hotel Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Marketing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Image Making',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '3rd Semester',
+        courseName: 'NCS Professional Basic Skills',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Domestic Travel Guide',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Field Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Travel Agency Practice',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Hotel Front Office and Guest Room Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aviation Practical English',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'International Conference Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Emergency Nursing',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '4th Semester',
+        courseName: 'Hotel Field Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'International Tour Conductor (TC)',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Convention Planner',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 호텔관광전문가과정 자격증
+const hotelTourismSpecialistCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Service Practical Skills Level 1, 2',
+        authority: 'Korea Service Promotion Association',
+        description: 'The only domestic certification system in Korea that tests the ability to perform service operation/management, practical work, and guidance in aviation or tourism industry-related organizations such as airlines, travel agencies, and hotels, with professional knowledge required in the aviation transportation service industry based on NCS. Registration Number: (Ministry of Land, Infrastructure and Transport) No. 2016-000972. Test subjects: 1. Aviation Service Introduction, 2. Aviation Service General, 3. Aviation Service Practice.',
+        website: 'https://www.kspa.or.kr'
+    },
+    {
+        name: 'CS Instructor',
+        authority: 'Korea Service Promotion Association',
+        description: 'A certification system that tests general-level job performance ability to develop and manage service human resources through service education planning and CS lectures for customer satisfaction management. Registration Number: (Ministry of Trade, Industry and Energy) No. 2013-0381. Test subjects: 1. Understanding of Service and Customer Satisfaction Management, 2. CS Instructor Theory, 3. CS Instructor Practical Theory.',
+        website: 'https://www.kspa.or.kr'
+    },
+    {
+        name: 'National Certified CS Manager (CS Leaders)',
+        authority: 'Korea Information Assessment Association',
+        description: 'A certification system that evaluates practical knowledge ability to maximize CS planning, customer response, and customer satisfaction based on professional knowledge of customer satisfaction service to achieve efficiency and practicality in real life and business, and evaluates the ability to quickly and accurately perform tasks related to situation analysis and solution presentation when customer dissatisfaction occurs. Test subjects: 1. CS Introduction, 2. CS Strategy Theory, 3. Customer Management Practice Theory.',
+        website: 'https://www.kaa.or.kr'
+    },
+    {
+        name: 'CRS Certification',
+        authority: 'Asiana Abacus, Topas Travel Information Co., Ltd.',
+        description: 'A certification system operated with the goal of training competent professionals who can effectively learn the program system for airline reservation/ticketing and immediately apply it in practice.',
+        website: 'https://www.abacus.co.kr'
+    },
+    {
+        name: 'First Aid (CPR)',
+        authority: 'Korean Red Cross',
+        description: 'An important training course necessary to protect oneself from life-threatening emergency situations that may occur at home or in external life, reduce additional damage by providing appropriate treatment to patients until they receive professional treatment when accidents occur, and prevent accidents and protect precious lives. Test subjects: CPR and automatic defibrillator operation, airway obstruction treatment, etc.',
+        website: 'https://www.redcross.or.kr'
+    },
+    {
+        name: 'Secretary National Technical Qualification Level 1, 2, 3',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'A national technical qualification system that evaluates the overall practical ability of secretaries who assist management so that executives can focus on important decision-making by being freed from administrative work. Test subjects: 1. Secretary Practice, 2. Business General, 3. Business English, 4. Office Information Management, 5. Practical Test.',
+        website: 'https://www.kcci.or.kr'
+    }
+];
+
+// 식음료전문가과정 교육과정
+const foodBeverageSpecialistCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Tourism',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Cultural Tourism Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Tourism Chinese I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Practice Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Cabin Service Theory',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 식음료 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Hotel Service History',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Barista Basic Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Bartender Technician',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Tourism Laws and Regulations',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'World Tourism Geography',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Casino Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Tourism English I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Flight Safety Practice',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 식음료 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Chinese Conversation Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Wine Sommelier Basic Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Hotelier Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Service Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Food and Beverage Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Hotel Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Marketing',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Image Making',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '3rd Semester',
+        courseName: 'NCS Professional Basic Skills',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'First Aid',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tourism Recreation',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Travel Agency Practice',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Hotel Front Office and Guest Room Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aviation Practical English',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'International Conference Practice',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Emergency Nursing',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 식음료 특화
+    {
+        semester: '4th Semester',
+        courseName: 'Hotel Field Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Tourism Field Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'English Conversation Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 식음료전문가과정 자격증
+const foodBeverageSpecialistCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Service Practical Skills Level 1, 2',
+        authority: 'Korea Service Promotion Association',
+        description: 'The only domestic certification system in Korea that tests the ability to perform service operation/management, practical work, and guidance in aviation or tourism industry-related organizations such as airlines, travel agencies, and hotels, with professional knowledge required in the aviation transportation service industry based on NCS. Registration Number: (Ministry of Land, Infrastructure and Transport) No. 2016-000972. Test subjects: 1. Aviation Service Introduction, 2. Aviation Service General, 3. Aviation Service Practice.',
+        website: 'https://www.kspa.or.kr'
+    },
+    {
+        name: 'CS Instructor',
+        authority: 'Korea Service Promotion Association',
+        description: 'A certification system that tests general-level job performance ability to develop and manage service human resources through service education planning and CS lectures for customer satisfaction management. Registration Number: (Ministry of Trade, Industry and Energy) No. 2013-0381. Test subjects: 1. Understanding of Service and Customer Satisfaction Management, 2. CS Instructor Theory, 3. CS Instructor Practical Theory.',
+        website: 'https://www.kspa.or.kr'
+    },
+    {
+        name: 'National Certified CS Manager (CS Leaders)',
+        authority: 'Korea Information Assessment Association',
+        description: 'A certification system that evaluates practical knowledge ability to maximize CS planning, customer response, and customer satisfaction based on professional knowledge of customer satisfaction service to achieve efficiency and practicality in real life and business, and evaluates the ability to quickly and accurately perform tasks related to situation analysis and solution presentation when customer dissatisfaction occurs. Test subjects: 1. CS Introduction, 2. CS Strategy Theory, 3. Customer Management Practice Theory.',
+        website: 'https://www.kaa.or.kr'
+    },
+    {
+        name: 'CRS Certification',
+        authority: 'Asiana Abacus, Topas Travel Information Co., Ltd.',
+        description: 'A certification system operated with the goal of training competent professionals who can effectively learn the program system for airline reservation/ticketing and immediately apply it in practice.',
+        website: 'https://www.abacus.co.kr'
+    },
+    {
+        name: 'First Aid (CPR)',
+        authority: 'Korean Red Cross',
+        description: 'An important training course necessary to protect oneself from life-threatening emergency situations that may occur at home or in external life, reduce additional damage by providing appropriate treatment to patients until they receive professional treatment when accidents occur, and prevent accidents and protect precious lives. Test subjects: CPR and automatic defibrillator operation, airway obstruction treatment, etc.',
+        website: 'https://www.redcross.or.kr'
+    },
+    {
+        name: 'Secretary National Technical Qualification Level 1, 2, 3',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'A national technical qualification system that evaluates the overall practical ability of secretaries who assist management so that executives can focus on important decision-making by being freed from administrative work. Test subjects: 1. Secretary Practice, 2. Business General, 3. Business English, 4. Office Information Management, 5. Practical Test.',
+        website: 'https://www.kcci.or.kr'
+    }
+];
+
+// -------------------------------------------------------------------------------------------------
+
 // Aviation Maintenance Department - Complete Data Structure
 const aviationMaintenanceData: Department = {
     id: 'aviation-maintenance',
@@ -3371,6 +4140,8 @@ const aviationTourismData: Department = {
                 'Overseas hotel experience and interview training',
                 'Overseas hotel industry experience training'
             ],
+            curriculum: flightAttendantCurriculum,
+            detailedCertifications: flightAttendantCertifications,
             certifications: [
                 'International Tour Conductor License',
                 'Convention Planning Specialist',
@@ -3473,6 +4244,8 @@ const aviationTourismData: Department = {
                 'Service industry leadership participation',
                 'Barrier-free tourism education for inclusive tourism services'
             ],
+            curriculum: foodBeverageSpecialistCurriculum,
+            detailedCertifications: foodBeverageSpecialistCertifications,
             certifications: [
                 'Barista Qualification',
                 'F&B Management Specialist',
@@ -3559,6 +4332,8 @@ const aviationTourismData: Department = {
                 'Service industry leadership participation',
                 'Barrier-free tourism education for inclusive tourism service capability improvement'
             ],
+            curriculum: hotelTourismSpecialistCurriculum,
+            detailedCertifications: hotelTourismSpecialistCertifications,
             certifications: [
                 'International Tour Conductor',
                 'Convention Planning Specialist',
