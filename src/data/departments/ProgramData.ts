@@ -4733,6 +4733,1196 @@ const sportsRehabCertifications: CertificationItem[] = [
 
 // 국방AI --------------------------------------------------------------------------------------------
 
+// 국방사관 교육과정
+const defenseOfficerCourseCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '1st Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Police Investigation Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Criminal Law I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Current Affairs Special Lecture',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Life Etiquette',
+        category: 'General',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '1st Semester',
+        courseName: 'Korean History I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'English I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Physical Education I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Intellectual Ability Assessment I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Police Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Constitutional Law I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '2nd Semester',
+        courseName: 'Korean History II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'English II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Physical Education II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Military Ethics',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Criminology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Criminal Procedure Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Ethics',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Martial Arts',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '3rd Semester',
+        courseName: 'Leadership',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'English III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Physical Education III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Teaching Methods',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '4th Semester',
+        courseName: 'Police and Society',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Criminal Psychology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Crime Prevention Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Personnel Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Organization Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '4th Semester',
+        courseName: 'National Security Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'English IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Physical Education IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Unit Management',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 국방사관과정 자격증
+const defenseOfficerCourseCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Industry Engineer/Technician',
+        authority: 'Korea Human Resources Development Service',
+        description: 'To ensure the safety of aircraft operations, this certification was established to train personnel with practical skilled functions in aircraft maintenance technology and basic knowledge and adaptability to aviation technology in general, to perform field work related to aircraft maintenance and manufacturing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certifications',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts specialists who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even beginners who have never learned martial arts can become 2nd dan or higher black belt holders by training martial arts at our school.',
+        website: 'Various associations'
+    },
+    {
+        name: 'Personal Computer Test (PCT)',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'As industrialization advances, management analysis and data management for areas such as sales, finance, and production are essential. The Computer Utilization Ability test is a national technical qualification exam that evaluates the ability to use spreadsheets and databases, which are essential programs for office automation.',
+        website: 'https://www.kcci.or.kr'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'TOEIC (Educational Testing Service)',
+        description: 'An English test by the American ETS (Educational Testing Service) that evaluates the level of proficiency in English as an international common language. TOEIC is a test that emphasizes listening (auditory ability).',
+        website: 'http://exam.ybmsisa.com/toeic'
+    },
+    {
+        name: 'Taekwondo',
+        authority: 'Kukkiwon',
+        description: 'A martial art that attacks or defends using hands and feet anytime, anywhere without weapons, characterized by fast and powerful kicking techniques. It is divided into standing at attention, standing together, sitting stance, front stance, front standing, back stance, crane standing, etc., and is a necessary certification for professional soldiers who must fight and win against enemies to have strong physical abilities.',
+        website: 'https://www.kukkiwon.or.kr'
+    },
+    {
+        name: 'National Certified Chinese Character Certification',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Most problem types include reading, writing Chinese characters, phonetics, completing idioms, antonyms, interpretation, homophones, and writing radicals, and the number of tests is maintained at twice a year. According to the standards by status, non-commissioned officers must have level 4 or higher, and officers must have level 3 or higher, so it is a certification that many students who hope to become professional soldiers prepare for. The National Certified Chinese Character Certification not only provides additional points in non-commissioned officer selection tests, but is also an essential certification that is reflected as potential capability in various evaluations such as long-term service and promotion after commissioning as officers and non-commissioned officers.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'ETS',
+        description: 'A test system developed by the US Educational Assessment Committee to measure English proficiency, helpful in learning basic conversation (meals, travel, etc.) and business English. It is a test that emphasizes listening rather than reading and writing, allowing practical English study, with a total of 200 questions and a perfect score of 990 points.',
+        website: 'https://www.ets.org'
+    },
+    {
+        name: 'Computer Utilization Ability',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Computer utilization ability is a national technical qualification exam that evaluates the ability to use computers, spreadsheets, and databases, which are essential programs for office automation. There are no restrictions on applicant qualifications, and the test consists of written and practical exams.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'Korean History Proficiency Test Certificate (Level 1, 2, 3, 4)',
+        authority: 'National Institute of Korean History',
+        description: 'The Korean History Proficiency Test is a test designed to measure the basic historical knowledge that citizens of the Republic of Korea should have and to form a national consensus on history. It is a test prepared by the National Institute of Korean History to innovate the paradigm of Korean history and strengthen the status of Korean history education, and is an essential certification for defense students who should have thorough national consciousness, security consciousness, and historical consciousness as future professional soldiers.',
+        website: 'https://www.historyexam.go.kr'
+    }
+];
+
+// 국방부사관과정 교육과정
+const defenseNCOCourseCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '1st Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Police Investigation Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Criminal Law I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Current Affairs Special Lecture',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Life Etiquette',
+        category: 'General',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '1st Semester',
+        courseName: 'Korean History I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'English I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Physical Education I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Intellectual Ability Assessment I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Police Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Constitutional Law I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '2nd Semester',
+        courseName: 'Korean History II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'English II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Physical Education II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Military Ethics',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Criminology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Criminal Procedure Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Ethics',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Martial Arts',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '3rd Semester',
+        courseName: 'Leadership',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'English III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Physical Education III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Teaching Methods',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '4th Semester',
+        courseName: 'Police and Society',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Criminal Psychology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Crime Prevention Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Personnel Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Organization Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점)
+    {
+        semester: '4th Semester',
+        courseName: 'National Security Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'English IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Physical Education IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Unit Management',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 국방부사관과정 자격증
+const defenseNCOCourseCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Industry Engineer/Technician',
+        authority: 'Korea Human Resources Development Service',
+        description: 'To ensure the safety of aircraft operations, this certification was established to train personnel with practical skilled functions in aircraft maintenance technology and basic knowledge and adaptability to aviation technology in general, to perform field work related to aircraft maintenance and manufacturing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certifications',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts specialists who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even beginners who have never learned martial arts can become 2nd dan or higher black belt holders by training martial arts at our school.',
+        website: 'Various associations'
+    },
+    {
+        name: 'Personal Computer Test (PCT)',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'As industrialization advances, management analysis and data management for areas such as sales, finance, and production are essential. The Computer Utilization Ability test is a national technical qualification exam that evaluates the ability to use spreadsheets and databases, which are essential programs for office automation.',
+        website: 'https://www.kcci.or.kr'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'TOEIC (Educational Testing Service)',
+        description: 'An English test by the American ETS (Educational Testing Service) that evaluates the level of proficiency in English as an international common language. TOEIC is a test that emphasizes listening (auditory ability).',
+        website: 'http://exam.ybmsisa.com/toeic'
+    },
+    {
+        name: 'Taekwondo',
+        authority: 'Kukkiwon',
+        description: 'A martial art that attacks or defends using hands and feet anytime, anywhere without weapons, characterized by fast and powerful kicking techniques. It is divided into standing at attention, standing together, sitting stance, front stance, front standing, back stance, crane standing, etc., and is a necessary certification for professional soldiers who must fight and win against enemies to have strong physical abilities.',
+        website: 'https://www.kukkiwon.or.kr'
+    },
+    {
+        name: 'National Certified Chinese Character Certification',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Most problem types include reading, writing Chinese characters, phonetics, completing idioms, antonyms, interpretation, homophones, and writing radicals, and the number of tests is maintained at twice a year. According to the standards by status, non-commissioned officers must have level 4 or higher, and officers must have level 3 or higher, so it is a certification that many students who hope to become professional soldiers prepare for. The National Certified Chinese Character Certification not only provides additional points in non-commissioned officer selection tests, but is also an essential certification that is reflected as potential capability in various evaluations such as long-term service and promotion after commissioning as officers and non-commissioned officers.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'ETS',
+        description: 'A test system developed by the US Educational Assessment Committee to measure English proficiency, helpful in learning basic conversation (meals, travel, etc.) and business English. It is a test that emphasizes listening rather than reading and writing, allowing practical English study, with a total of 200 questions and a perfect score of 990 points.',
+        website: 'https://www.ets.org'
+    },
+    {
+        name: 'Computer Utilization Ability',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Computer utilization ability is a national technical qualification exam that evaluates the ability to use computers, spreadsheets, and databases, which are essential programs for office automation. There are no restrictions on applicant qualifications, and the test consists of written and practical exams.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'Korean History Proficiency Test Certificate (Level 1, 2, 3, 4)',
+        authority: 'National Institute of Korean History',
+        description: 'The Korean History Proficiency Test is a test designed to measure the basic historical knowledge that citizens of the Republic of Korea should have and to form a national consensus on history. It is a test prepared by the National Institute of Korean History to innovate the paradigm of Korean history and strengthen the status of Korean history education, and is an essential certification for defense students who should have thorough national consciousness, security consciousness, and historical consciousness as future professional soldiers.',
+        website: 'https://www.historyexam.go.kr'
+    }
+];
+
+// 국방AI과정 교육과정
+const defenseAICourseCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '1st Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Police Investigation Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Criminal Law I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Current Affairs Special Lecture',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Life Etiquette',
+        category: 'General',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - AI/정보보호 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Information Security',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Hacking and Virus',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'English I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Physical Education I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Police Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Constitutional Law I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - AI/정보보호 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Internet Security',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Intrusion Prevention System',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'English II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Physical Education II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Criminology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Criminal Procedure Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Ethics',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Martial Arts',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - AI/정보보호 특화
+    {
+        semester: '3rd Semester',
+        courseName: 'Information Security Law',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Algorithm',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Leadership',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Teaching Methods',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) - Police Administration Major ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '4th Semester',
+        courseName: 'Police and Society',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Criminal Psychology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Crime Prevention Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Personnel Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Organization Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - AI/정보보호 특화
+    {
+        semester: '4th Semester',
+        courseName: 'Security Programming',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Malware Analysis',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Military Ethics',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'National Security Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 국방AI과정 자격증
+const defenseAICourseCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Industry Engineer/Technician',
+        authority: 'Korea Human Resources Development Service',
+        description: 'To ensure the safety of aircraft operations, this certification was established to train personnel with practical skilled functions in aircraft maintenance technology and basic knowledge and adaptability to aviation technology in general, to perform field work related to aircraft maintenance and manufacturing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certifications',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts specialists who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even beginners who have never learned martial arts can become 2nd dan or higher black belt holders by training martial arts at our school.',
+        website: 'Various associations'
+    },
+    {
+        name: 'Personal Computer Test (PCT)',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'As industrialization advances, management analysis and data management for areas such as sales, finance, and production are essential. The Computer Utilization Ability test is a national technical qualification exam that evaluates the ability to use spreadsheets and databases, which are essential programs for office automation.',
+        website: 'https://www.kcci.or.kr'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'TOEIC (Educational Testing Service)',
+        description: 'An English test by the American ETS (Educational Testing Service) that evaluates the level of proficiency in English as an international common language. TOEIC is a test that emphasizes listening (auditory ability).',
+        website: 'http://exam.ybmsisa.com/toeic'
+    },
+    {
+        name: 'Taekwondo',
+        authority: 'Kukkiwon',
+        description: 'A martial art that attacks or defends using hands and feet anytime, anywhere without weapons, characterized by fast and powerful kicking techniques. It is divided into standing at attention, standing together, sitting stance, front stance, front standing, back stance, crane standing, etc., and is a necessary certification for professional soldiers who must fight and win against enemies to have strong physical abilities.',
+        website: 'https://www.kukkiwon.or.kr'
+    },
+    {
+        name: 'National Certified Chinese Character Certification',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Most problem types include reading, writing Chinese characters, phonetics, completing idioms, antonyms, interpretation, homophones, and writing radicals, and the number of tests is maintained at twice a year. According to the standards by status, non-commissioned officers must have level 4 or higher, and officers must have level 3 or higher, so it is a certification that many students who hope to become professional soldiers prepare for. The National Certified Chinese Character Certification not only provides additional points in non-commissioned officer selection tests, but is also an essential certification that is reflected as potential capability in various evaluations such as long-term service and promotion after commissioning as officers and non-commissioned officers.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'ETS',
+        description: 'A test system developed by the US Educational Assessment Committee to measure English proficiency, helpful in learning basic conversation (meals, travel, etc.) and business English. It is a test that emphasizes listening rather than reading and writing, allowing practical English study, with a total of 200 questions and a perfect score of 990 points.',
+        website: 'https://www.ets.org'
+    },
+    {
+        name: 'Computer Utilization Ability',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Computer utilization ability is a national technical qualification exam that evaluates the ability to use computers, spreadsheets, and databases, which are essential programs for office automation. There are no restrictions on applicant qualifications, and the test consists of written and practical exams.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'Korean History Proficiency Test Certificate (Level 1, 2, 3, 4)',
+        authority: 'National Institute of Korean History',
+        description: 'The Korean History Proficiency Test is a test designed to measure the basic historical knowledge that citizens of the Republic of Korea should have and to form a national consensus on history. It is a test prepared by the National Institute of Korean History to innovate the paradigm of Korean history and strengthen the status of Korean history education, and is an essential certification for defense students who should have thorough national consciousness, security consciousness, and historical consciousness as future professional soldiers.',
+        website: 'https://www.historyexam.go.kr'
+    }
+];
+
+// 경찰공무원과정 교육과정
+const policeCivilServiceCourseCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '1st Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Police Investigation Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Criminal Law I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Current Affairs Special Lecture',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Life Etiquette',
+        category: 'General',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - 경찰공무원 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Korean History I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'English I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Physical Education I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Police Comprehensive Practice I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Introduction to Police Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Constitutional Law I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Arrest Techniques',
+        category: 'General',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - 경찰공무원 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Korean History II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'English II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Physical Education II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Police Comprehensive Practice II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Criminology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Criminal Procedure Law',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Ethics',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Martial Arts',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - 경찰공무원 특화
+    {
+        semester: '3rd Semester',
+        courseName: 'Teaching Methods',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'English III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Physical Education III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Comprehensive Practice III',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program (학점인정 학습과정)
+    {
+        semester: '4th Semester',
+        courseName: 'Police and Society',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Criminal Psychology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Crime Prevention Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Personnel Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Organization Management',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 심화 학습과정(비학점) - 경찰공무원 특화
+    {
+        semester: '4th Semester',
+        courseName: 'National Security Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'English IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Physical Education IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Police Comprehensive Practice IV',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 경찰공무원과정 자격증
+const policeCivilServiceCourseCertifications: CertificationItem[] = [
+    {
+        name: 'Aviation Industry Engineer/Technician',
+        authority: 'Korea Human Resources Development Service',
+        description: 'To ensure the safety of aircraft operations, this certification was established to train personnel with practical skilled functions in aircraft maintenance technology and basic knowledge and adaptability to aviation technology in general, to perform field work related to aircraft maintenance and manufacturing.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certifications',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts specialists who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even beginners who have never learned martial arts can become 2nd dan or higher black belt holders by training martial arts at our school.',
+        website: 'Various associations'
+    },
+    {
+        name: 'Personal Computer Test (PCT)',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'As industrialization advances, management analysis and data management for areas such as sales, finance, and production are essential. The Computer Utilization Ability test is a national technical qualification exam that evaluates the ability to use spreadsheets and databases, which are essential programs for office automation.',
+        website: 'https://www.kcci.or.kr'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'TOEIC (Educational Testing Service)',
+        description: 'An English test by the American ETS (Educational Testing Service) that evaluates the level of proficiency in English as an international common language. TOEIC is a test that emphasizes listening (auditory ability).',
+        website: 'http://exam.ybmsisa.com/toeic'
+    },
+    {
+        name: 'Taekwondo',
+        authority: 'Kukkiwon',
+        description: 'A martial art that attacks or defends using hands and feet anytime, anywhere without weapons, characterized by fast and powerful kicking techniques. It is divided into standing at attention, standing together, sitting stance, front stance, front standing, back stance, crane standing, etc., and is a necessary certification for professional soldiers who must fight and win against enemies to have strong physical abilities.',
+        website: 'https://www.kukkiwon.or.kr'
+    },
+    {
+        name: 'National Certified Chinese Character Certification',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Most problem types include reading, writing Chinese characters, phonetics, completing idioms, antonyms, interpretation, homophones, and writing radicals, and the number of tests is maintained at twice a year. According to the standards by status, non-commissioned officers must have level 4 or higher, and officers must have level 3 or higher, so it is a certification that many students who hope to become professional soldiers prepare for. The National Certified Chinese Character Certification not only provides additional points in non-commissioned officer selection tests, but is also an essential certification that is reflected as potential capability in various evaluations such as long-term service and promotion after commissioning as officers and non-commissioned officers.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'TOEIC',
+        authority: 'ETS',
+        description: 'A test system developed by the US Educational Assessment Committee to measure English proficiency, helpful in learning basic conversation (meals, travel, etc.) and business English. It is a test that emphasizes listening rather than reading and writing, allowing practical English study, with a total of 200 questions and a perfect score of 990 points.',
+        website: 'https://www.ets.org'
+    },
+    {
+        name: 'Computer Utilization Ability',
+        authority: 'Korea Chamber of Commerce and Industry',
+        description: 'Computer utilization ability is a national technical qualification exam that evaluates the ability to use computers, spreadsheets, and databases, which are essential programs for office automation. There are no restrictions on applicant qualifications, and the test consists of written and practical exams.',
+        website: 'https://www.korcham.net'
+    },
+    {
+        name: 'Korean History Proficiency Test Certificate (Level 1, 2, 3, 4)',
+        authority: 'National Institute of Korean History',
+        description: 'The Korean History Proficiency Test is a test designed to measure the basic historical knowledge that citizens of the Republic of Korea should have and to form a national consensus on history. It is a test prepared by the National Institute of Korean History to innovate the paradigm of Korean history and strengthen the status of Korean history education, and is an essential certification for defense students who should have thorough national consciousness, security consciousness, and historical consciousness as future professional soldiers.',
+        website: 'https://www.historyexam.go.kr'
+    }
+];
+
+// Departments Data --------------------------------------------------------------------------------------------
+
 // Aviation Maintenance Department - Complete Data Structure
 const aviationMaintenanceData: Department = {
     id: 'aviation-maintenance',
@@ -6493,6 +7683,8 @@ const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData �
                 'Transfer opportunities connected to university degrees and leadership development for all social sectors',
                 'Character development education and career roadmap management essential for officer duties'
             ],
+            curriculum: defenseOfficerCourseCurriculum,
+            detailedCertifications: defenseOfficerCourseCertifications,
             certifications: [
                 'University \'3rd and 4th year\' transfer program with full government funding (40 million KRW per year benefit)',
                 'Dual degree upon graduation (General Bachelor\'s and Military Science Bachelor\'s)',
@@ -6568,6 +7760,8 @@ const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData �
                 'Army military service company NCO receipt temporary Second Lieutenant service special priority educational standards and instruction (Target: Army Sergeant commissioning)',
                 'Character development and career roadmap management essential for NCO duty performance'
             ],
+            curriculum: defenseNCOCourseCurriculum,
+            detailedCertifications: defenseNCOCourseCertifications,
             certifications: [
                 'Comprehensive benefits upon each service branch NCO commissioning',
                 'Secure and stable career with professional field experience retention and free preparation opportunities',
@@ -6643,6 +7837,8 @@ const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData �
                 'AI-based personnel management systems and military logistics big data education',
                 'University, NCO, military civilian service academy (application) followed by related unit/support service assignment ease'
             ],
+            curriculum: defenseAICourseCurriculum,
+            detailedCertifications: defenseAICourseCertifications,
             certifications: [
                 'Graduation after 3 or more certifications during study (Target: English TOEIC score 500 or above, martial arts certification, Korean History Proficiency Test Grade 6 or above, Chinese characters, etc.)',
                 'Military technical examination preparation for enhanced educational programs: National Physical Fitness Level 3 3rd grade or above target achievement',
@@ -6717,6 +7913,8 @@ const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData �
                 'Various martial arts certifications above 4th dan acquisition (career civil service examination qualification granted)',
                 'Martial arts trainer certification education and police public safety officer employment opportunities'
             ],
+            curriculum: policeCivilServiceCourseCurriculum,
+            detailedCertifications: policeCivilServiceCourseCertifications,
             certifications: [
                 'Career experience recruitment examination qualification acquisition',
                 'Grade 9 career experience recruitment examination application eligibility',
