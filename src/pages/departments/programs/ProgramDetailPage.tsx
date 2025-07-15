@@ -138,73 +138,122 @@ const ProgramDetailPage: React.FC = () => {
     );
 
     // 교육과정 탭
-    const renderCurriculumTab = () => (
-        <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
-                <GraduationCap className="w-8 h-8 mr-3" />
-                Curriculum Structure
-            </h2>
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                <div className="overflow-x-auto">
-                    <table className="w-full">
-                        <thead className="bg-blue-900 text-white">
-                        <tr>
-                            <th className="px-4 py-3 text-left font-semibold">Semester</th>
-                            <th className="px-4 py-3 text-left font-semibold">Course Name</th>
-                            <th className="px-4 py-3 text-center font-semibold">Credits</th>
-                            <th className="px-4 py-3 text-center font-semibold">Type</th>
-                            <th className="px-4 py-3 text-left font-semibold">Prerequisites</th>
-                        </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200">
-                        {/* Sample curriculum data - will be replaced with actual data */}
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">1st Semester</td>
-                            <td className="px-4 py-3">Introduction to Aviation</td>
-                            <td className="px-4 py-3 text-center">3</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Core</span>
-                            </td>
-                            <td className="px-4 py-3 text-sm text-gray-600">None</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">1st Semester</td>
-                            <td className="px-4 py-3">Basic Mathematics</td>
-                            <td className="px-4 py-3 text-center">3</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">General</span>
-                            </td>
-                            <td className="px-4 py-3 text-sm text-gray-600">None</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">2nd Semester</td>
-                            <td className="px-4 py-3">Aircraft Systems</td>
-                            <td className="px-4 py-3 text-center">4</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Core</span>
-                            </td>
-                            <td className="px-4 py-3 text-sm text-gray-600">Introduction to Aviation</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">2nd Semester</td>
-                            <td className="px-4 py-3">Physics for Aviation</td>
-                            <td className="px-4 py-3 text-center">3</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">General</span>
-                            </td>
-                            <td className="px-4 py-3 text-sm text-gray-600">Basic Mathematics</td>
-                        </tr>
-                        </tbody>
-                    </table>
+    const renderCurriculumTab = () => {
+        // Sample curriculum data - will be replaced with actual data
+        const curriculumData = [
+            {
+                semester: "1st Semester",
+                courseName: "Introduction to Aviation",
+                credits: 3,
+                type: "Core",
+                prerequisites: "None"
+            },
+            {
+                semester: "1st Semester",
+                courseName: "Basic Mathematics",
+                credits: 3,
+                type: "General",
+                prerequisites: "None"
+            },
+            {
+                semester: "2nd Semester",
+                courseName: "Aircraft Systems",
+                credits: 4,
+                type: "Core",
+                prerequisites: "Introduction to Aviation"
+            },
+            {
+                semester: "2nd Semester",
+                courseName: "Physics for Aviation",
+                credits: 3,
+                type: "General",
+                prerequisites: "Basic Mathematics"
+            }
+        ];
+
+        return (
+            <div>
+                <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
+                    <GraduationCap className="w-8 h-8 mr-3" />
+                    Curriculum Structure
+                </h2>
+
+                {/* Desktop Table */}
+                <div className="hidden md:block bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div className="overflow-x-auto">
+                        <table className="w-full">
+                            <thead className="bg-blue-900 text-white">
+                            <tr>
+                                <th className="px-4 py-3 text-left font-semibold">Semester</th>
+                                <th className="px-4 py-3 text-left font-semibold">Course Name</th>
+                                <th className="px-4 py-3 text-center font-semibold">Credits</th>
+                                <th className="px-4 py-3 text-center font-semibold">Type</th>
+                                <th className="px-4 py-3 text-left font-semibold">Prerequisites</th>
+                            </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200">
+                            {curriculumData.map((course, index) => (
+                                <tr key={index} className="hover:bg-gray-50">
+                                    <td className="px-4 py-3 font-semibold text-blue-900">{course.semester}</td>
+                                    <td className="px-4 py-3">{course.courseName}</td>
+                                    <td className="px-4 py-3 text-center">{course.credits}</td>
+                                    <td className="px-4 py-3 text-center">
+                                            <span className={`px-2 py-1 rounded-full text-xs ${
+                                                course.type === 'Core'
+                                                    ? 'bg-blue-100 text-blue-800'
+                                                    : 'bg-green-100 text-green-800'
+                                            }`}>
+                                                {course.type}
+                                            </span>
+                                    </td>
+                                    <td className="px-4 py-3 text-sm text-gray-600">{course.prerequisites}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                {/* Mobile Cards */}
+                <div className="md:hidden space-y-4">
+                    {curriculumData.map((course, index) => (
+                        <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                            <div className="flex items-center justify-between mb-4">
+                                <h3 className="text-lg font-bold text-blue-900">{course.courseName}</h3>
+                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                    course.type === 'Core'
+                                        ? 'bg-blue-100 text-blue-800'
+                                        : 'bg-green-100 text-green-800'
+                                }`}>
+                                    {course.type}
+                                </span>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span className="text-gray-600">Semester:</span>
+                                    <p className="font-semibold text-gray-900">{course.semester}</p>
+                                </div>
+                                <div>
+                                    <span className="text-gray-600">Credits:</span>
+                                    <p className="font-semibold text-gray-900">{course.credits}</p>
+                                </div>
+                                <div className="col-span-2">
+                                    <span className="text-gray-600">Prerequisites:</span>
+                                    <p className="font-semibold text-gray-900">{course.prerequisites}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-100">
+                    <p className="text-blue-800 text-sm">
+                        <strong>Note:</strong> This is a sample curriculum structure. Actual curriculum data will be populated from ProgramData.ts
+                    </p>
                 </div>
             </div>
-            <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-100">
-                <p className="text-blue-800 text-sm">
-                    <strong>Note:</strong> This is a sample curriculum structure. Actual curriculum data will be populated from ProgramData.ts
-                </p>
-            </div>
-        </div>
-    );
+        );
+    };
 
     // 교수진 탭
     const renderFacultyTab = () => (
@@ -232,64 +281,121 @@ const ProgramDetailPage: React.FC = () => {
     );
 
     // 자격증 탭
-    const renderCertificatesTab = () => (
-        <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
-                <Award className="w-8 h-8 mr-3" />
-                Certifications & Licenses
-            </h2>
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                <div className="overflow-x-auto">
-                    <table className="w-full">
-                        <thead className="bg-blue-900 text-white">
-                        <tr>
-                            <th className="px-4 py-3 text-left font-semibold">Certification Name</th>
-                            <th className="px-4 py-3 text-left font-semibold">Issuing Authority</th>
-                            <th className="px-4 py-3 text-center font-semibold">Level</th>
-                            <th className="px-4 py-3 text-center font-semibold">Validity</th>
-                            <th className="px-4 py-3 text-left font-semibold">Requirements</th>
-                        </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200">
-                        {/* Sample certification data - will be replaced with actual data */}
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">Aviation Maintenance License</td>
-                            <td className="px-4 py-3">Ministry of Land, Infrastructure and Transport</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Professional</span>
-                            </td>
-                            <td className="px-4 py-3 text-center">Permanent</td>
-                            <td className="px-4 py-3 text-sm text-gray-600">Course completion + Exam</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">Aircraft Mechanic Certificate</td>
-                            <td className="px-4 py-3">Korea Aviation Association</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Basic</span>
-                            </td>
-                            <td className="px-4 py-3 text-center">3 years</td>
-                            <td className="px-4 py-3 text-sm text-gray-600">Training hours + Assessment</td>
-                        </tr>
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-4 py-3 font-semibold text-blue-900">Safety Management Certificate</td>
-                            <td className="px-4 py-3">Korea Occupational Safety and Health Agency</td>
-                            <td className="px-4 py-3 text-center">
-                                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Standard</span>
-                            </td>
-                            <td className="px-4 py-3 text-center">2 years</td>
-                            <td className="px-4 py-3 text-sm text-gray-600">Course completion</td>
-                        </tr>
-                        </tbody>
-                    </table>
+    const renderCertificatesTab = () => {
+        // Sample certification data - will be replaced with actual data
+        const certificationData = [
+            {
+                name: "Aviation Maintenance License",
+                authority: "Ministry of Land, Infrastructure and Transport",
+                level: "Professional",
+                validity: "Permanent",
+                requirements: "Course completion + Exam"
+            },
+            {
+                name: "Aircraft Mechanic Certificate",
+                authority: "Korea Aviation Association",
+                level: "Basic",
+                validity: "3 years",
+                requirements: "Training hours + Assessment"
+            },
+            {
+                name: "Safety Management Certificate",
+                authority: "Korea Occupational Safety and Health Agency",
+                level: "Standard",
+                validity: "2 years",
+                requirements: "Course completion"
+            }
+        ];
+
+        return (
+            <div>
+                <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
+                    <Award className="w-8 h-8 mr-3" />
+                    Certifications & Licenses
+                </h2>
+
+                {/* Desktop Table */}
+                <div className="hidden md:block bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div className="overflow-x-auto">
+                        <table className="w-full">
+                            <thead className="bg-blue-900 text-white">
+                            <tr>
+                                <th className="px-4 py-3 text-left font-semibold">Certification Name</th>
+                                <th className="px-4 py-3 text-left font-semibold">Issuing Authority</th>
+                                <th className="px-4 py-3 text-center font-semibold">Level</th>
+                                <th className="px-4 py-3 text-center font-semibold">Validity</th>
+                                <th className="px-4 py-3 text-left font-semibold">Requirements</th>
+                            </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200">
+                            {certificationData.map((cert, index) => (
+                                <tr key={index} className="hover:bg-gray-50">
+                                    <td className="px-4 py-3 font-semibold text-blue-900">{cert.name}</td>
+                                    <td className="px-4 py-3">{cert.authority}</td>
+                                    <td className="px-4 py-3 text-center">
+                                            <span className={`px-2 py-1 rounded-full text-xs ${
+                                                cert.level === 'Professional'
+                                                    ? 'bg-yellow-100 text-yellow-800'
+                                                    : cert.level === 'Basic'
+                                                        ? 'bg-green-100 text-green-800'
+                                                        : 'bg-blue-100 text-blue-800'
+                                            }`}>
+                                                {cert.level}
+                                            </span>
+                                    </td>
+                                    <td className="px-4 py-3 text-center">{cert.validity}</td>
+                                    <td className="px-4 py-3 text-sm text-gray-600">{cert.requirements}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                {/* Mobile Cards */}
+                <div className="md:hidden space-y-4">
+                    {certificationData.map((cert, index) => (
+                        <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                            <div className="flex items-center justify-between mb-4">
+                                <h3 className="text-lg font-bold text-blue-900">{cert.name}</h3>
+                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                    cert.level === 'Professional'
+                                        ? 'bg-yellow-100 text-yellow-800'
+                                        : cert.level === 'Basic'
+                                            ? 'bg-green-100 text-green-800'
+                                            : 'bg-blue-100 text-blue-800'
+                                }`}>
+                                    {cert.level}
+                                </span>
+                            </div>
+                            <div className="space-y-3 text-sm">
+                                <div>
+                                    <span className="text-gray-600">Issuing Authority:</span>
+                                    <p className="font-semibold text-gray-900">{cert.authority}</p>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <span className="text-gray-600">Validity:</span>
+                                        <p className="font-semibold text-gray-900">{cert.validity}</p>
+                                    </div>
+                                    <div>
+                                        <span className="text-gray-600">Requirements:</span>
+                                        <p className="font-semibold text-gray-900">{cert.requirements}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-100">
+                    <p className="text-blue-800 text-sm">
+                        <strong>Note:</strong> This is a sample certification structure. Actual certification data will be populated from ProgramData.ts
+                    </p>
                 </div>
             </div>
-            <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-100">
-                <p className="text-blue-800 text-sm">
-                    <strong>Note:</strong> This is a sample certification structure. Actual certification data will be populated from ProgramData.ts
-                </p>
-            </div>
-        </div>
-    );
+        );
+    };
 
     // 실습실 탭
     const renderFacilitiesTab = () => (
