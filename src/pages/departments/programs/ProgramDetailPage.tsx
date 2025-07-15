@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
     Clock, Star, Award, Building2, Users, CheckCircle, ArrowLeft, MapPin,
-    BookOpen, GraduationCap, UserCheck, Construction
+    BookOpen, GraduationCap, UserCheck, Construction, ExternalLink
 } from 'lucide-react';
 import { getDepartmentById, getProgramById } from '../../../data/departments/ProgramData';
 import { getDepartmentIdFromUrl } from '../../../router/routes';
@@ -137,120 +137,126 @@ const ProgramDetailPage: React.FC = () => {
         </div>
     );
 
-    // 교육과정 탭
+    // ✅ 교육과정 탭 - 새 타입 정의에 맞게 수정
     const renderCurriculumTab = () => {
-        // Sample curriculum data - will be replaced with actual data
-        const curriculumData = [
-            {
-                semester: "1st Semester",
-                courseName: "Introduction to Aviation",
-                credits: 3,
-                type: "Core",
-                prerequisites: "None"
-            },
-            {
-                semester: "1st Semester",
-                courseName: "Basic Mathematics",
-                credits: 3,
-                type: "General",
-                prerequisites: "None"
-            },
-            {
-                semester: "2nd Semester",
-                courseName: "Aircraft Systems",
-                credits: 4,
-                type: "Core",
-                prerequisites: "Introduction to Aviation"
-            },
-            {
-                semester: "2nd Semester",
-                courseName: "Physics for Aviation",
-                credits: 3,
-                type: "General",
-                prerequisites: "Basic Mathematics"
+        const curriculumData = program.curriculum || [];
+
+        if (curriculumData.length === 0) {
+            return (
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
+                    <div className="text-center">
+                        <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-gray-700 mb-2">Curriculum Information</h3>
+                        <p className="text-gray-500 mb-6">
+                            Detailed curriculum information will be available soon.
+                        </p>
+                        <div className="bg-blue-50 rounded-lg p-4">
+                            <p className="text-blue-700 text-sm">
+                                We are currently preparing comprehensive curriculum details including
+                                course descriptions and learning outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // 학기별 그룹화
+        const semesterGroups = curriculumData.reduce((acc, course) => {
+            if (!acc[course.semester]) {
+                acc[course.semester] = [];
             }
-        ];
+            acc[course.semester].push(course);
+            return acc;
+        }, {} as Record<string, typeof curriculumData>);
 
         return (
-            <div>
+            <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
                     <GraduationCap className="w-8 h-8 mr-3" />
                     Curriculum Structure
                 </h2>
 
-                {/* Desktop Table */}
-                <div className="hidden md:block bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full">
-                            <thead className="bg-blue-900 text-white">
-                            <tr>
-                                <th className="px-4 py-3 text-left font-semibold">Semester</th>
-                                <th className="px-4 py-3 text-left font-semibold">Course Name</th>
-                                <th className="px-4 py-3 text-center font-semibold">Credits</th>
-                                <th className="px-4 py-3 text-center font-semibold">Type</th>
-                                <th className="px-4 py-3 text-left font-semibold">Prerequisites</th>
-                            </tr>
-                            </thead>
-                            <tbody className="divide-y divide-gray-200">
-                            {curriculumData.map((course, index) => (
-                                <tr key={index} className="hover:bg-gray-50">
-                                    <td className="px-4 py-3 font-semibold text-blue-900">{course.semester}</td>
-                                    <td className="px-4 py-3">{course.courseName}</td>
-                                    <td className="px-4 py-3 text-center">{course.credits}</td>
-                                    <td className="px-4 py-3 text-center">
-                                            <span className={`px-2 py-1 rounded-full text-xs ${
-                                                course.type === 'Core'
-                                                    ? 'bg-blue-100 text-blue-800'
-                                                    : 'bg-green-100 text-green-800'
-                                            }`}>
-                                                {course.type}
-                                            </span>
-                                    </td>
-                                    <td className="px-4 py-3 text-sm text-gray-600">{course.prerequisites}</td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                {/* Mobile Cards */}
-                <div className="md:hidden space-y-4">
-                    {curriculumData.map((course, index) => (
-                        <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-                            <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-lg font-bold text-blue-900">{course.courseName}</h3>
-                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                    course.type === 'Core'
-                                        ? 'bg-blue-100 text-blue-800'
-                                        : 'bg-green-100 text-green-800'
-                                }`}>
-                                    {course.type}
-                                </span>
-                            </div>
-                            <div className="grid grid-cols-2 gap-4 text-sm">
-                                <div>
-                                    <span className="text-gray-600">Semester:</span>
-                                    <p className="font-semibold text-gray-900">{course.semester}</p>
-                                </div>
-                                <div>
-                                    <span className="text-gray-600">Credits:</span>
-                                    <p className="font-semibold text-gray-900">{course.credits}</p>
-                                </div>
-                                <div className="col-span-2">
-                                    <span className="text-gray-600">Prerequisites:</span>
-                                    <p className="font-semibold text-gray-900">{course.prerequisites}</p>
-                                </div>
-                            </div>
+                {/* 학기별 섹션 */}
+                {Object.entries(semesterGroups).map(([semester, courses]) => (
+                    <div key={semester} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                        <div className="bg-blue-900 text-white px-6 py-4">
+                            <h3 className="text-xl font-bold">{semester}</h3>
+                            <p className="text-blue-100 text-sm">{courses.length} courses</p>
                         </div>
-                    ))}
-                </div>
 
-                <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-100">
-                    <p className="text-blue-800 text-sm">
-                        <strong>Note:</strong> This is a sample curriculum structure. Actual curriculum data will be populated from ProgramData.ts
-                    </p>
-                </div>
+                        {/* 데스크톱 테이블 */}
+                        <div className="hidden md:block overflow-x-auto">
+                            <table className="w-full">
+                                <thead className="bg-gray-50">
+                                <tr>
+                                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Course Name</th>
+                                    <th className="px-6 py-3 text-center text-sm font-semibold text-gray-900">Category</th>
+                                    <th className="px-6 py-3 text-center text-sm font-semibold text-gray-900">Education Type</th>
+                                </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-200">
+                                {courses.map((course, index) => (
+                                    <tr key={index} className="hover:bg-gray-50">
+                                        <td className="px-6 py-4 text-gray-900 font-medium">{course.courseName}</td>
+                                        <td className="px-6 py-4 text-center">
+                                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                                    course.category === 'Major Required'
+                                                        ? 'bg-red-100 text-red-800'
+                                                        : course.category === 'Major Elective'
+                                                            ? 'bg-blue-100 text-blue-800'
+                                                            : course.category === 'Advanced Major'
+                                                                ? 'bg-purple-100 text-purple-800'
+                                                                : 'bg-gray-100 text-gray-800'
+                                                }`}>
+                                                    {course.category}
+                                                </span>
+                                        </td>
+                                        <td className="px-6 py-4 text-center">
+                                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                                    course.eduType === 'Credit-bearing Program'
+                                                        ? 'bg-emerald-100 text-emerald-800'
+                                                        : 'bg-orange-100 text-orange-800'
+                                                }`}>
+                                                    {course.eduType === 'Credit-bearing Program' ? 'Credit' : 'Non-credit'}
+                                                </span>
+                                        </td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {/* 모바일 카드 */}
+                        <div className="md:hidden p-4 space-y-4">
+                            {courses.map((course, index) => (
+                                <div key={index} className="border border-gray-200 rounded-lg p-4">
+                                    <h4 className="font-semibold text-gray-900 mb-2">{course.courseName}</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                            course.category === 'Major Required'
+                                                ? 'bg-red-100 text-red-800'
+                                                : course.category === 'Major Elective'
+                                                    ? 'bg-blue-100 text-blue-800'
+                                                    : course.category === 'Advanced Major'
+                                                        ? 'bg-purple-100 text-purple-800'
+                                                        : 'bg-gray-100 text-gray-800'
+                                        }`}>
+                                            {course.category}
+                                        </span>
+                                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                            course.eduType === 'Credit-bearing Program'
+                                                ? 'bg-emerald-100 text-emerald-800'
+                                                : 'bg-orange-100 text-orange-800'
+                                        }`}>
+                                            {course.eduType === 'Credit-bearing Program' ? 'Credit' : 'Non-credit'}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         );
     };
@@ -280,118 +286,75 @@ const ProgramDetailPage: React.FC = () => {
         </div>
     );
 
-    // 자격증 탭
+    // ✅ 자격증 탭 - 새 타입 정의에 맞게 수정
     const renderCertificatesTab = () => {
-        // Sample certification data - will be replaced with actual data
-        const certificationData = [
-            {
-                name: "Aviation Maintenance License",
-                authority: "Ministry of Land, Infrastructure and Transport",
-                level: "Professional",
-                validity: "Permanent",
-                requirements: "Course completion + Exam"
-            },
-            {
-                name: "Aircraft Mechanic Certificate",
-                authority: "Korea Aviation Association",
-                level: "Basic",
-                validity: "3 years",
-                requirements: "Training hours + Assessment"
-            },
-            {
-                name: "Safety Management Certificate",
-                authority: "Korea Occupational Safety and Health Agency",
-                level: "Standard",
-                validity: "2 years",
-                requirements: "Course completion"
-            }
-        ];
+        const certificationData = program.detailedCertifications || [];
+
+        if (certificationData.length === 0) {
+            return (
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
+                    <div className="text-center">
+                        <Award className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-gray-700 mb-2">Certification Information</h3>
+                        <p className="text-gray-500 mb-6">
+                            Detailed certification information will be available soon.
+                        </p>
+                        <div className="bg-blue-50 rounded-lg p-4">
+                            <p className="text-blue-700 text-sm">
+                                We are currently preparing comprehensive certification details including
+                                requirements and exam information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
 
         return (
-            <div>
+            <div className="space-y-6">
                 <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
                     <Award className="w-8 h-8 mr-3" />
                     Certifications & Licenses
                 </h2>
 
-                {/* Desktop Table */}
-                <div className="hidden md:block bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full">
-                            <thead className="bg-blue-900 text-white">
-                            <tr>
-                                <th className="px-4 py-3 text-left font-semibold">Certification Name</th>
-                                <th className="px-4 py-3 text-left font-semibold">Issuing Authority</th>
-                                <th className="px-4 py-3 text-center font-semibold">Level</th>
-                                <th className="px-4 py-3 text-center font-semibold">Validity</th>
-                                <th className="px-4 py-3 text-left font-semibold">Requirements</th>
-                            </tr>
-                            </thead>
-                            <tbody className="divide-y divide-gray-200">
-                            {certificationData.map((cert, index) => (
-                                <tr key={index} className="hover:bg-gray-50">
-                                    <td className="px-4 py-3 font-semibold text-blue-900">{cert.name}</td>
-                                    <td className="px-4 py-3">{cert.authority}</td>
-                                    <td className="px-4 py-3 text-center">
-                                            <span className={`px-2 py-1 rounded-full text-xs ${
-                                                cert.level === 'Professional'
-                                                    ? 'bg-yellow-100 text-yellow-800'
-                                                    : cert.level === 'Basic'
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : 'bg-blue-100 text-blue-800'
-                                            }`}>
-                                                {cert.level}
-                                            </span>
-                                    </td>
-                                    <td className="px-4 py-3 text-center">{cert.validity}</td>
-                                    <td className="px-4 py-3 text-sm text-gray-600">{cert.requirements}</td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                {/* Mobile Cards */}
-                <div className="md:hidden space-y-4">
+                {/* 자격증 카드 레이아웃 */}
+                <div className="space-y-6">
                     {certificationData.map((cert, index) => (
-                        <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-                            <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-lg font-bold text-blue-900">{cert.name}</h3>
-                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                    cert.level === 'Professional'
-                                        ? 'bg-yellow-100 text-yellow-800'
-                                        : cert.level === 'Basic'
-                                            ? 'bg-green-100 text-green-800'
-                                            : 'bg-blue-100 text-blue-800'
-                                }`}>
-                                    {cert.level}
-                                </span>
+                        <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                            <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white px-6 py-4">
+                                <h3 className="text-xl font-bold mb-1">{cert.name}</h3>
+                                <p className="text-blue-100 text-sm">{cert.authority}</p>
                             </div>
-                            <div className="space-y-3 text-sm">
-                                <div>
-                                    <span className="text-gray-600">Issuing Authority:</span>
-                                    <p className="font-semibold text-gray-900">{cert.authority}</p>
+
+                            <div className="p-6">
+                                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-600 mb-2">Issuing Authority</h4>
+                                        <p className="text-gray-900 font-medium">{cert.authority}</p>
+                                    </div>
+                                    {cert.website && (
+                                        <div>
+                                            <h4 className="text-sm font-semibold text-gray-600 mb-2">Official Website</h4>
+                                            <a
+                                                href={cert.website}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                                            >
+                                                Visit Website
+                                                <ExternalLink className="w-4 h-4 ml-1" />
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <span className="text-gray-600">Validity:</span>
-                                        <p className="font-semibold text-gray-900">{cert.validity}</p>
-                                    </div>
-                                    <div>
-                                        <span className="text-gray-600">Requirements:</span>
-                                        <p className="font-semibold text-gray-900">{cert.requirements}</p>
-                                    </div>
+
+                                <div>
+                                    <h4 className="text-sm font-semibold text-gray-600 mb-2">Description</h4>
+                                    <p className="text-gray-700 leading-relaxed">{cert.description}</p>
                                 </div>
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-100">
-                    <p className="text-blue-800 text-sm">
-                        <strong>Note:</strong> This is a sample certification structure. Actual certification data will be populated from ProgramData.ts
-                    </p>
                 </div>
             </div>
         );

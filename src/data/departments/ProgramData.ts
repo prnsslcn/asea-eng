@@ -12,6 +12,23 @@ export interface Program {
     certifications: string[];
     employmentAreas: EmploymentArea[];
     facilities: string[];
+    curriculum?: CurriculumItem[];
+    detailedCertifications?: CertificationItem[];
+}
+
+interface CurriculumItem {
+    semester: string;        // '1st Semester', '2nd Semester' 등
+    courseName: string;      // 실제 교과목명 (영문화)
+    category: string;        // 'Major Required', 'Major Elective', 'Advanced Major'
+    eduType: string;         // 'Credit-bearing Program', 'Advanced Program (Non-credit)'
+}
+
+// 자격증 타입 - 실제 HTML 구조만 반영
+interface CertificationItem {
+    name: string;           // 실제 자격증명 (영문화)
+    authority: string;      // 실제 시행기관 (영문화)
+    description: string;    // 실제 소개 내용 (영문화)
+    website?: string;       // 실제 URL (있는 경우만)
 }
 
 export interface EmploymentArea {
@@ -36,6 +53,1425 @@ export interface FacilityInfo {
     description: string;
     equipment: string[];
 }
+
+const aircraftMaintenanceCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Fluid Mechanics I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'General Aviation Maintenance',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aircraft Airframe I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Aerospace',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Electronics and Electrical Engineering Fundamentals',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '1st Semester',
+        courseName: 'Aircraft Airframe Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aircraft Engine 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'General Maintenance Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aircraft Engine Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Aviation Regulations',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aerodynamics',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Instruments and Electrical Equipment',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Airframe II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Powerplant I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '2nd Semester',
+        courseName: 'Transportation Safety Management',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Engine Practice 2',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument 2',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Airframe Practice 2',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument Practice 2',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'General Maintenance Practice 2',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Engineering Mathematics I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Airframe Repair',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Hydraulic Equipment',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Powerplant II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'General Aviation Maintenance',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Helicopter Maintenance Practice',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Fluid Mechanics I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Engine Practice I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Engineering Mechanics',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Machine Element Design I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Airframe I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Aerospace',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Electronics and Electrical Engineering Fundamentals',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aviation Maintenance Human Factors',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Digital Engineering',
+        category: 'General Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Engine Practice 3',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument 3',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument Practice 3',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Airframe Practice 3',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'General Maintenance Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Airframe Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Engine 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Engine Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument Practice 1',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Introduction to Aviation Maintenance',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aviation Maintenance Management',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Engineering Mechanics',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Thermodynamics I',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Airframe Repair',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Mechanics',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aviation Maintenance Human Factors',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Helicopter General',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit)
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Airframe Practice 4',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Engine 4',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Airframe Practice 4',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Engine Practice 4',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument 4',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Aircraft Electronics, Electrical & Instrument Practice 4',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 항공정비사과정 자격증 데이터
+const aircraftMaintenanceCertifications: CertificationItem[] = [
+    {
+        name: 'Aircraft Maintenance Technician (Airplane) [License]',
+        authority: 'Korea Transportation Safety Authority',
+        description: 'The scope of aircraft maintenance technician duties includes confirming airworthiness of aircraft, equipment, or parts that have undergone maintenance in accordance with Article 32, Paragraph 1 of the Aviation Safety Act, and confirming that light aircraft or their equipment and parts that have undergone maintenance can be operated safely in accordance with Article 108, Paragraph 4 of the Aviation Safety Act.',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Aviation Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'This certification was established to cultivate personnel who possess practical maintenance skills and fundamental knowledge of aviation technology to perform field work related to aircraft maintenance and manufacturing, in order to train skilled professionals with basic knowledge and adaptability regarding overall aviation technology and practical maintenance skills for aircraft maintenance technology to ensure flight safety.',
+        website: 'https://www.q-net.or.kr'
+    },
+    {
+        name: 'Aviation Transportation Safety Manager',
+        authority: 'Korea Transportation Safety Authority',
+        description: 'This certification is granted to those with professional knowledge and skills in transportation safety to have them exclusively handle transportation safety tasks at transportation companies, thereby preventing traffic accidents and contributing to the protection of people\'s lives and property. The transportation safety manager qualification exam is conducted for 5 categories (road, railway, aviation, port, cableway).',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Radio Equipment Industrial Engineer',
+        authority: 'KCA National Technical Qualification Test',
+        description: 'As the limitations of wired communication facilities have become apparent due to various constraints from industrial development, the wireless communication field is increasing. Accordingly, this qualification system was established to train professional personnel with knowledge and skills in wireless communication facilities to perform construction, installation, and maintenance work for wireless communication facilities.',
+        website: 'https://cq.or.kr'
+    },
+    {
+        name: 'Radio Electronic Communication Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'This qualification system was established to train skilled personnel who possess both technical basic knowledge and skilled functions in radio communication, to efficiently communicate radio communications and further develop the information and communication field, which is the key to national competitiveness.',
+        website: 'http://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Information Communication Industrial Engineer',
+        authority: 'KCA National Technical Qualification Test',
+        description: 'The management function of data communication and computer communication is essential for advanced information and telecommunication. Accordingly, this qualification system was established to train personnel who can perform professional technical work in the information communication facilities field.',
+        website: 'https://cq.or.kr'
+    },
+    {
+        name: 'Information Processing Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        description: 'To effectively utilize computers, not only hardware but also sophisticated software is required. Accordingly, this certification was established with the purpose of training people with professional knowledge and skills in computers to develop excellent programs, improve work efficiency, and ultimately contribute to national development.',
+        website: 'http://www.hrdkorea.or.kr'
+    }
+];
+
+// 항공기계과정 교육과정 데이터
+const aviationMechanicalCurriculum: CurriculumItem[] = [
+    // 1-1학기 - 학점인정 학습과정
+    {
+        semester: '1-1',
+        courseName: 'Fluid Mechanics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'General Aviation Maintenance',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Structures I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Introduction to Aerospace Engineering',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Introduction to Electronics and Electrical Systems',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+
+    // 1-1학기 - 심화 학습과정(비학점)
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Structures Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Powerplant 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'General Maintenance Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Engine Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+
+    // 1-2학기 - 학점인정 학습과정
+    {
+        semester: '1-2',
+        courseName: 'Aviation Regulations',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aerodynamics',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Instruments and Electrical Equipment',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Structures II',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Powerplant I',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+
+    // 1-2학기 - 심화 학습과정(비학점)
+    {
+        semester: '1-2',
+        courseName: 'Transportation Safety Management',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Engine Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Structures Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'General Maintenance Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+
+    // 2-1학기 - 학점인정 학습과정
+    {
+        semester: '2-1',
+        courseName: 'Engineering Mathematics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Repair',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Hydraulic Systems',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Powerplant II',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'General Aviation Maintenance',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Helicopter Maintenance Practice',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Fluid Mechanics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Engine Practice I',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Engineering Mechanics',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Machine Element Design I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Structures I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Aerospace Engineering',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Electronics and Electrical Systems',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Maintenance Human Factors',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Digital Engineering',
+        type: 'General',
+        category: 'General Elective',
+        eduType: 'Credit'
+    },
+
+    // 2-1학기 - 심화 학습과정(비학점)
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Engine Practicum 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Structures Practicum 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'General Maintenance Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Structures Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Powerplant 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Engine Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Aviation Maintenance',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Maintenance Management',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+
+    // 2-2학기 - 학점인정 학습과정
+    {
+        semester: '2-2',
+        courseName: 'Engineering Mechanics',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Thermodynamics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Repair',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Dynamics',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aviation Maintenance Human Factors',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Helicopter General',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+
+    // 2-2학기 - 심화 학습과정(비학점)
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Structures Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Powerplant 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Structures Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Engine Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    }
+];
+
+// 항공기계과정 자격증 데이터 (항공정비사과정과 동일)
+const aviationMechanicalCertifications: CertificationItem[] = [
+    {
+        name: 'Aircraft Maintenance Technician (Airplane)',
+        authority: 'Korea Transportation Safety Authority',
+        level: 'Professional',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Licensed aviation maintenance technician responsible for aircraft airworthiness certification. Scope includes maintenance verification of aircraft, equipment, and parts according to Aviation Safety Act Article 32, and safety confirmation of light aircraft maintenance according to Article 108.',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Aviation Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification for aviation maintenance and manufacturing personnel. Designed to cultivate skilled professionals with practical maintenance skills and fundamental knowledge of aviation technology for aircraft maintenance and manufacturing operations.',
+        website: 'https://www.q-net.or.kr'
+    },
+    {
+        name: 'Aviation Traffic Safety Manager',
+        authority: 'Korea Transportation Safety Authority',
+        level: 'Specialist',
+        validity: '3 years',
+        requirements: 'Course completion + Examination',
+        description: 'Professional certification for transportation safety management. Designed to prevent traffic accidents and protect public safety by having qualified professionals handle transportation safety tasks in transportation companies across 5 sectors (road, rail, aviation, port, cable car).',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Radio Equipment Industrial Engineer',
+        authority: 'Korea Communications Agency',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification for wireless communication equipment installation and maintenance. Established to train skilled professionals for the growing wireless communication field due to limitations of wired communication systems.',
+        website: 'https://cq.or.kr'
+    },
+    {
+        name: 'Radio Electronics Communication Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification combining technical knowledge and practical skills in radio communication. Established to efficiently manage radio communication systems and advance the information communication sector.',
+        website: 'https://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Information Communication Industrial Engineer',
+        authority: 'Korea Communications Agency',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Essential certification for advanced information communication systems. Designed to train professionals capable of performing specialized technical tasks in information communication equipment management.',
+        website: 'https://cq.or.kr'
+    },
+    {
+        name: 'Information Processing Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification for computer software development and system management. Established to train professionals with specialized computer knowledge and skills for efficient software development and national development.',
+        website: 'https://www.hrdkorea.or.kr'
+    }
+];
+
+const aviationNCOCurriculum: CurriculumItem[] = [
+    // 1-1학기 - 학점인정 학습과정
+    {
+        semester: '1-1',
+        courseName: 'Fluid Mechanics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'General Aviation Maintenance',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Structures I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Introduction to Aerospace Engineering',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Introduction to Electronics and Electrical Systems',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+
+    // 1-1학기 - 심화 학습과정(비학점)
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Structures Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Powerplant 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'General Maintenance Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-1',
+        courseName: 'Aircraft Engine Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+
+    // 1-2학기 - 학점인정 학습과정
+    {
+        semester: '1-2',
+        courseName: 'Aviation Regulations',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aerodynamics',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Instruments and Electrical Equipment',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Structures II',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Powerplant I',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+
+    // 1-2학기 - 심화 학습과정(비학점)
+    {
+        semester: '1-2',
+        courseName: 'Transportation Safety Management',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Engine Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aircraft Structures Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '1-2',
+        courseName: 'General Maintenance Practicum 2',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+
+    // 2-1학기 - 학점인정 학습과정
+    {
+        semester: '2-1',
+        courseName: 'Engineering Mathematics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Repair',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Hydraulic Systems',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Powerplant II',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'General Aviation Maintenance',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Helicopter Maintenance Practice',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Fluid Mechanics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Engine Practice I',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Engineering Mechanics',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Machine Element Design I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Structures I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Aerospace Engineering',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Electronics and Electrical Systems',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Maintenance Human Factors',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Digital Engineering',
+        type: 'General',
+        category: 'General Elective',
+        eduType: 'Credit'
+    },
+
+    // 2-1학기 - 심화 학습과정(비학점)
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Engine Practicum 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Structures Practicum 3',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'General Maintenance Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Structures Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Powerplant 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aircraft Engine Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 1',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Introduction to Aviation Maintenance',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-1',
+        courseName: 'Aviation Maintenance Management',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+
+    // 2-2학기 - 학점인정 학습과정
+    {
+        semester: '2-2',
+        courseName: 'Engineering Mechanics',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Thermodynamics I',
+        type: 'Core',
+        category: 'Major Required',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Repair',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Dynamics',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aviation Maintenance Human Factors',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Helicopter General',
+        type: 'Elective',
+        category: 'Major Elective',
+        eduType: 'Credit'
+    },
+
+    // 2-2학기 - 심화 학습과정(비학점)
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Structures Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Powerplant 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Structures Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aircraft Engine Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    },
+    {
+        semester: '2-2',
+        courseName: 'Aviation Electronics, Electrical & Instruments Practicum 4',
+        type: 'Core',
+        category: 'Major Advanced',
+        eduType: 'Advanced'
+    }
+];
+
+// 항공부사관과정 자격증 데이터 (동일한 구조)
+const aviationNCOCertifications: CertificationItem[] = [
+    {
+        name: 'Aircraft Maintenance Technician (Airplane)',
+        authority: 'Korea Transportation Safety Authority',
+        level: 'Professional',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Licensed aviation maintenance technician responsible for aircraft airworthiness certification. Scope includes maintenance verification of aircraft, equipment, and parts according to Aviation Safety Act Article 32, and safety confirmation of light aircraft maintenance according to Article 108.',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Aviation Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification for aviation maintenance and manufacturing personnel. Designed to cultivate skilled professionals with practical maintenance skills and fundamental knowledge of aviation technology for aircraft maintenance and manufacturing operations.',
+        website: 'https://www.q-net.or.kr'
+    },
+    {
+        name: 'Aviation Traffic Safety Manager',
+        authority: 'Korea Transportation Safety Authority',
+        level: 'Specialist',
+        validity: '3 years',
+        requirements: 'Course completion + Examination',
+        description: 'Professional certification for transportation safety management. Designed to prevent traffic accidents and protect public safety by having qualified professionals handle transportation safety tasks in transportation companies across 5 sectors (road, rail, aviation, port, cable car).',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Radio Equipment Industrial Engineer',
+        authority: 'Korea Communications Agency',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification for wireless communication equipment installation and maintenance. Established to train skilled professionals for the growing wireless communication field due to limitations of wired communication systems.',
+        website: 'https://cq.or.kr'
+    },
+    {
+        name: 'Radio Electronics Communication Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification combining technical knowledge and practical skills in radio communication. Established to efficiently manage radio communication systems and advance the information communication sector.',
+        website: 'https://www.hrdkorea.or.kr'
+    },
+    {
+        name: 'Information Communication Industrial Engineer',
+        authority: 'Korea Communications Agency',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Essential certification for advanced information communication systems. Designed to train professionals capable of performing specialized technical tasks in information communication equipment management.',
+        website: 'https://cq.or.kr'
+    },
+    {
+        name: 'Information Processing Industrial Engineer',
+        authority: 'Korea Human Resources Development Service',
+        level: 'Industrial',
+        validity: 'Permanent',
+        requirements: 'Course completion + National examination',
+        description: 'Professional certification for computer software development and system management. Established to train professionals with specialized computer knowledge and skills for efficient software development and national development.',
+        website: 'https://www.hrdkorea.or.kr'
+    }
+];
 
 // Aviation Maintenance Department - Complete Data Structure
 const aviationMaintenanceData: Department = {
@@ -76,6 +1512,8 @@ const aviationMaintenanceData: Department = {
                 'International license programs (FAA, TC)',
                 'Overseas license validation programs'
             ],
+            curriculum: aircraftMaintenanceCurriculum,
+            detailedCertifications: aircraftMaintenanceCertifications,
             certifications: [
                 'Aircraft Maintenance Technician (Engine/Airframe/Avionics/Electrical)',
                 'Aviation Maintenance Engineer',
@@ -160,6 +1598,8 @@ const aviationMaintenanceData: Department = {
                 'International certification programs',
                 'Overseas employment preparation programs'
             ],
+            curriculum: aviationMechanicalCurriculum,
+            detailedCertifications: aviationMechanicalCertifications,
             certifications: [
                 'Aircraft Maintenance Technician (Engine/Airframe/Avionics/Electrical)',
                 'Aviation Maintenance Engineer',
@@ -222,6 +1662,8 @@ const aviationMaintenanceData: Department = {
                 'Technical English for military aviation',
                 'International military aviation standards'
             ],
+            curriculum: aviationNCOCurriculum,
+            detailedCertifications: aviationNCOCertifications,
             certifications: [
                 'Aircraft Maintenance Technician (Engine/Airframe/Avionics/Electrical)',
                 'Aviation Maintenance Engineer',
