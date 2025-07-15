@@ -3300,7 +3300,1438 @@ const foodBeverageSpecialistCertifications: CertificationItem[] = [
     }
 ];
 
-// -------------------------------------------------------------------------------------------------
+// 항공보안계열 --------------------------------------------------------------------------------------------
+
+// 항공보안과정 교육과정
+const aviationSecurityCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Practice I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Self-Defense Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Emergency First Aid',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Training Methodology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 항공보안 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Security Theory',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Industry Understanding',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Aviation Security Screening Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Studies Introduction',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Business Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Exercise Therapy Introduction',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 항공보안 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Shooting Training',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Airport Operations Theory',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Aviation Security Regulations',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Protocol Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Methodology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Martial Arts I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Safety Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Taekwondo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 항공보안 특화
+    {
+        semester: '3rd Semester',
+        courseName: 'Shooting Training II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aviation Security Equipment Theory',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Aviation Security Screening CBT Analysis',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Judo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Martial Arts II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Practice II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 항공보안 특화
+    {
+        semester: '4th Semester',
+        courseName: 'Aviation Transportation Theory',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Explosive Terrorism Response',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'AI X-ray CBT Analysis',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 항공보안과정 자격증
+const aviationSecurityCertifications: CertificationItem[] = [
+    {
+        name: 'Security Supervisor',
+        authority: 'Korea National Police Agency',
+        description: 'Professional certification for security supervisors responsible for planning, directing, and managing security operations in various facilities and events.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Personal Protection Specialist',
+        authority: 'Korea National Police Agency',
+        description: 'Specialized certification for personal protection officers providing security services for VIPs, executives, and high-risk individuals.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Security Officer',
+        authority: 'Korea National Police Agency',
+        description: 'Professional certification for security personnel responsible for protecting people, property, and facilities from various security threats.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'General Security Guard',
+        authority: 'Korea National Police Agency',
+        description: 'Basic certification for security guards performing general security duties in commercial, residential, and public facilities.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Special Security Guard',
+        authority: 'Korea National Police Agency',
+        description: 'Advanced certification for security guards with specialized training for high-risk environments and special security operations.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Auxiliary Police Officer',
+        authority: 'Korea National Police Agency',
+        description: 'Certification for auxiliary police officers supporting regular police forces in maintaining public safety and security.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Aviation Security Guard',
+        authority: 'Korea Transportation Safety Authority',
+        description: 'Specialized certification for security personnel working at airports and aviation facilities, ensuring aviation security and passenger safety.',
+        website: 'https://lic.kotsa.or.kr'
+    },
+    {
+        name: 'Police Officer',
+        authority: 'Korea National Police Agency',
+        description: 'National certification for police officers responsible for law enforcement, crime prevention, and public safety maintenance.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Coast Guard Officer',
+        authority: 'Korea Coast Guard',
+        description: 'Professional certification for maritime law enforcement officers responsible for coastal security, maritime safety, and marine environment protection.',
+        website: 'https://www.kcg.go.kr'
+    },
+    {
+        name: 'Firefighter',
+        authority: 'National Fire Agency',
+        description: 'Professional certification for firefighters responsible for fire suppression, emergency medical services, and disaster response operations.',
+        website: 'https://www.nfa.go.kr'
+    },
+    {
+        name: 'Security Guard',
+        authority: 'Korea National Police Agency',
+        description: 'Professional certification for security personnel responsible for protecting facilities, assets, and people through surveillance and patrol activities.',
+        website: 'https://www.police.go.kr'
+    },
+    {
+        name: 'Martial Arts Related Certification',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'Various martial arts certifications through training in different disciplines to strengthen mind and body, developing martial arts expertise. Even complete beginners can achieve 2nd dan or higher black belt level through training at our institution.',
+        website: 'https://www.sports.or.kr'
+    }
+];
+
+// 의전경비과정 교육과정
+const vipSecurityCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Practice I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Emergency First Aid',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Training Methodology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 의전경비 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Practical Security Techniques',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Physical Training Method I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Screening Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Studies Introduction',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Protocol Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Self-Defense Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Business Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Exercise Therapy Introduction',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 의전경비 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Shooting Training',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Physical Training Method II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Industry Understanding',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Martial Arts I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Safety Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Judo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 의전경비 특화
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Shooting Training',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Safety Detection Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Screening CBT Analysis',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Security Methodology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Taekwondo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Martial Arts II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Practice II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 의전경비 특화
+    {
+        semester: '4th Semester',
+        courseName: 'Explosive Terrorism Response',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'AI X-ray CBT Analysis',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 의전경비과정 자격증
+const vipSecurityCertifications: CertificationItem[] = [
+    {
+        name: 'Security Supervisor',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A certification system to train comprehensive management supervisors who are exclusively responsible for organizational guidance, management, supervision, and education of security personnel, escort security personnel, and security guards who are in charge of security work at nationally important facilities, risk prevention work for objects, and personal protection work.',
+        website: 'http://www.q-net.or.kr/site/security'
+    },
+    {
+        name: 'Personal Protection Specialist',
+        authority: 'Korea Security Association',
+        description: 'A certification system aimed at developing and disseminating the minimum skills necessary for crisis response capabilities that may occur during personal protection work, and training personal protection specialists with excellent practical abilities by enabling appropriate utilization according to situations.',
+        website: 'http://www.ksan.or.kr/'
+    },
+    {
+        name: 'Fire Safety Manager Level 2',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the Act on Installation, Maintenance and Safety Management of Fire-Fighting Systems when there are fire-fighting facilities in buildings.',
+        website: 'http://www.kfsa.or.kr/'
+    },
+    {
+        name: 'Hazardous Materials Manager',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the enforcement rules of the Hazardous Materials Safety Management Act when there are designated quantities of hazardous materials in buildings.',
+        website: 'http://www.kfsa.or.kr'
+    },
+    {
+        name: 'First Aid Instructor',
+        authority: 'Korean Red Cross',
+        description: 'A system to train those who educate to protect oneself from life-threatening situations, reduce patient suffering by providing immediate and temporary appropriate treatment and protection when injured persons or patients occur, prevent accidents, and help receive professional treatment to save precious lives.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Recreation Leader Level 1, 2',
+        authority: 'Korea Leisure Recreation Association',
+        description: 'A process to train professionals who provide recreation services to give clients new experiences through recreation education, provide opportunities for healthy physical and mental training, and promote personal growth and development by desirably changing physical, mental, emotional, and social behaviors.',
+        website: 'http://www.recro.or.kr'
+    },
+    {
+        name: 'Sports for All Leader',
+        authority: 'Ministry of Culture, Sports and Tourism',
+        description: 'A national certified qualification system for sports leaders to promote systematic guidance of national sports activities and dissemination of various programs, improve the quality of sports leaders for national sports promotion, and train sports leaders with basic knowledge and professional abilities.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Radio Operator Level 2',
+        authority: 'Korea Communications Agency',
+        description: 'A system that conducts technical qualification examinations to produce radio operators who respond to environmental changes and industrial manpower demands according to the development of radio communication technology.',
+        website: 'http://www.kca.kr'
+    },
+    {
+        name: 'Sports Massage',
+        authority: 'Korea Sports Massage Federation',
+        description: 'A certification system to train professionals aimed at promoting the physical completion of sportsmen, recovering from fatigue, and improving sports activities with the purpose of improving sportsmen\'s exercise function and increasing exercise ability through condition control and preventing sports injuries.',
+        website: 'http://www.sportsmassage.or.kr'
+    },
+    {
+        name: 'Exercise Specialist',
+        authority: 'Korea Association of Certified Exercise Professionals',
+        description: 'A certification system to train those with knowledge and skills who can perform duties for the purpose of physical education, sports performance improvement, leisure use, health/fitness improvement, disease and exercise injury prevention and rehabilitation, industrial safety and productivity improvement for people capable of exercise.',
+        website: 'http://www.kacep.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certification',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts experts who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even complete beginners who have never learned martial arts can become black belt holders of 2nd dan or higher through martial arts training at our institution.',
+        website: 'https://www.sports.or.kr'
+    }
+];
+
+// PMC경비과정 교육과정
+const pmcSecurityCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Practice I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Emergency First Aid',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Training Methodology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - PMC 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Special Forces Physical Training I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'National Security Theory',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Military Basic Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Studies Introduction',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'VIP Protocol Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Self-Defense Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Business Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Exercise Therapy Introduction',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - PMC 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Shooting Training',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'North Korean Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Special Forces Tactics',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Martial Arts I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Safety Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Judo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - PMC 특화
+    {
+        semester: '3rd Semester',
+        courseName: 'Military History',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Tactical Shooting',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Explosive Terrorism Response',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Security Methodology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Taekwondo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Martial Arts II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Practice II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - PMC 특화
+    {
+        semester: '4th Semester',
+        courseName: 'Close Quarter Combat',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Comprehensive Tactical Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Special Forces Physical Training II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// PMC경비과정 자격증
+const pmcSecurityCertifications: CertificationItem[] = [
+    {
+        name: 'Security Supervisor',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A certification system to train comprehensive management supervisors who are exclusively responsible for organizational guidance, management, supervision, and education of security personnel, escort security personnel, and security guards who are in charge of security work at nationally important facilities, risk prevention work for objects, and personal protection work.',
+        website: 'http://www.q-net.or.kr/site/security'
+    },
+    {
+        name: 'Personal Protection Specialist',
+        authority: 'Korea Security Association',
+        description: 'A certification system aimed at developing and disseminating the minimum skills necessary for crisis response capabilities that may occur during personal protection work, and training personal protection specialists with excellent practical abilities by enabling appropriate utilization according to situations.',
+        website: 'http://www.ksan.or.kr/'
+    },
+    {
+        name: 'Fire Safety Manager Level 2',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the Act on Installation, Maintenance and Safety Management of Fire-Fighting Systems when there are fire-fighting facilities in buildings.',
+        website: 'http://www.kfsa.or.kr/'
+    },
+    {
+        name: 'Hazardous Materials Manager',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the enforcement rules of the Hazardous Materials Safety Management Act when there are designated quantities of hazardous materials in buildings.',
+        website: 'http://www.kfsa.or.kr'
+    },
+    {
+        name: 'First Aid Instructor',
+        authority: 'Korean Red Cross',
+        description: 'A system to train those who educate to protect oneself from life-threatening situations, reduce patient suffering by providing immediate and temporary appropriate treatment and protection when injured persons or patients occur, prevent accidents, and help receive professional treatment to save precious lives.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Recreation Leader Level 1, 2',
+        authority: 'Korea Leisure Recreation Association',
+        description: 'A process to train professionals who provide recreation services to give clients new experiences through recreation education, provide opportunities for healthy physical and mental training, and promote personal growth and development by desirably changing physical, mental, emotional, and social behaviors.',
+        website: 'http://www.recro.or.kr'
+    },
+    {
+        name: 'Sports for All Leader',
+        authority: 'Ministry of Culture, Sports and Tourism',
+        description: 'A national certified qualification system for sports leaders to promote systematic guidance of national sports activities and dissemination of various programs, improve the quality of sports leaders for national sports promotion, and train sports leaders with basic knowledge and professional abilities.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Radio Operator Level 2',
+        authority: 'Korea Communications Agency',
+        description: 'A system that conducts technical qualification examinations to produce radio operators who respond to environmental changes and industrial manpower demands according to the development of radio communication technology.',
+        website: 'http://www.kca.kr'
+    },
+    {
+        name: 'Sports Massage',
+        authority: 'Korea Sports Massage Federation',
+        description: 'A certification system to train professionals aimed at promoting the physical completion of sportsmen, recovering from fatigue, and improving sports activities with the purpose of improving sportsmen\'s exercise function and increasing exercise ability through condition control and preventing sports injuries.',
+        website: 'http://www.sportsmassage.or.kr'
+    },
+    {
+        name: 'Exercise Specialist',
+        authority: 'Korea Association of Certified Exercise Professionals',
+        description: 'A certification system to train those with knowledge and skills who can perform duties for the purpose of physical education, sports performance improvement, leisure use, health/fitness improvement, disease and exercise injury prevention and rehabilitation, industrial safety and productivity improvement for people capable of exercise.',
+        website: 'http://www.kacep.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certification',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts experts who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even complete beginners who have never learned martial arts can become black belt holders of 2nd dan or higher through martial arts training at our institution.',
+        website: 'https://www.sports.or.kr'
+    }
+];
+
+// 액션연기과정 교육과정
+const actionActingCurriculum: CurriculumItem[] = [
+    // === 1st Semester (1-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '1st Semester',
+        courseName: 'Private Security Theory',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Security Practice I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Arrest Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Emergency First Aid',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Training Methodology',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 액션연기 특화
+    {
+        semester: '1st Semester',
+        courseName: 'Introduction to Film Studies',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Basic Acting I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Action Acting Practice I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '1st Semester',
+        courseName: 'Voice and Pronunciation I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 2nd Semester (1-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Studies Introduction',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'VIP Protocol Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Self-Defense Techniques',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Security Business Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Exercise Therapy Introduction',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 액션연기 특화
+    {
+        semester: '2nd Semester',
+        courseName: 'Theater Education Theory',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Basic Acting II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Action Acting Practice I',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '2nd Semester',
+        courseName: 'Voice and Pronunciation II',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 3rd Semester (2-1학기) ===
+    // Credit-bearing Program
+    {
+        semester: '3rd Semester',
+        courseName: 'Terrorism Studies',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Police Administration',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Security Martial Arts I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Safety Management Theory',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Judo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 액션연기 특화
+    {
+        semester: '3rd Semester',
+        courseName: 'Scene Acting',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Camera Acting',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Wire Action Basics',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '3rd Semester',
+        courseName: 'Film Direction Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+
+    // === 4th Semester (2-2학기) ===
+    // Credit-bearing Program
+    {
+        semester: '4th Semester',
+        courseName: 'Security Methodology',
+        category: 'Major Required',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Introduction to Law',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Taekwondo I',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Martial Arts II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Security Practice II',
+        category: 'Major Elective',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Online Education',
+        category: 'General Education',
+        eduType: 'Credit-bearing Program'
+    },
+
+    // Advanced Program (Non-credit) - 액션연기 특화
+    {
+        semester: '4th Semester',
+        courseName: 'Improvised Acting',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Action Camera Acting',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Wire Action Acting',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    },
+    {
+        semester: '4th Semester',
+        courseName: 'Film Production Practice',
+        category: 'Advanced Major',
+        eduType: 'Advanced Program (Non-credit)'
+    }
+];
+
+// 액션연기과정 자격증
+const actionActingCertifications: CertificationItem[] = [
+    {
+        name: 'Security Supervisor',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A certification system to train comprehensive management supervisors who are exclusively responsible for organizational guidance, management, supervision, and education of security personnel, escort security personnel, and security guards who are in charge of security work at nationally important facilities, risk prevention work for objects, and personal protection work.',
+        website: 'http://www.q-net.or.kr/site/security'
+    },
+    {
+        name: 'Personal Protection Specialist',
+        authority: 'Korea Security Association',
+        description: 'A certification system aimed at developing and disseminating the minimum skills necessary for crisis response capabilities that may occur during personal protection work, and training personal protection specialists with excellent practical abilities by enabling appropriate utilization according to situations.',
+        website: 'http://www.ksan.or.kr/'
+    },
+    {
+        name: 'Fire Safety Manager Level 2',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the Act on Installation, Maintenance and Safety Management of Fire-Fighting Systems when there are fire-fighting facilities in buildings.',
+        website: 'http://www.kfsa.or.kr/'
+    },
+    {
+        name: 'Hazardous Materials Manager',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the enforcement rules of the Hazardous Materials Safety Management Act when there are designated quantities of hazardous materials in buildings.',
+        website: 'http://www.kfsa.or.kr'
+    },
+    {
+        name: 'First Aid Instructor',
+        authority: 'Korean Red Cross',
+        description: 'A system to train those who educate to protect oneself from life-threatening situations, reduce patient suffering by providing immediate and temporary appropriate treatment and protection when injured persons or patients occur, prevent accidents, and help receive professional treatment to save precious lives.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Recreation Leader Level 1, 2',
+        authority: 'Korea Leisure Recreation Association',
+        description: 'A process to train professionals who provide recreation services to give clients new experiences through recreation education, provide opportunities for healthy physical and mental training, and promote personal growth and development by desirably changing physical, mental, emotional, and social behaviors.',
+        website: 'http://www.recro.or.kr'
+    },
+    {
+        name: 'Sports for All Leader',
+        authority: 'Ministry of Culture, Sports and Tourism',
+        description: 'A national certified qualification system for sports leaders to promote systematic guidance of national sports activities and dissemination of various programs, improve the quality of sports leaders for national sports promotion, and train sports leaders with basic knowledge and professional abilities.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Radio Operator Level 2',
+        authority: 'Korea Communications Agency',
+        description: 'A system that conducts technical qualification examinations to produce radio operators who respond to environmental changes and industrial manpower demands according to the development of radio communication technology.',
+        website: 'http://www.kca.kr'
+    },
+    {
+        name: 'Sports Massage',
+        authority: 'Korea Sports Massage Federation',
+        description: 'A certification system to train professionals aimed at promoting the physical completion of sportsmen, recovering from fatigue, and improving sports activities with the purpose of improving sportsmen\'s exercise function and increasing exercise ability through condition control and preventing sports injuries.',
+        website: 'http://www.sportsmassage.or.kr'
+    },
+    {
+        name: 'Exercise Specialist',
+        authority: 'Korea Association of Certified Exercise Professionals',
+        description: 'A certification system to train those with knowledge and skills who can perform duties for the purpose of physical education, sports performance improvement, leisure use, health/fitness improvement, disease and exercise injury prevention and rehabilitation, industrial safety and productivity improvement for people capable of exercise.',
+        website: 'http://www.kacep.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certification',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts experts who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even complete beginners who have never learned martial arts can become black belt holders of 2nd dan or higher through martial arts training at our institution.',
+        website: 'https://www.sports.or.kr'
+    }
+];
+
+//
+// 스포츠재활컨디셔닝과정 교육과정 올바른 정보가 아님
+
+// 스포츠재활컨디셔닝과정 자격증
+const sportsRehabCertifications: CertificationItem[] = [
+    {
+        name: 'Security Supervisor',
+        authority: 'Korea Human Resources Development Service',
+        description: 'A certification system to train comprehensive management supervisors who are exclusively responsible for organizational guidance, management, supervision, and education of security personnel, escort security personnel, and security guards who are in charge of security work at nationally important facilities, risk prevention work for objects, and personal protection work.',
+        website: 'http://www.q-net.or.kr/site/security'
+    },
+    {
+        name: 'Personal Protection Specialist',
+        authority: 'Korea Security Association',
+        description: 'A certification system aimed at developing and disseminating the minimum skills necessary for crisis response capabilities that may occur during personal protection work, and training personal protection specialists with excellent practical abilities by enabling appropriate utilization according to situations.',
+        website: 'http://www.ksan.or.kr/'
+    },
+    {
+        name: 'Fire Safety Manager Level 2',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the Act on Installation, Maintenance and Safety Management of Fire-Fighting Systems when there are fire-fighting facilities in buildings.',
+        website: 'http://www.kfsa.or.kr/'
+    },
+    {
+        name: 'Hazardous Materials Manager',
+        authority: 'Korea Fire Safety Association',
+        description: 'A certification system for appointing managers according to the enforcement rules of the Hazardous Materials Safety Management Act when there are designated quantities of hazardous materials in buildings.',
+        website: 'http://www.kfsa.or.kr'
+    },
+    {
+        name: 'First Aid Instructor',
+        authority: 'Korean Red Cross',
+        description: 'A system to train those who educate to protect oneself from life-threatening situations, reduce patient suffering by providing immediate and temporary appropriate treatment and protection when injured persons or patients occur, prevent accidents, and help receive professional treatment to save precious lives.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Recreation Leader Level 1, 2',
+        authority: 'Korea Leisure Recreation Association',
+        description: 'A process to train professionals who provide recreation services to give clients new experiences through recreation education, provide opportunities for healthy physical and mental training, and promote personal growth and development by desirably changing physical, mental, emotional, and social behaviors.',
+        website: 'http://www.recro.or.kr'
+    },
+    {
+        name: 'Sports for All Leader',
+        authority: 'Ministry of Culture, Sports and Tourism',
+        description: 'A national certified qualification system for sports leaders to promote systematic guidance of national sports activities and dissemination of various programs, improve the quality of sports leaders for national sports promotion, and train sports leaders with basic knowledge and professional abilities.',
+        website: 'http://www.redcross.or.kr'
+    },
+    {
+        name: 'Radio Operator Level 2',
+        authority: 'Korea Communications Agency',
+        description: 'A system that conducts technical qualification examinations to produce radio operators who respond to environmental changes and industrial manpower demands according to the development of radio communication technology.',
+        website: 'http://www.kca.kr'
+    },
+    {
+        name: 'Sports Massage',
+        authority: 'Korea Sports Massage Federation',
+        description: 'A certification system to train professionals aimed at promoting the physical completion of sportsmen, recovering from fatigue, and improving sports activities with the purpose of improving sportsmen\'s exercise function and increasing exercise ability through condition control and preventing sports injuries.',
+        website: 'http://www.sportsmassage.or.kr'
+    },
+    {
+        name: 'Exercise Specialist',
+        authority: 'Korea Association of Certified Exercise Professionals',
+        description: 'A certification system to train those with knowledge and skills who can perform duties for the purpose of physical education, sports performance improvement, leisure use, health/fitness improvement, disease and exercise injury prevention and rehabilitation, industrial safety and productivity improvement for people capable of exercise.',
+        website: 'http://www.kacep.or.kr'
+    },
+    {
+        name: 'Martial Arts Related Certification',
+        authority: 'Various Martial Arts Associations (Taekwondo, Judo, Hapkido, Yongmudo, Sambo, Gyeokgido, Security Martial Arts, etc.)',
+        description: 'A system to train martial arts experts who strengthen mind and body through training in various martial arts and create themselves who win in the fight against themselves and will. Even complete beginners who have never learned martial arts can become black belt holders of 2nd dan or higher through martial arts training at our institution.',
+        website: 'https://www.sports.or.kr'
+    }
+];
+
+// 국방AI --------------------------------------------------------------------------------------------
 
 // Aviation Maintenance Department - Complete Data Structure
 const aviationMaintenanceData: Department = {
@@ -4514,6 +5945,8 @@ const aviationSecurityData: Department = {
                 'Close Quarters Battle (CQB), anti-terrorism tactics, unmanned security guard (PSD), tactical emergency care (TCCC) training',
                 'Age advantages for military service and various international certifications'
             ],
+            curriculum: aviationSecurityCurriculum,
+            detailedCertifications: aviationSecurityCertifications,
             certifications: [
                 'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
                 'State Technical Qualification for Security Guard (20 points advantage when taking the exam)',
@@ -4602,6 +6035,8 @@ const aviationSecurityData: Department = {
                 'Partnership with veteran training institutions for practical civil security experience of 15 weeks',
                 'Training by graduates and professional instructors for specialized ceremonial and private security education'
             ],
+            curriculum: vipSecurityCurriculum,
+            detailedCertifications: vipSecurityCertifications,
             certifications: [
                 'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
                 'State Technical Qualification for Security Guard (20 points advantage when taking the exam)',
@@ -4684,6 +6119,8 @@ const aviationSecurityData: Department = {
                 'Government agencies, military special forces graduates, current PMC company professional instructor training',
                 'Korea\'s most advanced private military company with professional training for 100% overseas employment'
             ],
+            curriculum: pmcSecurityCurriculum,
+            detailedCertifications: pmcSecurityCertifications,
             certifications: [
                 'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
                 'State Technical Qualification for Security Guard (20 points advantage when taking the exam)',
@@ -4779,6 +6216,8 @@ const aviationSecurityData: Department = {
                 'State-certified private security guard qualification testing facility (employment advantages in security and protection industry)',
                 'Broadcasting industry professional celebrity lectures and practical knowledge and field networking training'
             ],
+            curriculum: actionActingCurriculum,
+            detailedCertifications: actionActingCertifications,
             certifications: [
                 'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
                 'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
@@ -4872,6 +6311,7 @@ const aviationSecurityData: Department = {
                 'Veteran training institution partnerships for comprehensive field experience',
                 'Industry connections for employment in sports and security fields'
             ],
+            detailedCertifications: sportsRehabCertifications,
             certifications: [
                 'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
                 'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
