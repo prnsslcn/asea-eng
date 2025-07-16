@@ -20,6 +20,7 @@ export interface Program {
     additionalFeatures?: string[];
     transferUniversities?: string[];
     militaryCareer?: string[];
+    droneSpecificCareers?: string[];
 
     // 기존 필드들
     features: string[];
@@ -6099,206 +6100,418 @@ const aviationMaintenanceData: Department = {
             id: 'aviation-mechanical',
             name: 'Aviation Mechanical Course',
             koreanName: '항공기계과정',
-            description: 'Specialized training in aircraft design and manufacturing using CAD/CAM and CATIA technologies',
-            duration: '2 years',
+            description: 'Aviation engineer training course to perform a pivotal role in the aerospace industry, which is the most promising large-scale industry of the future. Aims to train competent personnel who can work as aviation engineers immediately upon graduation through aviation industrial engineer certification education and practical field training. Upon graduation, students can transfer to 4-year university mechanical and aviation departments if they obtain an Associate Degree in Aviation Maintenance through the Credit Bank System, apply as aircraft maintenance technicians at airlines and Air Force technical soldiers, and be commissioned and appointed as aviation maintenance non-commissioned officers and military civilians in the Army, Navy, Marine Corps, and Air Force.',
+            duration: '2 years (Associate Degree) / 3 years (Bachelor\'s Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'Advanced CAD/CAM and CATIA training for aircraft design',
-                'Transfer opportunities to 4-year mechanical and aviation engineering programs',
-                'Employment preparation programs for aerospace companies',
-                'Comprehensive training in aircraft manufacturing processes'
+                'Establishment and operation of CAD/CAM, CATIA training courses for aircraft design',
+                'Operation of preparatory classes for transfer to 4-year universities in aviation and mechanical engineering',
+                'Operation of employment preparation programs for veterans, female students, and other job seekers'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션
+            coursebenefits: [
+                'Establishment and operation of CAD/CAM, CATIA training courses for aircraft design',
+                'Operation of preparatory classes for transfer to 4-year universities in aviation and mechanical engineering',
+                'Operation of employment preparation programs for veterans, female students, and other job seekers'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역
             features: [
-                'Professional degree (Associate) in Aviation Maintenance available',
-                'License exemption for qualified candidates',
-                'Transfer to 4-year universities available for top students',
-                'Multiple certifications in aircraft maintenance fields',
-                'Advanced technical training programs',
-                'Industry partnership training programs',
-                'International certification programs',
-                'Overseas employment preparation programs'
+                'Available to obtain Associate Degree in Aviation Maintenance through Credit Bank System (college-level education)',
+                'Available to obtain 4-year Bachelor\'s Degree in Aviation Maintenance Engineering through certificate credit conversion and additional credit completion',
+                'Transfer to 3rd year of 4-year universities nationwide or graduate school admission available',
+                'Available to obtain certificates: Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics), Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane), Aviation Traffic Safety Manager',
+                'After obtaining aircraft maintenance technician certificate, eligible for enrollment in our school\'s type-rating education course (scholarship benefits provided)',
+                'Credit recognition: Aviation Industrial Engineer 16 credits, Aircraft Maintenance Technician (Airplane) 18 credits, Aviation Traffic Safety Manager 16 credits',
+                'Equipped with Korea\'s largest-scale professional aviation maintenance practice facilities for hands-on training'
             ],
-            curriculum: aviationMechanicalCurriculum,
-            detailedCertifications: aviationMechanicalCertifications,
-            certifications: [
-                'Aircraft Maintenance Technician (Engine/Airframe/Avionics/Electrical)',
-                'Aviation Maintenance Engineer',
-                'Aircraft Maintenance Technician (Non-powered Aircraft)',
-                'Aviation Traffic Safety Manager',
-                'Age requirement: 16 years (Aviation Maintenance Engineer), 18 years (Aircraft Maintenance Technician)'
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역 (항공정비사과정과 동일)
+            facilities: [
+                {
+                    campus: 'Seoul Yeongdeungpo Campus',
+                    description: 'Practice for Aircraft Engine/Airframe/Equipment Maintenance Technician, Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane) qualification test preparation'
+                },
+                {
+                    campus: 'Aviation Technology Training Center',
+                    description: 'Aircraft system practice, Aviation CBT practice, Aircraft engine and airframe maintenance practice (J-79 & JT-3D & O-320 engine, CESSNA 152 & 172, T-33 & 37, 500MD, UH-1B). Practical aircraft hands-on practice (B737 CFM-56 engine, A320MTD, B737 & A320 Simulator, B737 Landing Gear & Nose Gear, B737 APU, etc.)'
+                },
+                {
+                    campus: 'Icheon Campus',
+                    description: 'Aircraft overhaul (disassembly, assembly) practice (F-5E, T-37 & 33, O-1G, UH-1H), Unmanned aerial vehicle (drone) flight practice'
+                },
+                {
+                    note: 'All Seoul Yeongdeungpo Campus, Aviation Technology Training Center, and Icheon Campus are designated as aviation maintenance practice facilities by Ministry of Land, Infrastructure and Transport. Seoul Yeongdeungpo Campus is designated as practical examination site for Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics) and Aviation Industrial Engineer qualifications.'
+                }
             ],
+
+            // 원본 HTML의 추가 특징들 (항공정비사과정과 동일)
+            additionalFeatures: [
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Free education during semester for employment, transfer, study abroad preparation - English education (TOEIC, conversation, etc.) and aviation maintenance technical English through affiliated Foreign Language Education Center',
+                'Field trips to Korean Air and Asiana Airlines Incheon Airport maintenance hangars, Korea Aerospace Industries (KAI) Sacheon aircraft manufacturing plant, Korea Forest Service Aviation Headquarters Wonju helicopter maintenance hangar, Air Force aircraft maintenance depot and Army aviation units',
+                'Special lectures by celebrities in aviation maintenance field',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Aviation Maintenance Engineering (3rd year)',
+                'Transfer class operation for 4-year universities such as Korea Aerospace University, Hanseo University',
+                'Study abroad program for US FAA and Canada TC aircraft maintenance technician',
+                'Bachelor\'s degree study abroad programs in USA, Canada, Australia, UK, China, Malaysia, Philippines'
+            ],
+
+            // 원본 HTML의 상세한 진로 정보 (항공정비사과정과 동일)
             employmentAreas: [
                 {
                     category: 'Civil Aviation',
                     companies: [
                         'Korean Air', 'Asiana Airlines', 'Jeju Air', 'Jin Air', 'Air Busan',
-                        'Fly Gangwon', 'Eastar Jet', 'Star Jet', 'Air Incheon', 'T\'way Air',
-                        'UA Helicopter', 'Helicopter Korea', 'Woong-An Aviation'
+                        'T\'way Air', 'Eastar Jet', 'Sharp Air', 'Air Incheon', 'Korea Times Aviation',
+                        'UI Helicopter', 'Heli Korea', 'Hongik Aviation'
+                    ]
+                },
+                {
+                    category: 'Government Agencies',
+                    companies: [
+                        'Korea Forest Service Aviation Headquarters',
+                        'National Police Agency Aviation Department',
+                        'National Emergency Management Agency Fire Aviation Rescue Team',
+                        'Provincial Government Transportation Aviation Department',
+                        'Ministry of Land, Infrastructure and Transport Flight Inspection Center'
+                    ]
+                },
+                {
+                    category: 'Foreign Airlines',
+                    companies: [
+                        'Boeing', 'Airbus', 'Lufthansa Airlines', 'Sikorsky',
+                        'Cathay Pacific Airways', 'Thai Airways'
                     ]
                 },
                 {
                     category: 'Aircraft Manufacturing',
                     companies: [
                         'Korea Aerospace Industries (KAI)', 'KAEMS (Korea Aircraft Service)',
-                        'HIZEAERO', 'QUEST AERO', 'Hanwha Techwin', 'Samsung Techwin',
-                        'Future Aviation', 'Daelim ENG', 'Korea Defence Service'
+                        'Hizero Aviation', 'AST Co.', 'Hanwha TechM', 'Samheung Precision',
+                        'Future Aviation', 'Daemyung ENG', 'Korea Composite Materials Co.'
                     ]
                 },
                 {
-                    category: 'Government Agencies',
+                    category: 'Aviation Ground Services',
                     companies: [
-                        'Ministry of Defense Aviation Maintenance',
-                        'Police Aviation Department',
-                        'National Fire Agency Aviation Department',
-                        'Regional Aviation Departments'
+                        'Asiana Airport', 'Korea Airport Co.', 'KR Co.', 'KTS Global Co.', 'Staffs'
+                    ]
+                },
+                {
+                    category: 'Others',
+                    companies: [
+                        'Light aircraft companies', 'Helicopter operation companies',
+                        'Pilot training institutes', 'Broadcasting stations and newspapers',
+                        'Map production companies', 'Unmanned aircraft companies'
                     ]
                 }
             ],
-            facilities: [
-                'Seoul Yeongdeungpo Campus: CAD/CAM and CATIA laboratories',
-                'Aviation Technology Training Center: Aircraft systems training',
-                'Icheon Campus: Manufacturing and assembly training'
-            ]
+
+            // 원본 HTML의 편입 가능 대학 정보 (항공정비사과정과 동일)
+            transferUniversities: [
+                'Korea Aerospace University', 'Hanseo University', 'Sejong University',
+                'Chosun University', 'Korea National University of Transportation',
+                'Chungju University', 'Chodang University', 'Howon University'
+            ],
+
+            // 원본 HTML의 군 진로 정보
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment'
+            ],
+
+            certifications: [
+                'Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics)',
+                'Aviation Industrial Engineer',
+                'Aircraft Maintenance Technician (Airplane)',
+                'Aviation Traffic Safety Manager'
+            ],
+            curriculum: aviationMechanicalCurriculum,
+            detailedCertifications: aviationMechanicalCertifications
         },
         {
             id: 'aviation-nco',
             name: 'Aviation NCO Course',
             koreanName: '항공부사관과정',
-            description: 'Specialized military aviation NCO training for Air Force, Navy, Marine Corps, and Army aviation units',
-            duration: '2 years',
+            description: 'The impact of changes in national security situations worldwide, in Northeast Asia, and on the Korean Peninsula on our Army, Navy, and Air Force is very significant. Therefore, the military is changing from the past manpower-centered quantitative structure to an elite, information, and knowledge-centered technology-intensive structure. In response to this, our school\'s Aviation NCO Course aims to train aviation maintenance non-commissioned officers from each military branch who will lead the aviation industry. Upon graduation, students can obtain an Associate Degree in Aviation Maintenance through the Credit Bank System and be commissioned as aviation maintenance non-commissioned officers in the Army, Navy, Marine Corps, and Air Force. Furthermore, they can also be commissioned as officers through the Korea Military Academy 3rd Class and Air Force Academy Bachelor Officer programs.',
+            duration: '2 years (Associate Degree) / 3 years (Bachelor\'s Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'Preparation for military aviation NCO entrance exams',
-                'Comprehensive military aviation training programs',
-                'Physical fitness and interview preparation',
-                'Partnership with Asian Future Human Resources Research Institute'
+                'Operation of NCO education programs including Korean History and Intellectual Ability Assessment for NCO written examination preparation',
+                'Our school practice facility designated as national official practical examination site',
+                'Special lectures during semester and vacation for certificate acquisition preparation and special lectures by celebrities in aviation maintenance field'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 부사관 특화
+            coursebenefits: [
+                'Operation of NCO education programs including Korean History and Intellectual Ability Assessment for NCO written examination preparation',
+                'Operation of coaching and counseling programs for NCO personality assessment and interview preparation (in partnership with ASEA Future Talent Research Institute)',
+                'Operation of physical training programs for NCO physical examination preparation'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역
             features: [
-                'Professional degree (Associate) in Aviation Maintenance available',
-                'Military aviation technology training programs',
-                'Physical training and military discipline programs',
-                'Leadership development programs',
-                'Advanced aircraft systems training',
-                'Military aviation regulations and procedures',
-                'Technical English for military aviation',
-                'International military aviation standards'
+                'Available to obtain Associate Degree in Aviation Maintenance through Credit Bank System (college-level education)',
+                'Available to obtain 4-year Bachelor\'s Degree in Aviation Maintenance Engineering through certificate credit conversion and additional credit completion',
+                'Transfer to 3rd year of 4-year universities nationwide or graduate school admission available',
+                'Available to obtain certificates: Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics), Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane), Aviation Traffic Safety Manager',
+                'After obtaining aircraft maintenance technician certificate, eligible for enrollment in our school\'s type-rating education course (scholarship benefits provided)',
+                'Credit recognition: Aviation Industrial Engineer 16 credits, Aircraft Maintenance Technician (Airplane) 18 credits, Aviation Traffic Safety Manager 16 credits',
+                'Equipped with Korea\'s largest-scale professional aviation maintenance practice facilities for hands-on training'
             ],
-            curriculum: aviationNCOCurriculum,
-            detailedCertifications: aviationNCOCertifications,
-            certifications: [
-                'Aircraft Maintenance Technician (Engine/Airframe/Avionics/Electrical)',
-                'Aviation Maintenance Engineer',
-                'Aircraft Maintenance Technician (Non-powered Aircraft)',
-                'Aviation Traffic Safety Manager',
-                'Military Aviation Technician Certifications'
-            ],
-            employmentAreas: [
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역 (동일)
+            facilities: [
                 {
-                    category: 'Military Services',
-                    companies: [
-                        'Republic of Korea Air Force NCO',
-                        'Republic of Korea Navy NCO',
-                        'Republic of Korea Marine Corps NCO',
-                        'Republic of Korea Army Aviation NCO',
-                        'Military Civil Service'
-                    ]
+                    campus: 'Seoul Yeongdeungpo Campus',
+                    description: 'Practice for Aircraft Engine/Airframe/Equipment Maintenance Technician, Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane) qualification test preparation'
                 },
                 {
-                    category: 'Civil Aviation (Post-Military)',
-                    companies: [
-                        'Korean Air', 'Asiana Airlines', 'Jeju Air', 'Jin Air', 'Air Busan',
-                        'Aircraft Manufacturing Companies',
-                        'Airport Operations', 'Aviation Training Institutions'
-                    ]
+                    campus: 'Aviation Technology Training Center',
+                    description: 'Aircraft system practice, Aviation CBT practice, Aircraft engine and airframe maintenance practice (J-79 & JT-3D & O-320 engine, CESSNA 152 & 172, T-33 & 37, 500MD, UH-1B). Practical aircraft hands-on practice (B737 CFM-56 engine, A320MTD, B737 & A320 Simulator, B737 Landing Gear & Nose Gear, B737 APU, etc.)'
                 },
                 {
-                    category: '4-Year Universities',
-                    companies: [
-                        'Korea National University of Transportation',
-                        'Hanseo University', 'Sejong University', 'ChongJu University',
-                        'Korea National University of Education', 'Cheju National University',
-                        'Kangwon National University', 'Hoseo University'
-                    ]
+                    campus: 'Icheon Campus',
+                    description: 'Aircraft overhaul (disassembly, assembly) practice (F-5E, T-37 & 33, O-1G, UH-1H), Unmanned aerial vehicle (drone) flight practice'
+                },
+                {
+                    note: 'All Seoul Yeongdeungpo Campus, Aviation Technology Training Center, and Icheon Campus are designated as aviation maintenance practice facilities by Ministry of Land, Infrastructure and Transport. Seoul Yeongdeungpo Campus is designated as practical examination site for Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics) and Aviation Industrial Engineer qualifications.'
                 }
             ],
-            facilities: [
-                'Seoul Yeongdeungpo Campus: Military aviation theory and regulations',
-                'Aviation Technology Training Center: Military aircraft systems',
-                'Icheon Campus: Military aircraft maintenance training'
-            ]
-        },
-        {
-            id: 'drone-operation',
-            name: 'Drone Operation & Maintenance Course',
-            koreanName: '드론과정',
-            description: 'Comprehensive unmanned aircraft (drone) operation and maintenance training with MOLIT certification',
-            duration: '2 years',
-            highlights: [
-                'Icheon Campus unmanned aircraft (drone) operation facility training',
-                'Drone pilot license certification (MOLIT designated, autonomous testing available)',
-                'Military drone operation and maintenance training for Air Force, Navy, Army',
-                'Comprehensive drone technology education'
+
+            // 원본 HTML의 추가 특징들 (동일)
+            additionalFeatures: [
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Free education during semester for employment, transfer, study abroad preparation - English education (TOEIC, conversation, etc.) and aviation maintenance technical English through affiliated Foreign Language Education Center',
+                'Field trips to Korean Air and Asiana Airlines Incheon Airport maintenance hangars, Korea Aerospace Industries (KAI) Sacheon aircraft manufacturing plant, Korea Forest Service Aviation Headquarters Wonju helicopter maintenance hangar, Air Force aircraft maintenance depot and Army aviation units',
+                'Special lectures by celebrities in aviation maintenance field',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Aviation Maintenance Engineering (3rd year)',
+                'Transfer class operation for 4-year universities such as Korea Aerospace University, Hanseo University',
+                'Study abroad program for US FAA and Canada TC aircraft maintenance technician',
+                'Bachelor\'s degree study abroad programs in USA, Canada, Australia, UK, China, Malaysia, Philippines'
             ],
-            features: [
-                'Unmanned aircraft operation professional facilities at Icheon Campus',
-                'MOLIT designated testing facility (autonomous testing available)',
-                'Professional instructor team with drone pilot certifications',
-                'Comprehensive drone operation training',
-                'Advanced drone maintenance techniques',
-                'Commercial drone application training',
-                'Emergency response drone operations',
-                'Drone photography and surveying applications'
-            ],
-            curriculum: droneOperationCurriculum,
-            detailedCertifications: droneOperationCertifications,
-            certifications: [
-                'Professional degree (Associate) in Aviation Maintenance available',
-                'License exemption for qualified candidates through additional evaluation',
-                'Transfer to 4-year universities available for top students',
-                'Aircraft Maintenance Technician certifications',
-                'Aviation Maintenance Engineer',
-                'Aircraft Maintenance Technician (Non-powered Aircraft)',
-                'Drone Pilot License (various categories)',
-                'Unmanned Aircraft System Operator License'
-            ],
+
+            // 원본 HTML의 상세한 진로 정보 (동일)
             employmentAreas: [
                 {
                     category: 'Civil Aviation',
                     companies: [
                         'Korean Air', 'Asiana Airlines', 'Jeju Air', 'Jin Air', 'Air Busan',
-                        'Fly Gangwon', 'Eastar Jet', 'Star Jet', 'Air Incheon', 'T\'way Air',
-                        'UA Helicopter', 'Helicopter Korea', 'Woong-An Aviation'
+                        'T\'way Air', 'Eastar Jet', 'Sharp Air', 'Air Incheon', 'Korea Times Aviation',
+                        'UI Helicopter', 'Heli Korea', 'Hongik Aviation'
                     ]
                 },
                 {
                     category: 'Government Agencies',
                     companies: [
-                        'Ministry of Defense Aviation Maintenance',
-                        'Police Aviation Department',
-                        'National Fire Agency Aviation Department',
-                        'National Transportation Safety Board'
+                        'Korea Forest Service Aviation Headquarters',
+                        'National Police Agency Aviation Department',
+                        'National Emergency Management Agency Fire Aviation Rescue Team',
+                        'Provincial Government Transportation Aviation Department',
+                        'Ministry of Land, Infrastructure and Transport Flight Inspection Center'
                     ]
                 },
                 {
-                    category: 'Drone Industry',
+                    category: 'Foreign Airlines',
                     companies: [
-                        'Police helicopter units', 'Specialized rental companies',
-                        'Pilot training institutions', 'Media companies',
-                        'Import/export companies', 'Unmanned aircraft companies'
+                        'Boeing', 'Airbus', 'Lufthansa Airlines', 'Sikorsky',
+                        'Cathay Pacific Airways', 'Thai Airways'
                     ]
                 },
                 {
                     category: 'Aircraft Manufacturing',
                     companies: [
                         'Korea Aerospace Industries (KAI)', 'KAEMS (Korea Aircraft Service)',
-                        'HIZEAERO', 'QUEST AERO', 'Hanwha Techwin', 'Samsung Techwin',
-                        'Future Aviation', 'Daelim ENG', 'Korea Defence Service'
+                        'Hizero Aviation', 'AST Co.', 'Hanwha TechM', 'Samheung Precision',
+                        'Future Aviation', 'Daemyung ENG', 'Korea Composite Materials Co.'
+                    ]
+                },
+                {
+                    category: 'Aviation Ground Services',
+                    companies: [
+                        'Asiana Airport', 'Korea Airport Co.', 'KR Co.', 'KTS Global Co.', 'Staffs'
+                    ]
+                },
+                {
+                    category: 'Others',
+                    companies: [
+                        'Light aircraft companies', 'Helicopter operation companies',
+                        'Pilot training institutes', 'Broadcasting stations and newspapers',
+                        'Map production companies', 'Unmanned aircraft companies'
                     ]
                 }
             ],
+
+            // 원본 HTML의 편입 가능 대학 정보 (동일)
+            transferUniversities: [
+                'Korea Aerospace University', 'Hanseo University', 'Sejong University',
+                'Chosun University', 'Korea National University of Transportation',
+                'Chungju University', 'Chodang University', 'Howon University'
+            ],
+
+            // 원본 HTML의 군 진로 정보 - 부사관 특화
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment',
+                'Officer commission through Korea Military Academy 3rd Class and Air Force Academy Bachelor Officer programs'
+            ],
+
+            certifications: [
+                'Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics)',
+                'Aviation Industrial Engineer',
+                'Aircraft Maintenance Technician (Airplane)',
+                'Aviation Traffic Safety Manager'
+            ],
+            curriculum: aviationNCOCurriculum,
+            detailedCertifications: aviationNCOCertifications
+        },
+        {
+            id: 'drone-operation',
+            name: 'Drone Operation & Maintenance Course',
+            koreanName: '드론과정',
+            description: 'A course to train specialists in unmanned aerial systems in response to the era of dramatically increasing demand for unmanned aircraft. The goal is to cultivate excellent talent who can contribute to the development of unmanned aircraft technology and industry by providing theoretical and practical education in the design, manufacturing, maintenance, and operation of fixed-wing drones, unmanned helicopters, multi-rotor drones, and micro drones. Upon graduation, students who obtain an Associate Degree in Aviation Maintenance through the Credit Bank System can transfer to aviation-related departments such as Unmanned Aircraft Departments and Aerospace Engineering at 4-year universities, and can apply as military non-commissioned officers for unmanned aircraft units in the Army, Navy, and Air Force specializing in operation, maintenance, and operation. Furthermore, employment is possible in unmanned aircraft-related industries (Korean Air, KAI, Museong Aviation, etc.), venture companies, and research institutions.',
+            duration: '2 years (Associate Degree) / 3 years (Bachelor\'s Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
+            highlights: [
+                'Excellent professional faculty with unmanned aircraft (drone) operation instructor certificates',
+                'Icheon Campus dedicated unmanned aircraft (drone) operation practice facility (designated by Ministry of Land, Infrastructure and Transport, self-examination possible)',
+                'Support available for Army, Navy, Air Force non-commissioned officer unmanned aircraft unit operation, maintenance, and operation specialties'
+            ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 드론 특화
+            coursebenefits: [
+                'Operation of dedicated unmanned aircraft (drone) operation practice facility at Icheon Campus',
+                'Drone (ultra-light unmanned multi-copter flight device) operation certificate: Free education for our school drone course graduates - Conducted at our school Icheon Campus flight practical examination site (designated by Ministry of Land, Infrastructure and Transport, self-examination possible)',
+                'Lectures conducted by excellent faculty with unmanned aircraft (drone) operation instructor certificates'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역 - 드론 특화 내용 포함
+            features: [
+                'Available to obtain Associate Degree in Aviation Maintenance through Credit Bank System (college-level education)',
+                'Available to obtain Bachelor\'s Degree in Aviation Maintenance Studies through certificate credit conversion and additional credit completion',
+                'Transfer to 3rd year of 4-year universities nationwide or graduate school admission available',
+                'Available to obtain certificates: Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics), Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane)',
+                'Credit recognition: Aviation Industrial Engineer 16 credits, Aircraft Maintenance Technician (Airplane) 18 credits',
+                'Equipped with Korea\'s largest-scale professional aviation maintenance practice facilities for hands-on training'
+            ],
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역 (동일)
             facilities: [
-                'Seoul Yeongdeungpo Campus: Drone theory and regulations',
-                'Aviation Technology Training Center: Advanced drone systems',
-                'Icheon Campus: Drone flight training and maintenance with real aircraft debris training'
-            ]
+                {
+                    campus: 'Seoul Yeongdeungpo Campus',
+                    description: 'Practice for Aircraft Engine/Airframe/Equipment Maintenance Technician, Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane) qualification test preparation'
+                },
+                {
+                    campus: 'Aviation Technology Training Center',
+                    description: 'Aircraft system practice, Aviation CBT practice, Aircraft engine and airframe maintenance practice (J-79 & JT-3D & O-320 engine, CESSNA 152 & 172, T-33 & 37, 500MD, UH-1B). Practical aircraft hands-on practice (B737 CFM-56 engine, A320MTD, B737 & A320 Simulator, B737 Landing Gear & Nose Gear, B737 APU, etc.)'
+                },
+                {
+                    campus: 'Icheon Campus',
+                    description: 'Aircraft overhaul (disassembly, assembly) practice (F-5E, T-37 & 33, O-1G, UH-1H), Unmanned aerial vehicle (drone) flight practice'
+                },
+                {
+                    note: 'All Seoul Yeongdeungpo Campus, Aviation Technology Training Center, and Icheon Campus are designated as aviation maintenance practice facilities by Ministry of Land, Infrastructure and Transport. Seoul Yeongdeungpo Campus is designated as practical examination site for Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics) and Aviation Industrial Engineer qualifications.'
+                }
+            ],
+
+            // 원본 HTML의 추가 특징들 (동일)
+            additionalFeatures: [
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Free education during semester for employment, transfer, study abroad preparation - English education (TOEIC, conversation, etc.) and aviation maintenance technical English through affiliated Foreign Language Education Center',
+                'Field trips to Korean Air and Asiana Airlines Incheon Airport maintenance hangars, Korea Aerospace Industries (KAI) Sacheon aircraft manufacturing plant, Korea Forest Service Aviation Headquarters Wonju helicopter maintenance hangar, Air Force aircraft maintenance depot and Army aviation units',
+                'Special lectures by celebrities in aviation maintenance field',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Aviation Maintenance Engineering (3rd year)',
+                'Transfer class operation for 4-year universities such as Korea Aerospace University, Hanseo University',
+                'Study abroad program for US FAA and Canada TC aircraft maintenance technician',
+                'Bachelor\'s degree study abroad programs in USA, Canada, Australia, UK, China, Malaysia, Philippines'
+            ],
+
+            // 원본 HTML의 상세한 진로 정보 (동일)
+            employmentAreas: [
+                {
+                    category: 'Civil Aviation',
+                    companies: [
+                        'Korean Air', 'Asiana Airlines', 'Jeju Air', 'Jin Air', 'Air Busan',
+                        'T\'way Air', 'Eastar Jet', 'Sharp Air', 'Air Incheon', 'Korea Times Aviation',
+                        'UI Helicopter', 'Heli Korea', 'Hongik Aviation'
+                    ]
+                },
+                {
+                    category: 'Government Agencies',
+                    companies: [
+                        'Korea Forest Service Aviation Headquarters',
+                        'National Police Agency Aviation Department',
+                        'National Emergency Management Agency Fire Aviation Rescue Team',
+                        'Provincial Government Transportation Aviation Department',
+                        'Ministry of Land, Infrastructure and Transport Flight Inspection Center'
+                    ]
+                },
+                {
+                    category: 'Foreign Airlines',
+                    companies: [
+                        'Boeing', 'Airbus', 'Lufthansa Airlines', 'Sikorsky',
+                        'Cathay Pacific Airways', 'Thai Airways'
+                    ]
+                },
+                {
+                    category: 'Aircraft Manufacturing',
+                    companies: [
+                        'Korea Aerospace Industries (KAI)', 'KAEMS (Korea Aircraft Service)',
+                        'Hizero Aviation', 'AST Co.', 'Hanwha TechM', 'Samheung Precision',
+                        'Future Aviation', 'Daemyung ENG', 'Korea Composite Materials Co.'
+                    ]
+                },
+                {
+                    category: 'Aviation Ground Services',
+                    companies: [
+                        'Asiana Airport', 'Korea Airport Co.', 'KR Co.', 'KTS Global Co.', 'Staffs'
+                    ]
+                },
+                {
+                    category: 'Others',
+                    companies: [
+                        'Light aircraft companies', 'Helicopter operation companies',
+                        'Pilot training institutes', 'Broadcasting stations and newspapers',
+                        'Map production companies', 'Unmanned aircraft companies'
+                    ]
+                }
+            ],
+
+            // 원본 HTML의 편입 가능 대학 정보 (동일)
+            transferUniversities: [
+                'Korea Aerospace University', 'Hanseo University', 'Sejong University',
+                'Chosun University', 'Korea National University of Transportation',
+                'Chungju University', 'Chodang University', 'Howon University'
+            ],
+
+            // 원본 HTML의 군 진로 정보 - 드론 특화
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment',
+                'Support for unmanned aircraft unit operation, maintenance, and operation specialties as Army, Navy, Air Force non-commissioned officers'
+            ],
+
+            // 드론 특화 진로 추가
+            droneSpecificCareers: [
+                'Unmanned aircraft-related industries (Korean Air, KAI, Museong Aviation, etc.)',
+                'Venture companies specializing in drone technology',
+                'Research institutions for unmanned aerial systems',
+                'Transfer to Unmanned Aircraft Departments and Aerospace Engineering at 4-year universities'
+            ],
+
+            certifications: [
+                'Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics)',
+                'Aviation Industrial Engineer',
+                'Aircraft Maintenance Technician (Airplane)',
+                'Drone (Ultra-light Unmanned Multi-copter Flight Device) Operation Certificate'
+            ],
+            curriculum: droneOperationCurriculum,
+            detailedCertifications: droneOperationCertifications
         }
     ],
     overallEmploymentAreas: [
