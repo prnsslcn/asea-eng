@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
     Star, Award, Building2, CheckCircle, ArrowLeft,
@@ -13,6 +13,18 @@ const ProgramDetailPage: React.FC = () => {
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('overview');
     const [currentPage, setCurrentPage] = useState(1);
+
+    // 다른 엔드포인트로 이동할 때 첫 번째 탭으로 초기화
+    useEffect(() => {
+        setActiveTab('overview');
+        setCurrentPage(1);
+    }, [departmentId, programId]);
+
+    // 탭 변경 시 페이지네이션 초기화
+    const handleTabChange = (tabId: string) => {
+        setActiveTab(tabId);
+        setCurrentPage(1); // 탭 변경 시 1페이지로 초기화
+    };
 
     // 데이터 매핑 및 가져오기
     const mappedDepartmentId = getDepartmentIdFromUrl(departmentId || '');
@@ -657,7 +669,7 @@ const ProgramDetailPage: React.FC = () => {
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
-                                onClick={() => setActiveTab(tab.id)}
+                                onClick={() => handleTabChange(tab.id)}
                                 className={`flex items-center px-6 py-4 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                                     activeTab === tab.id
                                         ? 'border-blue-900 text-blue-900 bg-blue-50'
