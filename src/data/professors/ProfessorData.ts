@@ -266,6 +266,180 @@ export const professorsData: ProgramProfessors[] = [
         ]
     },
     {
+        programId: 'ultrasonic-diagnostics',
+        professors: [
+            // 초음파진단과정 - 항공비파괴검사과정과 동일한 교수진
+            {
+                id: 'prof-ultrasonic-diagnostics-001',
+                name: 'Man-Soon Kim',
+                koreanName: '김만순',
+                title: 'Professor (Department Head)',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Penetrant Testing',
+                    'Penetrant Testing Practice',
+                    'Leak Testing'
+                ],
+                photo: '/asea-eng/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
+            },
+            {
+                id: 'prof-ultrasonic-diagnostics-002',
+                name: 'Cheol-Young Kim',
+                koreanName: '김철영',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Ultrasonic Testing',
+                    'Ultrasonic Testing Practice'
+                ],
+                photo: '/asea-eng/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
+            },
+            {
+                id: 'prof-ultrasonic-diagnostics-003',
+                name: 'Jae-Won Park',
+                koreanName: '박재원',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Magnetic Particle Testing Practice',
+                    'Welding Engineering',
+                    'Blueprint Reading'
+                ],
+                photo: '/asea-eng/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
+            },
+            {
+                id: 'prof-ultrasonic-diagnostics-004',
+                name: 'Ho-Gyun Lee',
+                koreanName: '이호균',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Visual Testing',
+                    'Metallurgical Materials Engineering',
+                    'Radiographic Testing',
+                    'Radiographic Testing Practice'
+                ],
+                photo: '/asea-eng/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'metallurgical-engineering',
+        professors: [
+            // 금속공학사과정[3년제] - 항공비파괴검사과정과 동일한 교수진
+            {
+                id: 'prof-metallurgical-engineering-001',
+                name: 'Man-Soon Kim',
+                koreanName: '김만순',
+                title: 'Professor (Department Head)',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Penetrant Testing',
+                    'Penetrant Testing Practice',
+                    'Leak Testing'
+                ],
+                photo: '/asea-eng/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
+            },
+            {
+                id: 'prof-metallurgical-engineering-002',
+                name: 'Cheol-Young Kim',
+                koreanName: '김철영',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Ultrasonic Testing',
+                    'Ultrasonic Testing Practice'
+                ],
+                photo: '/asea-eng/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
+            },
+            {
+                id: 'prof-metallurgical-engineering-003',
+                name: 'Jae-Won Park',
+                koreanName: '박재원',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Magnetic Particle Testing Practice',
+                    'Welding Engineering',
+                    'Blueprint Reading'
+                ],
+                photo: '/asea-eng/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
+            },
+            {
+                id: 'prof-metallurgical-engineering-004',
+                name: 'Ho-Gyun Lee',
+                koreanName: '이호균',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Visual Testing',
+                    'Metallurgical Materials Engineering',
+                    'Radiographic Testing',
+                    'Radiographic Testing Practice'
+                ],
+                photo: '/asea-eng/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'aviation-ndt',
+        professors: [
+            // 항공비파괴검사과정 - 스마트안전진단계열 전용 교수진
+            {
+                id: 'prof-aviation-ndt-001',
+                name: 'Man-Soon Kim',
+                koreanName: '김만순',
+                title: 'Professor (Department Head)',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Penetrant Testing',
+                    'Penetrant Testing Practice',
+                    'Leak Testing'
+                ],
+                photo: '/asea-eng/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
+            },
+            {
+                id: 'prof-aviation-ndt-002',
+                name: 'Cheol-Young Kim',
+                koreanName: '김철영',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Ultrasonic Testing',
+                    'Ultrasonic Testing Practice'
+                ],
+                photo: '/asea-eng/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
+            },
+            {
+                id: 'prof-aviation-ndt-003',
+                name: 'Jae-Won Park',
+                koreanName: '박재원',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Magnetic Particle Testing Practice',
+                    'Welding Engineering',
+                    'Blueprint Reading'
+                ],
+                photo: '/asea-eng/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
+            },
+            {
+                id: 'prof-aviation-ndt-004',
+                name: 'Ho-Gyun Lee',
+                koreanName: '이호균',
+                title: 'Professor',
+                department: 'Smart Safety Diagnostics',
+                courses: [
+                    'Visual Testing',
+                    'Metallurgical Materials Engineering',
+                    'Radiographic Testing',
+                    'Radiographic Testing Practice'
+                ],
+                photo: '/asea-eng/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
+            }
+        ]
+    },
+    {
         programId: 'drone-operation',
         professors: [
             // 드론과정 - 항공정비사과정과 동일한 교수진
