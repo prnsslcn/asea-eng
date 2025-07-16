@@ -21,6 +21,10 @@ export interface Program {
     transferUniversities?: string[];
     militaryCareer?: string[];
     droneSpecificCareers?: string[];
+    internationalCareers?: string[];
+    ultrasonicSpecificBenefits?: string[];
+    metallurgicalSpecificCareers?: string[];
+    bachelorDegreeBenefits?: string[];
 
     // 기존 필드들
     features: string[];
@@ -6610,324 +6614,414 @@ const smartSafetyData: Department = {
             id: 'aviation-ndt',
             name: 'Aviation NDT Course',
             koreanName: '항공비파괴검사과정',
-            description: 'Comprehensive non-destructive testing for aviation industry with X-ray and ultrasonic technology',
-            duration: '2 years',
+            description: 'Non-destructive testing refers to conducting inspection and safety checks on products such as nuclear power, railways, aircraft, and buildings using X-rays or ultrasound without disassembling or damaging the inspection objects, and performing product reliability evaluation work. The Aviation NDT Course is a fusion of aviation maintenance technology and non-destructive testing technology, from diagnosis to maintenance for aircraft safety, aiming to train specialized technicians optimized for the aviation industry who can obtain related qualifications.',
+            duration: '2 years (Associate Degree) / 3 years (Bachelor\'s Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'No employment concerns for 22 consecutive years with 100% employment guarantee',
-                'NDT technician and engineer certifications available',
-                'Aircraft maintenance technician and aviation engineer licensing available',
-                'Aviation NDT inspection combining aircraft systems with NDT technology'
+                'No job worries! 100% employment for all job seekers for 22 consecutive years',
+                'NDT-related technician and industrial engineer certification acquisition and eligibility to take aviation maintenance technician and aviation industrial engineer certification exams',
+                'Training specialized technicians optimized for the aviation industry from aviation non-destructive testing (safety diagnosis) to maintenance'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - NDT 특화
+            coursebenefits: [
+                'Upon course completion: Transfer preference to Korea Military Academy 3rd Class, non-commissioned officer application, MOU 4-year universities with transfer preference and scholarship benefits upon admission',
+                'Graduates are employed as quality controllers (Q.C) and inspectors in supervision companies, NDT specialized companies, small and medium enterprises, and large corporations',
+                'Obtain Associate Degree in Non-Destructive Testing (Bachelor\'s degree in engineering upon additional credit completion)',
+                'Professional faculty and Korea\'s largest practice facilities with cutting-edge equipment',
+                'Aiming to train NDT specialists by acquiring 3-4 or more certificates per person',
+                'Not only acquire NDT-related (penetrant, magnetic, ultrasonic, radiographic) technician and industrial engineer certificates, but also eligible to take aviation maintenance technician and aviation industrial engineer certification exams',
+                'Employment of all graduates who wish to be employed through industry-academia partnerships',
+                'Conduct aviation NDT maintenance education through aviation-related technical education'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역
             features: [
-                'Air Force Academy admission, military service, and 4-year university transfer options',
-                'Professional NDT degree (Associate) available',
-                'License exemption through additional evaluation for qualified candidates',
-                'Transfer to 4-year metallurgy/safety engineering programs available',
-                'Multiple NDT certifications (Penetrant, Magnetic Particle, Ultrasonic, Radiographic)',
-                'Age advantages: 16 years (engineer), 20 years (technician) for national certification',
-                'Specialized facilities with latest NDT equipment',
-                'Free language education and technical English programs',
-                'Advanced degree pathway (5-year program) for bachelor\'s degree',
-                'Transfer programs to prestigious 4-year universities',
-                'Advanced NDT field specialization programs',
-                'Industry partnership for guaranteed employment',
-                'Advanced PAUT (Phased Array Ultrasonic Testing) training',
-                'Air Force Academy and military technical training'
+                'Obtain Associate Degree in Non-Destructive Testing (recognized as college-level education)',
+                'Available to obtain Bachelor\'s Degree in Metallurgical Engineering/Safety Engineering through certificate credit conversion and additional credit completion',
+                'Transfer to 3rd year of 4-year universities available',
+                'Available to obtain NDT-related (penetrant, magnetic, ultrasonic, radiographic) technician and industrial engineer certificates',
+                'Credit conversion available: 16 credits for industrial engineer, 20 credits for engineer when obtaining NDT-related national technical qualifications',
+                'Equipped with practice facilities by major. Practice conducted with Korea\'s best and largest facilities'
             ],
-            curriculum: aviationNDTCurriculum,
-            detailedCertifications: aviationNDTCertifications,
-            certifications: [
-                'NDT Professional Degree (Associate)',
-                'License exemption for qualified candidates through additional evaluation',
-                'Metallurgy/Safety Engineering bachelor\'s degree available',
-                'NDT certifications (Penetrant Testing, Magnetic Particle, Ultrasonic, Radiographic)',
-                'National Technical Certifications',
-                'Aircraft Maintenance Technician',
-                'Aviation Maintenance Engineer'
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역
+            facilities: [
+                {
+                    description: 'Penetrant testing laboratory, Magnetic particle testing laboratory, Ultrasonic testing laboratory, Radiographic testing laboratory, Materials laboratory'
+                }
             ],
+
+            // 원본 HTML의 추가 특징들 - NDT 특화
+            additionalFeatures: [
+                'Free English education (TOEIC, conversation, etc.) through affiliated ASEA Foreign Language Education Center for employment, transfer, and study abroad preparation',
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Free education during semester for employment, transfer, study abroad preparation - English education (TOEIC, conversation, etc.) and aviation maintenance technical English. Free TOEIC and conversation special lectures during vacation',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Metallurgical Engineering/Safety Engineering (5th semester)',
+                'Transfer class operation for 4-year universities such as Korea Aerospace University, Hanseo University',
+                'Operation of advanced learning courses in NDT field in addition to NDT Associate Degree curriculum',
+                'Employment of all graduates who wish to be employed through industry-academia partnerships',
+                'Phased Array Ultrasonic Testing (PAUT) equipment education',
+                'Customized education for Korea Military Academy 3rd Class and technical non-commissioned officers'
+            ],
+
+            // 원본 HTML의 상세한 진로 정보 - NDT 특화 광범위한 산업분야
             employmentAreas: [
                 {
-                    category: '4-Year Universities',
+                    category: 'Heavy Industry & Shipbuilding',
                     companies: [
-                        'Korea National University of Transportation', 'Seoul Institute of Technology',
-                        'Korea National University of Transportation', 'Hanseo University'
+                        'Hyundai Heavy Industries', 'Hanjin Heavy Industries', 'Doosan Infracore',
+                        'Hyundai Mipo Dockyard', 'Daewoo Shipbuilding & Marine Engineering'
                     ]
                 },
                 {
-                    category: 'Military Services',
+                    category: 'Aviation',
                     companies: [
-                        'Republic of Korea Air Force', 'Republic of Korea Navy',
-                        'Republic of Korea Army', 'Republic of Korea Marine Corps'
+                        'Asiana Airlines', 'Korean Air', 'Korea Aerospace Industries', 'and many others'
                     ]
                 },
                 {
-                    category: 'Heavy Industries & Shipbuilding',
+                    category: 'Petrochemical',
                     companies: [
-                        'Hyundai Heavy Industries', 'Hanjin Heavy Industries', 'Doosan Infrastructure',
-                        'Hyundai Mipo Dockyard', 'Daehan Shipbuilding'
+                        'SK Chemical', 'GS Caltex', 'Hyundai Oilbank'
                     ]
                 },
                 {
-                    category: 'Aviation Industry',
+                    category: 'Engineering',
                     companies: [
-                        'Asiana Airlines', 'Korean Air', 'Korea Aerospace Industries'
+                        'Hyundai, Samsung, LG comprehensive companies for design, construction, supervision'
                     ]
                 },
                 {
-                    category: 'Petrochemical Industry',
+                    category: 'Government Public Corporations',
                     companies: [
-                        'SK Chemicals', 'GS Caltex', 'Hyundai Oil Bank'
+                        'Korea Electric Power Corporation', 'Korea Gas Corporation', 'Korea Gas Safety Corporation'
                     ]
                 },
                 {
-                    category: 'Manufacturing',
+                    category: 'Nuclear Power Plants',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG design, construction, inspection companies'
+                        'Korea Atomic Energy Research Institute', 'Kori/Yeonggwang Nuclear Power Plants'
                     ]
                 },
                 {
-                    category: 'Government Agencies',
+                    category: 'Automotive',
                     companies: [
-                        'Korea Electric Power Corporation', 'Korea Gas Corporation',
-                        'Korea Gas Safety Corporation'
-                    ]
-                },
-                {
-                    category: 'Nuclear Industry',
-                    companies: [
-                        'Nuclear Research Institute', 'Gori/Youngkwang Nuclear Research Centers'
-                    ]
-                },
-                {
-                    category: 'Automotive Industry',
-                    companies: [
-                        'Hyundai Motor', 'Kia related parts manufacturers'
+                        'Hyundai Motor Company', 'GM Korea', 'related parts companies'
                     ]
                 },
                 {
                     category: 'Construction & Others',
                     companies: [
-                        'Construction companies', 'Steel manufacturing companies',
-                        'Safety inspection companies'
+                        'Construction companies', 'Steel manufacturing companies', 'Safety diagnosis companies'
                     ]
                 }
             ],
-            facilities: [
-                'Professional NDT laboratories with latest equipment',
-                'Penetrant Testing, Magnetic Particle, Ultrasonic, Radiographic facilities',
-                'Metallurgy and materials testing laboratories'
-            ]
+
+            // 원본 HTML의 편입 가능 대학 정보 - NDT 특화
+            transferUniversities: [
+                'Korea University', 'Seoul National University of Science and Technology',
+                'Korea Aerospace University', 'Hanyang University',
+                'metallurgy, safety, mechanical engineering related departments at 4-year universities'
+            ],
+
+            // 원본 HTML의 군 진로 정보
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment'
+            ],
+
+            // 원본 HTML의 해외 취업 정보
+            internationalCareers: [
+                'Employment in overseas companies related to shipbuilding, aviation, railway, electronics, construction, nuclear power, and plant (Australia, Japan, etc.)'
+            ],
+
+            certifications: [
+                'NDT-related (Penetrant, Magnetic, Ultrasonic, Radiographic) Technician',
+                'NDT-related (Penetrant, Magnetic, Ultrasonic, Radiographic) Industrial Engineer',
+                'Aviation Maintenance Technician',
+                'Aviation Industrial Engineer'
+            ],
+            curriculum: aviationNDTCurriculum,
+            detailedCertifications: aviationNDTCertifications
         },
         {
             id: 'ultrasonic-diagnostics',
             name: 'Ultrasonic Diagnostics Course',
             koreanName: '초음파진단과정',
-            description: 'Advanced ultrasonic testing and PAUT (Phased Array Ultrasonic Testing) technology training',
-            duration: '2 years',
+            description: 'The goal is to train ultrasonic testing technology specialists to advance quality control work through scientific and efficient product inspection. Through systematic education and practice of ultrasonic NDT industrial engineer qualification acquisition and various related inspection training using the latest ultrasonic testing equipment including PAUT testing, we aim to strengthen direct connection with industrial sites and cultivate core talent in the ultrasonic testing field.',
+            duration: '2 years (Associate Degree) / 3 years (Bachelor\'s Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'Advanced PAUT (Phased Array Ultrasonic Testing) training',
-                'Professional development with 3+ certifications per person',
-                'Industry partnership for guaranteed employment through corporate connections',
-                'Specialized ultrasonic testing technology advancement'
+                'Phased Array Ultrasonic Testing (PAUT) equipment education implementation',
+                'Training specialists by acquiring 3 or more certificates per person',
+                '100% employment for all job seekers through industry-academia partnerships'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 초음파 특화
+            coursebenefits: [
+                'Various benefits available when graduates wish to transfer: Transfer preference to MOU 4-year universities and scholarship benefits upon admission',
+                'Aiming to train NDT specialists by acquiring 3-4 or more certificates per person',
+                'Professional faculty and Korea\'s largest practice facilities with cutting-edge equipment',
+                'Employment of all graduates who wish to be employed through industry-academia partnerships: Graduates are employed as quality controllers (Q.C) and inspectors in supervision companies, NDT specialized companies, small and medium enterprises, and large corporations',
+                'Complete advanced courses in ultrasonic testing: Employment possible in companies specializing in ultrasonic testing, Recognition as inspectors with new technology by learning PAUT during enrollment'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역
             features: [
-                'Multiple transfer opportunities to 4-year universities with MOU agreements',
-                'Professional development with 3-4 certifications per person for NDT specialists',
-                'Professional instructor team and latest facilities with cutting-edge equipment',
-                'Industry partnership for guaranteed employment and employment security',
-                'Employment in supervision, NDT specialists, heavy industry, and major companies',
-                'PAUT specialization for employment in companies requiring ultrasonic testing',
-                'Recognition as inspector with new technology for employment in PAUT-specialized companies'
+                'Obtain Associate Degree in Non-Destructive Testing (recognized as college-level education)',
+                'Available to obtain Bachelor\'s Degree in Metallurgical Engineering/Safety Engineering through certificate credit conversion and additional credit completion',
+                'Transfer to 3rd year of 4-year universities available',
+                'Available to obtain NDT-related (penetrant, magnetic, ultrasonic, radiographic) technician and industrial engineer certificates',
+                'Credit conversion available: 16 credits for industrial engineer, 20 credits for engineer when obtaining NDT-related national technical qualifications',
+                'Equipped with practice facilities by major. Practice conducted with Korea\'s best and largest facilities'
             ],
-            curriculum: ultrasonicDiagnosticsCurriculum,
-            detailedCertifications: ultrasonicDiagnosticsCertifications,
-            certifications: [
-                'NDT Professional Degree (Associate)',
-                'License exemption for qualified candidates through additional evaluation',
-                'Transfer to 4-year universities available',
-                'NDT certifications (Penetrant Testing, Magnetic Particle, Ultrasonic, Radiographic)',
-                'National Technical Certifications with age advantages',
-                'PAUT (Phased Array Ultrasonic Testing) certification',
-                'Advanced NDT specialization certifications'
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역 (동일)
+            facilities: [
+                {
+                    description: 'Penetrant testing laboratory, Magnetic particle testing laboratory, Ultrasonic testing laboratory, Radiographic testing laboratory, Materials laboratory'
+                }
             ],
+
+            // 원본 HTML의 추가 특징들 (동일)
+            additionalFeatures: [
+                'Free English education (TOEIC, conversation, etc.) through affiliated ASEA Foreign Language Education Center for employment, transfer, and study abroad preparation',
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Free education during semester for employment, transfer, study abroad preparation - English education (TOEIC, conversation, etc.) and aviation maintenance technical English. Free TOEIC and conversation special lectures during vacation',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Metallurgical Engineering/Safety Engineering (5th semester)',
+                'Transfer class operation for 4-year universities such as Korea Aerospace University, Hanseo University',
+                'Operation of advanced learning courses in NDT field in addition to NDT Associate Degree curriculum',
+                'Employment of all graduates who wish to be employed through industry-academia partnerships',
+                'Phased Array Ultrasonic Testing (PAUT) equipment education',
+                'Customized education for Korea Military Academy 3rd Class and technical non-commissioned officers'
+            ],
+
+            // 원본 HTML의 상세한 진로 정보 (항공비파괴검사과정과 동일)
             employmentAreas: [
                 {
-                    category: '4-Year Universities',
+                    category: 'Heavy Industry & Shipbuilding',
                     companies: [
-                        'Korea National University of Transportation', 'Seoul Institute of Technology',
-                        'Korea National University of Transportation', 'Hanseo University'
+                        'Hyundai Heavy Industries', 'Hanjin Heavy Industries', 'Doosan Infracore',
+                        'Hyundai Mipo Dockyard', 'Daewoo Shipbuilding & Marine Engineering'
                     ]
                 },
                 {
-                    category: 'Military Services',
+                    category: 'Aviation',
                     companies: [
-                        'Republic of Korea Air Force', 'Republic of Korea Navy',
-                        'Republic of Korea Army', 'Republic of Korea Marine Corps'
+                        'Asiana Airlines', 'Korean Air', 'Korea Aerospace Industries', 'and many others'
                     ]
                 },
                 {
-                    category: 'Heavy Industries & Shipbuilding',
+                    category: 'Petrochemical',
                     companies: [
-                        'Hyundai Heavy Industries', 'Hanjin Heavy Industries', 'Doosan Infrastructure',
-                        'Hyundai Mipo Dockyard', 'Daehan Shipbuilding'
+                        'SK Chemical', 'GS Caltex', 'Hyundai Oilbank'
                     ]
                 },
                 {
-                    category: 'Aviation Industry',
+                    category: 'Engineering',
                     companies: [
-                        'Asiana Airlines', 'Korean Air', 'Korea Aerospace Industries'
+                        'Hyundai, Samsung, LG comprehensive companies for design, construction, supervision'
                     ]
                 },
                 {
-                    category: 'Petrochemical Industry',
+                    category: 'Government Public Corporations',
                     companies: [
-                        'SK Chemicals', 'GS Caltex', 'Hyundai Oil Bank'
+                        'Korea Electric Power Corporation', 'Korea Gas Corporation', 'Korea Gas Safety Corporation'
                     ]
                 },
                 {
-                    category: 'Manufacturing',
+                    category: 'Nuclear Power Plants',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG design, construction, inspection companies'
+                        'Korea Atomic Energy Research Institute', 'Kori/Yeonggwang Nuclear Power Plants'
                     ]
                 },
                 {
-                    category: 'Government Agencies',
+                    category: 'Automotive',
                     companies: [
-                        'Korea Electric Power Corporation', 'Korea Gas Corporation',
-                        'Korea Gas Safety Corporation'
-                    ]
-                },
-                {
-                    category: 'Nuclear Industry',
-                    companies: [
-                        'Nuclear Research Institute', 'Gori/Youngkwang Nuclear Research Centers'
-                    ]
-                },
-                {
-                    category: 'Automotive Industry',
-                    companies: [
-                        'Hyundai Motor', 'Kia related parts manufacturers'
+                        'Hyundai Motor Company', 'GM Korea', 'related parts companies'
                     ]
                 },
                 {
                     category: 'Construction & Others',
                     companies: [
-                        'Construction companies', 'Steel manufacturing companies',
-                        'Safety inspection companies'
+                        'Construction companies', 'Steel manufacturing companies', 'Safety diagnosis companies'
                     ]
                 }
             ],
-            facilities: [
-                'Advanced PAUT (Phased Array Ultrasonic Testing) laboratories',
-                'Professional NDT equipment and testing facilities',
-                'Latest ultrasonic diagnostic technology centers'
-            ]
+
+            // 원본 HTML의 편입 가능 대학 정보 (동일)
+            transferUniversities: [
+                'Korea University', 'Seoul National University of Science and Technology',
+                'Korea Aerospace University', 'Hanyang University',
+                'metallurgy, safety, mechanical engineering related departments at 4-year universities'
+            ],
+
+            // 원본 HTML의 군 진로 정보 (동일)
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment'
+            ],
+
+            // 원본 HTML의 해외 취업 정보 (동일)
+            internationalCareers: [
+                'Employment in overseas companies related to shipbuilding, aviation, railway, electronics, construction, nuclear power, and plant (Australia, Japan, etc.)'
+            ],
+
+            // 초음파 특화 혜택
+            ultrasonicSpecificBenefits: [
+                'Employment possible in companies specializing in ultrasonic testing',
+                'Recognition as inspectors with new technology by learning PAUT during enrollment',
+                'Systematic education and practice strengthening direct connection with industrial sites'
+            ],
+
+            certifications: [
+                'NDT-related (Penetrant, Magnetic, Ultrasonic, Radiographic) Technician',
+                'NDT-related (Penetrant, Magnetic, Ultrasonic, Radiographic) Industrial Engineer',
+                'Ultrasonic NDT Industrial Engineer',
+                'Phased Array Ultrasonic Testing (PAUT) Certification'
+            ],
+            curriculum: ultrasonicDiagnosticsCurriculum,
+            detailedCertifications: ultrasonicDiagnosticsCertifications
         },
         {
             id: 'metallurgical-engineering',
             name: 'Metallurgical Engineering [3-Year]',
             koreanName: '금속공학사과정[3년제]',
-            description: '3-year bachelor\'s degree program in metallurgical engineering with advanced safety diagnostics',
-            duration: '3 years',
+            description: 'We train professionals in the broader non-destructive testing industry by basically obtaining an Associate Degree in Non-Destructive Testing and acquiring a 4-year Bachelor\'s Degree in Metallurgical Engineering within a total of 3 years. [3-Year Program] 3-year course awarding \'4-year specialized Bachelor\'s Degree\'.',
+            duration: '3 years (Bachelor\'s Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'Industry employment security system for guaranteed employment',
-                'NDT and metallurgy related engineer and technician certifications',
-                'Full-time and weekend programs available for working adults',
-                'Bachelor\'s degree (4-year equivalent) awarded after completion'
+                '100% employment for all job seekers through industry-academia partnership system',
+                'Free special lectures for acquiring NDT and metal-related engineer and industrial engineer certifications',
+                'Day, evening, and weekend programs for working professionals'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 금속공학사 특화
+            coursebenefits: [
+                'Recommendation to semiconductor-related graduate schools (Seoul area)',
+                'Tuition support benefits for our school graduates',
+                'Aiming to train NDT specialists by acquiring 3-4 or more certificates per person',
+                'Professional faculty and Korea\'s largest practice facilities with cutting-edge equipment',
+                'Employment of all graduates who wish to be employed through industry-academia partnerships: Graduates are employed as quality controllers (Q.C) and inspectors in supervision companies, NDT specialized companies, small and medium enterprises, and large corporations'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역
             features: [
-                'Metallurgical Engineering bachelor\'s degree (4-year university equivalent)',
-                '3-year program leading to 4-year bachelor\'s degree',
-                'NDT certifications (Penetrant Testing, Magnetic Particle, Ultrasonic, Radiographic)',
-                'National Technical Certifications with age advantages',
-                'Professional specialization with 3-4 certifications per person',
-                'Professional instructor team and latest facilities',
-                'Industry partnership for guaranteed employment',
-                'Advanced metallurgy and materials science education',
-                'Advanced PAUT (Phased Array Ultrasonic Testing) training',
-                'Air Force Academy and military technical training opportunities'
+                'Obtain Bachelor\'s Degree in Metallurgical Engineering (recognized as 4-year university education)',
+                'Acquire 4-year Bachelor\'s degree in just 3 years',
+                'Available to obtain NDT-related (penetrant, magnetic, ultrasonic, radiographic) technician and industrial engineer certificates',
+                'Credit conversion available: 16 credits for industrial engineer, 20 credits for engineer when obtaining NDT-related national technical qualifications',
+                'Equipped with practice facilities by major. Practice conducted with Korea\'s best and largest facilities'
             ],
-            curriculum: metallurgicalEngineeringCurriculum,
-            detailedCertifications: metallurgicalEngineeringCertifications,
-            certifications: [
-                'Metallurgical Engineering Bachelor\'s Degree (4-year equivalent)',
-                'NDT Professional certifications',
-                'Metallurgy and Materials Engineering certifications',
-                'NDT certifications (Penetrant Testing, Magnetic Particle, Ultrasonic, Radiographic)',
-                'National Technical Certifications',
-                'PAUT (Phased Array Ultrasonic Testing) advanced certification'
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역 (동일)
+            facilities: [
+                {
+                    description: 'Penetrant testing laboratory, Magnetic particle testing laboratory, Ultrasonic testing laboratory, Radiographic testing laboratory, Materials laboratory'
+                }
             ],
+
+            // 원본 HTML의 추가 특징들 - 금속공학사 특화
+            additionalFeatures: [
+                'Free English education (TOEIC, conversation, etc.) through affiliated ASEA Foreign Language Education Center for employment and study abroad preparation, and free aviation maintenance technical English during semester. Free TOEIC and conversation special lectures during vacation',
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Metallurgical Engineering/Safety Engineering (5th semester)',
+                'Employment of all graduates who wish to be employed through industry-academia partnerships',
+                'Phased Array Ultrasonic Testing (PAUT) equipment education',
+                'Customized education for Korea Military Academy 3rd Class and technical non-commissioned officers'
+            ],
+
+            // 원본 HTML의 상세한 진로 정보 (동일)
             employmentAreas: [
                 {
-                    category: 'Higher Education Transfer',
+                    category: 'Heavy Industry & Shipbuilding',
                     companies: [
-                        'Graduate school admission for advanced degrees'
+                        'Hyundai Heavy Industries', 'Hanjin Heavy Industries', 'Doosan Infracore',
+                        'Hyundai Mipo Dockyard', 'Daewoo Shipbuilding & Marine Engineering'
                     ]
                 },
                 {
-                    category: 'Military Services',
+                    category: 'Aviation',
                     companies: [
-                        'Republic of Korea Air Force', 'Republic of Korea Navy',
-                        'Republic of Korea Army', 'Republic of Korea Marine Corps'
+                        'Asiana Airlines', 'Korean Air', 'Korea Aerospace Industries', 'and many others'
                     ]
                 },
                 {
-                    category: 'Heavy Industries & Shipbuilding',
+                    category: 'Petrochemical',
                     companies: [
-                        'Hyundai Heavy Industries', 'Hanjin Heavy Industries', 'Doosan Infrastructure',
-                        'Hyundai Mipo Dockyard', 'Daehan Shipbuilding'
+                        'SK Chemical', 'GS Caltex', 'Hyundai Oilbank'
                     ]
                 },
                 {
-                    category: 'Aviation Industry',
+                    category: 'Engineering',
                     companies: [
-                        'Asiana Airlines', 'Korean Air', 'Korea Aerospace Industries'
+                        'Hyundai, Samsung, LG comprehensive companies for design, construction, supervision'
                     ]
                 },
                 {
-                    category: 'Petrochemical Industry',
+                    category: 'Government Public Corporations',
                     companies: [
-                        'SK Chemicals', 'GS Caltex', 'Hyundai Oil Bank'
+                        'Korea Electric Power Corporation', 'Korea Gas Corporation', 'Korea Gas Safety Corporation'
                     ]
                 },
                 {
-                    category: 'Manufacturing',
+                    category: 'Nuclear Power Plants',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG design, construction, inspection companies'
+                        'Korea Atomic Energy Research Institute', 'Kori/Yeonggwang Nuclear Power Plants'
                     ]
                 },
                 {
-                    category: 'Government Agencies',
+                    category: 'Automotive',
                     companies: [
-                        'Korea Electric Power Corporation', 'Korea Gas Corporation',
-                        'Korea Gas Safety Corporation'
-                    ]
-                },
-                {
-                    category: 'Nuclear Industry',
-                    companies: [
-                        'Nuclear Research Institute', 'Gori/Youngkwang Nuclear Research Centers'
-                    ]
-                },
-                {
-                    category: 'Automotive Industry',
-                    companies: [
-                        'Hyundai Motor', 'Kia related parts manufacturers'
+                        'Hyundai Motor Company', 'GM Korea', 'related parts companies'
                     ]
                 },
                 {
                     category: 'Construction & Others',
                     companies: [
-                        'Construction companies', 'Steel manufacturing companies',
-                        'Safety inspection companies'
+                        'Construction companies', 'Steel manufacturing companies', 'Safety diagnosis companies'
                     ]
                 }
             ],
-            facilities: [
-                'Advanced metallurgy laboratories',
-                'Materials testing and analysis facilities',
-                'Professional NDT and diagnostic equipment'
-            ]
+
+            // 원본 HTML의 군 진로 정보 (동일)
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment'
+            ],
+
+            // 원본 HTML의 해외 취업 정보 (동일)
+            internationalCareers: [
+                'Employment in overseas companies related to shipbuilding, aviation, railway, electronics, construction, nuclear power, and plant (Australia, Japan, etc.)'
+            ],
+
+            // 금속공학사 특화 진로
+            metallurgicalSpecificCareers: [
+                'Advancement to semiconductor-related graduate schools',
+                'Advanced career opportunities with Bachelor\'s degree in Metallurgical Engineering',
+                'Broader employment opportunities in metallurgy and materials science fields'
+            ],
+
+            // 금속공학사 특화 혜택
+            bachelorDegreeBenefits: [
+                'Recommendation to semiconductor-related graduate schools (Seoul area)',
+                'Tuition support benefits for our school graduates',
+                'Acquire 4-year Bachelor\'s degree in just 3 years',
+                'Day, evening, and weekend programs for working professionals'
+            ],
+
+            certifications: [
+                'NDT-related (Penetrant, Magnetic, Ultrasonic, Radiographic) Technician',
+                'NDT-related (Penetrant, Magnetic, Ultrasonic, Radiographic) Industrial Engineer',
+                'Bachelor\'s Degree in Metallurgical Engineering',
+                'Phased Array Ultrasonic Testing (PAUT) Certification'
+            ],
+            curriculum: metallurgicalEngineeringCurriculum,
+            detailedCertifications: metallurgicalEngineeringCertifications
         }
     ],
     overallEmploymentAreas: [
