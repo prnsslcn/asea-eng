@@ -462,8 +462,11 @@ const ProgramDetailPage: React.FC = () => {
                             {/* 교수 정보 - 하단에 텍스트 */}
                             <div className="p-4">
                                 <div className="mb-3">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-1">
                                         {professor.name}
+                                    </h3>
+                                    <h3 className="text-sm text-gray-900 mb-2">
+                                        {professor.title}
                                     </h3>
                                 </div>
 

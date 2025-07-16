@@ -266,6 +266,574 @@ export const professorsData: ProgramProfessors[] = [
         ]
     },
     {
+        programId: 'national-defense-officer',
+        professors: [
+            // 국방사관과정 - 국방경찰AI계열 교수진
+            {
+                id: 'prof-national-defense-officer-001',
+                name: 'Nam-Won Kim',
+                koreanName: '김남원',
+                title: 'Professor (Department Head, Former Army Major)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Korean History',
+                    'Interview Evaluation',
+                    'Terrorism Studies',
+                    'First Aid',
+                    'Current Affairs Special Lecture',
+                    'Life Etiquette'
+                ],
+                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-002',
+                name: 'Su-Min Chae',
+                koreanName: '채수민',
+                title: 'Professor (Former Army Lieutenant, YouTuber Lieutenant Shu)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Intellectual Ability Assessment (Data Analysis)',
+                    'Korean History I & II',
+                    'Easy-to-Understand Big Data I & II',
+                    'Leadership',
+                    'Military Ethics',
+                    'Teaching Methods'
+                ],
+                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-003',
+                name: 'Ju-Su Kim',
+                koreanName: '김주수',
+                title: 'Professor (Former Army Colonel)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Constitutional Law I',
+                    'Police Administration',
+                    'Corrections',
+                    'Civil Law General Principles'
+                ],
+                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-004',
+                name: 'Kyung-Min Kim',
+                koreanName: '김경민',
+                title: 'Professor (Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Military Physical Training I-IV',
+                    'Special Forces Martial Arts',
+                    'Taekwondo'
+                ],
+                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-005',
+                name: 'Je-Kwang Lee',
+                koreanName: '이제광',
+                title: 'Professor (Active Police Inspector, Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Police Administration',
+                    'Police Comprehensive Practice'
+                ],
+                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-006',
+                name: 'Kyung-Cheol Park',
+                koreanName: '박경철',
+                title: 'Advisory Professor (Former Army Master Sergeant)',
+                department: 'Defense Police AI',
+                courses: [
+                    'NCO Role and Practice',
+                    'Unit Management'
+                ],
+                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-007',
+                name: 'In-Gil Chae',
+                koreanName: '채인길',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Security Industry Law',
+                    'Criminology',
+                    'Police Investigation Theory',
+                    'Terrorism Studies',
+                    'Protocol Studies',
+                    'Police Comprehensive Practice I-IV'
+                ],
+                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+            },
+            {
+                id: 'prof-national-defense-officer-008',
+                name: 'Soon-Gwan Kwak',
+                koreanName: '곽순관',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Terrorism Studies',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+            },
+            {
+                id: 'prof-national-defense-officer-009',
+                name: 'Sang-Hak Lee',
+                koreanName: '이상학',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Criminal Law I'
+                ],
+                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+            },
+            {
+                id: 'prof-national-defense-officer-010',
+                name: 'Won-Young Kim',
+                koreanName: '김원영',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Introduction to Law',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'national-defense-nco',
+        professors: [
+            // 국방부사관과정 - 국방사관과정과 동일한 교수진
+            {
+                id: 'prof-national-defense-nco-001',
+                name: 'Nam-Won Kim',
+                koreanName: '김남원',
+                title: 'Professor (Department Head, Former Army Major)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Korean History',
+                    'Interview Evaluation',
+                    'Terrorism Studies',
+                    'First Aid',
+                    'Current Affairs Special Lecture',
+                    'Life Etiquette'
+                ],
+                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-002',
+                name: 'Su-Min Chae',
+                koreanName: '채수민',
+                title: 'Professor (Former Army Lieutenant, YouTuber Lieutenant Shu)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Intellectual Ability Assessment (Data Analysis)',
+                    'Korean History I & II',
+                    'Easy-to-Understand Big Data I & II',
+                    'Leadership',
+                    'Military Ethics',
+                    'Teaching Methods'
+                ],
+                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-003',
+                name: 'Ju-Su Kim',
+                koreanName: '김주수',
+                title: 'Professor (Former Army Colonel)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Constitutional Law I',
+                    'Police Administration',
+                    'Corrections',
+                    'Civil Law General Principles'
+                ],
+                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-004',
+                name: 'Kyung-Min Kim',
+                koreanName: '김경민',
+                title: 'Professor (Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Military Physical Training I-IV',
+                    'Special Forces Martial Arts',
+                    'Taekwondo'
+                ],
+                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-005',
+                name: 'Je-Kwang Lee',
+                koreanName: '이제광',
+                title: 'Professor (Active Police Inspector, Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Police Administration',
+                    'Police Comprehensive Practice'
+                ],
+                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-006',
+                name: 'Kyung-Cheol Park',
+                koreanName: '박경철',
+                title: 'Advisory Professor (Former Army Master Sergeant)',
+                department: 'Defense Police AI',
+                courses: [
+                    'NCO Role and Practice',
+                    'Unit Management'
+                ],
+                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-007',
+                name: 'In-Gil Chae',
+                koreanName: '채인길',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Security Industry Law',
+                    'Criminology',
+                    'Police Investigation Theory',
+                    'Terrorism Studies',
+                    'Protocol Studies',
+                    'Police Comprehensive Practice I-IV'
+                ],
+                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+            },
+            {
+                id: 'prof-national-defense-nco-008',
+                name: 'Soon-Gwan Kwak',
+                koreanName: '곽순관',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Terrorism Studies',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+            },
+            {
+                id: 'prof-national-defense-nco-009',
+                name: 'Sang-Hak Lee',
+                koreanName: '이상학',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Criminal Law I'
+                ],
+                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+            },
+            {
+                id: 'prof-national-defense-nco-010',
+                name: 'Won-Young Kim',
+                koreanName: '김원영',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Introduction to Law',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'national-defense-ai',
+        professors: [
+            // 국방AI과정 - 국방사관과정과 동일한 교수진
+            {
+                id: 'prof-national-defense-ai-001',
+                name: 'Nam-Won Kim',
+                koreanName: '김남원',
+                title: 'Professor (Department Head, Former Army Major)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Korean History',
+                    'Interview Evaluation',
+                    'Terrorism Studies',
+                    'First Aid',
+                    'Current Affairs Special Lecture',
+                    'Life Etiquette'
+                ],
+                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-002',
+                name: 'Su-Min Chae',
+                koreanName: '채수민',
+                title: 'Professor (Former Army Lieutenant, YouTuber Lieutenant Shu)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Intellectual Ability Assessment (Data Analysis)',
+                    'Korean History I & II',
+                    'Easy-to-Understand Big Data I & II',
+                    'Leadership',
+                    'Military Ethics',
+                    'Teaching Methods'
+                ],
+                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-003',
+                name: 'Ju-Su Kim',
+                koreanName: '김주수',
+                title: 'Professor (Former Army Colonel)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Constitutional Law I',
+                    'Police Administration',
+                    'Corrections',
+                    'Civil Law General Principles'
+                ],
+                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-004',
+                name: 'Kyung-Min Kim',
+                koreanName: '김경민',
+                title: 'Professor (Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Military Physical Training I-IV',
+                    'Special Forces Martial Arts',
+                    'Taekwondo'
+                ],
+                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-005',
+                name: 'Je-Kwang Lee',
+                koreanName: '이제광',
+                title: 'Professor (Active Police Inspector, Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Police Administration',
+                    'Police Comprehensive Practice'
+                ],
+                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-006',
+                name: 'Kyung-Cheol Park',
+                koreanName: '박경철',
+                title: 'Advisory Professor (Former Army Master Sergeant)',
+                department: 'Defense Police AI',
+                courses: [
+                    'NCO Role and Practice',
+                    'Unit Management'
+                ],
+                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-007',
+                name: 'In-Gil Chae',
+                koreanName: '채인길',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Security Industry Law',
+                    'Criminology',
+                    'Police Investigation Theory',
+                    'Terrorism Studies',
+                    'Protocol Studies',
+                    'Police Comprehensive Practice I-IV'
+                ],
+                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+            },
+            {
+                id: 'prof-national-defense-ai-008',
+                name: 'Soon-Gwan Kwak',
+                koreanName: '곽순관',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Terrorism Studies',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+            },
+            {
+                id: 'prof-national-defense-ai-009',
+                name: 'Sang-Hak Lee',
+                koreanName: '이상학',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Criminal Law I'
+                ],
+                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+            },
+            {
+                id: 'prof-national-defense-ai-010',
+                name: 'Won-Young Kim',
+                koreanName: '김원영',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Introduction to Law',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'police-officer',
+        professors: [
+            // 경찰공무원과정 - 국방사관과정과 동일한 교수진
+            {
+                id: 'prof-police-officer-001',
+                name: 'Nam-Won Kim',
+                koreanName: '김남원',
+                title: 'Professor (Department Head, Former Army Major)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Korean History',
+                    'Interview Evaluation',
+                    'Terrorism Studies',
+                    'First Aid',
+                    'Current Affairs Special Lecture',
+                    'Life Etiquette'
+                ],
+                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+            },
+            {
+                id: 'prof-police-officer-002',
+                name: 'Su-Min Chae',
+                koreanName: '채수민',
+                title: 'Professor (Former Army Lieutenant, YouTuber Lieutenant Shu)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Intellectual Ability Assessment (Data Analysis)',
+                    'Korean History I & II',
+                    'Easy-to-Understand Big Data I & II',
+                    'Leadership',
+                    'Military Ethics',
+                    'Teaching Methods'
+                ],
+                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+            },
+            {
+                id: 'prof-police-officer-003',
+                name: 'Ju-Su Kim',
+                koreanName: '김주수',
+                title: 'Professor (Former Army Colonel)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Constitutional Law I',
+                    'Police Administration',
+                    'Corrections',
+                    'Civil Law General Principles'
+                ],
+                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+            },
+            {
+                id: 'prof-police-officer-004',
+                name: 'Kyung-Min Kim',
+                koreanName: '김경민',
+                title: 'Professor (Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Military Physical Training I-IV',
+                    'Special Forces Martial Arts',
+                    'Taekwondo'
+                ],
+                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+            },
+            {
+                id: 'prof-police-officer-005',
+                name: 'Je-Kwang Lee',
+                koreanName: '이제광',
+                title: 'Professor (Active Police Inspector, Former Army Captain)',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Police Administration',
+                    'Police Comprehensive Practice'
+                ],
+                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+            },
+            {
+                id: 'prof-police-officer-006',
+                name: 'Kyung-Cheol Park',
+                koreanName: '박경철',
+                title: 'Advisory Professor (Former Army Master Sergeant)',
+                department: 'Defense Police AI',
+                courses: [
+                    'NCO Role and Practice',
+                    'Unit Management'
+                ],
+                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+            },
+            {
+                id: 'prof-police-officer-007',
+                name: 'In-Gil Chae',
+                koreanName: '채인길',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Security Industry Law',
+                    'Criminology',
+                    'Police Investigation Theory',
+                    'Terrorism Studies',
+                    'Protocol Studies',
+                    'Police Comprehensive Practice I-IV'
+                ],
+                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+            },
+            {
+                id: 'prof-police-officer-008',
+                name: 'Soon-Gwan Kwak',
+                koreanName: '곽순관',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Terrorism Studies',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+            },
+            {
+                id: 'prof-police-officer-009',
+                name: 'Sang-Hak Lee',
+                koreanName: '이상학',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Police Investigation Theory',
+                    'Criminal Law I'
+                ],
+                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+            },
+            {
+                id: 'prof-police-officer-010',
+                name: 'Won-Young Kim',
+                koreanName: '김원영',
+                title: 'Professor',
+                department: 'Defense Police AI',
+                courses: [
+                    'Introduction to Law',
+                    'Criminal Procedure Law'
+                ],
+                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+            }
+        ]
+    },
+    {
         programId: 'airport-security',
         professors: [
             // 항공보안과정 - 항공보안계열 교수진
