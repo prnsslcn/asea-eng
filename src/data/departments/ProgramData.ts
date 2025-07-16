@@ -28,6 +28,13 @@ export interface Program {
     specializedPrograms?: string[];
     governmentCertifications?: string[];
     beverageSpecialties?: string[];
+    pmcSpecificBenefits?: string[];
+    actionActingSpecificBenefits?: string[];
+    sportsRehabilitationSpecificBenefits?: string[];
+    koreaArmyAcademyBenefits?: string[];
+    ncoCommissionBenefits?: string[];
+    aiSpecializedEducation?: string[];
+    policeSpecificBenefits?: string[];
 
     // 기존 필드들
     features: string[];
@@ -7596,458 +7603,655 @@ const aviationSecurityData: Department = {
             id: 'airport-security',
             name: 'Airport Security Course',
             koreanName: '항공보안과정',
-            description: 'Comprehensive airport security training with AI screening technology and the most advanced facilities in Korea',
-            duration: '2 years',
+            description: 'The Aviation Security program aims to train specialized aviation security and security screening personnel to protect passengers\' safety from various illegal activities that affect civil aviation safety and aviation operations as living standards improve and aviation passenger demand rapidly increases. Through theoretical education in aviation security and systematic practical training in the nation\'s only comprehensive airport training facility among educational institutions, we are training professional security screening personnel to work in major national transportation networks such as airports, ports, and railways, as well as important national facilities.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'Korea\'s leading airport security training institution with most advanced facilities',
-                'First in Korea to implement AI artificial intelligence security screening education',
-                'Private training institution with IED terrorism response training programs',
-                'State-certified private security guard qualification testing facility'
+                'First domestic educational institution to operate comprehensive airport training facility',
+                'First private educational institution to operate explosive terrorism response education program',
+                'First domestic AI (artificial intelligence) security screening solution development participation and educational program operation'
             ],
+
+            // 과정혜택 (Course Benefits)
+            coursebenefits: [
+                'First domestic educational institution to establish aviation security program and develop/operate educational programs (aviation security specialized educational institution with extensive experience and infrastructure)',
+                'First private educational institution to develop and operate Improvised Explosive Device (IED) terrorism response education program as regular curriculum',
+                'First domestic AI (artificial intelligence) security screening education program learning support (providing specialized talent development programs for the 4th industrial era)',
+                'Systematic practical training for enhancing field practical capabilities in various aviation security-related training facilities (comprehensive airport training facility, security screening training facility, AI artificial intelligence security screening training facility, security screening CBT room, explosive model training facility, etc.)',
+                'Designated as testing venue for national certified personal protection officer qualification examination (taking qualification examination at our school)',
+                'Educational support for airport corporation employment preparation through public official employment preparation class via affiliated convergence education center'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'Korea\'s leading airport security course establishment and training program standardization',
-                'First private training institution to implement IED terrorism response training programs',
-                'State-certified private security guard qualification testing facility (on-campus testing available)',
-                'Korea\'s first AI artificial intelligence security screening education implementation',
-                'Professional training for various firearms, chemical weapons, and security equipment',
-                'Close Quarters Battle (CQB), anti-terrorism tactics, unmanned security guard (PSD), tactical emergency care (TCCC) training',
-                'Age advantages for military service and various international certifications'
+                'Obtain associate degree in protocol security (recognition of 2-year college education)',
+                'Recognition of 20 credits when obtaining national certified security supervisor qualification',
+                'Possible to transfer to 3rd year of 4-year university with associate degree',
+                'English education support through affiliated foreign language education center for employment and transfer preparation',
+                'Systematic education provided by professional faculty from airport corporation and security/protection specialists',
+                'Systematic security and screening education support through affiliated ASEA Aviation Security Research Institute',
+                'Live ammunition shooting classes conducted for 15 weeks at Mokdong Shooting Range, an industry-academia cooperation institution',
+                'Field-oriented practical education support through industry-academia cooperation related to security and screening',
+                'Capacity enhancement and self-development possible through support for various club activities outside regular curriculum',
+                'Complete martial arts and training facility equipment and domestic largest possession of various security training equipment',
+                'Possible to obtain various martial arts dan certificates above 4th dan (Taekwondo, Hapkido, Special Forces Martial Arts, Judo, Yongmudo, Krav Maga)',
+                'Our school designated as testing venue for national certified personal protection officer qualification examination (Seoul, Gyeonggi, Incheon region/1st testing center)',
+                'Support for occasional special lectures by security and screening field experts and extensive learning through field trips and field-oriented education support (Airport Corporation, Aviation Administration, National Police Agency, Korea Customs Service, Port Authority, Korea Railroad Corporation, Airlines, National Important Facilities, etc.)',
+                'Located in the closest area to Incheon International Airport, Gimpo Airport, port facilities, government agencies, etc., advantageous for practice, field trips, and employment'
             ],
-            curriculum: aviationSecurityCurriculum,
-            detailedCertifications: aviationSecurityCertifications,
+
+            // 자격증 (기본 - 실제 HTML Tab4에서 추가 확인 필요)
             certifications: [
-                'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
-                'State Technical Qualification for Security Guard (20 points advantage when taking the exam)',
-                'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
-                'Employment and transfer advantages through graduation and corporate connections',
-                'Various activity club participation and self-development opportunities',
-                'Overseas employment and field experience through industry partnerships',
-                'Professional training completion at various training centers and facilities',
-                'Multiple martial arts certifications above 4th dan and related self-defense certifications'
+                'National Certified Personal Protection Officer',
+                'National Certified Security Supervisor',
+                'Various Martial Arts Dan Certificates (4th dan and above)',
+                'Security Screening Related Certifications'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
-                {
-                    category: 'Aviation Security',
-                    companies: [
-                        'Airport security and ground services',
-                        'Airline security departments',
-                        'Aviation security training centers',
-                        'Airport operations security',
-                        'International aviation security consultants'
-                    ]
-                },
                 {
                     category: 'Government Agencies',
                     companies: [
-                        'Ministry of Defense 9th Military Police Command',
-                        'National Police University', 'Chungnam National University',
-                        'Police University', 'Customs Service', 'Coast Guard',
-                        'Railroad Police', 'National Intelligence Service',
-                        'Various national and public facility security jobs'
+                        'Grade 9 Protection Civil Servant',
+                        'Auxiliary Police',
+                        'National Assembly Security',
+                        'Blue House Security',
+                        'Korea Customs Service',
+                        'National Police Agency',
+                        'Korea Aviation Administration',
+                        'Korea Minting, Security Printing & ID Card Operating Corp.',
+                        'Nuclear Power Plant Security',
+                        'Other National Important Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Transportation Security',
+                    category: 'Public Institutions',
                     companies: [
                         'Incheon International Airport Corporation',
-                        'Korea Railroad Corporation', 'Incheon Subway Corporation',
-                        'KTX Telecom', 'Various national transportation facility security jobs'
+                        'Korea Airports Corporation',
+                        'Incheon Port Authority',
+                        'Pyeongtaek Port Authority',
+                        'Korea Railroad Corporation',
+                        'Korea Electric Power Corporation',
+                        'Other National Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Corporate Security',
+                    category: 'National Airlines',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK and other major corporations',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and private facility security jobs'
+                        'Airline Security Personnel (Korean Air, Asiana Airlines, Jeju Air, Jin Air, Air Busan, T\'way Air, etc.)',
+                        'Mobile Strike Team',
+                        'Special Security Personnel',
+                        'Ground Staff',
+                        'Office Staff',
+                        'Air Cargo',
+                        'Aviation Security',
+                        'Other National Airlines Security, Protection, and Guard Personnel'
                     ]
                 },
                 {
-                    category: '4-Year Universities',
+                    category: 'Security & Protection Companies',
                     companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Samsung, LG, SK, Hyundai, Hwanhwa and other major corporations and high-tech companies industrial security personnel',
+                        'International conference security service companies',
+                        'Major corporations and general security and screening personnel'
+                    ]
+                },
+                {
+                    category: 'Transfer to 4-year Universities',
+                    companies: [
+                        'Transfer to 4-year universities nationwide',
+                        'Transfer to 4-year universities in metropolitan area'
                     ]
                 },
                 {
                     category: 'Others',
                     companies: [
-                        'Various facilities (casinos, multi-cultural spaces, hotel security companies)',
-                        'Security and facility management jobs at sports facilities'
+                        'Multi-use facilities (casinos and leisure facilities, multipurpose cultural spaces)',
+                        'International event agency companies',
+                        'Security and protection companies',
+                        'Sports facility safety personnel'
                     ]
                 }
             ],
+
+            // 시설 (Facilities) - HTML에 명시된 실습실들
             facilities: [
-                'AI security screening training equipment',
-                'Airport security simulation facilities',
-                'State-certified testing facility for private security guards'
-            ]
+                'Comprehensive Airport Training Facility',
+                'Security Screening Training Facility',
+                'AI Artificial Intelligence Security Screening Training Facility',
+                'Security Screening CBT Room',
+                'Explosive Model Training Facility',
+                'Martial Arts Training Hall',
+                'Training Facility'
+            ],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: aviationSecurityCurriculum,
+            detailedCertifications: aviationSecurityCertifications
         },
         {
             id: 'vip-security',
             name: 'VIP Security Course',
-            koreanName: '의전경비과정',
-            description: 'Professional VIP protection and ceremonial security training for government and corporate leaders',
-            duration: '2 years',
+            koreanName: '의전경호과정',
+            description: 'The VIP Security Course aims to train specialized police and security personnel to protect citizens\' safety as crime increases and various needs such as personal safety, human rights protection, and social order maintenance grow due to improved living standards. This program cultivates theory and practice for protecting others\' lives and property, acquires martial arts capabilities, improves situational response and crisis management abilities against crime, and trains professional security guards responsible for personal protection and safety of multi-use facilities.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'State-certified private security guard qualification testing facility',
-                'Professional training by graduates and experienced instructors',
-                'Practical training at various security facilities for field experience',
-                'Comprehensive VIP protection and security management training'
+                'Designated testing institution for national certified personal protection officer qualification examination',
+                'Systematic education by excellent professional faculty from government agencies',
+                'Educational institution that produces Presidential Security Service security personnel'
             ],
+
+            // 과정혜택 (Course Benefits)
+            coursebenefits: [
+                'First private educational institution to develop and operate Improvised Explosive Device (IED) terrorism response education program as regular curriculum',
+                'Designated as testing venue for national certified personal protection officer qualification examination (taking qualification examination at our school)',
+                'Systematic practical training for enhancing field practical capabilities in various security and protection-related training facilities (comprehensive martial arts training facility, CrossFit training center, vehicle inspection training center, in-flight security training facility, mechanical security training facility, etc.)',
+                'Educational support for Grade 9 protection civil servant exam preparation through convergence education center for prospective applicants',
+                'Field-oriented practical education support through industry-academia cooperation related to security and mechanical security'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'First private training institution to implement IED terrorism response training programs',
-                'State-certified private security guard qualification testing facility (on-campus testing available)',
-                'Professional training for various security facilities requiring field competency',
-                'VIP security facility training at various institutions including martial arts centers, cruise training facilities, computer training centers, civil security training centers, comprehensive security training centers',
-                'Partnership with veteran training institutions for practical civil security experience of 15 weeks',
-                'Training by graduates and professional instructors for specialized ceremonial and private security education'
+                'Obtain associate degree in protocol security (recognition of 2-year college education)',
+                'Recognition of 20 credits when obtaining national certified security supervisor qualification',
+                'Possible to transfer to 3rd year of 4-year university with associate degree',
+                'English education support through affiliated foreign language education center for employment and transfer preparation',
+                'Systematic education provided by professional faculty from Presidential Security Service and security/protection specialists',
+                'Live ammunition shooting classes conducted for 15 weeks at Mokdong Shooting Range, an industry-academia cooperation institution',
+                'Systematic security and personal protection officer certification acquisition education support through affiliated convergence education center',
+                'Capacity enhancement and self-development possible through support for various club activities outside regular curriculum',
+                'Complete martial arts and training facility equipment and domestic largest possession of various security training equipment',
+                'Possible to obtain various martial arts dan certificates above 4th dan (Taekwondo, Hapkido, Special Forces Martial Arts, Judo, Yongmudo, Krav Maga)',
+                'Our school designated as testing venue for national certified personal protection officer qualification examination (Seoul, Gyeonggi, Incheon region/1st testing center)',
+                'Support for occasional special lectures by security field experts and extensive learning through field trips and field-oriented education support (Blue House Presidential Security Service, National Assembly, National Police Agency, ADT CAPS, S1, multi-use facilities, private companies, etc.)',
+                'Located in the closest area to government agencies, advantageous for practice, field trips, and employment'
             ],
-            curriculum: vipSecurityCurriculum,
-            detailedCertifications: vipSecurityCertifications,
+
+            // 자격증 (기본 - 실제 HTML Tab4에서 추가 확인 필요)
             certifications: [
-                'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
-                'State Technical Qualification for Security Guard (20 points advantage when taking the exam)',
-                'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
-                'Employment and transfer advantages through graduation and corporate connections',
-                'Various martial arts certifications above 4th dan (Taekwondo, Hapkido, special martial arts, Judo, Yongmudo, Takraw)',
-                'State-certified private security guard qualification testing facility (Seoul, Gyeonggi, Incheon area/Level 1 manager)',
-                'Professional training completion certificates from various specialized institutions'
+                'National Certified Personal Protection Officer',
+                'National Certified Security Supervisor',
+                'Various Martial Arts Dan Certificates (4th dan and above)',
+                'Security and Protection Related Certifications'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
                 {
                     category: 'Government Agencies',
                     companies: [
-                        'Ministry of Defense 9th Military Police Command',
-                        'National Police University', 'Chungnam National University',
-                        'Police University', 'Customs Service', 'Coast Guard',
-                        'Railroad Police', 'National Intelligence Service',
-                        'Various national and public facility security jobs'
+                        'Grade 9 Protection Civil Servant',
+                        'National Assembly Security Guard',
+                        'Blue House Security',
+                        'National Police Agency',
+                        'Auxiliary Police',
+                        'Nuclear Power Plant Security',
+                        'National Important Facilities and Public Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Transportation Security',
+                    category: 'Public Institutions',
                     companies: [
                         'Incheon International Airport Corporation',
-                        'Korea Railroad Corporation', 'Incheon Subway Corporation',
-                        'KTX Telecom', 'Various national transportation facility security jobs'
+                        'Korea Airports Corporation',
+                        'Incheon Port Authority',
+                        'Pyeongtaek Port Authority',
+                        'Korea Railroad Corporation',
+                        'Other National Important Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Corporate Security',
+                    category: 'Aviation Related',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK and other major corporations',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and private facility security jobs'
+                        'Airline Security Personnel',
+                        'Airport Mobile Strike Team',
+                        'Aviation Cargo Terminal',
+                        'Aviation Security',
+                        'Airport Security',
+                        'Special Security',
+                        'Other National Airlines Security, Protection, and Guard Personnel'
                     ]
                 },
                 {
-                    category: '4-Year Universities',
+                    category: 'Security & Protection Companies',
                     companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Hyundai, Samsung, Hwanhwa, LG, SK and other major corporations secretariat',
+                        'ADT CAPS',
+                        'S1',
+                        'KT Telecop',
+                        'International conference security service companies',
+                        'Private security companies and private facility security personnel'
+                    ]
+                },
+                {
+                    category: 'Transfer to 4-year Universities',
+                    companies: [
+                        'Transfer to 4-year universities nationwide',
+                        'Transfer to 4-year universities in metropolitan area'
                     ]
                 },
                 {
                     category: 'Others',
                     companies: [
-                        'Various facilities (casinos, multi-cultural spaces, hotel security companies)',
-                        'Security and facility management jobs at sports facilities'
+                        'Multi-use facilities (casinos, multipurpose cultural spaces)',
+                        'Escort security companies',
+                        'Security and protection companies',
+                        'Sports industry facility safety management personnel'
                     ]
                 }
             ],
+
+            // 시설 (Facilities) - HTML에 명시된 실습실들
             facilities: [
-                'VIP protection training facilities',
-                'Ceremonial security training centers',
-                'Advanced security management systems'
-            ]
+                'Comprehensive Martial Arts Training Facility',
+                'CrossFit Training Center',
+                'Vehicle Inspection Training Center',
+                'In-flight Security Training Facility',
+                'Mechanical Security Training Facility',
+                'Martial Arts Training Hall',
+                'Training Facility'
+            ],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: vipSecurityCurriculum,
+            detailedCertifications: vipSecurityCertifications
         },
         {
             id: 'pmc-security',
             name: 'PMC Security Course',
-            koreanName: 'PMC경비과정',
-            description: 'Korea\'s most advanced PMC training with veteran instructors for overseas private military contractor careers',
-            duration: '2 years',
+            koreanName: 'PMC경호과정',
+            description: 'The PMC Security Course, aimed at employment in domestic and international private military companies, provides in-depth education in various fields related to private military company operations. This is a comprehensive program covering military, security, international relations, legal, and ethical fields, designed to enable students to build expertise and practical experience for working in private military companies. Since the missions performed by private military companies include various military-related duties such as military supply transport, VIP protection, armed escort, and facility protection according to diverse military and economic needs, this course provides extensive knowledge and skills learning in these related fields.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'Korea\'s most advanced PMC company with veteran instructors for field training',
-                '100% overseas employment for graduates through professional training',
-                'Specialized training by government agencies and military special forces graduates',
-                'Professional training by current and veteran field experts'
+                'Field practical education through industry-academia cooperation with Korea\'s first established PMC company',
+                '100% priority selection and employment for graduates through industry-customized education',
+                'Systematic education by faculty from government agencies and military special forces'
             ],
+
+            // 과정혜택 (Course Benefits)
+            coursebenefits: [
+                'First private educational institution to develop and operate Improvised Explosive Device (IED) terrorism response education program as regular curriculum',
+                'Professional drone operation education and license acquisition support through affiliated unmanned aviation education center',
+                'Designated as testing venue for national certified personal protection officer qualification examination (taking qualification examination at our school)',
+                'First domestic AI security screening education program learning support (screening equipment operation and explosive identification, response, and removal education support)',
+                'Professional training in various military equipment including small arms, heavy weapons, and various security equipment operation',
+                'Education provision in Close Quarters Battle (CQB), counter-terrorism operations (land, sea, aircraft), Personal Security Detail (PSD), Tactical Combat Casualty Care (TCCC)',
+                'Scholarship support benefits provided when recommended by commanding officers from each military branch'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'Private training institution first to implement IED terrorism response training programs',
-                'Drone operation training through our subsidiary unmanned aviation training institute',
-                'State-certified private security guard qualification testing facility (on-campus testing available)',
-                'Korea\'s first AI artificial intelligence security screening education implementation',
-                'Professional training for various firearms, ammunition, and security equipment',
-                'Close Quarters Battle (CQB), anti-terrorism tactics, unmanned security guard (PSD), tactical emergency care (TCCC) training',
-                'Military/special forces training for comprehensive training capabilities including admission training',
-                'Veteran training institution partnerships for practical training experience of 15 weeks',
-                'Overseas employment and field experience training (online or offline language training)',
-                'Government agencies, military special forces graduates, current PMC company professional instructor training',
-                'Korea\'s most advanced private military company with professional training for 100% overseas employment'
+                'Obtain associate degree in protocol security (recognition of 2-year college education)',
+                'Recognition of 20 credits when obtaining national certified security supervisor qualification',
+                'Possible to transfer to 3rd year of 4-year university with associate degree',
+                'Live ammunition shooting classes conducted for 15 weeks at Mokdong Shooting Range, an industry-academia cooperation institution',
+                'Possible to obtain various martial arts dan certificates above 4th dan and related certification acquisition support',
+                'Field-oriented education program support through military-related industry-academia cooperation',
+                'Complete martial arts and training facility equipment and security training equipment (domestic largest possession)',
+                'Capacity enhancement and self-development possible through support for various after-school club activities',
+                'Major English education support for overseas employment and field operation preparation (online or offline lecture support)',
+                'Systematic education support by professional faculty from government agencies, military special forces instructors, and current PMC companies',
+                '100% priority selection and employment for graduates through industry-customized education with Korea\'s first established private military company'
             ],
-            curriculum: pmcSecurityCurriculum,
-            detailedCertifications: pmcSecurityCertifications,
+
+            // PMC 특화 혜택 (PMC-Specific Benefits)
+            pmcSpecificBenefits: [
+                'Professional training in various military equipment (small arms, heavy weapons, security equipment)',
+                'Specialized tactical training (CQB, counter-terrorism operations, PSD, TCCC)',
+                'Drone operation certification through affiliated unmanned aviation education center',
+                'AI security screening education program',
+                'Military branch scholarship support system',
+                '100% priority employment guarantee with domestic PMC companies'
+            ],
+
+            // 해외취업 특화 (International Career Specialization)
+            internationalCareers: [
+                '100% priority selection and employment for graduates through industry-customized education with Korea\'s first established private military company',
+                'Employment connections with international security companies, NGOs, and multinational corporations',
+                'Employment opportunities with domestic and international private military companies',
+                'Major English education support for overseas employment preparation',
+                'Disaster response specialist opportunities with government agencies and international organizations'
+            ],
+
+            // 자격증 (기본 - 실제 HTML Tab4에서 추가 확인 필요)
             certifications: [
-                'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
-                'State Technical Qualification for Security Guard (20 points advantage when taking the exam)',
-                'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
-                'Veteran training institution practical training experience of 15 weeks',
-                'Various martial arts certifications above 4th dan and related self-defense certifications',
-                'Field training with current professionals for practical experience',
-                'Martial arts and trainer certification training and specialized facility training (Korea\'s largest facilities)',
-                'Various activity club participation and self-development opportunities',
-                'Overseas employment and field experience training with industry partnerships',
-                'Government agencies, military special forces graduates, current PMC company professional instructor training',
-                'Korea\'s most advanced private military company with professional training for 100% overseas employment'
+                'National Certified Personal Protection Officer',
+                'National Certified Security Supervisor',
+                'Drone Operation License',
+                'Various Martial Arts Dan Certificates (4th dan and above)',
+                'Military and Security Related Certifications'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
                 {
                     category: 'Overseas Employment',
                     companies: [
-                        'Korea\'s most advanced private military company with professional training for 100% overseas employment',
-                        'International security companies, NGOs and multinational company employment connections',
-                        'Domestic and international private military company employment'
+                        '100% priority selection employment through industry-customized education with Korea\'s first established private military company',
+                        'International security companies',
+                        'NGOs and multinational corporations',
+                        'Domestic and international private military companies'
                     ]
                 },
                 {
                     category: 'Government Agencies',
                     companies: [
-                        'Ministry of Defense 9th Military Police Command',
-                        'National Police University', 'Chungnam National University',
-                        'Police University', 'Customs Service', 'Coast Guard',
-                        'Railroad Police', 'National Intelligence Service',
-                        'Various national and public facility security jobs'
+                        'Grade 9 Protection Civil Servant',
+                        'National Assembly Security Guard',
+                        'Blue House Security',
+                        'National Police Agency',
+                        'Auxiliary Police',
+                        'Nuclear Power Plant Security',
+                        'National Important Facilities and Public Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Transportation Security',
+                    category: 'Public Institutions',
                     companies: [
                         'Incheon International Airport Corporation',
-                        'Korea Railroad Corporation', 'Incheon Subway Corporation',
-                        'KTX Telecom', 'Various national transportation facility security jobs'
+                        'Korea Airports Corporation',
+                        'Incheon Port Authority',
+                        'Pyeongtaek Port Authority',
+                        'Korea Railroad Corporation',
+                        'Other National Important Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Corporate Security',
+                    category: 'Aviation Related',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK and other major corporations',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and private facility security jobs'
+                        'Airline Security Personnel',
+                        'Airport Mobile Strike Team',
+                        'Aviation Cargo Terminal',
+                        'Aviation Security',
+                        'Airport Security',
+                        'Special Security',
+                        'Other National Airlines Security, Protection, and Guard Personnel'
                     ]
                 },
                 {
-                    category: '4-Year Universities',
+                    category: 'Security & Protection Companies',
                     companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Hyundai, Samsung, Hwanhwa, LG, SK and other major corporations secretariat',
+                        'ADT CAPS',
+                        'S1',
+                        'KT Telecop',
+                        'International conference security service companies',
+                        'Private security companies and private facility security personnel'
+                    ]
+                },
+                {
+                    category: 'Transfer to 4-year Universities',
+                    companies: [
+                        'Transfer to 4-year universities nationwide',
+                        'Transfer to 4-year universities in metropolitan area'
                     ]
                 },
                 {
                     category: 'Others',
                     companies: [
-                        'PMC and other government agencies and international organizations as senior experts',
-                        'Various specialized professional activities as experts'
+                        'Disaster response specialists for government agencies and international organizations outside PMC'
                     ]
                 }
             ],
-            facilities: [
-                'Advanced PMC training facilities',
-                'Tactical training centers',
-                'Specialized security equipment training rooms'
-            ]
+
+            // 시설 (Facilities) - HTML에서 언급된 시설들 (구체적 실습실 목록 없음)
+            facilities: [],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: pmcSecurityCurriculum,
+            detailedCertifications: pmcSecurityCertifications
         },
         {
             id: 'action-acting',
             name: 'Action Acting Course',
             koreanName: '액션연기과정',
-            description: 'Professional action acting training for entertainment industry with martial arts and stunt specialization',
-            duration: '2 years',
+            description: 'The Action Acting Course is a program within the Aviation Security Department (Protocol Security Associate Degree Program) that trains specialized talent in the action acting field based on martial arts and tactics. This program organizes subjects related to acting, directing, and action acting during the semester, and trains professional action actors through faculty who are currently active as actors and directors in the field.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'Current action and acting industry professionals as instructors',
-                'Professional casting directors visit the school as instructors for practical education',
-                'Direct employment through broadcasting, film field experience opportunities',
-                'Comprehensive action acting and security industry preparation'
+                'Direct education by faculty currently active in action and acting fields',
+                'System for direct deployment to broadcasting and film sets with professional casting directors serving as school professors',
+                'Easy employment in security and protection fields if not entering related fields after graduation with security associate degree'
             ],
+
+            // 과정혜택 (Course Benefits)
+            coursebenefits: [
+                'First private educational institution to develop and operate tactical shooting training education program as regular curriculum',
+                'Systematic rappelling education through operation of the nation\'s only rappelling training center among educational institutions',
+                'More field opportunities provided through education by specialized faculty currently active in each field',
+                'Systematic practical training for enhancing field practical capabilities in various training facilities suited to action acting characteristics (rappelling center, martial arts hall, weight room, shooting range, tactical shooting training center, comprehensive airport training facility, in-flight training facility, etc.)',
+                'Specialized educational program operation and support for martial arts and tactical acting due to security major degree characteristics',
+                'Educational support and employment guarantee enabling employment in security and protection fields if not entering acting field after graduation'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'Private training institution first to implement martial arts training programs',
-                'Korea\'s leading level trainer training center training programs for specialized level training',
-                'Current field professionals providing direct acting guidance and various specialized field training',
-                'Professional director, acting coach, and military advisory professional guidance',
-                'Veteran training institution partnerships for practical training experience of 15 weeks',
-                'Employment and transfer advantages through graduation and corporate connections',
-                'Various activity club participation and regular formal programming and self-development opportunities',
-                'Martial arts and trainer certification training and specialized facility training',
-                'Various weapon and device training for Korea\'s top-level martial arts training facilities and markets',
-                'Various martial arts certifications above 4th dan (Taekwondo, Hapkido, special martial arts, Judo, Yongmudo, Takraw)',
-                'State-certified private security guard qualification testing facility (employment advantages in security and protection industry)',
-                'Broadcasting industry professional celebrity lectures and practical knowledge and field networking training'
+                'Obtain associate degree in protocol security (recognition of 2-year college education)',
+                'Possible to transfer to 3rd year of 4-year university with associate degree',
+                'Professional acting instruction by current actors, directors, action teams, and military advisory teams',
+                'Systematic education provided by professional faculty from Presidential Security Service and security/protection specialists',
+                'Live ammunition shooting classes conducted for 15 weeks at Mokdong Shooting Range, an industry-academia cooperation institution',
+                'English education support for employment and transfer preparation (online or offline lecture support)',
+                'Capacity enhancement and self-development possible through support for various club activities outside regular curriculum',
+                'Complete martial arts and training facility equipment and domestic largest possession of various action equipment',
+                'Possession of domestic top-level tactical education training equipment and facilities including various training firearms and rappelling training center',
+                'Possible to obtain various martial arts dan certificates above 4th dan (Taekwondo, Hapkido, Special Forces Martial Arts, Judo, Yongmudo, Krav Maga)',
+                'Our school designated as testing venue for national certified personal protection officer qualification examination (advantageous for employment in security and protection fields when obtained)',
+                'Support for occasional special lectures by broadcasting field experts and extensive learning through field trips and field-oriented education support (film actors, famous talents, action directors, action acting trainers, theater and various drama/film shooting sites, etc.)',
+                'Located in the closest area to broadcasting stations and related companies, advantageous for practice, field trips, and employment',
+                'Student discount and priority registration benefits for all programs conducted at affiliated convergence education center'
             ],
-            curriculum: actionActingCurriculum,
-            detailedCertifications: actionActingCertifications,
+
+            // 액션연기 특화 혜택 (Action Acting Specific Benefits)
+            actionActingSpecificBenefits: [
+                'Professional tactical shooting training program',
+                'Nation\'s only rappelling training center operation',
+                'Specialized education for martial arts and tactical acting',
+                'Current industry professionals as faculty (actors, directors, action teams)',
+                'Professional casting director system for direct industry deployment',
+                'Domestic top-level tactical education equipment and facilities',
+                'Broadcasting field expert special lectures and field trip programs'
+            ],
+
+            // 자격증 (기본 - 실제 HTML Tab4에서 추가 확인 필요)
             certifications: [
-                'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
-                'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
-                'Current field acting, performance supervision and action film professionals',
-                'Large-scale security facility graduates and security specialist professional training',
-                'Veteran training institution practical training experience of 15 weeks',
-                'Employment and transfer advantages through graduation and corporate connections',
-                'Various activity club participation and self-development opportunities',
-                'Martial arts and trainer certification training and specialized facility training',
-                'Various weapon and device training for Korea\'s top-level martial arts training facilities',
-                'Various martial arts certifications above 4th dan (Taekwondo, Hapkido, special martial arts, Judo, Yongmudo, Takraw)',
-                'State-certified private security guard qualification testing facility (employment advantages in security and protection industry)',
-                'Broadcasting industry professional celebrity lectures and practical knowledge and field networking training'
+                'National Certified Personal Protection Officer',
+                'Various Martial Arts Dan Certificates (4th dan and above)',
+                'Security and Protection Related Certifications',
+                'Acting and Performance Related Certifications'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
                 {
-                    category: 'Entertainment Industry',
+                    category: 'Culture and Arts',
                     companies: [
-                        'Acting, film, and broadcasting industry (film acting, talent, action supervision, action acting training)',
-                        'Various entertainment industry professional activities'
+                        'Theater, Film and Broadcasting (Film Actors, Talents, Action Directors, Action Acting Trainers, etc.)'
                     ]
                 },
                 {
                     category: 'Government Agencies',
                     companies: [
-                        'Ministry of Defense 9th Military Police Command',
-                        'National Police University', 'Chungnam National University',
-                        'Police University', 'Customs Service', 'Coast Guard',
-                        'Railroad Police', 'National Intelligence Service',
-                        'Various national and public facility security jobs'
+                        'Grade 9 Protection Civil Servant',
+                        'National Assembly Security Guard',
+                        'Blue House Security',
+                        'National Police Agency',
+                        'Auxiliary Police',
+                        'Nuclear Power Plant Security',
+                        'National Important Facilities and Public Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Transportation Security',
+                    category: 'Public Institutions',
                     companies: [
                         'Incheon International Airport Corporation',
-                        'Korea Railroad Corporation', 'Incheon Subway Corporation',
-                        'KTX Telecom', 'Various national transportation facility security jobs'
+                        'Korea Airports Corporation',
+                        'Incheon Port Authority',
+                        'Pyeongtaek Port Authority',
+                        'Korea Railroad Corporation',
+                        'Other National Important Facilities Security Personnel'
                     ]
                 },
                 {
-                    category: 'Corporate Security',
+                    category: 'Aviation Related',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK and other major corporations',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and private facility security jobs'
+                        'Airline Security Personnel',
+                        'Airport Mobile Strike Team',
+                        'Aviation Cargo Terminal',
+                        'Aviation Security',
+                        'Airport Security',
+                        'Special Security',
+                        'Other National Airlines Security, Protection, and Guard Personnel'
                     ]
                 },
                 {
-                    category: '4-Year Universities',
+                    category: 'Security & Protection Companies',
                     companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Hyundai, Samsung, Hwanhwa, LG, SK and other major corporations secretariat',
+                        'ADT CAPS',
+                        'S1',
+                        'KT Telecop',
+                        'International conference security service companies',
+                        'Private security companies and private facility security personnel'
+                    ]
+                },
+                {
+                    category: 'Transfer to 4-year Universities',
+                    companies: [
+                        'Transfer to 4-year universities nationwide',
+                        'Transfer to 4-year universities in metropolitan area'
                     ]
                 },
                 {
                     category: 'Others',
                     companies: [
-                        'Various facilities (casinos, multi-cultural spaces, hotel security companies)',
-                        'Security and facility management jobs at sports facilities'
+                        'Multi-use facilities (casinos, multipurpose cultural spaces)',
+                        'Escort security companies',
+                        'Security and protection companies',
+                        'Sports industry facility safety management personnel'
                     ]
                 }
             ],
+
+            // 시설 (Facilities) - HTML에 명시된 실습실들
             facilities: [
-                'Professional acting studios',
-                'Action training facilities',
-                'Martial arts training centers'
-            ]
+                'Rappelling Training Center',
+                'Martial Arts Hall',
+                'Weight Room',
+                'Shooting Range',
+                'Tactical Shooting Training Center',
+                'Comprehensive Airport Training Facility',
+                'In-flight Training Facility'
+            ],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: actionActingCurriculum,
+            detailedCertifications: actionActingCertifications
         },
         {
             id: 'sports-rehabilitation',
             name: 'Sports Rehabilitation & Conditioning Course',
             koreanName: '스포츠재활컨디셔닝과정',
-            description: 'Advanced sports rehabilitation and conditioning training for athletes and fitness professionals',
-            duration: '2 years',
+            description: 'The Sports Rehabilitation & Conditioning Course trains exercise rehabilitation specialists who can perform professional and systematic management to help people maintain health and physical fitness through exercise while achieving physical, psychological, and social recovery. Through theoretical and practical education in sports, health, medical care, healthcare, and exercise rehabilitation, we train specialists in the rehabilitation field and cultivate experts in sports rehabilitation based on knowledge, information, and technology related to sports, exercise, and healthcare.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'Leading specialized sports rehabilitation education in Korea',
-                'Professional training for future sports rehabilitation and security industry development',
-                'Comprehensive training combining fitness, safety, and security expertise',
-                'Advanced sports science and rehabilitation technology training'
+                'Priority selection transfer support to health-related departments of domestic 4-year universities through industry-academia cooperation',
+                'Internship provision and mentoring at famous domestic sports rehabilitation hospitals and centers',
+                'Expandable educational opportunities extending from rehabilitation to treatment scope'
             ],
+
+            // 과정혜택 (Course Benefits)
+            coursebenefits: [
+                'Priority selection transfer support to medical and health-related departments of 4-year universities with industry-academia agreements upon graduation from this program',
+                'Easy acquisition of relevant certifications when completing organized certification-granting educational courses',
+                'Internship participation education programs provided at famous domestic sports rehabilitation hospitals and centers',
+                'Systematic practical education for enhancing field practical capabilities in various sports rehabilitation-related training facilities',
+                'Systematic education by professional faculty currently active in sports rehabilitation, sports medicine, body conditioning, etc.'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'Private training institution first to implement advanced sports rehabilitation training programs',
-                'Professional degree (Associate) in Private Security Specialist available',
-                'Korea\'s leading level trainer and sports rehabilitation specialist training',
-                'Current industry professionals providing specialized sports and fitness guidance',
-                'Large-scale security and sports facilities for comprehensive practical training',
-                'Professional sports rehabilitation and conditioning specialist training',
-                'Integration of sports science with security and safety training',
-                'Advanced sports rehabilitation equipment and technology training',
-                'Veteran training institution partnerships for comprehensive field experience',
-                'Industry connections for employment in sports and security fields'
+                'Obtain associate degree in protocol security (recognition of 2-year college education)',
+                'Recognition of 20 credits when obtaining national certified security supervisor qualification',
+                'Possible to transfer to 3rd year of 4-year university with associate degree',
+                'English education support through affiliated foreign language education center for employment and transfer preparation',
+                'Capacity enhancement and self-development possible through support for various after-school club activities',
+                'Field learning support and activity opportunities as A/T personnel at domestic and international sports competitions',
+                'Medical license acquisition opportunities through transfer support to domestic 4-year medical and health-related universities for academically excellent students',
+                'Systematic education by professional faculty currently active in sports rehabilitation, sports medicine, body conditioning, etc.',
+                'Support for occasional special lectures by rehabilitation field experts and extensive learning through field trips and field-oriented education support',
+                'Located in the most concentrated area of famous rehabilitation hospitals, professional sports teams, sports centers, etc., advantageous for practice, field trips, and employment',
+                'Student discount and priority registration benefits for all programs conducted at affiliated convergence education center'
             ],
-            detailedCertifications: sportsRehabCertifications,
+
+            // 스포츠재활 특화 혜택 (Sports Rehabilitation Specific Benefits)
+            sportsRehabilitationSpecificBenefits: [
+                'Priority transfer support to medical and health-related departments of 4-year universities',
+                'Internship programs at famous sports rehabilitation hospitals and centers',
+                'Professional faculty currently active in sports rehabilitation, sports medicine, body conditioning',
+                'A/T personnel opportunities at domestic and international sports competitions',
+                'Medical license acquisition opportunities for academically excellent students',
+                'Access to concentrated rehabilitation hospitals and sports facilities area'
+            ],
+
+            // 자격증 (기본 - 실제 HTML Tab4에서 추가 확인 필요)
             certifications: [
-                'Private Security Specialist Professional Degree (Associate, equivalent to 2-year university)',
-                'Professional Bachelor\'s Degree available (3-year program transfer to 4-year university)',
-                'Sports Rehabilitation Specialist Certification',
-                'Fitness and Conditioning Trainer Certification',
-                'Various martial arts certifications above 4th dan',
-                'Sports Science and Rehabilitation Technology Certifications',
-                'State-certified private security guard qualification',
-                'Professional sports trainer and rehabilitation specialist certifications'
+                'National Certified Security Supervisor',
+                'Sports Rehabilitation Related Certifications',
+                'Exercise Prescription Specialist',
+                'Health and Fitness Related Certifications'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
                 {
-                    category: 'Sports & Fitness',
+                    category: 'Rehabilitation Specialists',
                     companies: [
-                        'Professional sports teams rehabilitation departments',
-                        'Fitness centers and rehabilitation clinics',
-                        'Sports science institutes',
-                        'Athletic training facilities',
-                        'Sports conditioning specialists'
+                        'Sports Teams: Rehabilitation trainers and physical (conditioning) coaches for professional and amateur teams',
+                        'Hospitals and Clinics: Sports medicine (rehabilitation) centers',
+                        'Training Centers: Sports or physical training centers'
                     ]
                 },
                 {
-                    category: 'Healthcare & Rehabilitation',
+                    category: 'Health and Exercise Management Specialists',
                     companies: [
-                        'Sports medicine clinics',
-                        'Physical therapy centers',
-                        'Rehabilitation hospitals',
-                        'Sports injury prevention programs',
-                        'Athletic performance enhancement centers'
+                        'National Health Insurance and Public Health Centers: Health (fitness) promotion centers',
+                        'National Fitness 100 Fitness Certification Centers, Sports Science Centers',
+                        'Corporate and Hotel: Musculoskeletal prevention exercise centers, fitness centers',
+                        'City/County/District National Sports Centers, Sports Association fitness instructors'
                     ]
                 },
                 {
-                    category: 'Government Agencies',
+                    category: 'Target-Specific Exercise Specialists',
                     companies: [
-                        'Ministry of Defense 9th Military Police Command',
-                        'National Police University', 'Chungnam National University',
-                        'Police University', 'Customs Service', 'Coast Guard',
-                        'Various national and public facility security jobs'
+                        'Senior Exercise Rehabilitation Centers: Exercise prescription specialists',
+                        'Senior Welfare Facilities: Senior towns, nursing homes, etc.',
+                        'Comprehensive Welfare Centers for the Disabled: Disability rehabilitation instruction',
+                        'Youth Training Centers: Physical activity instruction'
                     ]
                 },
                 {
-                    category: 'Corporate Security',
+                    category: 'Transfer to 4-year Universities',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK and other major corporations',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'Private security companies and facility security jobs'
-                    ]
-                },
-                {
-                    category: '4-Year Universities',
-                    companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Transfer to 4-year universities nationwide',
+                        'Transfer to 4-year universities in metropolitan area'
                     ]
                 },
                 {
                     category: 'Others',
                     companies: [
-                        'Sports facilities management',
-                        'Athletic training consulting',
-                        'Fitness industry leadership positions'
+                        'Corporate Employment: Sports and rehabilitation medical equipment companies',
+                        'Further Education: University advancement through transfer',
+                        'Entrepreneurship: Exercise rehabilitation centers, etc.'
                     ]
                 }
             ],
-            facilities: [
-                'Advanced sports rehabilitation equipment',
-                'Professional conditioning training facilities',
-                'Sports science laboratories'
-            ]
+
+            // 시설 (Facilities) - HTML에서 구체적 실습실 목록 없음
+            facilities: [],
+
+            // 커리큘럼 및 자격증 연결 (curriculum 없음 - HTML에서 확인)
+            detailedCertifications: sportsRehabCertifications
         }
     ],
     overallEmploymentAreas: [
@@ -8129,8 +8333,8 @@ const aviationSecurityData: Department = {
 
 // National Defense & Police AI Department - Complete Data Structure (Phase 5)
 const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData → defensePoliceAIData
-    id: 'defense-police-ai',  // ✅ 'national-defense-police-ai' → 'defense-police-ai'
-    name: 'Defense & Police AI',  // ✅ 'National Defense & Police AI' → 'Defense & Police AI'
+    id: 'defense-police-ai',
+    name: 'Defense & Police AI',
     koreanName: '국방경찰AI계열',
     description: 'Elite national defense and police training with 10 consecutive years #1 ranking at Army 3rd Officer Candidate School and 91% officer/NCO advancement rate',
     educationalGoals: 'Training elite defense professionals and police officers for national security and public safety with advanced AI technology integration',
@@ -8146,308 +8350,388 @@ const defensePoliceAIData: Department = {  // ✅ nationalDefensePoliceAIData �
             id: 'national-defense-officer',
             name: 'National Defense Officer Course',
             koreanName: '국방사관과정',
-            description: 'Elite Army officer training targeting Army 3rd Officer Candidate School admission and military academy commissioning',
-            duration: '2 years',
+            description: 'The National Defense Officer Course is an elite military officer training program established to cultivate talented individuals equipped with excellent leadership, competitiveness, and professional skills necessary for the era of internationalization. In the 21st century military specialization and information society, we are training true leaders of the Korean Armed Forces who will be responsible for future national security, targeting professional military personnel such as Korea Army Academy at Yeongcheon cadets and bachelor officers from each military branch.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'Nationwide #1 Army 3rd Officer Candidate School admission rate',
-                'Priority admission to Seoul National University and professional military academies',
-                'Elite officer training with 21st century military modernization and informatization',
-                'Training for professional military officers as future national security backbone'
+                'Customized elite officer training required by the military',
+                'Highest number of Korea Army Academy at Yeongcheon graduates nationwide (1st-2nd place)',
+                'Highest number of Korea Army Academy at Yeongcheon graduates among Seoul area and vocational schools'
             ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'Priority admission to Army 3rd Officer Candidate School with top educational standards (Target: Army Second Lieutenant commissioning)',
-                'Priority admission to each service branch (Army/Navy/Air Force) officer candidate programs (Target: Service branch Second Lieutenant commissioning)',
-                'Mentoring education programs with individualized officer track advancement based on personal capabilities',
-                'Transfer opportunities connected to university degrees and leadership development for all social sectors',
-                'Character development education and career roadmap management essential for officer duties'
+                'Priority educational support and guidance for all students to transfer to Korea Army Academy at Yeongcheon (Goal: Commission as Army Second Lieutenant)',
+                'Priority educational support and guidance for bachelor officer selection exams for each military branch (Army, Navy, Air Force) (Goal: Commission as Second Lieutenant in each branch)',
+                'Customized education programs to commission as officers according to individual capabilities and status',
+                'Transfer support linked to school degrees and cultivation as pivotal leaders in various sectors of society',
+                'Education in potential capabilities necessary for officer duties and career roadmap management (promotion, long-term service)'
             ],
-            curriculum: defenseOfficerCourseCurriculum,
-            detailedCertifications: defenseOfficerCourseCertifications,
+
+            // 육군3사관학교 특화 혜택 (Korea Army Academy at Yeongcheon Specific Benefits)
+            koreaArmyAcademyBenefits: [
+                'Transfer to 3rd and 4th year programs followed by full government-funded education (benefits worth approximately 140 million won)',
+                'Two degrees awarded upon graduation (general bachelor\'s and military bachelor\'s degrees)',
+                'All graduates promoted to Captain 3 years after commissioning from Korea Army Academy at Yeongcheon (equivalent to Grade 5 national civil servant)',
+                '100% possibility for those who wish long-term service (National Assembly bill in progress), advancement to general according to ability',
+                'Possibility of commissioned education inside and outside the military and obtaining master\'s and doctoral degrees through self-development',
+                'Lifetime military pension benefits when serving 19 years and 6 months or more'
+            ],
+
+            // 군사 특화 진로 (Military Career Specialization)
+            militaryCareer: [
+                'Transfer to Korea Army Academy at Yeongcheon followed by commission as Army Second Lieutenant (equivalent to Grade 7 civil servant) (Army officer life: lifetime career if desired)',
+                'Commission as Second Lieutenant in Army, Navy, or Air Force through bachelor officer program for each branch (equivalent to Grade 7 civil servant) (Officer life in each branch: lifetime career if desired)',
+                'After officer discharge, possible appointment as civil military employee through career-competitive recruitment at Ministry of National Defense (Army/Navy/Air Force/Marines/Special Forces): various fields (15 job groups, 60 job series)',
+                'After officer discharge, possible employment at military-related institutions and defense industry companies',
+                'After special forces officer discharge, possible employment as career-competitive civil servants at fire departments, police special forces, etc.'
+            ],
+
+            // 자격증 (Certifications)
             certifications: [
-                'University \'3rd and 4th year\' transfer program with full government funding (40 million KRW per year benefit)',
-                'Dual degree upon graduation (General Bachelor\'s and Military Science Bachelor\'s)',
-                'Army 3rd Officer Candidate School commissioning with promotion to Captain after 3 years (equivalent to Grade 5 civil servant)',
-                'Second Lieutenant service available for 100% of applicants (overseas deployment support included), promotion opportunities based on ability',
-                'Self-development opportunities for military internal/external commissioned education and master\'s/doctoral degree acquisition',
-                '19 years 6 months or longer service with special military pension benefits'
+                'TOEIC score 500 or above',
+                'Martial Arts Dan Certificates',
+                'Korean History Proficiency Test Grade 6 or above',
+                'Computer Certifications',
+                'Chinese Character Certifications',
+                'Drone Certifications (Type 1, Type 2, and Drone Maintenance Technician)',
+                'National Fitness 100 Grade 3 or above'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
                 {
-                    category: 'Military Officer Positions',
+                    category: 'Military Officer Commission',
                     companies: [
-                        'Army 3rd Officer Candidate School graduates as Army Officers (Grade 7 civil servant equivalent)',
-                        'Each service branch officer candidate graduates as Service Officers (Grade 7 civil servant equivalent)',
-                        'Officer retirement followed by career transition opportunities to defense (Army/Navy/Air Force/Marine Corps/Special Forces) competitive appointment as military civil service: Various specialties (15 Army divisions, 60 regiments)',
-                        'Officer retirement followed by military-related agencies and affiliated organization employment opportunities',
-                        'Special forces officer retirement followed by security service, special police duty, and other competitive appointment civil service employment opportunities'
+                        'Korea Army Academy at Yeongcheon → Army Second Lieutenant Commission',
+                        'Army, Navy, Air Force Bachelor Officer → Second Lieutenant Commission in each branch'
                     ]
                 },
                 {
-                    category: 'Government Agencies',
+                    category: 'Post-Discharge Career',
                     companies: [
-                        'Regular Agencies: Defense Civil Service Grade 9 (national civil service) admission',
-                        'Simultaneous civilian equivalent Correctional Officer Grade 9 (correctional service), Firefighter Grade 9 (currently, public security service transferred from public security service to national service), Fire Service Grade 9 admission',
-                        'Police Officer Grade 9 admission (youth security, police, judicial police service, and legal affairs for self-governing local governments)',
-                        'Korea National University of Transportation, Cheonan University, Police University, Cheongwoon Police College, Eulji University Medical Center, National Intelligence Service Training Institute, and various government facility security and public facility services'
+                        'Ministry of National Defense Civil Military Employee (Career-competitive recruitment)',
+                        'Military-related institutions employment',
+                        'Defense industry companies employment',
+                        'Fire department career-competitive civil servant',
+                        'Police special forces career-competitive civil servant'
                     ]
                 },
                 {
-                    category: 'Public Institutions',
+                    category: 'Long-term Military Service',
                     companies: [
-                        'Incheon International Airport Corporation', 'Korea Railroad Corporation', 'Incheon Transportation Corporation',
-                        'KTX Telecom', 'Various national transportation facility security services'
-                    ]
-                },
-                {
-                    category: 'Corporate Security & Defense',
-                    companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK major corporation security services',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and private facility security services'
-                    ]
-                },
-                {
-                    category: '4-Year Universities',
-                    companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Lifetime military career (if desired)',
+                        'Promotion to Captain after 3 years',
+                        'Advancement to general according to ability',
+                        'Lifetime military pension (19.5+ years service)'
                     ]
                 }
             ],
-            facilities: [
-                'Military leadership training facilities',
-                'Officer candidate preparation centers',
-                'Military science education laboratories'
-            ]
+
+            // 시설 (Facilities) - HTML에서 구체적 실습실 목록 없음
+            facilities: [],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: defenseOfficerCourseCurriculum,
+            detailedCertifications: defenseOfficerCourseCertifications
         },
         {
             id: 'national-defense-nco',
             name: 'National Defense NCO Course',
             koreanName: '국방부사관과정',
-            description: 'Professional military NCO training for all service branches with 8 consecutive years of Seoul area ranking #1',
-            duration: '2 years',
+            description: 'The National Defense NCO Course is an elite military non-commissioned officer training program established to cultivate talented individuals equipped with excellent leadership, competitiveness, and professional skills necessary for the era of internationalization. In the 21st century military specialization and information society, we are training true leaders of the Korean Armed Forces who will be responsible for future national security, targeting professional military personnel such as NCOs from each military branch.',
+            duration: '2 years (Associate Degree)',
             highlights: [
-                'Metropolitan area only defense NCO professional training institution with 8 consecutive years Seoul area ranking #1',
-                'Elite military NCO training meeting military demands',
-                'Each service branch NCO advancement with mentoring system',
-                'Professional military NCO development as specialized career path'
+                'Customized NCO training for each military branch as required by the military',
+                'Seoul area 1st place for 8 consecutive years in Army premium service NCOs',
+                'Highest number of graduates in national defense employment among specialized vocational schools in the metropolitan area'
             ],
+
+            // 특징 및 특전 (Features and Benefits)
             features: [
-                'Air Force NCO selection test priority educational standards and instruction (Target: Air Force Sergeant commissioning)',
-                'Army/Navy/Marine Corps/Special Forces/various special units military service NCO receipt priority educational standards and instruction (Target: Army/Navy/Marine Corps/Special Forces/various special units Sergeant commissioning)',
-                'Army military service company NCO receipt temporary Second Lieutenant service special priority educational standards and instruction (Target: Army Sergeant commissioning)',
-                'Character development and career roadmap management essential for NCO duty performance'
+                'Priority educational support and guidance for Air Force NCO selection exams (Goal: Commission as Air Force Sergeant)',
+                'Priority educational support and guidance for Army/Navy/Marines/Special Forces/Various Special Units premium service NCOs (receiving scholarship of approximately 8 million won) and civilian NCO selection exams (Goal: Commission as Army/Navy/Marines/Special Forces/Various Special Units Sergeant)',
+                'Priority educational support and guidance for Army premium service combat NCOs (receiving scholarship of approximately 16 million won) and long-term service NCO selection exams upon commissioning (Goal: Commission as Army Sergeant)',
+                'Management of potential capabilities and career roadmap necessary for NCO duties (promotion, long-term service)'
             ],
-            curriculum: defenseNCOCourseCurriculum,
-            detailedCertifications: defenseNCOCourseCertifications,
+
+            // 부사관 임관 혜택 (NCO Commission Benefits)
+            ncoCommissionBenefits: [
+                'Secure and stable job, possibility of building professional career and substantial savings',
+                '70% or more possibility for those who wish long-term service',
+                'Lifetime military pension benefits when serving 19 years and 6 months or more',
+                'Priority employment at military-related institutions after discharge (airlines, fire departments, police special forces, etc.)',
+                'Possibility of commissioned education inside and outside the military and obtaining bachelor\'s, master\'s and doctoral degrees through self-development'
+            ],
+
+            // 군사 특화 진로 (Military Career Specialization) - 기존 필드 재활용
+            militaryCareer: [
+                'Commission as Sergeant in each military branch (NCO life in each branch: lifetime career if desired)',
+                'After NCO discharge, possible appointment as civil military employee through career-competitive recruitment at Ministry of National Defense (Army/Navy/Air Force/Marines/Special Forces/Various Special Units): various fields (15 job groups, 60 job series)',
+                'After NCO discharge, possible employment at military-related institutions and defense industry companies',
+                'After special forces NCO discharge, possible employment as career-competitive civil servants at fire departments, police special forces, etc.'
+            ],
+
+            // 자격증 (Certifications)
             certifications: [
-                'Comprehensive benefits upon each service branch NCO commissioning',
-                'Secure and stable career with professional field experience retention and free preparation opportunities',
-                'Second Lieutenant service available for 70% or more applicants',
-                '19 years 6 months or longer service with dedicated military pension benefits',
-                'Post-discharge priority employment at military-related agencies',
-                'Self-development opportunities for military internal/external commissioned education and bachelor\'s, master\'s, doctoral degree acquisition'
+                'TOEIC score 500 or above',
+                'Martial Arts Dan Certificates',
+                'Korean History Proficiency Test Grade 6 or above',
+                'Computer Certifications',
+                'Chinese Character Certifications',
+                'Drone Certifications (Type 1, Type 2, and Drone Maintenance Technician)',
+                'National Fitness 100 Grade 3 or above'
             ],
+
+            // 취업분야 (Employment Areas)
             employmentAreas: [
                 {
-                    category: 'Military NCO Positions',
+                    category: 'Military NCO Commission',
                     companies: [
-                        'Each service branch Sergeant commissioning (each service branch NCO career: personal preference upon retirement)',
-                        'NCO retirement followed by defense military (Army/Navy/Air Force/Marine Corps/Special Forces) competitive appointment military civil service admission available: Various specialties (15 Army divisions, 60 regiments)',
-                        'NCO retirement followed by military-related agencies and affiliated organization employment opportunities',
-                        'Special forces NCO retirement followed by security service, special police duty, and other competitive appointment civil service employment opportunities'
+                        'Air Force Sergeant Commission',
+                        'Army/Navy/Marines/Special Forces/Various Special Units Sergeant Commission',
+                        'Army Premium Service Combat NCO (16 million won scholarship)',
+                        'Army/Navy/Marines/Special Forces Premium Service NCO (8 million won scholarship)'
                     ]
                 },
                 {
+                    category: 'Post-Discharge Career',
+                    companies: [
+                        'Ministry of National Defense Civil Military Employee (Career-competitive recruitment)',
+                        'Military-related institutions employment',
+                        'Defense industry companies employment',
+                        'Fire department career-competitive civil servant',
+                        'Police special forces career-competitive civil servant'
+                    ]
+                },
+                {
+                    category: 'Long-term Military Service',
+                    companies: [
+                        'Lifetime military career (if desired)',
+                        '70% or more possibility for long-term service',
+                        'Lifetime military pension (19.5+ years service)',
+                        'Professional career building and substantial savings'
+                    ]
+                }
+            ],
+
+            // 시설 (Facilities) - HTML에서 구체적 실습실 목록 없음
+            facilities: [],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: defenseNCOCourseCurriculum,
+            detailedCertifications: defenseNCOCourseCertifications
+        },
+        {
+            id: 'national-defense-ai',
+            name: 'National Defense AI Course',
+            koreanName: '국방AI과정',
+            description: 'The National Defense AI Course is a program for military officers, NCOs, and civil military employees established to cultivate national defense science and technology personnel for building a competitive AI science and technology strong military. We are training AI cyber operation personnel (hacking security) and AI personnel/logistics personnel (big data) with cyber domain operational capabilities based on national defense AI among 4th industrial revolution science technologies.',
+            duration: '2 years (Associate Degree)',
+            highlights: [
+                'National defense science and technology personnel training for building competitive AI science and technology strong military',
+                'Acquisition of cyber domain operational capabilities based on national defense AI',
+                'Training of AI cyber operation personnel (hacking security) and AI personnel/logistics personnel (big data) specialists'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
+            features: [
+                'Artificial Intelligence education (intelligent battlefield recognition, national defense AI platform)',
+                'Cyber/Network (cyber warfare response, scientific training), AI big data, defense technology, information security education',
+                'AI-based talent management system and military logistics big data education',
+                'Easy assignment to related units/positions after commissioning (appointment) as officers, NCOs, and civil military employees (Cyber Operations Command, personnel officer, logistics officer, etc.)'
+            ],
+
+            // AI 특화 교육 (AI Specialized Education)
+            aiSpecializedEducation: [
+                'Artificial Intelligence (intelligent battlefield recognition, national defense AI platform)',
+                'Cyber/Network (cyber warfare response, scientific training)',
+                'AI Big Data analysis and management',
+                'Defense technology and information security',
+                'AI-based talent management systems',
+                'Military logistics big data systems'
+            ],
+
+            // 군사 특화 진로 (Military Career Specialization) - 기존 필드 재활용
+            militaryCareer: [
+                'AI cyber operation personnel and AI personnel/logistics personnel at Cyber Operations Command (officers, NCOs)',
+                'Advanced weapon system operation management specialists (officers, NCOs)',
+                'After discharge (retirement), career-competitive civil military employees in AI cyber (hacking security) and AI personnel/logistics (big data) related fields',
+                'After discharge (retirement), easy re-employment in AI cyber (hacking security) and AI personnel/logistics (big data) related fields at government agencies, major corporations, information security companies, defense research institutes, aviation companies, defense IT companies, etc.'
+            ],
+
+            // 자격증 (Certifications)
+            certifications: [
+                'TOEIC score 500 or above',
+                'Martial Arts Dan Certificates',
+                'Korean History Proficiency Test Grade 6 or above',
+                'Computer Certifications',
+                'Chinese Character Certifications',
+                'National Fitness 100 Grade 3 or above',
+                'Hacking Security Expert',
+                'Information Security Industrial Engineer',
+                'Big Data Expert',
+                'Data Analysis Semi-Professional (ADsP)'
+            ],
+
+            // 취업분야 (Employment Areas)
+            employmentAreas: [
+                {
+                    category: 'Military AI Specialists',
+                    companies: [
+                        'Cyber Operations Command AI Cyber Operation Personnel',
+                        'Cyber Operations Command AI Personnel/Logistics Personnel',
+                        'Advanced Weapon System Operation Management Specialists',
+                        'Officers and NCOs in AI-related military positions'
+                    ]
+                },
+                {
+                    category: 'Post-Discharge AI Career',
+                    companies: [
+                        'Career-competitive civil military employees in AI cyber (hacking security) fields',
+                        'Career-competitive civil military employees in AI personnel/logistics (big data) fields',
+                        'Government agencies AI specialists',
+                        'Major corporations AI/cybersecurity positions'
+                    ]
+                },
+                {
+                    category: 'Private Sector AI Employment',
+                    companies: [
+                        'Information security companies',
+                        'Defense research institutes',
+                        'Aviation companies AI departments',
+                        'Defense IT companies',
+                        'Big data analysis companies',
+                        'Cybersecurity firms'
+                    ]
+                }
+            ],
+
+            // 시설 (Facilities) - HTML에서 구체적 실습실 목록 없음
+            facilities: [],
+
+            // 커리큘럼 및 자격증 연결
+            curriculum: defenseAICourseCurriculum,
+            detailedCertifications: defenseAICourseCertifications
+        },
+        {
+            id: 'police-officer',
+            name: 'Police Officer Course',
+            koreanName: '경찰공무원과정',
+            description: 'As the demand for police personnel continues to increase, this program aims primarily at producing police civil servants, and also targets the production of personnel for related fields such as correctional officers, firefighters, and protection civil servants. Through theoretical and practical classes necessary for maintaining social safety and order, we are training prospective police personnel who will lead advanced order and a just society.',
+            duration: '2 years (Associate Degree)',
+            highlights: [
+                'Systematic education system with professional faculty from police executive backgrounds',
+                'Customized education through mentoring by police executives',
+                'Professional faculty specialized in police examination success with extensive experience in training police civil servants'
+            ],
+
+            // 과정혜택 (Course Benefits)
+            coursebenefits: [
+                'Possible to take Grade 9 police civil servant career-competitive examination after graduation through operation of subjects recognizable for career-competitive examination (Administrative Associate Degree: Police Administration Major)',
+                'Possible to obtain additional points when taking police civil servant exams through obtaining dan certificates from martial arts organizations recognized by the National Police Agency (Taekwondo, Hapkido, Special Forces Martial Arts, Judo, martial arts, etc.)',
+                'Certification acquisition through customized guidance by professional police faculty (Korean History Grade 3 or above, TOEIC score 550 or above, etc.)',
+                'Operation of educational programs for producing personnel in related fields such as correctional officers (prison guards), firefighters (conversion from local civil servants to national civil servants), and protection officers (Grade 9 civil servants under the Ministry of Public Administration and Security responsible for building security, protection, patrol, and security duties) through affiliated educational institutions'
+            ],
+
+            // 특징 및 특전 (Features and Benefits)
+            features: [
+                'Obtain associate degree in police administration (recognition of 2-year college education)',
+                'Possible to transfer to 3rd year of 4-year university with associate degree (partner universities)',
+                'Systematic educational support by professional faculty from police executive backgrounds and related professions',
+                'Field-oriented education system support through industry-academia cooperation with the National Police Agency',
+                'Recognition of 20 credits when obtaining national certified security supervisor qualification (additional points for Grade 9 police civil servant exam)',
+                'Recognition of 6 credits when obtaining national certified personal protection officer qualification',
+                'Capacity enhancement and self-development possible through support for various after-school club activities',
+                'Possible to obtain various martial arts dan certificates above 4th dan (additional points for police civil servant exam)',
+                'Complete martial arts and training facility equipment (intensive education in test subjects necessary for physical fitness tests in police civil servant exams)',
+                'Operation of preparation classes and learning support for police civil servant, correctional officer, firefighter, and protection officer appointment exams',
+                'Support for occasional special lectures by experts in police, correctional, firefighter, and protection fields and extensive learning through field trips and field-oriented education support',
+                'Possible to take police civil servant career-competitive examination as career personnel after discharge from military police NCO service (recognition of military police experience)',
+                'Support and guidance for university (graduate school) transfer according to personal preference after police civil servant appointment'
+            ],
+
+            // 경찰 특화 혜택 (Police Specific Benefits)
+            policeSpecificBenefits: [
+                'Grade 9 police civil servant career-competitive examination eligibility',
+                'Police Agency martial arts additional points system',
+                'Professional police faculty customized guidance',
+                'Industry-academia cooperation with National Police Agency',
+                'Military police experience recognition for career-competitive examination',
+                'Physical fitness test intensive training for police exams',
+                'Related civil service preparation (correctional, firefighter, protection officers)'
+            ],
+
+            // 자격증 (Certifications)
+            certifications: [
+                'Korean History Grade 3 or above',
+                'TOEIC score 550 or above',
+                'National Certified Security Supervisor (20 credits recognition)',
+                'National Certified Personal Protection Officer (6 credits recognition)',
+                'Various Martial Arts Dan Certificates (4th dan and above)',
+                'Police Administration Related Certifications'
+            ],
+
+            // 취업분야 (Employment Areas)
+            employmentAreas: [
+                {
                     category: 'Government Agencies',
                     companies: [
-                        'Regular Agencies: Defense Civil Service Grade 9 (national civil service) admission',
-                        'Simultaneous civilian equivalent Correctional Officer Grade 9 (correctional service), Firefighter Grade 9 (currently, public security service transferred from public security service to national service), Fire Service Grade 9 admission',
-                        'Police Officer Grade 9 admission (youth security, police, judicial police service for self-governing local governments)',
-                        'Korea National University of Transportation, Cheonan University, Police University, Cheongwoon Police College, Eulji University Medical Center, National Intelligence Service Training Institute, and various government facility security services'
+                        'Grade 9 Police Civil Servant (National Civil Servant) Appointment',
+                        'Grade 9 Correctional Officer (Prison Guard) in related field',
+                        'Grade 9 Firefighter (currently changing from local to national civil servant)',
+                        'Grade 9 Protection Officer (Ministry of Public Administration and Security civil servants responsible for building security, protection, patrol, and security duties)',
+                        'National Assembly Security Guard, Blue House, National Police Agency, Auxiliary Police, Nuclear Power Plant, National Important Facilities and Public Facilities Security Personnel'
                     ]
                 },
                 {
                     category: 'Public Institutions',
                     companies: [
                         'Incheon International Airport Corporation',
-                        'Korea Railroad Corporation', 'Incheon Transportation Corporation',
-                        'KTX Telecom', 'Various national transportation facility security services'
+                        'Korea Airports Corporation',
+                        'Incheon Port Authority',
+                        'Pyeongtaek Port Authority',
+                        'Korea Railroad Corporation',
+                        'Other National Facilities'
                     ]
                 },
                 {
-                    category: 'Corporate Security & Defense',
+                    category: 'Aviation Related',
                     companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK major corporation security services',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and private facility security services'
+                        'Airline Security Personnel',
+                        'Airport Mobile Strike Team',
+                        'Aviation Cargo Terminal',
+                        'Aviation Security',
+                        'Airport Security',
+                        'Special Security',
+                        'Other National Airlines Security, Protection, and Guard Personnel'
                     ]
                 },
                 {
-                    category: '4-Year Universities',
+                    category: 'Security & Protection Companies',
                     companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
+                        'Hyundai, Samsung, Hanwha, LG, SK and other major corporations secretariat',
+                        'ADT CAPS',
+                        'S1',
+                        'KT Telecop',
+                        'International conference security service companies',
+                        'Private security companies and private facility security and protection personnel'
+                    ]
+                },
+                {
+                    category: 'Transfer to 4-year Universities',
+                    companies: [
+                        'Transfer to 4-year universities nationwide',
+                        'Transfer to 4-year universities in metropolitan area'
                     ]
                 }
             ],
-            facilities: [
-                'Military NCO training facilities',
-                'Service branch specialization centers',
-                'Military leadership development laboratories'
-            ]
-        },
-        {
-            id: 'national-defense-ai',
-            name: 'National Defense AI Course',
-            koreanName: '국방AI과정',
-            description: 'Advanced AI and cybersecurity training for national defense with cutting-edge technology and specialized military applications',
-            duration: '2 years',
-            highlights: [
-                'National defense AI and scientific technology development for national crisis management',
-                'Cyber security professional training with AI-based defense systems',
-                'Advanced defense technology training with artificial intelligence integration',
-                'Specialized military AI applications and cybersecurity operations'
-            ],
-            features: [
-                'Artificial Intelligence (intelligent pattern recognition, defense AI platform) education',
-                'Cyber/Network (cyber warfare response, national cybersecurity), AI big data, defense technology, information security education',
-                'AI-based personnel management systems and military logistics big data education',
-                'University, NCO, military civilian service academy (application) followed by related unit/support service assignment ease'
-            ],
-            curriculum: defenseAICourseCurriculum,
-            detailedCertifications: defenseAICourseCertifications,
-            certifications: [
-                'Graduation after 3 or more certifications during study (Target: English TOEIC score 500 or above, martial arts certification, Korean History Proficiency Test Grade 6 or above, Chinese characters, etc.)',
-                'Military technical examination preparation for enhanced educational programs: National Physical Fitness Level 3 3rd grade or above target achievement',
-                'Related certification acquisition: Cybersecurity professional, Information Security Engineer, Big Data Professional, Data Analysis Professional (ADsP) certification, etc.'
-            ],
-            employmentAreas: [
-                {
-                    category: 'Military AI & Cyber Operations',
-                    companies: [
-                        'Cyber Command AI cyber specialists and AI personnel/logistics fields (university, NCO)',
-                        'Advanced weapons systems operation management specialists (university, NCO)',
-                        'Post-discharge AI cyber (core security) and AI personnel/logistics (big data) related field employment ease',
-                        'Post-discharge national agencies, major corporations and information security companies, defense research institutions, aviation enterprises, defense IT companies, etc., AI cyber (core security), AI personnel/logistics (big data) related field specialist employment ease'
-                    ]
-                },
-                {
-                    category: 'Government & Research Institutions',
-                    companies: [
-                        'National agencies and research institutions',
-                        'Defense research institutes',
-                        'Cybersecurity agencies',
-                        'Information security companies',
-                        'Aviation technology companies'
-                    ]
-                },
-                {
-                    category: 'Corporate Technology',
-                    companies: [
-                        'Major corporations (Hyundai, Samsung, LG, SK)',
-                        'Information security companies',
-                        'Defense IT companies',
-                        'AI technology firms',
-                        'Big data analytics companies'
-                    ]
-                },
-                {
-                    category: 'Specialized AI Fields',
-                    companies: [
-                        'AI cybersecurity specialists',
-                        'Defense AI system developers',
-                        'Military logistics AI specialists',
-                        'Cybersecurity consultants'
-                    ]
-                }
-            ],
-            facilities: [
-                'AI technology training laboratories',
-                'Cybersecurity simulation centers',
-                'Defense AI development facilities'
-            ]
-        },
-        {
-            id: 'police-officer',
-            name: 'Police Officer Course',
-            koreanName: '경찰공무원과정',
-            description: 'Comprehensive police officer training with focus on experienced career recruitment and advanced qualifications for law enforcement careers',
-            duration: '2 years',
-            highlights: [
-                'Career experience recruitment examination qualification through approved curriculum',
-                'Grade 9 career experience recruitment examination eligibility after graduation',
-                'Police martial arts certification programs with advanced training',
-                'Comprehensive public safety and law enforcement career preparation'
-            ],
-            features: [
-                'Career experience recruitment examination qualification through approved curriculum, enabling Grade 9 career experience recruitment examination application after graduation (Professional specialist: Defense professional course)',
-                'Police martial arts qualification recognition organization certification programs enabling career civil service examination qualification acquisition',
-                'Defense professional institution\'s defense technical professional learning enabling career civil service examination qualification acquisition',
-                'Defense agency partnership through academic agreements for enhanced educational systems',
-                'National technical career specialist certification acquisition with 20 points recognition (Grade 9 career civil service examination qualification granted)',
-                'National technical personal protection specialist certification acquisition with 6 points recognition',
-                'After-school various club activities for capacity enhancement and self-development opportunities',
-                'Various martial arts certifications above 4th dan acquisition (career civil service examination qualification granted)',
-                'Martial arts trainer certification education and police public safety officer employment opportunities'
-            ],
+
+            // 시설 (Facilities) - HTML에서 구체적 실습실 목록 없음
+            facilities: [],
+
+            // 커리큘럼 및 자격증 연결
             curriculum: policeCivilServiceCourseCurriculum,
-            detailedCertifications: policeCivilServiceCourseCertifications,
-            certifications: [
-                'Career experience recruitment examination qualification acquisition',
-                'Grade 9 career experience recruitment examination application eligibility',
-                'National technical career specialist certification (20 points advantage)',
-                'National technical personal protection specialist certification (6 points advantage)',
-                'Various martial arts certifications above 4th dan',
-                'Martial arts trainer certifications',
-                'Police qualification and safety management certifications'
-            ],
-            employmentAreas: [
-                {
-                    category: 'Government Agencies',
-                    companies: [
-                        'Regular agencies: Defense civil service Grade 9 (national civil service) admission',
-                        'Simultaneous civilian equivalent Correctional Officer Grade 9, Firefighter Grade 9, Fire Service Grade 9 (youth security, police, and judicial police service handling legal affairs for self-governing local governments\' civilian local government civil service)',
-                        'Korea National University of Transportation, Cheonan University, Police University, Cheongwoon Police College, Eulji University Medical Center, National Intelligence Service Training Institute, and various government facility security services'
-                    ]
-                },
-                {
-                    category: 'Public Institutions',
-                    companies: [
-                        'Incheon International Airport Corporation', 'Korea Railroad Corporation', 'Incheon Transportation Corporation',
-                        'KTX Telecom', 'Various national transportation facility security services'
-                    ]
-                },
-                {
-                    category: 'Law Enforcement & Security',
-                    companies: [
-                        'Police departments and law enforcement agencies',
-                        'Correctional facilities and judicial police services',
-                        'Fire departments and emergency services',
-                        'Private security companies and facility security services'
-                    ]
-                },
-                {
-                    category: 'Corporate Security',
-                    companies: [
-                        'Hyundai', 'Samsung', 'LG', 'SK major corporation security services',
-                        'ADT Caps', 'S1', 'KT Telecop',
-                        'International hotel security service companies',
-                        'Private security companies and facility security services'
-                    ]
-                },
-                {
-                    category: '4-Year Universities',
-                    companies: [
-                        'Transfer to 4-year universities in Korea and metropolitan area'
-                    ]
-                }
-            ],
-            facilities: [
-                'Police training simulation centers',
-                'Martial arts and physical training facilities',
-                'Law enforcement equipment training rooms'
-            ]
+            detailedCertifications: policeCivilServiceCourseCertifications
         }
     ],
     overallEmploymentAreas: [
