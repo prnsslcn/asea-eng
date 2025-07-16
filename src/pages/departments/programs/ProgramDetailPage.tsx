@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
-    Clock, Star, Award, Building2, Users, CheckCircle, ArrowLeft, MapPin,
+    Star, Award, Building2, CheckCircle, ArrowLeft,
     BookOpen, GraduationCap, UserCheck, Construction, ExternalLink
 } from 'lucide-react';
 import { getDepartmentById, getProgramById } from '../../../data/departments/ProgramData';
@@ -36,7 +36,7 @@ const ProgramDetailPage: React.FC = () => {
         );
     }
 
-    // 탭 메뉴 구성
+    // 탭 메뉴 구성 (5개 탭만)
     const tabs = [
         { id: 'overview', label: 'Program Overview', icon: <BookOpen className="w-5 h-5" /> },
         { id: 'curriculum', label: 'Curriculum', icon: <GraduationCap className="w-5 h-5" /> },
@@ -63,81 +63,220 @@ const ProgramDetailPage: React.FC = () => {
         }
     };
 
-    // 프로그램 개요 탭
+    // ✅ HTML 구조에 맞춘 프로그램 개요 탭
     const renderOverviewTab = () => (
-        <div className="space-y-12">
-            {/* Highlights Section */}
-            {program.highlights && program.highlights.length > 0 && (
-                <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-                        <Star className="w-8 h-8 mr-3 text-yellow-500" />
-                        Program Highlights
+        <div className="space-y-8">
+            {/* 메인 설명 (HTML의 contentTitle 부분) */}
+            <div className="bg-white rounded-xl shadow-md p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Course Introduction</h2>
+                <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                    <p className="mb-4">{program.description}</p>
+                </div>
+            </div>
+
+            {/* 과정혜택 섹션 (HTML의 subject_txt - 과정혜택) */}
+            {program.coursebenefits && program.coursebenefits.length > 0 && (
+                <div className="bg-white rounded-xl shadow-md p-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <CheckCircle className="w-7 h-7 mr-3 text-green-600" />
+                        Course Benefits
                     </h2>
-                    <div className="grid md:grid-cols-1 gap-6">
-                        {program.highlights.map((highlight, index) => (
-                            <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                                <div className="flex items-start">
-                                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 mr-4 flex-shrink-0" />
-                                    <p className="text-gray-700 text-lg leading-relaxed">{highlight}</p>
-                                </div>
-                            </div>
+                    <ul className="space-y-4">
+                        {program.coursebenefits.map((benefit, index) => (
+                            <li key={index} className="flex items-start">
+                                <CheckCircle className="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                                <span className="text-gray-700 leading-relaxed">{benefit}</span>
+                            </li>
                         ))}
+                    </ul>
+                </div>
+            )}
+
+            {/* 특징 및 특전 섹션 (HTML의 subject_txt - 특징 및 특전) */}
+            {program.features && program.features.length > 0 && (
+                <div className="bg-white rounded-xl shadow-md p-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <Star className="w-7 h-7 mr-3 text-yellow-500" />
+                        Features & Benefits
+                    </h2>
+                    <ul className="space-y-4">
+                        {program.features.map((feature, index) => (
+                            <li key={index} className="flex items-start">
+                                <CheckCircle className="w-5 h-5 text-blue-600 mt-1 mr-3 flex-shrink-0" />
+                                <span className="text-gray-700 leading-relaxed">{feature}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            {/* 시설 정보 테이블 (HTML의 table_basic_slist) */}
+            {program.facilities && program.facilities.length > 0 && (
+                <div className="bg-white rounded-xl shadow-md p-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <Construction className="w-7 h-7 mr-3 text-purple-600" />
+                        Training Facilities
+                    </h2>
+
+                    {/* 데스크톱 테이블 */}
+                    <div className="hidden md:block overflow-x-auto">
+                        <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
+                            <tbody className="divide-y divide-gray-200">
+                            {program.facilities.map((facility, index) => {
+                                if (typeof facility === 'string') {
+                                    return (
+                                        <tr key={index} className="hover:bg-gray-50">
+                                            <th className="bg-gray-50 px-6 py-4 text-left text-sm font-semibold text-gray-900 w-48">
+                                                Facility
+                                            </th>
+                                            <td className="px-6 py-4 text-gray-700">
+                                                {facility}
+                                            </td>
+                                        </tr>
+                                    );
+                                } else {
+                                    return (
+                                        <tr key={index} className="hover:bg-gray-50">
+                                            <th className="bg-gray-50 px-6 py-4 text-left text-sm font-semibold text-gray-900 w-48">
+                                                {facility.campus || 'Facility'}
+                                            </th>
+                                            <td className="px-6 py-4 text-gray-700">
+                                                {facility.description || facility.note || ''}
+                                            </td>
+                                        </tr>
+                                    );
+                                }
+                            })}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {/* 모바일 카드 */}
+                    <div className="md:hidden space-y-4">
+                        {program.facilities.map((facility, index) => {
+                            if (typeof facility === 'string') {
+                                return (
+                                    <div key={index} className="border border-gray-200 rounded-lg p-4">
+                                        <h4 className="font-semibold text-gray-900 mb-2">Facility</h4>
+                                        <p className="text-gray-700 text-sm">{facility}</p>
+                                    </div>
+                                );
+                            } else {
+                                return (
+                                    <div key={index} className="border border-gray-200 rounded-lg p-4">
+                                        <h4 className="font-semibold text-gray-900 mb-2">
+                                            {facility.campus || 'Facility'}
+                                        </h4>
+                                        <p className="text-gray-700 text-sm">
+                                            {facility.description || facility.note || ''}
+                                        </p>
+                                    </div>
+                                );
+                            }
+                        })}
                     </div>
                 </div>
             )}
 
-            {/* Features Section */}
-            {program.features && program.features.length > 0 && (
-                <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-                        <Users className="w-8 h-8 mr-3 text-blue-600" />
-                        Program Features & Benefits
+            {/* 졸업 후 진로 섹션 (HTML의 subject_txt - 졸업 후 진로) */}
+            {program.employmentAreas && program.employmentAreas.length > 0 && (
+                <div className="bg-white rounded-xl shadow-md p-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <Building2 className="w-7 h-7 mr-3 text-emerald-600" />
+                        Career Opportunities After Graduation
                     </h2>
-                    <div className="bg-white rounded-xl shadow-md p-8">
-                        <div className="grid md:grid-cols-2 gap-4">
-                            {program.features.map((feature, index) => (
-                                <div key={index} className="flex items-start">
-                                    <CheckCircle className="w-5 h-5 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                                    <span className="text-gray-700">{feature}</span>
+
+                    {/* 전체 진로 설명 */}
+                    <div className="mb-6 text-gray-700">
+                        <p>Career opportunities in civil aviation, government agencies, foreign airlines, aircraft manufacturing, and ground services.</p>
+                    </div>
+
+                    {/* 진로 테이블 (HTML의 table_basic_slist 구조) */}
+                    <div className="space-y-6">
+                        {/* 데스크톱 테이블 */}
+                        <div className="hidden md:block overflow-x-auto">
+                            <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
+                                <tbody className="divide-y divide-gray-200">
+                                {program.employmentAreas.map((area, index) => (
+                                    <tr key={index} className="hover:bg-gray-50">
+                                        <th className="bg-gray-50 px-6 py-4 text-left text-sm font-semibold text-gray-900 w-48">
+                                            {area.category}
+                                        </th>
+                                        <td className="px-6 py-4">
+                                            <div className="flex flex-wrap gap-2">
+                                                {area.companies.map((company, companyIndex) => (
+                                                    <span
+                                                        key={companyIndex}
+                                                        className="inline-block bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium"
+                                                    >
+                                                            {company}
+                                                        </span>
+                                                ))}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {/* 모바일 카드 */}
+                        <div className="md:hidden space-y-4">
+                            {program.employmentAreas.map((area, index) => (
+                                <div key={index} className="border border-gray-200 rounded-lg p-4">
+                                    <h4 className="font-semibold text-emerald-700 mb-3">{area.category}</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {area.companies.map((company, companyIndex) => (
+                                            <span
+                                                key={companyIndex}
+                                                className="inline-block bg-emerald-50 text-emerald-800 px-2 py-1 rounded-full text-xs font-medium"
+                                            >
+                                                {company}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                </div>
-            )}
 
-            {/* Employment Areas Section */}
-            {program.employmentAreas && program.employmentAreas.length > 0 && (
-                <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-                        <Building2 className="w-8 h-8 mr-3 text-emerald-600" />
-                        Career Opportunities
-                    </h2>
-                    <div className="grid md:grid-cols-1 gap-6">
-                        {program.employmentAreas.map((area, index) => (
-                            <div key={index} className="bg-white rounded-xl shadow-md p-6">
-                                <h3 className="text-xl font-bold text-emerald-700 mb-4">
-                                    {area.category}
-                                </h3>
-                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                                    {area.companies.map((company, companyIndex) => (
-                                        <div
-                                            key={companyIndex}
-                                            className="bg-emerald-50 text-emerald-800 px-3 py-2 rounded-lg text-sm font-medium"
-                                        >
-                                            {company}
-                                        </div>
-                                    ))}
-                                </div>
+                    {/* 편입 가능 대학 정보 */}
+                    {program.transferUniversities && program.transferUniversities.length > 0 && (
+                        <div className="mt-6 pt-6 border-t border-gray-200">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-3">Transfer Universities</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {program.transferUniversities.map((university, index) => (
+                                    <span
+                                        key={index}
+                                        className="inline-block bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                                    >
+                                        {university}
+                                    </span>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    )}
+
+                    {/* 군 진로 정보 */}
+                    {program.militaryCareer && program.militaryCareer.length > 0 && (
+                        <div className="mt-6 pt-6 border-t border-gray-200">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-3">Military Career</h3>
+                            <ul className="space-y-2">
+                                {program.militaryCareer.map((career, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <CheckCircle className="w-4 h-4 text-green-600 mt-1 mr-2 flex-shrink-0" />
+                                        <span className="text-gray-700 text-sm">{career}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             )}
         </div>
     );
 
-    // ✅ 교육과정 탭 - 새 타입 정의에 맞게 수정
+    // 기존 탭들 유지
     const renderCurriculumTab = () => {
         const curriculumData = program.curriculum || [];
 
@@ -150,12 +289,6 @@ const ProgramDetailPage: React.FC = () => {
                         <p className="text-gray-500 mb-6">
                             Detailed curriculum information will be available soon.
                         </p>
-                        <div className="bg-blue-50 rounded-lg p-4">
-                            <p className="text-blue-700 text-sm">
-                                We are currently preparing comprehensive curriculum details including
-                                course descriptions and learning outcomes.
-                            </p>
-                        </div>
                     </div>
                 </div>
             );
@@ -177,7 +310,6 @@ const ProgramDetailPage: React.FC = () => {
                     Curriculum Structure
                 </h2>
 
-                {/* 학기별 섹션 */}
                 {Object.entries(semesterGroups).map(([semester, courses]) => (
                     <div key={semester} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
                         <div className="bg-blue-900 text-white px-6 py-4">
@@ -185,7 +317,6 @@ const ProgramDetailPage: React.FC = () => {
                             <p className="text-blue-100 text-sm">{courses.length} courses</p>
                         </div>
 
-                        {/* 데스크톱 테이블 */}
                         <div className="hidden md:block overflow-x-auto">
                             <table className="w-full">
                                 <thead className="bg-gray-50">
@@ -200,26 +331,26 @@ const ProgramDetailPage: React.FC = () => {
                                     <tr key={index} className="hover:bg-gray-50">
                                         <td className="px-6 py-4 text-gray-900 font-medium">{course.courseName}</td>
                                         <td className="px-6 py-4 text-center">
-                                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                                    course.category === 'Major Required'
-                                                        ? 'bg-red-100 text-red-800'
-                                                        : course.category === 'Major Elective'
-                                                            ? 'bg-blue-100 text-blue-800'
-                                                            : course.category === 'Advanced Major'
-                                                                ? 'bg-purple-100 text-purple-800'
-                                                                : 'bg-gray-100 text-gray-800'
-                                                }`}>
-                                                    {course.category}
-                                                </span>
+                                            <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                                course.category === 'Major Required'
+                                                    ? 'bg-red-100 text-red-800'
+                                                    : course.category === 'Major Elective'
+                                                        ? 'bg-blue-100 text-blue-800'
+                                                        : course.category === 'Advanced Major'
+                                                            ? 'bg-purple-100 text-purple-800'
+                                                            : 'bg-gray-100 text-gray-800'
+                                            }`}>
+                                                {course.category}
+                                            </span>
                                         </td>
                                         <td className="px-6 py-4 text-center">
-                                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                                    course.eduType === 'Credit-bearing Program'
-                                                        ? 'bg-emerald-100 text-emerald-800'
-                                                        : 'bg-orange-100 text-orange-800'
-                                                }`}>
-                                                    {course.eduType === 'Credit-bearing Program' ? 'Credit' : 'Non-credit'}
-                                                </span>
+                                            <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                                course.eduType === 'Credit-bearing Program'
+                                                    ? 'bg-emerald-100 text-emerald-800'
+                                                    : 'bg-orange-100 text-orange-800'
+                                            }`}>
+                                                {course.eduType === 'Credit-bearing Program' ? 'Credit' : 'Non-credit'}
+                                            </span>
                                         </td>
                                     </tr>
                                 ))}
@@ -227,7 +358,6 @@ const ProgramDetailPage: React.FC = () => {
                             </table>
                         </div>
 
-                        {/* 모바일 카드 */}
                         <div className="md:hidden p-4 space-y-4">
                             {courses.map((course, index) => (
                                 <div key={index} className="border border-gray-200 rounded-lg p-4">
@@ -261,32 +391,16 @@ const ProgramDetailPage: React.FC = () => {
         );
     };
 
-    // 교수진 탭
     const renderFacultyTab = () => (
-        <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
-                <UserCheck className="w-8 h-8 mr-3" />
-                Faculty Members
-            </h2>
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
-                <div className="text-center">
-                    <UserCheck className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-gray-700 mb-2">Faculty Information</h3>
-                    <p className="text-gray-500 mb-6">
-                        Faculty profiles and information will be available soon.
-                    </p>
-                    <div className="bg-blue-50 rounded-lg p-4">
-                        <p className="text-blue-700 text-sm">
-                            We are currently preparing detailed faculty profiles including photos,
-                            qualifications, and areas of expertise.
-                        </p>
-                    </div>
-                </div>
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
+            <div className="text-center">
+                <UserCheck className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-700 mb-2">Faculty Information</h3>
+                <p className="text-gray-500 mb-6">Faculty profiles will be available soon.</p>
             </div>
         </div>
     );
 
-    // ✅ 자격증 탭 - 새 타입 정의에 맞게 수정
     const renderCertificatesTab = () => {
         const certificationData = program.detailedCertifications || [];
 
@@ -296,15 +410,7 @@ const ProgramDetailPage: React.FC = () => {
                     <div className="text-center">
                         <Award className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                         <h3 className="text-2xl font-bold text-gray-700 mb-2">Certification Information</h3>
-                        <p className="text-gray-500 mb-6">
-                            Detailed certification information will be available soon.
-                        </p>
-                        <div className="bg-blue-50 rounded-lg p-4">
-                            <p className="text-blue-700 text-sm">
-                                We are currently preparing comprehensive certification details including
-                                requirements and exam information.
-                            </p>
-                        </div>
+                        <p className="text-gray-500 mb-6">Detailed certification information will be available soon.</p>
                     </div>
                 </div>
             );
@@ -317,7 +423,6 @@ const ProgramDetailPage: React.FC = () => {
                     Certifications & Licenses
                 </h2>
 
-                {/* 자격증 카드 레이아웃 */}
                 <div className="space-y-6">
                     {certificationData.map((cert, index) => (
                         <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
@@ -360,34 +465,19 @@ const ProgramDetailPage: React.FC = () => {
         );
     };
 
-    // 실습실 탭
     const renderFacilitiesTab = () => (
-        <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
-                <Construction className="w-8 h-8 mr-3" />
-                Training Facilities
-            </h2>
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
-                <div className="text-center">
-                    <Construction className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-gray-700 mb-2">Facility Information</h3>
-                    <p className="text-gray-500 mb-6">
-                        Training facility information and images will be available soon.
-                    </p>
-                    <div className="bg-blue-50 rounded-lg p-4">
-                        <p className="text-blue-700 text-sm">
-                            We are currently preparing detailed information about our state-of-the-art
-                            training facilities including equipment specifications and layout.
-                        </p>
-                    </div>
-                </div>
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
+            <div className="text-center">
+                <Construction className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-700 mb-2">Facility Information</h3>
+                <p className="text-gray-500 mb-6">Training facility information will be available soon.</p>
             </div>
         </div>
     );
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Hero Section */}
+            {/* Hero Section - HTML의 title 부분을 반영 */}
             <div className="bg-blue-900 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <button
@@ -398,22 +488,35 @@ const ProgramDetailPage: React.FC = () => {
                         Back to {department.name}
                     </button>
 
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">{program.name}</h1>
-                    <p className="text-xl text-blue-100 mb-6">{program.koreanName}</p>
-                    <p className="text-lg text-blue-50 mb-8 max-w-4xl leading-relaxed">
-                        {program.description}
-                    </p>
+                    {/* HTML의 title 구조 반영 */}
+                    <div className="space-y-6">
+                        <div>
+                            <h1 className="text-4xl md:text-5xl font-bold mb-2">{program.name}</h1>
+                            <p className="text-xl text-blue-100">{program.koreanName}</p>
+                        </div>
 
-                    <div className="flex items-center">
-                        <Clock className="w-6 h-6 mr-3 text-blue-200" />
-                        <span className="bg-blue-800 px-6 py-2 rounded-full text-lg font-semibold">
-                            {program.duration}
-                        </span>
+                        {/* HTML의 주요 특장점 (btn 클래스 부분) */}
+                        {program.highlights && program.highlights.length > 0 && (
+                            <div className="bg-blue-800 rounded-xl p-6 space-y-4">
+                                {program.highlights.map((highlight, index) => (
+                                    <div key={index} className="text-blue-50">
+                                        <p className="text-lg font-semibold">{highlight}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {/* HTML의 text1 부분 (학위 정보) */}
+                        <div className="bg-blue-800 rounded-lg p-4">
+                            <p className="text-blue-100 text-lg">
+                                <span className="text-blue-50 font-semibold">{program.duration}</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Navigation Tabs */}
+            {/* Navigation Tabs - HTML의 TabTabs 구조 반영 */}
             <div className="bg-white shadow-sm border-b border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex overflow-x-auto">
@@ -435,83 +538,9 @@ const ProgramDetailPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Main Content */}
+            {/* Main Content - 사이드바 제거, 전체 너비 사용 */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid lg:grid-cols-3 gap-12">
-                    {/* Left Column - Main Content */}
-                    <div className="lg:col-span-2">
-                        {renderTabContent()}
-                    </div>
-
-                    {/* Right Column - Sidebar */}
-                    <div className="lg:col-span-1">
-                        <div className="sticky top-8 space-y-8">
-                            {/* Quick Info */}
-                            <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
-                                <h3 className="text-lg font-bold text-blue-900 mb-4">Program Information</h3>
-                                <div className="space-y-3 text-sm">
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Department:</span>
-                                        <span className="font-medium text-gray-900">{department.name}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Duration:</span>
-                                        <span className="font-medium text-gray-900">{program.duration}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Type:</span>
-                                        <span className="font-medium text-gray-900">Professional Training</span>
-                                    </div>
-                                </div>
-
-                                <div className="mt-6 pt-6 border-t border-blue-200">
-                                    <button
-                                        onClick={() => navigate('/admission')}
-                                        className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
-                                    >
-                                        Apply Now
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Certifications - Only show in sidebar if not on certificates tab */}
-                            {activeTab !== 'certificates' && program.certifications && program.certifications.length > 0 && (
-                                <div className="bg-white rounded-xl shadow-md p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                                        <Award className="w-6 h-6 mr-3 text-rose-600" />
-                                        Certifications
-                                    </h3>
-                                    <div className="space-y-3">
-                                        {program.certifications.slice(0, 5).map((cert, index) => (
-                                            <div key={index} className="flex items-start">
-                                                <Award className="w-4 h-4 text-rose-600 mt-1 mr-3 flex-shrink-0" />
-                                                <span className="text-gray-700 text-sm leading-relaxed">{cert}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* Facilities - Only show in sidebar if not on facilities tab */}
-                            {activeTab !== 'facilities' && program.facilities && program.facilities.length > 0 && (
-                                <div className="bg-white rounded-xl shadow-md p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                                        <MapPin className="w-6 h-6 mr-3 text-purple-600" />
-                                        Training Facilities
-                                    </h3>
-                                    <div className="space-y-3">
-                                        {program.facilities.slice(0, 5).map((facility, index) => (
-                                            <div key={index} className="flex items-start">
-                                                <MapPin className="w-4 h-4 text-purple-600 mt-1 mr-3 flex-shrink-0" />
-                                                <span className="text-gray-700 text-sm leading-relaxed">{facility}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
+                {renderTabContent()}
             </div>
         </div>
     );

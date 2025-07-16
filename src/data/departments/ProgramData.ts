@@ -1,6 +1,12 @@
 // ProgramData.ts - Phase 1: Aviation Maintenance Department
 // Based on curriculum_01_01.php ~ curriculum_01_04.php
 
+export interface FacilityDetail {
+    campus?: string;
+    description?: string;  // optional로 변경
+    note?: string;         // 추가
+}
+
 export interface Program {
     id: string;
     name: string;
@@ -8,12 +14,25 @@ export interface Program {
     description: string;
     duration: string;
     highlights: string[];
+
+    // 새로 추가된 필드들
+    coursebenefits?: string[];
+    additionalFeatures?: string[];
+    transferUniversities?: string[];
+    militaryCareer?: string[];
+
+    // 기존 필드들
     features: string[];
     certifications: string[];
     employmentAreas: EmploymentArea[];
-    facilities: string[];
+    facilities: (string | FacilityDetail)[];  // Union 타입으로 명확화
     curriculum?: CurriculumItem[];
     detailedCertifications?: CertificationItem[];
+}
+
+export interface EmploymentArea {
+    category: string;
+    companies: string[];
 }
 
 interface CurriculumItem {
@@ -5941,89 +5960,139 @@ const aviationMaintenanceData: Department = {
             id: 'aircraft-maintenance',
             name: 'Aircraft Maintenance Course',
             koreanName: '항공정비사과정',
-            description: 'Comprehensive aircraft maintenance technician training based on ICAO standards with MOLIT certification',
-            duration: '2 years',
-            highlights: [
-                'MOLIT designated professional aviation maintenance training institution',
-                'Leading Korean aviation technical education institution (ranked #1 by 2022 Ministry of Education)',
-                'Professional degree (Associate) in Aviation Maintenance available',
-                'License exemption for qualified candidates through additional evaluation',
-                'Transfer to 4-year universities available for top students'
-            ],
-            features: [
-                'Practical training exemption for aircraft maintenance license exam',
-                'Special lectures for license acquisition preparation',
-                'Free specialized courses for employment, admission, and study abroad',
-                'Technical English education and aviation maintenance technical English',
-                'Field training at major airlines and aircraft manufacturers',
-                'Celebrity lectures from aviation maintenance industry experts',
-                'Additional degree programs for bachelor\'s degree (3-year program)',
-                'Transfer programs to 4-year universities',
-                'International license programs (FAA, TC)',
-                'Overseas license validation programs'
-            ],
+            description: 'Aircraft maintenance technician course designated by the Ministry of Land, Infrastructure and Transport in accordance with ICAO (International Civil Aviation Organization) regulations. Aims to train aircraft maintenance technicians who will lead Korea\'s aviation maintenance industry, with primary focus on employment through practical field training.',
+            duration: '2 years (Associate Degree) / 3 years (Bachelor\'s Degree)',
             curriculum: aircraftMaintenanceCurriculum,
             detailedCertifications: aircraftMaintenanceCertifications,
-            certifications: [
-                'Aircraft Maintenance Technician (Engine/Airframe/Avionics/Electrical)',
-                'Aviation Maintenance Engineer',
-                'Aircraft Maintenance Technician (Non-powered Aircraft)',
-                'Aviation Traffic Safety Manager',
-                'Age requirement: 16 years (Aviation Maintenance Engineer), 18 years (Aircraft Maintenance Technician)'
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
+            highlights: [
+                'Aircraft maintenance technician type-rating education for 3 categories simultaneously (B737NG, C172, B737NG instructor course)',
+                'Operating Korea\'s largest-scale aviation technology training center and practice facilities',
+                'Oral interview only for aircraft maintenance technician practical exam (exemption from hands-on work)',
+                '[2-year program] Awards Associate Degree in Aviation Maintenance specialty',
+                '[3-year program] Awards Bachelor\'s Degree in Aviation Maintenance specialty'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션
+            coursebenefits: [
+                'Subject exemption benefits for aircraft maintenance technician qualification exam upon course completion - Practical exam: Oral interview (\'exemption benefit\' for hands-on work)',
+                'Operation of oral and hands-on special lectures for aircraft maintenance technician acquisition'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역
+            features: [
+                'Professional educational institution for aircraft maintenance technician courses designated by Ministry of Land, Infrastructure and Transport',
+                'Justified choice - #1 in number of students enrolled in domestic aviation professional schools (Based on 2022 Ministry of Education Credit Bank System information disclosure data)',
+                'Available to obtain Associate Degree in Aviation Maintenance through Credit Bank System (college-level education)',
+                'Available to obtain 4-year Bachelor\'s Degree in Aviation Maintenance Engineering through certificate credit conversion and additional credit completion',
+                'Transfer to 3rd year of 4-year universities nationwide or graduate school admission available',
+                'Available to obtain certificates: Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics), Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane), Aviation Traffic Safety Manager',
+                'After obtaining aircraft maintenance technician certificate, eligible for enrollment in our school\'s type-rating education course (scholarship benefits provided)',
+                'Credit recognition: Aviation Industrial Engineer 16 credits, Aircraft Maintenance Technician (Airplane) 18 credits, Aviation Traffic Safety Manager 16 credits',
+                'Equipped with Korea\'s largest-scale professional aviation maintenance practice facilities for hands-on training'
+            ],
+
+            // 원본 HTML의 상세한 시설 정보를 완전히 번역
+            facilities: [
+                {
+                    campus: 'Seoul Yeongdeungpo Campus',
+                    description: 'Practice for Aircraft Engine/Airframe/Equipment Maintenance Technician, Aviation Industrial Engineer, Aircraft Maintenance Technician (Airplane) qualification test preparation'
+                },
+                {
+                    campus: 'Aviation Technology Training Center',
+                    description: 'Aircraft system practice, Aviation CBT practice, Aircraft engine and airframe maintenance practice (J-79 & JT-3D & O-320 engine, CESSNA 152 & 172, T-33 & 37, 500MD, UH-1B). Practical aircraft hands-on practice (B737 CFM-56 engine, A320MTD, B737 & A320 Simulator, B737 Landing Gear & Nose Gear, B737 APU, etc.)'
+                },
+                {
+                    campus: 'Icheon Campus',
+                    description: 'Aircraft overhaul (disassembly, assembly) practice (F-5E, T-37 & 33, O-1G, UH-1H), Unmanned aerial vehicle (drone) flight practice'
+                },
+                {
+                    note: 'All Seoul Yeongdeungpo Campus, Aviation Technology Training Center, and Icheon Campus are designated as aviation maintenance practice facilities by Ministry of Land, Infrastructure and Transport. Seoul Yeongdeungpo Campus is designated as practical examination site for Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics) and Aviation Industrial Engineer qualifications.'
+                }
+            ],
+
+            // 원본 HTML의 추가 특징들
+            additionalFeatures: [
+                'Free special lectures during semester and vacation for certificate acquisition preparation',
+                'Free education during semester for employment, transfer, study abroad preparation - English education (TOEIC, conversation, etc.) and aviation maintenance technical English through affiliated Foreign Language Education Center',
+                'Field trips to Korean Air and Asiana Airlines Incheon Airport maintenance hangars, Korea Aerospace Industries (KAI) Sacheon aircraft manufacturing plant, Korea Forest Service Aviation Headquarters Wonju helicopter maintenance hangar, Air Force aircraft maintenance depot and Army aviation units',
+                'Special lectures by celebrities in aviation maintenance field',
+                'Additional semester operation for obtaining Bachelor\'s Degree in Aviation Maintenance Engineering (3rd year)',
+                'Transfer class operation for 4-year universities such as Korea Aerospace University, Hanseo University',
+                'Study abroad program for US FAA and Canada TC aircraft maintenance technician',
+                'Bachelor\'s degree study abroad programs in USA, Canada, Australia, UK, China, Malaysia, Philippines'
+            ],
+
+            // 원본 HTML의 상세한 진로 정보
             employmentAreas: [
                 {
                     category: 'Civil Aviation',
                     companies: [
                         'Korean Air', 'Asiana Airlines', 'Jeju Air', 'Jin Air', 'Air Busan',
-                        'Fly Gangwon', 'Eastar Jet', 'Star Jet', 'Air Incheon', 'T\'way Air',
-                        'UA Helicopter', 'Helicopter Korea', 'Woong-An Aviation'
+                        'T\'way Air', 'Eastar Jet', 'Sharp Air', 'Air Incheon', 'Korea Times Aviation',
+                        'UI Helicopter', 'Heli Korea', 'Hongik Aviation'
                     ]
                 },
                 {
                     category: 'Government Agencies',
                     companies: [
-                        'Ministry of Defense Aviation Maintenance',
-                        'Police Aviation Department',
-                        'National Fire Agency Aviation Department',
-                        'Regional Aviation Departments',
-                        'National Transportation Safety Board'
+                        'Korea Forest Service Aviation Headquarters',
+                        'National Police Agency Aviation Department',
+                        'National Emergency Management Agency Fire Aviation Rescue Team',
+                        'Provincial Government Transportation Aviation Department',
+                        'Ministry of Land, Infrastructure and Transport Flight Inspection Center'
                     ]
                 },
                 {
                     category: 'Foreign Airlines',
                     companies: [
-                        'Boeing', 'Airbus', 'Lufthansa Technik',
-                        'SIA Engineering', 'Cathay Pacific Catering', 'Thai Airways'
+                        'Boeing', 'Airbus', 'Lufthansa Airlines', 'Sikorsky',
+                        'Cathay Pacific Airways', 'Thai Airways'
                     ]
                 },
                 {
                     category: 'Aircraft Manufacturing',
                     companies: [
                         'Korea Aerospace Industries (KAI)', 'KAEMS (Korea Aircraft Service)',
-                        'HIZEAERO', 'QUEST AERO', 'Hanwha Techwin', 'Samsung Techwin',
-                        'Future Aviation', 'Daelim ENG', 'Korea Defence Service'
+                        'Hizero Aviation', 'AST Co.', 'Hanwha TechM', 'Samheung Precision',
+                        'Future Aviation', 'Daemyung ENG', 'Korea Composite Materials Co.'
                     ]
                 },
                 {
-                    category: 'Aircraft Parts & Supply',
+                    category: 'Aviation Ground Services',
                     companies: [
-                        'Asiana Aeroparts', 'Korea Gohyup', 'KAI KTS Global', 'Staples'
+                        'Asiana Airport', 'Korea Airport Co.', 'KR Co.', 'KTS Global Co.', 'Staffs'
                     ]
                 },
                 {
                     category: 'Others',
                     companies: [
-                        'Aircraft rental companies', 'Flight operation companies',
-                        'Pilot training institutions', 'Media and journalism',
-                        'Import/export companies', 'Unmanned aircraft companies'
+                        'Light aircraft companies', 'Helicopter operation companies',
+                        'Pilot training institutes', 'Broadcasting stations and newspapers',
+                        'Map production companies', 'Unmanned aircraft companies'
                     ]
                 }
             ],
-            facilities: [
-                'Seoul Yeongdeungpo Campus: Certification test preparation facilities',
-                'Aviation Technology Training Center: Comprehensive aircraft training',
-                'Icheon Campus: Hands-on maintenance training with real aircraft'
+
+            // 원본 HTML의 편입 가능 대학 정보
+            transferUniversities: [
+                'Korea Aerospace University', 'Hanseo University', 'Sejong University',
+                'Chosun University', 'Korea National University of Transportation',
+                'Chungju University', 'Chodang University', 'Howon University'
+            ],
+
+            // 원본 HTML의 군 진로 정보
+            militaryCareer: [
+                'Technical soldier enlistment and technical non-commissioned officer commission in aviation maintenance branch of Air Force, Army, Navy, Marine Corps',
+                'Military civilian employment'
+            ],
+
+            certifications: [
+                'Aircraft Maintenance Technician (Engine/Airframe/Equipment/Electronics)',
+                'Aviation Industrial Engineer',
+                'Aircraft Maintenance Technician (Airplane)',
+                'Aviation Traffic Safety Manager'
             ]
         },
         {
