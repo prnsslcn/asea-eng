@@ -266,6 +266,695 @@ export const professorsData: ProgramProfessors[] = [
         ]
     },
     {
+        programId: 'tourism-specialist',
+        professors: [
+            // 호텔관광전문가과정 - 승무원과정과 동일한 교수진
+            {
+                id: 'prof-tourism-specialist-001',
+                name: 'Jae-Heung Yu',
+                koreanName: '유재흥',
+                title: 'Professor (Director of Innovation Support)',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Introduction to Tourism',
+                    'Tourism Marketing',
+                    'Hotel Human Resources Management',
+                    'Cultural Tourism',
+                    'Tourism Regulations'
+                ],
+                photo: '/asea-eng/images/professors/315154fde807de185018697610f0701a.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-002',
+                name: 'Yu-Na Kim',
+                koreanName: '김유나',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Service',
+                    'Introduction to Airline Cabin Operations',
+                    'Airline Cabin Service Practice',
+                    'Aviation Business English',
+                    'Flight Safety Practice',
+                    'Tourism English',
+                    'Aircraft In-flight Announcement'
+                ],
+                photo: '/asea-eng/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-003',
+                name: 'Min-Cheol Oh',
+                koreanName: '오민철',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Resource Interpretation',
+                    'Cultural Heritage Tourism Resources',
+                    'Tourism Regulations'
+                ],
+                photo: '/asea-eng/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-004',
+                name: 'Yeo-San Yoon',
+                koreanName: '윤여산',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'International Travel Escort Certification Course',
+                    'Local Guide',
+                    'Customer Satisfaction Service Management'
+                ],
+                photo: '/asea-eng/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-005',
+                name: 'Ji-Hyun Jung',
+                koreanName: '정지현',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Aviation Business Practice',
+                    'International Travel Escort',
+                    'Tourism English'
+                ],
+                photo: '/asea-eng/images/professors/64a266aa667d7c98d7490e27558f1166.png'
+            },
+            {
+                id: 'prof-tourism-specialist-006',
+                name: 'Dong-Woo Lee',
+                koreanName: '이동우',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Barista Practice'
+                ],
+                photo: '/asea-eng/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
+            },
+            {
+                id: 'prof-tourism-specialist-007',
+                name: 'Yoon-Sun Jang',
+                koreanName: '장윤선',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Hotel Management',
+                    'Food and Beverage Service Practice'
+                ],
+                photo: '/asea-eng/images/professors/b095dfb06c66a5107a006525e127d962.png'
+            },
+            {
+                id: 'prof-tourism-specialist-008',
+                name: 'Hee-Jin Lee',
+                koreanName: '이희진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Casino Management'
+                ],
+                photo: '/asea-eng/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-009',
+                name: 'Jung-Shin Cha',
+                koreanName: '차정신',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Chinese',
+                    'Basic Chinese',
+                    'Intermediate Chinese Conversation',
+                    'Hotel Chinese',
+                    'Cruise Basic Conversation',
+                    'Business Chinese',
+                    'HSK'
+                ],
+                photo: '/asea-eng/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
+            },
+            {
+                id: 'prof-tourism-specialist-010',
+                name: 'Ju-Young Jung',
+                koreanName: '정주영',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Understanding Cruise Crew I & II',
+                    'Cruise Basic Practice I & II',
+                    'Cruise English Interview',
+                    'Marine Tourism',
+                    'World Tourism Geography'
+                ],
+                photo: '/asea-eng/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-011',
+                name: 'Hye-Jung Jang',
+                koreanName: '장혜정',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Aviation Service Practical Skills'
+                ],
+                photo: '/asea-eng/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-012',
+                name: 'Hyeok-Jin Kwon',
+                koreanName: '권혁진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Principles of Tourism',
+                    'Tourism Marketing',
+                    'Hotel Room Service Practice'
+                ],
+                photo: '/asea-eng/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-013',
+                name: 'Tae-Won Kim',
+                koreanName: '김태원',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Introduction to Aircraft Cabin Structure',
+                    'Flight Safety Practice'
+                ],
+                photo: '/asea-eng/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-014',
+                name: 'Oh-Jin Kwon',
+                koreanName: '권오진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Leisure and Recreation'
+                ],
+                photo: '/asea-eng/images/professors/39645eb52457c5793a006468353eb42f.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-015',
+                name: 'Yeon-Jung Kim',
+                koreanName: '김연정',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Barista Theory and Practice',
+                    'Coffee Barista Certification Instruction'
+                ],
+                photo: '/asea-eng/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-016',
+                name: 'Hye-Sun Yang',
+                koreanName: '양혜선',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Casino Management',
+                    'Casino Practice'
+                ],
+                photo: '/asea-eng/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
+            },
+            {
+                id: 'prof-tourism-specialist-017',
+                name: 'Min-Kyung Noh',
+                koreanName: '노민경',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Marketing',
+                    'Hotel Management',
+                    'Tourism Resource Interpretation',
+                    'World Tourism Geography',
+                    'Convention Banquet Planning Cocktail Practice'
+                ],
+                photo: '/asea-eng/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'food-beverage-specialist',
+        professors: [
+            // 식음료전문가과정 - 승무원과정과 동일한 교수진
+            {
+                id: 'prof-food-beverage-specialist-001',
+                name: 'Jae-Heung Yu',
+                koreanName: '유재흥',
+                title: 'Professor (Director of Innovation Support)',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Introduction to Tourism',
+                    'Tourism Marketing',
+                    'Hotel Human Resources Management',
+                    'Cultural Tourism',
+                    'Tourism Regulations'
+                ],
+                photo: '/asea-eng/images/professors/315154fde807de185018697610f0701a.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-002',
+                name: 'Yu-Na Kim',
+                koreanName: '김유나',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Service',
+                    'Introduction to Airline Cabin Operations',
+                    'Airline Cabin Service Practice',
+                    'Aviation Business English',
+                    'Flight Safety Practice',
+                    'Tourism English',
+                    'Aircraft In-flight Announcement'
+                ],
+                photo: '/asea-eng/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-003',
+                name: 'Min-Cheol Oh',
+                koreanName: '오민철',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Resource Interpretation',
+                    'Cultural Heritage Tourism Resources',
+                    'Tourism Regulations'
+                ],
+                photo: '/asea-eng/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-004',
+                name: 'Yeo-San Yoon',
+                koreanName: '윤여산',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'International Travel Escort Certification Course',
+                    'Local Guide',
+                    'Customer Satisfaction Service Management'
+                ],
+                photo: '/asea-eng/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-005',
+                name: 'Ji-Hyun Jung',
+                koreanName: '정지현',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Aviation Business Practice',
+                    'International Travel Escort',
+                    'Tourism English'
+                ],
+                photo: '/asea-eng/images/professors/64a266aa667d7c98d7490e27558f1166.png'
+            },
+            {
+                id: 'prof-food-beverage-specialist-006',
+                name: 'Dong-Woo Lee',
+                koreanName: '이동우',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Barista Practice'
+                ],
+                photo: '/asea-eng/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
+            },
+            {
+                id: 'prof-food-beverage-specialist-007',
+                name: 'Yoon-Sun Jang',
+                koreanName: '장윤선',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Hotel Management',
+                    'Food and Beverage Service Practice'
+                ],
+                photo: '/asea-eng/images/professors/b095dfb06c66a5107a006525e127d962.png'
+            },
+            {
+                id: 'prof-food-beverage-specialist-008',
+                name: 'Hee-Jin Lee',
+                koreanName: '이희진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Casino Management'
+                ],
+                photo: '/asea-eng/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-009',
+                name: 'Jung-Shin Cha',
+                koreanName: '차정신',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Chinese',
+                    'Basic Chinese',
+                    'Intermediate Chinese Conversation',
+                    'Hotel Chinese',
+                    'Cruise Basic Conversation',
+                    'Business Chinese',
+                    'HSK'
+                ],
+                photo: '/asea-eng/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
+            },
+            {
+                id: 'prof-food-beverage-specialist-010',
+                name: 'Ju-Young Jung',
+                koreanName: '정주영',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Understanding Cruise Crew I & II',
+                    'Cruise Basic Practice I & II',
+                    'Cruise English Interview',
+                    'Marine Tourism',
+                    'World Tourism Geography'
+                ],
+                photo: '/asea-eng/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-011',
+                name: 'Hye-Jung Jang',
+                koreanName: '장혜정',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Aviation Service Practical Skills'
+                ],
+                photo: '/asea-eng/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-012',
+                name: 'Hyeok-Jin Kwon',
+                koreanName: '권혁진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Principles of Tourism',
+                    'Tourism Marketing',
+                    'Hotel Room Service Practice'
+                ],
+                photo: '/asea-eng/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-013',
+                name: 'Tae-Won Kim',
+                koreanName: '김태원',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Introduction to Aircraft Cabin Structure',
+                    'Flight Safety Practice'
+                ],
+                photo: '/asea-eng/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-014',
+                name: 'Oh-Jin Kwon',
+                koreanName: '권오진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Leisure and Recreation'
+                ],
+                photo: '/asea-eng/images/professors/39645eb52457c5793a006468353eb42f.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-015',
+                name: 'Yeon-Jung Kim',
+                koreanName: '김연정',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Barista Theory and Practice',
+                    'Coffee Barista Certification Instruction'
+                ],
+                photo: '/asea-eng/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-016',
+                name: 'Hye-Sun Yang',
+                koreanName: '양혜선',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Casino Management',
+                    'Casino Practice'
+                ],
+                photo: '/asea-eng/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
+            },
+            {
+                id: 'prof-food-beverage-specialist-017',
+                name: 'Min-Kyung Noh',
+                koreanName: '노민경',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Marketing',
+                    'Hotel Management',
+                    'Tourism Resource Interpretation',
+                    'World Tourism Geography',
+                    'Convention Banquet Planning Cocktail Practice'
+                ],
+                photo: '/asea-eng/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
+            }
+        ]
+    },
+    {
+        programId: 'flight-attendant',
+        professors: [
+            // 승무원과정 - 항공관광계열 교수진
+            // Page 1 - 12명
+            {
+                id: 'prof-flight-attendant-001',
+                name: 'Jae-Heung Yu',
+                koreanName: '유재흥',
+                title: 'Professor (Director of Innovation Support)',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Introduction to Tourism',
+                    'Tourism Marketing',
+                    'Hotel Human Resources Management',
+                    'Cultural Tourism',
+                    'Tourism Regulations'
+                ],
+                photo: '/asea-eng/images/professors/315154fde807de185018697610f0701a.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-002',
+                name: 'Yu-Na Kim',
+                koreanName: '김유나',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Service',
+                    'Introduction to Airline Cabin Operations',
+                    'Airline Cabin Service Practice',
+                    'Aviation Business English',
+                    'Flight Safety Practice',
+                    'Tourism English',
+                    'Aircraft In-flight Announcement'
+                ],
+                photo: '/asea-eng/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-003',
+                name: 'Min-Cheol Oh',
+                koreanName: '오민철',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Resource Interpretation',
+                    'Cultural Heritage Tourism Resources',
+                    'Tourism Regulations'
+                ],
+                photo: '/asea-eng/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-004',
+                name: 'Yeo-San Yoon',
+                koreanName: '윤여산',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'International Travel Escort Certification Course',
+                    'Local Guide',
+                    'Customer Satisfaction Service Management'
+                ],
+                photo: '/asea-eng/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-005',
+                name: 'Ji-Hyun Jung',
+                koreanName: '정지현',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Aviation Business Practice',
+                    'International Travel Escort',
+                    'Tourism English'
+                ],
+                photo: '/asea-eng/images/professors/64a266aa667d7c98d7490e27558f1166.png'
+            },
+            {
+                id: 'prof-flight-attendant-006',
+                name: 'Dong-Woo Lee',
+                koreanName: '이동우',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Barista Practice'
+                ],
+                photo: '/asea-eng/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
+            },
+            {
+                id: 'prof-flight-attendant-007',
+                name: 'Yoon-Sun Jang',
+                koreanName: '장윤선',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Hotel Management',
+                    'Food and Beverage Service Practice'
+                ],
+                photo: '/asea-eng/images/professors/b095dfb06c66a5107a006525e127d962.png'
+            },
+            {
+                id: 'prof-flight-attendant-008',
+                name: 'Hee-Jin Lee',
+                koreanName: '이희진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Casino Management'
+                ],
+                photo: '/asea-eng/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-009',
+                name: 'Jung-Shin Cha',
+                koreanName: '차정신',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Chinese',
+                    'Basic Chinese',
+                    'Intermediate Chinese Conversation',
+                    'Hotel Chinese',
+                    'Cruise Basic Conversation',
+                    'Business Chinese',
+                    'HSK'
+                ],
+                photo: '/asea-eng/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
+            },
+            {
+                id: 'prof-flight-attendant-010',
+                name: 'Ju-Young Jung',
+                koreanName: '정주영',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Understanding Cruise Crew I & II',
+                    'Cruise Basic Practice I & II',
+                    'Cruise English Interview',
+                    'Marine Tourism',
+                    'World Tourism Geography'
+                ],
+                photo: '/asea-eng/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-011',
+                name: 'Hye-Jung Jang',
+                koreanName: '장혜정',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Aviation Service Practical Skills'
+                ],
+                photo: '/asea-eng/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-012',
+                name: 'Hyeok-Jin Kwon',
+                koreanName: '권혁진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Principles of Tourism',
+                    'Tourism Marketing',
+                    'Hotel Room Service Practice'
+                ],
+                photo: '/asea-eng/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
+            },
+            // Page 2 - 5명
+            {
+                id: 'prof-flight-attendant-013',
+                name: 'Tae-Won Kim',
+                koreanName: '김태원',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Introduction to Aircraft Cabin Structure',
+                    'Flight Safety Practice'
+                ],
+                photo: '/asea-eng/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-014',
+                name: 'Oh-Jin Kwon',
+                koreanName: '권오진',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Leisure and Recreation'
+                ],
+                photo: '/asea-eng/images/professors/39645eb52457c5793a006468353eb42f.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-015',
+                name: 'Yeon-Jung Kim',
+                koreanName: '김연정',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Barista Theory and Practice',
+                    'Coffee Barista Certification Instruction'
+                ],
+                photo: '/asea-eng/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-016',
+                name: 'Hye-Sun Yang',
+                koreanName: '양혜선',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Casino Management',
+                    'Casino Practice'
+                ],
+                photo: '/asea-eng/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
+            },
+            {
+                id: 'prof-flight-attendant-017',
+                name: 'Min-Kyung Noh',
+                koreanName: '노민경',
+                title: 'Professor',
+                department: 'Aviation Tourism',
+                courses: [
+                    'Tourism Marketing',
+                    'Hotel Management',
+                    'Tourism Resource Interpretation',
+                    'World Tourism Geography',
+                    'Convention Banquet Planning Cocktail Practice'
+                ],
+                photo: '/asea-eng/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
+            }
+        ]
+    },
+    {
         programId: 'ultrasonic-diagnostics',
         professors: [
             // 초음파진단과정 - 항공비파괴검사과정과 동일한 교수진
