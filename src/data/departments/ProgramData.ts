@@ -25,6 +25,9 @@ export interface Program {
     ultrasonicSpecificBenefits?: string[];
     metallurgicalSpecificCareers?: string[];
     bachelorDegreeBenefits?: string[];
+    specializedPrograms?: string[];
+    governmentCertifications?: string[];
+    beverageSpecialties?: string[];
 
     // 기존 필드들
     features: string[];
@@ -7117,284 +7120,383 @@ const aviationTourismData: Department = {
             id: 'flight-attendant',
             name: 'Flight Attendant Course',
             koreanName: '승무원과정',
-            description: 'Comprehensive cabin crew and ground service training for domestic and international airlines',
-            duration: '2 years',
+            description: 'Flight attendants broadly refer to airline cabin crew, railway crew, and cruise crew, aiming to train the best flight attendants representing domestic and foreign airlines and various companies. In line with the global era, we cultivate excellent talent through differentiated educational curriculum by acquiring international sensibilities and business manners. We handle aviation services as basic and will produce the best flight attendants through aviation safety practical training, which will become increasingly important in the future.',
+            duration: '2 years (Associate Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'Training for domestic and international airline cabin crew positions',
-                'Ground service and airport operations training',
-                'Comprehensive aviation safety and emergency procedures',
-                'Real aircraft cabin training facilities with professional instructors'
+                'Excellent professional faculty from domestic and international airline cabin crew backgrounds',
+                'Professional interview clinic operation for aviation tourism field domestic and overseas employment preparation',
+                'Realistic training including flight safety training and cabin service conducted in cabin practice rooms identical to actual aircraft'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 승무원 특화 (10가지)
+            coursebenefits: [
+                'Operation of practice-oriented curriculum through on-campus and off-campus training during semester',
+                'Advanced aviation safety education courses (methods for dealing with unruly passengers, in-flight emergency treatment, etc.)',
+                'Certification acquisition through physical fitness verification education (judo, aikido, martial arts, etc.)',
+                'Advanced in-flight announcement and cabin service education',
+                'Practical skills provision through linked education with industry-academia partnership companies',
+                'Special recruitment support when hired by industry-academia partnership companies',
+                'Mock interviews by current and former airline interview committee members',
+                'Participation in flight attendant experience education through domestic airline training facilities',
+                'Provision of foreign airport ground staff education and interview opportunities',
+                'Provision of practical training opportunities as cruise crew members'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역 (9가지)
             features: [
-                'Practical aviation safety training with real aircraft equipment',
-                'Tourism industry safety education (barrier-free tourism, tourist accident services, etc.)',
-                'Professional certification programs through various training courses (flow guide, Taekwondo, martial arts, etc.)',
-                'Smart Asia future leader training',
-                'Industry partnership training through corporate connections for practical experience',
-                'Special recruitment advantages for corporate partnerships',
-                'Professional hospitality and aviation service interview preparation',
-                '5-star hotel international certification training',
-                'Overseas hotel experience and interview training',
-                'Overseas hotel industry experience training'
+                'High-level service education composed of faculty from each airline\'s cabin crew and tourism specialty backgrounds',
+                'Operation of aviation service-dedicated cabin practice rooms and comprehensive airport practice rooms',
+                'Operation of Asiana Airlines reservation and ticketing system education courses',
+                'Operation of seasonal internships linked to 5-star hotels and weekend internships during semester, and overseas university advancement (transfer, etc.) available',
+                'Selected as \'Cruise Specialist Training Institution\' for 2 consecutive times (Ministry of Oceans and Fisheries)',
+                'First vocational school selected as International Travel Tour Leader Qualification Training Institution (Ministry of Culture, Sports and Tourism)',
+                '3+2 Education: 3 days of classes, 2 days of self-development and personal capacity building (our school\'s online language classes & internship training & personal capacity preparation)',
+                'Implementation of linked education with industry-academia partnership companies and special recruitment support when hiring',
+                'Aviation specialized school benefits (aviation security, illegal unruly passenger response methods, aviation emergency treatment education)'
             ],
-            curriculum: flightAttendantCurriculum,
-            detailedCertifications: flightAttendantCertifications,
-            certifications: [
-                'International Tour Conductor License',
-                'Convention Planning Specialist',
-                'Hotel Management Specialist',
-                'Hotel Service Specialist',
-                'Hospitality Service Specialist',
-                'Tourism Specialist Guide',
-                'Cultural Tourism Guide',
-                'Travel Service Management Specialist',
-                'Customer Satisfaction Service Management Specialist',
-                'CPR Emergency First Aid Instructor',
-                'CS Leaders Management Specialist',
-                'Secretary National Technical Qualification',
-                'Recreation Instructor',
-                'TOEIC, JLPT, HSK',
-                'SMAT (Service Management Qualification)',
-                'Domestic Travel Guide',
-                'Computer Activity Instructor'
-            ],
+
+            // 원본 HTML의 상세한 진로 정보
             employmentAreas: [
                 {
-                    category: 'Airlines & Aviation',
+                    category: 'Aviation & Transportation',
                     companies: [
-                        'Domestic & International Airlines Cabin Crew and Ground Services',
-                        'International Travel Agencies',
-                        'Foreign Tourism Organizations',
-                        'Airport Operations and Management',
-                        'Aviation Training Institutions'
+                        'Domestic and international airline cabin crew',
+                        'Airline ground staff',
+                        'KTX, SRT, AREX railway cabin crew',
+                        'Airport services'
                     ]
                 },
                 {
-                    category: 'Tourism & Hospitality',
+                    category: 'Hospitality & Tourism',
                     companies: [
-                        'Travel Agencies and Tour Operators',
-                        'International Tour Conductors',
-                        'Local Guides and Travel Consultants',
-                        'Tourism Information Centers',
-                        'Cultural Tourism Interpretation Services'
+                        'Domestic and international hotels',
+                        'Travel agencies',
+                        'Cruise crew members',
+                        'Food service specialist companies',
+                        'International travel tour leaders',
+                        'Local guides',
+                        'International conference planners'
                     ]
                 },
                 {
-                    category: 'Hotels & Resorts',
+                    category: 'Corporate & Services',
                     companies: [
-                        'International Hotel Chains',
-                        'Resort Management Companies',
-                        'Convention Centers and Event Planning',
-                        'Cruise Ship Services',
-                        'Corporate Service Coordinators'
-                    ]
-                },
-                {
-                    category: 'Government & Public',
-                    companies: [
-                        'National Tourism Organization',
-                        'Regional Tourism Boards',
-                        'International Conference Organizers (PCO)',
-                        'Convention and Exhibition Companies',
-                        'Casino Dealers and Entertainment'
-                    ]
-                },
-                {
-                    category: 'Service Industry',
-                    companies: [
-                        'Corporate Service Departments',
-                        'Customer Service Training Companies',
-                        'Service Coordinator Positions',
-                        'Beauty Coordinator Services'
+                        'Large corporation secretarial positions',
+                        'Service coordinators',
+                        'Casino dealers',
+                        'Customer service specialists'
                     ]
                 }
             ],
-            facilities: [
-                'Real aircraft cabin training facility with professional aviation equipment',
-                '5-star hotel service training laboratory',
-                'Aviation safety and emergency training center'
-            ]
+
+            // 승무원 특화 시설
+            facilities: [],
+
+            // 승무원 특화 교육 프로그램
+            specializedPrograms: [
+                '3+2 Education system (3 days classes + 2 days self-development)',
+                'Cruise specialist training (Ministry of Oceans and Fisheries certified)',
+                'International travel tour leader qualification training (Ministry of Culture, Sports and Tourism certified)',
+                'Aviation safety specialized education (security, emergency response)',
+                'Physical fitness verification programs (martial arts training)',
+                'Industry-academia partnership internship programs'
+            ],
+
+            // 원본 HTML의 자격증 목록을 완전히 번역
+            certifications: [
+                'Aviation Service Practical Skills',
+                'CRS Aviation Reservation and Ticketing',
+                'International Travel Tour Leader',
+                'Tourism Interpretation Guide',
+                'Cultural Tourism Commentary',
+                'Travel Product Consultant',
+                'Customer Satisfaction Service Manager',
+                'CPR Emergency Treatment Cardiopulmonary Resuscitation',
+                'CS Leaders Manager',
+                'Secretary National Technical Qualification',
+                'Recreation Instructor',
+                'TOEIC',
+                'JLPT',
+                'HSK',
+                'SMAT (Service Management Qualification)',
+                'Domestic Travel Guide'
+            ],
+
+            curriculum: flightAttendantCurriculum,
+            detailedCertifications: flightAttendantCertifications
         },
         {
             id: 'food-beverage-specialist',
             name: 'Food & Beverage Specialist Course',
             koreanName: '식음료전문가과정',
-            description: 'Professional F&B training for hotels and restaurants with barista and sommelier specialization',
-            duration: '2 years',
+            description: 'We train food and beverage specialists in hotels and restaurant businesses who can provide customer satisfaction through recommendation and production of beverages suitable for seasons and atmosphere. You can obtain national technical qualification <Liquor Service Technician> along with Wine Sommelier, Tea Master, Coffee Barista, Water Sommelier, and Korean Traditional Liquor Brewer certifications on campus, and we are training global specialists who can work in hotels, resorts, cruises, casinos, and restaurant businesses to introduce Korean traditional liquor and traditional beverages to not only domestic but also foreign customers.',
+            duration: '2 years (Associate Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                '2016 Korea Tourism Organization selected excellent hospitality education program',
-                'NCS-based hospitality education curriculum implementation',
-                'Multiple certification acquisition programs for professional development',
-                'Barista, sommelier, wine management specialist training'
+                '2016 Korea Tourism Organization selected Excellent Hotelier Training Institution (NCS-centered hotelier education program operation)',
+                'Strengthening employment competitiveness through various certification acquisition courses (Liquor Service Technician, Barista, Wine Manager, etc.)',
+                'Implementation of industry-academia training and part-time job linked education at domestic and overseas hotels, resorts, etc. during enrollment'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 식음료 특화 (10가지)
+            coursebenefits: [
+                'Operation of practice-oriented curriculum through on-campus and off-campus training during semester',
+                'Advanced tourism site safety education courses (barrier-free tourism, tourism vulnerable service, etc.)',
+                'Certification acquisition through physical fitness verification education (judo, aikido, martial arts, etc.)',
+                'Smile ASEA Selection Competition',
+                'Practical skills provision through linked education with industry-academia partnership 4-5 star hotels and food service companies',
+                'Special recruitment support when hired by industry-academia partnership companies',
+                'Mock interviews by current and former hotelier and beverage master interview committee members',
+                '5-star hotel seasonal internship opportunities',
+                'Overseas hotel employment and interview opportunities',
+                'Overseas hotel training opportunities'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역 (12가지)
             features: [
-                'Professional hotel and restaurant F&B specialist training',
-                'Customer satisfaction and service excellence through cooking and beverage expertise',
-                'Multiple certification programs for professional development (Bartending, Barista, Wine Specialist, etc.)',
-                'Practical training for 4-5 star hotels and foreign companies through industry partnerships',
-                'Special recruitment advantages for corporate partnerships',
-                'Professional hospitality and beverage mastery interview preparation',
-                '5-star hotel international certification training',
-                'Industry partnership training and employment opportunities',
-                'F&B menu development and food service creation training',
-                'Creative culinary professional experience',
-                'Service industry leadership participation',
-                'Barrier-free tourism education for inclusive tourism services'
+                'High-level service education composed of excellent professional faculty from luxury hotels (5-star) and tourism doctorate backgrounds',
+                'Operation of seasonal internships linked to 5-star hotels and weekend internships during semester, and overseas university advancement (transfer, etc.) available',
+                'Selected as \'Cruise Specialist Training Institution\' for 2 consecutive times (Ministry of Oceans and Fisheries)',
+                'Selected as Excellent Hotelier Training Institution (Korea Tourism Organization)',
+                'First vocational school selected as International Travel Tour Leader Qualification Training Institution (Ministry of Culture, Sports and Tourism)',
+                '3+2 Education: 3 days of classes, 2 days of self-development and personal capacity building (our school\'s online language classes & internship training & personal capacity preparation)',
+                'Korea\'s first operation of IHG Academy hotelier course within InterContinental Hotels Group',
+                'Implementation of linked education with industry-academia partnership companies and special recruitment support when hiring',
+                'Food and beverage menu development and restaurant startup education',
+                'Participation in creative cocktail contests',
+                'Support for participation in service competition contests',
+                'Support for tourism vulnerable consideration service capabilities through barrier-free tourism education'
             ],
-            curriculum: foodBeverageSpecialistCurriculum,
-            detailedCertifications: foodBeverageSpecialistCertifications,
-            certifications: [
-                'Barista Qualification',
-                'F&B Management Specialist',
-                'Bartending Specialist',
-                'Wine Sommelier',
-                'Wine Management Specialist',
-                'Pastry Master',
-                'Cooking Bartender',
-                'Beverage Specialist',
-                'F&B Service Specialist',
-                'Customer Satisfaction Service Management Specialist',
-                'CPR Emergency First Aid Instructor',
-                'CS Leaders Management Specialist',
-                'Secretary National Technical Qualification',
-                'Recreation Instructor',
-                'TOEIC, JLPT, HSK',
-                'SMAT (Service Management Qualification)',
-                'Tourism Service Management Specialist',
-                'Computer Activity Instructor'
-            ],
+
+            // 원본 HTML의 상세한 진로 정보 - 식음료 특화
             employmentAreas: [
                 {
-                    category: 'Hotels & Restaurants',
+                    category: 'Hotel & Food Service',
                     companies: [
-                        'Domestic & International Hotel Guest Services and F&B Departments',
-                        'Corporate Dining Management',
-                        'Butler Services',
-                        'Bar Creation',
-                        'Front Desk and Foreign Business Operations'
+                        'Domestic and international hotel room and food & beverage department hoteliers',
+                        'Airport lounge managers',
+                        'Franchise food service companies',
+                        'Service coordinators',
+                        'CS instructors'
                     ]
                 },
                 {
-                    category: 'Food Service Industry',
+                    category: 'Beverage & Bar Industry',
                     companies: [
-                        'Tourism Gallery Management',
-                        'Food and Beverage Training Companies',
-                        'Coffee Training Institutions',
-                        'Restaurant Professional Businesses',
-                        'Wine Import and Distribution Companies'
+                        'Bar startups',
+                        'Traditional liquor galleries',
+                        'Liquor museum curators',
+                        'Wine import and distribution companies',
+                        'Wine academies',
+                        'Breweries'
                     ]
                 },
                 {
-                    category: 'Hospitality Services',
+                    category: 'Coffee & Bakery',
                     companies: [
-                        'Wine Academies',
-                        'Food Service Professional Companies',
-                        'Wine Service and Distribution',
-                        'Service Coordinator Positions',
-                        'CS Training and Instruction'
+                        'Bakeries',
+                        'Coffee franchises',
+                        'Roasting specialist companies',
+                        'Coffee specialty businesses'
                     ]
                 }
             ],
-            facilities: [
-                'Professional F&B training laboratory with commercial kitchen equipment',
-                'Barista and coffee training center',
-                'Wine tasting and sommelier training facility'
-            ]
+
+            // 식음료 특화 시설 및 프로그램
+            facilities: [],
+
+            // 식음료 특화 교육 프로그램
+            specializedPrograms: [
+                '3+2 Education system (3 days classes + 2 days self-development)',
+                'IHG Academy hotelier course (Korea\'s first)',
+                'Food and beverage menu development education',
+                'Creative cocktail contest participation',
+                'Korean traditional liquor specialist training',
+                'Barrier-free tourism service education',
+                'NCS-centered hotelier education program'
+            ],
+
+            // 정부 인증 및 선정 사항 (호텔관광전문가과정과 동일)
+            governmentCertifications: [
+                'Korea Tourism Organization selected Excellent Hotelier Training Institution (2016)',
+                'Ministry of Culture, Sports and Tourism certified International Travel Tour Leader Training Institution (First vocational school)',
+                'Ministry of Oceans and Fisheries selected Cruise Specialist Training Institution (2 consecutive times)'
+            ],
+
+            // 식음료 특화 경쟁력
+            beverageSpecialties: [
+                'National technical qualification Liquor Service Technician certification',
+                'Multiple beverage certifications (Wine Sommelier, Barista, Tea Master, Water Sommelier)',
+                'Korean traditional liquor specialist training',
+                'Creative cocktail development and competition',
+                'Global beverage service capabilities',
+                'Food and beverage startup education'
+            ],
+
+            // 원본 HTML의 자격증 목록을 완전히 번역
+            certifications: [
+                'Barista Certification',
+                'Food & Beverage Manager',
+                'Liquor Service Technician',
+                'Wine Sommelier',
+                'Water Sommelier',
+                'Tea Master',
+                'Korean Traditional Liquor Brewer',
+                'Mixologist',
+                'Food & Beverage Service Manager',
+                'Customer Satisfaction Service Manager',
+                'CPR Emergency Treatment Cardiopulmonary Resuscitation',
+                'CS Leaders Manager',
+                'Secretary National Technical Qualification',
+                'Recreation Instructor',
+                'TOEIC',
+                'JLPT',
+                'HSK',
+                'SMAT (Service Management Qualification)',
+                'Traditional Liquor Sommelier',
+                'Computer Utilization Skills'
+            ],
+
+            curriculum: foodBeverageSpecialistCurriculum,
+            detailedCertifications: foodBeverageSpecialistCertifications
         },
         {
             id: 'tourism-specialist',
             name: 'Tourism Specialist Course',
-            koreanName: '관광전문가과정',
-            description: 'International tourism professional training with tour conductor and cultural guide specialization',
-            duration: '2 years',
+            koreanName: '호텔관광전문가과정',
+            description: 'We train hoteliers and tourism specialists for the purpose of acquiring specialized knowledge and job performance capabilities that tourism service professionals should possess, including planning, marketing, and service provision for tourism and leisure activities, travel services, international conferences, and various events and festivals. You can obtain not only Hotel Service Manager certification but also Ministry of Culture, Sports and Tourism certified International Travel Tour Conductor certification on campus, and work as a guide overseas immediately upon graduation through domestic and overseas local guide employment programs.',
+            duration: '2 years (Associate Degree)',
+
+            // 원본 HTML의 주요 특장점을 정확히 번역
             highlights: [
-                'Professional international tour conductor training institution',
-                'Excellent hospitality education program (Ministry of Culture and Tourism certified)',
-                'Cultural tourism specialist training with multilingual capabilities',
-                'Overseas hotel experience and practical training programs'
+                'First vocational school certified by Ministry of Culture, Sports and Tourism as International Travel Tour Leader Qualification Training Institution',
+                'Field-oriented education provided by professors from overseas local guide backgrounds',
+                '1:1 customized employment programs through industry-academia training and part-time jobs linked with tourism companies'
             ],
+
+            // 원본 HTML의 "과정혜택" 섹션 - 호텔관광 특화 (10가지)
+            coursebenefits: [
+                'Operation of practice-oriented curriculum through on-campus and off-campus training during semester',
+                'Advanced tourism site safety education courses (barrier-free tourism, tourism vulnerable service, etc.)',
+                'Certification acquisition through physical fitness verification education (judo, aikido, martial arts, etc.)',
+                'Smile ASEA Selection Competition',
+                'Practical skills provision through linked education with industry-academia partnership companies',
+                'Special recruitment support when hired by industry-academia partnership companies',
+                'Mock interviews by current and former hotelier interview committee members',
+                '5-star hotel seasonal internship opportunities',
+                'Overseas hotel employment and interview opportunities',
+                'Overseas hotel training opportunities'
+            ],
+
+            // 원본 HTML의 "특징 및 특전" 섹션을 완전히 번역 (10가지)
             features: [
-                'Tourism and leisure activities, hotel services, international hospitality combining food & beverage expertise',
-                'Global tourism professionals with required professional knowledge and job competencies in various events, marketing, and services',
-                'Professional instructor team from 5-star hotels and tourism industry experts for high-quality professional service education',
-                '5-star hotel related international certification and weekend programs with major domestic and international hotel training',
-                'Overseas university (Thailand, etc.) study abroad opportunities',
-                '2-year continuous working tour professional training institution selection (overseas internship)',
-                'Excellent hospitality education program selection (Korea Tourism Organization)',
-                'Professional university first and international tour conductor license education program selection (Ministry of Culture and Tourism)',
-                '3+2 education: 3 years study, 2 years self-development & individual capacity building (school online learning & internships & individual capacity improvement)',
-                'Domestic leading international hotel group IHG Academy hospitality program implementation',
-                'Celebrity special lectures and various overseas activity participation',
-                'Industry partnership corporate connections for training and special recruitment advantages',
-                'Service industry leadership participation',
-                'Barrier-free tourism education for inclusive tourism service capability improvement'
+                'High-level service education composed of excellent professional faculty from luxury hotels (5-star) and tourism doctorate backgrounds',
+                'Operation of seasonal internships linked to 5-star hotels and weekend internships during semester, and overseas university advancement (transfer, etc.) available / Selected as \'Cruise Specialist Training Institution\' for 2 consecutive times (Ministry of Oceans and Fisheries)',
+                'Selected as Excellent Hotelier Training Institution (Korea Tourism Organization)',
+                'First vocational school selected as International Travel Tour Leader Qualification Training Institution (Ministry of Culture, Sports and Tourism)',
+                '3+2 Education: 3 days of classes, 2 days of self-development and personal capacity building (our school\'s online language classes & internship training & personal capacity preparation)',
+                'Korea\'s first operation of IHG Academy hotelier course within InterContinental Hotels Group',
+                'Celebrity invitation special lectures and support for participation in various external activities',
+                'Implementation of linked education with industry-academia partnership companies and special recruitment support when hiring',
+                'Support for participation in service competition contests',
+                'Support for tourism vulnerable consideration service capabilities through barrier-free tourism education'
             ],
-            curriculum: hotelTourismSpecialistCurriculum,
-            detailedCertifications: hotelTourismSpecialistCertifications,
-            certifications: [
-                'International Tour Conductor',
-                'Convention Planning Specialist',
-                'Hotel Management Specialist',
-                'Hotel Service Specialist',
-                'Hospitality Service Specialist',
-                'Tourism Specialist Guide',
-                'Cultural Tourism Guide',
-                'Travel Service Management Specialist',
-                'Customer Satisfaction Service Management Specialist',
-                'CPR Emergency First Aid Instructor',
-                'CS Leaders Management Specialist',
-                'Secretary National Technical Qualification',
-                'Recreation Instructor',
-                'TOEIC, JLPT, HSK',
-                'SMAT (Service Management Qualification)',
-                'Domestic Travel Guide',
-                'Computer Activity Instructor'
-            ],
+
+            // 원본 HTML의 상세한 진로 정보 - 호텔관광 특화
             employmentAreas: [
+                {
+                    category: 'Hotel & Hospitality',
+                    companies: [
+                        'Domestic and international hotel room and food & beverage department hoteliers',
+                        '5-star hotel management positions',
+                        'Food service specialist company managers',
+                        'Airport lounges',
+                        'Hospital coordinators'
+                    ]
+                },
                 {
                     category: 'Tourism & Travel',
                     companies: [
-                        'Domestic & International Hotel Guest Services and F&B Departments',
-                        'International Travel Agencies and Tour Operators',
-                        'Foreign Tourism Organizations and Operators',
-                        'Corporate Dining Management',
-                        'Corporate Travel Services'
+                        'Domestic and international travel agency guides and operators',
+                        'International travel tour leaders',
+                        'Overseas local guides',
+                        'Domestic travel guides',
+                        'Cultural tourism commentators',
+                        'National park geological park commentators',
+                        'Tourism interpretation guides'
                     ]
                 },
                 {
-                    category: 'Hospitality & Events',
+                    category: 'Event & Conference',
                     companies: [
-                        'International Tour Conductors',
-                        'Overseas Local Guides',
-                        'Domestic Travel Guides',
-                        'Cultural Tourism Interpreters',
-                        'National Tourism Organization Staff'
+                        'International conference planners (PCO)',
+                        'Festival planners',
+                        'Convention specialists',
+                        'Event coordinators'
                     ]
                 },
                 {
-                    category: 'International Business',
+                    category: 'Corporate & Services',
                     companies: [
-                        'International Conference Organizers (PCO)',
-                        'Convention Planning Companies',
-                        'Casino Dealers',
-                        'Corporate Service Departments',
-                        'Service Coordinators'
-                    ]
-                },
-                {
-                    category: 'Customer Service',
-                    companies: [
-                        'CS Training and Instruction',
-                        'Beauty Coordinators',
-                        'Customer Service Training Companies'
+                        'Airport ground staff',
+                        'Casino dealers',
+                        'Large corporation secretarial positions',
+                        'Service coordinators',
+                        'CS instructors',
+                        'Customer service specialists'
                     ]
                 }
             ],
-            facilities: [
-                'Tourism service training laboratory with industry-standard equipment',
-                'Cultural heritage and tourism interpretation training center',
-                'Multilingual communication and presentation facilities'
-            ]
+
+            // 호텔관광 특화 시설 및 프로그램
+            facilities: [],
+
+            // 호텔관광 특화 교육 프로그램
+            specializedPrograms: [
+                '3+2 Education system (3 days classes + 2 days self-development)',
+                'IHG Academy hotelier course (Korea\'s first)',
+                'International Travel Tour Leader certification program (Ministry certified)',
+                'Barrier-free tourism education program',
+                '5-star hotel internship programs',
+                'Overseas hotel training and employment programs',
+                'Smile ASEA competition program'
+            ],
+
+            // 정부 인증 및 선정 사항
+            governmentCertifications: [
+                'Ministry of Culture, Sports and Tourism certified International Travel Tour Leader Training Institution (First vocational school)',
+                'Korea Tourism Organization selected Excellent Hotelier Training Institution',
+                'Ministry of Oceans and Fisheries selected Cruise Specialist Training Institution (2 consecutive times)'
+            ],
+
+            // 원본 HTML의 자격증 목록을 완전히 번역
+            certifications: [
+                'International Travel Tour Leader',
+                'Convention Planner',
+                'Hotel Manager',
+                'Hotel Administrator',
+                'Hotel Service Manager',
+                'Tourism Interpretation Guide',
+                'Cultural Tourism Commentator',
+                'Travel Product Consultant',
+                'Customer Satisfaction Service Manager',
+                'CPR Emergency Treatment Cardiopulmonary Resuscitation',
+                'CS Leaders Manager',
+                'Secretary National Technical Qualification',
+                'Recreation Instructor',
+                'TOEIC',
+                'JLPT',
+                'HSK',
+                'SMAT (Service Management Qualification)',
+                'Domestic Travel Guide',
+                'Computer Utilization Skills'
+            ],
+
+            curriculum: hotelTourismSpecialistCurriculum,
+            detailedCertifications: hotelTourismSpecialistCertifications
         }
     ],
     overallEmploymentAreas: [
