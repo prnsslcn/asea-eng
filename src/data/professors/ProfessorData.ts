@@ -266,6 +266,658 @@ export const professorsData: ProgramProfessors[] = [
         ]
     },
     {
+        programId: 'airport-security',
+        professors: [
+            // 항공보안과정 - 항공보안계열 교수진
+            // Page 1 - 12명
+            {
+                id: 'prof-airport-security-001',
+                name: 'Yeon-Wan Jung',
+                koreanName: '정연완',
+                title: 'Professor (Department Head)',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Security',
+                    'Private Security Theory',
+                    'First Aid',
+                    'Live Fire Training'
+                ],
+                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+            },
+            {
+                id: 'prof-airport-security-002',
+                name: 'Jae-Ho Kim',
+                koreanName: '김재호',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Judo',
+                    'Security Martial Arts I',
+                    'Security Martial Arts II'
+                ],
+                photo: '/asea-eng/images/professors/73dc2ab2e904c17bc532596096edc32d.png'
+            },
+            {
+                id: 'prof-airport-security-003',
+                name: 'Dae-Han Ji',
+                koreanName: '지대한',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Basic Acting Practice',
+                    'Stage Acting Practice',
+                    'Camera Acting Practice'
+                ],
+                photo: '/asea-eng/images/professors/778e91a08bb47d5ac6dca4c183c019e4.jpg'
+            },
+            {
+                id: 'prof-airport-security-004',
+                name: 'Woo-Hyung Ham',
+                koreanName: '함우형',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Protocol Studies',
+                    'Security Industry Law',
+                    'Safety Management Theory'
+                ],
+                photo: '/asea-eng/images/professors/2bd042a629007b4cbd08bbfcb48533fb.jpg'
+            },
+            {
+                id: 'prof-airport-security-005',
+                name: 'Rak-Gi Kim',
+                koreanName: '김락기',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Security Methodology',
+                    'Terrorism Studies'
+                ],
+                photo: '/asea-eng/images/professors/ef3fc2a9826ed04c59eb3e2ec874f227.png'
+            },
+            {
+                id: 'prof-airport-security-006',
+                name: 'Se-Han Oh',
+                koreanName: '오세한',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Security Practice',
+                    'Security Safety Detection Practice'
+                ],
+                photo: '/asea-eng/images/professors/be4e3d56100a79587e4c29fbb22c6686.jpg'
+            },
+            {
+                id: 'prof-airport-security-007',
+                name: 'Sung-Jin Park',
+                koreanName: '박성진',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Training Methodology',
+                    'Introduction to Exercise Therapy'
+                ],
+                photo: '/asea-eng/images/professors/9e54949de666885357bbdfe559f98e06.jpg'
+            },
+            {
+                id: 'prof-airport-security-008',
+                name: 'Min-Su Jung',
+                koreanName: '정민수',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Counter-terrorism Practice',
+                    'Security Field Operation Theory'
+                ],
+                photo: '/asea-eng/images/professors/34f27d1d388bed5aad18496d33d91741.png'
+            },
+            {
+                id: 'prof-airport-security-009',
+                name: 'Jong-Sung Kim',
+                koreanName: '김종성',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Aviation Security Equipment Theory',
+                    'Aviation Security Screening Practice',
+                    'AI X-RAY CBT Analysis'
+                ],
+                photo: '/asea-eng/images/professors/f78390eee12dedcd401bb77b425a99cb.png'
+            },
+            {
+                id: 'prof-airport-security-010',
+                name: 'Gui-Seop Lim',
+                koreanName: '임귀섭',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Aviation Security Regulations',
+                    'Airport Operations Theory'
+                ],
+                photo: '/asea-eng/images/professors/b15dc1de09bd3de1a3bc1070e90e478a.jpg'
+            },
+            {
+                id: 'prof-airport-security-011',
+                name: 'Dong-Hwa Shin',
+                koreanName: '신동화',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Understanding Security Industry',
+                    'Counter-terrorism Strategy'
+                ],
+                photo: '/asea-eng/images/professors/f9489a61a234184fceb847a1b5ca6134.png'
+            },
+            {
+                id: 'prof-airport-security-012',
+                name: 'Kyung-Hoon Kim',
+                koreanName: '김경훈',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'War History',
+                    'Explosive Terrorism Response'
+                ],
+                photo: '/asea-eng/images/professors/5ba8f2e0b6b7ec6af72e51d3d4f26d79.png'
+            },
+            // Page 2 - 11명
+            {
+                id: 'prof-airport-security-013',
+                name: 'Haydn',
+                koreanName: '하이든',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Tactical Shooting',
+                    'Comprehensive Tactical Studies',
+                    'North Korean Studies',
+                    'National Security Theory'
+                ],
+                photo: '/asea-eng/images/professors/0c17d3469ecb6cf98eb6e224140126aa.png'
+            },
+            {
+                id: 'prof-airport-security-014',
+                name: 'Ki-Bun Kim',
+                koreanName: '김기분',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Theater',
+                    'Basic Acting II',
+                    'Action and Reaction'
+                ],
+                photo: '/asea-eng/images/professors/9b03e784dcebb9738a3b9a3bc666d46c.jpg'
+            },
+            {
+                id: 'prof-airport-security-015',
+                name: 'Jin-Kyung Lee',
+                koreanName: '이진경',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Basic Acting I',
+                    'Advanced Analysis'
+                ],
+                photo: '/asea-eng/images/professors/b637e978a35798eb7fb67a552efd4a06.jpg'
+            },
+            {
+                id: 'prof-airport-security-016',
+                name: 'Jun-Young Noh',
+                koreanName: '노준영',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Scene Acting',
+                    'Camera Acting',
+                    'Understanding Film Appreciation',
+                    'Video Production Practice'
+                ],
+                photo: '/asea-eng/images/professors/e4839e0735420cb23c0b4265cf34673d.jpg'
+            },
+            {
+                id: 'prof-airport-security-017',
+                name: 'Beom-Seok Kim',
+                koreanName: '김범석',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Action Acting Basics',
+                    'Wire Action Acting',
+                    'Counter-terrorism Action Acting'
+                ],
+                photo: '/asea-eng/images/professors/bd23d7f7c97b9a214dcef845847e776b.jpg'
+            },
+            {
+                id: 'prof-airport-security-018',
+                name: 'Jae-Seung Jung',
+                koreanName: '정재승',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Film Studies'
+                ],
+                photo: '/asea-eng/images/professors/ddd55e4decbcbfa7e5dd09344aba52ca.jpg'
+            },
+            {
+                id: 'prof-airport-security-019',
+                name: 'Kyung-Jin Ahn',
+                koreanName: '안경진',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Action and Shot Research'
+                ],
+                photo: '/asea-eng/images/professors/986558e031dca362af8ca739295d042f.jpg'
+            },
+            {
+                id: 'prof-airport-security-020',
+                name: 'Hee-Choon Park',
+                koreanName: '박희춘',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Self-Defense',
+                    'Arrest Techniques',
+                    'Taekwondo I',
+                    'Personal Protection Officer'
+                ],
+                photo: '/asea-eng/images/professors/1abcc7fbf695f7130f4c89a215898170.png'
+            },
+            {
+                id: 'prof-airport-security-021',
+                name: 'Min-Ji Kim',
+                koreanName: '김민지',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Security Physical Training I',
+                    'Security Physical Training II'
+                ],
+                photo: '/asea-eng/images/professors/1f950fe2de439ffc511990b95eb822cd.jpg'
+            },
+            {
+                id: 'prof-airport-security-022',
+                name: 'Si-Young Park',
+                koreanName: '박시영',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Criminal Psychology'
+                ],
+                photo: '/asea-eng/images/professors/a565297f739f6ba665caa6576082137c.jpg'
+            },
+            {
+                id: 'prof-airport-security-023',
+                name: 'Yong-Hwi Joo',
+                koreanName: '주용휘',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Criminology'
+                ],
+                photo: '/asea-eng/images/professors/bd220392ad050ee230a06fdc8b123a06.png'
+            }
+        ]
+    },
+    {
+        programId: 'vip-security',
+        professors: [
+            // 의전경호과정 - 항공보안과정과 동일한 교수진
+            {
+                id: 'prof-vip-security-001',
+                name: 'Yeon-Wan Jung',
+                koreanName: '정연완',
+                title: 'Professor (Department Head)',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Security',
+                    'Private Security Theory',
+                    'First Aid',
+                    'Live Fire Training'
+                ],
+                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+            },
+            {
+                id: 'prof-vip-security-002',
+                name: 'Jae-Ho Kim',
+                koreanName: '김재호',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Judo',
+                    'Security Martial Arts I',
+                    'Security Martial Arts II'
+                ],
+                photo: '/asea-eng/images/professors/73dc2ab2e904c17bc532596096edc32d.png'
+            },
+            {
+                id: 'prof-vip-security-003',
+                name: 'Dae-Han Ji',
+                koreanName: '지대한',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Basic Acting Practice',
+                    'Stage Acting Practice',
+                    'Camera Acting Practice'
+                ],
+                photo: '/asea-eng/images/professors/778e91a08bb47d5ac6dca4c183c019e4.jpg'
+            },
+            {
+                id: 'prof-vip-security-004',
+                name: 'Woo-Hyung Ham',
+                koreanName: '함우형',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Protocol Studies',
+                    'Security Industry Law',
+                    'Safety Management Theory'
+                ],
+                photo: '/asea-eng/images/professors/2bd042a629007b4cbd08bbfcb48533fb.jpg'
+            },
+            {
+                id: 'prof-vip-security-005',
+                name: 'Rak-Gi Kim',
+                koreanName: '김락기',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Security Methodology',
+                    'Terrorism Studies'
+                ],
+                photo: '/asea-eng/images/professors/ef3fc2a9826ed04c59eb3e2ec874f227.png'
+            },
+            {
+                id: 'prof-vip-security-006',
+                name: 'Se-Han Oh',
+                koreanName: '오세한',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Security Practice',
+                    'Security Safety Detection Practice'
+                ],
+                photo: '/asea-eng/images/professors/be4e3d56100a79587e4c29fbb22c6686.jpg'
+            },
+            {
+                id: 'prof-vip-security-007',
+                name: 'Sung-Jin Park',
+                koreanName: '박성진',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Training Methodology',
+                    'Introduction to Exercise Therapy'
+                ],
+                photo: '/asea-eng/images/professors/9e54949de666885357bbdfe559f98e06.jpg'
+            },
+            {
+                id: 'prof-vip-security-008',
+                name: 'Min-Su Jung',
+                koreanName: '정민수',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Counter-terrorism Practice',
+                    'Security Field Operation Theory'
+                ],
+                photo: '/asea-eng/images/professors/34f27d1d388bed5aad18496d33d91741.png'
+            },
+            {
+                id: 'prof-vip-security-009',
+                name: 'Jong-Sung Kim',
+                koreanName: '김종성',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Aviation Security Equipment Theory',
+                    'Aviation Security Screening Practice',
+                    'AI X-RAY CBT Analysis'
+                ],
+                photo: '/asea-eng/images/professors/f78390eee12dedcd401bb77b425a99cb.png'
+            },
+            {
+                id: 'prof-vip-security-010',
+                name: 'Gui-Seop Lim',
+                koreanName: '임귀섭',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Aviation Security Regulations',
+                    'Airport Operations Theory'
+                ],
+                photo: '/asea-eng/images/professors/b15dc1de09bd3de1a3bc1070e90e478a.jpg'
+            },
+            {
+                id: 'prof-vip-security-011',
+                name: 'Dong-Hwa Shin',
+                koreanName: '신동화',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Understanding Security Industry',
+                    'Counter-terrorism Strategy'
+                ],
+                photo: '/asea-eng/images/professors/f9489a61a234184fceb847a1b5ca6134.png'
+            },
+            {
+                id: 'prof-vip-security-012',
+                name: 'Kyung-Hoon Kim',
+                koreanName: '김경훈',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'War History',
+                    'Explosive Terrorism Response'
+                ],
+                photo: '/asea-eng/images/professors/5ba8f2e0b6b7ec6af72e51d3d4f26d79.png'
+            },
+            {
+                id: 'prof-vip-security-013',
+                name: 'Haydn',
+                koreanName: '하이든',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Tactical Shooting',
+                    'Comprehensive Tactical Studies',
+                    'North Korean Studies',
+                    'National Security Theory'
+                ],
+                photo: '/asea-eng/images/professors/0c17d3469ecb6cf98eb6e224140126aa.png'
+            },
+            {
+                id: 'prof-vip-security-014',
+                name: 'Ki-Bun Kim',
+                koreanName: '김기분',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Theater',
+                    'Basic Acting II',
+                    'Action and Reaction'
+                ],
+                photo: '/asea-eng/images/professors/9b03e784dcebb9738a3b9a3bc666d46c.jpg'
+            },
+            {
+                id: 'prof-vip-security-015',
+                name: 'Jin-Kyung Lee',
+                koreanName: '이진경',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Basic Acting I',
+                    'Advanced Analysis'
+                ],
+                photo: '/asea-eng/images/professors/b637e978a35798eb7fb67a552efd4a06.jpg'
+            },
+            {
+                id: 'prof-vip-security-016',
+                name: 'Jun-Young Noh',
+                koreanName: '노준영',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Scene Acting',
+                    'Camera Acting',
+                    'Understanding Film Appreciation',
+                    'Video Production Practice'
+                ],
+                photo: '/asea-eng/images/professors/e4839e0735420cb23c0b4265cf34673d.jpg'
+            },
+            {
+                id: 'prof-vip-security-017',
+                name: 'Beom-Seok Kim',
+                koreanName: '김범석',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Action Acting Basics',
+                    'Wire Action Acting',
+                    'Counter-terrorism Action Acting'
+                ],
+                photo: '/asea-eng/images/professors/bd23d7f7c97b9a214dcef845847e776b.jpg'
+            },
+            {
+                id: 'prof-vip-security-018',
+                name: 'Jae-Seung Jung',
+                koreanName: '정재승',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Film Studies'
+                ],
+                photo: '/asea-eng/images/professors/ddd55e4decbcbfa7e5dd09344aba52ca.jpg'
+            },
+            {
+                id: 'prof-vip-security-019',
+                name: 'Kyung-Jin Ahn',
+                koreanName: '안경진',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Action and Shot Research'
+                ],
+                photo: '/asea-eng/images/professors/986558e031dca362af8ca739295d042f.jpg'
+            },
+            {
+                id: 'prof-vip-security-020',
+                name: 'Hee-Choon Park',
+                koreanName: '박희춘',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Self-Defense',
+                    'Arrest Techniques',
+                    'Taekwondo I',
+                    'Personal Protection Officer'
+                ],
+                photo: '/asea-eng/images/professors/1abcc7fbf695f7130f4c89a215898170.png'
+            },
+            {
+                id: 'prof-vip-security-021',
+                name: 'Min-Ji Kim',
+                koreanName: '김민지',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Security Physical Training I',
+                    'Security Physical Training II'
+                ],
+                photo: '/asea-eng/images/professors/1f950fe2de439ffc511990b95eb822cd.jpg'
+            },
+            {
+                id: 'prof-vip-security-022',
+                name: 'Si-Young Park',
+                koreanName: '박시영',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Criminal Psychology'
+                ],
+                photo: '/asea-eng/images/professors/a565297f739f6ba665caa6576082137c.jpg'
+            },
+            {
+                id: 'prof-vip-security-023',
+                name: 'Yong-Hwi Joo',
+                koreanName: '주용휘',
+                title: 'Professor',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Criminology'
+                ],
+                photo: '/asea-eng/images/professors/bd220392ad050ee230a06fdc8b123a06.png'
+            }
+        ]
+    },
+    {
+        programId: 'pmc-security',
+        professors: [
+            // PMC경호과정 - 항공보안과정과 동일한 교수진
+            // (23명 동일 구조 반복)
+            {
+                id: 'prof-pmc-security-001',
+                name: 'Yeon-Wan Jung',
+                koreanName: '정연완',
+                title: 'Professor (Department Head)',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Security',
+                    'Private Security Theory',
+                    'First Aid',
+                    'Live Fire Training'
+                ],
+                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+            }
+            // ... (나머지 22명 동일)
+        ]
+    },
+    {
+        programId: 'action-acting',
+        professors: [
+            // 액션연기과정 - 항공보안과정과 동일한 교수진
+            // (23명 동일 구조 반복)
+            {
+                id: 'prof-action-acting-001',
+                name: 'Yeon-Wan Jung',
+                koreanName: '정연완',
+                title: 'Professor (Department Head)',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Security',
+                    'Private Security Theory',
+                    'First Aid',
+                    'Live Fire Training'
+                ],
+                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+            }
+            // ... (나머지 22명 동일)
+        ]
+    },
+    {
+        programId: 'sports-rehabilitation',
+        professors: [
+            // 스포츠재활컨디셔닝과정 - 항공보안과정과 동일한 교수진
+            // (23명 동일 구조 반복)
+            {
+                id: 'prof-sports-rehabilitation-001',
+                name: 'Yeon-Wan Jung',
+                koreanName: '정연완',
+                title: 'Professor (Department Head)',
+                department: 'Aviation Security',
+                courses: [
+                    'Introduction to Security',
+                    'Private Security Theory',
+                    'First Aid',
+                    'Live Fire Training'
+                ],
+                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+            }
+            // ... (나머지 22명 동일)
+        ]
+    },
+    {
         programId: 'tourism-specialist',
         professors: [
             // 호텔관광전문가과정 - 승무원과정과 동일한 교수진
