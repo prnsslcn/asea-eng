@@ -6,11 +6,13 @@ import {
 } from 'lucide-react';
 import { getDepartmentById, getProgramById } from '../../../data/departments/ProgramData';
 import { getDepartmentIdFromUrl } from '../../../router/routes';
+import { getProfessorsByProgram } from '../../../data/professors/ProfessorData';
 
 const ProgramDetailPage: React.FC = () => {
     const { departmentId, programId } = useParams();
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('overview');
+    const [currentPage, setCurrentPage] = useState(1);
 
     // 데이터 매핑 및 가져오기
     const mappedDepartmentId = getDepartmentIdFromUrl(departmentId || '');
@@ -276,7 +278,7 @@ const ProgramDetailPage: React.FC = () => {
         </div>
     );
 
-    // 기존 탭들 유지
+    // 커리큘럼 탭
     const renderCurriculumTab = () => {
         const curriculumData = program.curriculum || [];
 
@@ -391,16 +393,144 @@ const ProgramDetailPage: React.FC = () => {
         );
     };
 
-    const renderFacultyTab = () => (
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
-            <div className="text-center">
-                <UserCheck className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">Faculty Information</h3>
-                <p className="text-gray-500 mb-6">Faculty profiles will be available soon.</p>
-            </div>
-        </div>
-    );
+    // ✅ 교수진 탭 - 교수 소개 기능 구현
+    const renderFacultyTab = () => {
+        const professors = getProfessorsByProgram(programId || '');
+        const professorsPerPage = 9; // 3열 그리드에 맞게 9개로 변경
 
+        // 페이지네이션 계산
+        const totalPages = Math.ceil(professors.length / professorsPerPage);
+        const startIndex = (currentPage - 1) * professorsPerPage;
+        const endIndex = startIndex + professorsPerPage;
+        const currentProfessors = professors.slice(startIndex, endIndex);
+
+        const handlePageChange = (page: number) => {
+            setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        if (professors.length === 0) {
+            return (
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
+                    <div className="text-center">
+                        <UserCheck className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-gray-700 mb-2">Faculty Information</h3>
+                        <p className="text-gray-500 mb-6">Faculty profiles will be available soon.</p>
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div className="space-y-8">
+                {/* 헤더 */}
+                <div className="mb-8">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-2 flex items-center">
+                        <UserCheck className="w-8 h-8 mr-3" />
+                        Faculty Members
+                    </h2>
+                    <p className="text-gray-600">
+                        Meet our experienced professors who will guide your aviation career
+                    </p>
+                    <div className="mt-4 flex items-center text-sm text-gray-500">
+                        <span>Total: {professors.length} professors</span>
+                        {totalPages > 1 && (
+                            <span className="ml-4">
+                                Page {currentPage} of {totalPages}
+                            </span>
+                        )}
+                    </div>
+                </div>
+
+                {/* 교수진 카드 그리드 - 3열 그리드로 수정 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {currentProfessors.map((professor) => (
+                        <div key={professor.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            {/* 교수 사진 - 상단에 큰 이미지 */}
+                            <div className="w-full bg-gray-100">
+                                <img
+                                    src={professor.photo}
+                                    alt={professor.name}
+                                    className="w-full h-auto object-cover"
+                                    onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.src = '/asea-eng/images/professors/default-professor.png';
+                                    }}
+                                />
+                            </div>
+
+                            {/* 교수 정보 - 하단에 텍스트 */}
+                            <div className="p-4">
+                                <div className="mb-3">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                        {professor.name}
+                                    </h3>
+                                </div>
+
+                                {/* 강의 과목 */}
+                                <div>
+                                    <h4 className="text-base font-semibold text-gray-700 mb-2">
+                                        Teaching Subjects
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        {professor.courses.join(', ')}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* 페이지네이션 */}
+                {totalPages > 1 && (
+                    <div className="flex justify-center items-center space-x-2 py-8">
+                        {/* 이전 페이지 버튼 */}
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                currentPage === 1
+                                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                            }`}
+                        >
+                            Previous
+                        </button>
+
+                        {/* 페이지 번호 */}
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                            <button
+                                key={page}
+                                onClick={() => handlePageChange(page)}
+                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                    page === currentPage
+                                        ? 'bg-blue-900 text-white'
+                                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                                }`}
+                            >
+                                {page}
+                            </button>
+                        ))}
+
+                        {/* 다음 페이지 버튼 */}
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                currentPage === totalPages
+                                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                            }`}
+                        >
+                            Next
+                        </button>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
+    // 자격증 탭
     const renderCertificatesTab = () => {
         const certificationData = program.detailedCertifications || [];
 
@@ -465,6 +595,7 @@ const ProgramDetailPage: React.FC = () => {
         );
     };
 
+    // 시설 탭
     const renderFacilitiesTab = () => (
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
             <div className="text-center">
