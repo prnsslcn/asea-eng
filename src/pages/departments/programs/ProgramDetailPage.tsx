@@ -7,12 +7,14 @@ import {
 import { getDepartmentById, getProgramById } from '../../../data/departments/ProgramData';
 import { getDepartmentIdFromUrl } from '../../../router/routes';
 import { getProfessorsByProgram } from '../../../data/professors/ProfessorData';
+import { getFacilitiesByProgram, getFacilityImagePath, type FacilityImage } from '../../../data/facilities/FacilitiesData';
 
 const ProgramDetailPage: React.FC = () => {
     const { departmentId, programId } = useParams();
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('overview');
     const [currentPage, setCurrentPage] = useState(1);
+    const [lightboxImage, setLightboxImage] = useState<FacilityImage | null>(null);
 
     // 다른 엔드포인트로 이동할 때 첫 번째 탭으로 초기화
     useEffect(() => {
@@ -611,15 +613,200 @@ const ProgramDetailPage: React.FC = () => {
     };
 
     // 시설 탭
-    const renderFacilitiesTab = () => (
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
-            <div className="text-center">
-                <Construction className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">Facility Information</h3>
-                <p className="text-gray-500 mb-6">Training facility information will be available soon.</p>
+    const renderFacilitiesTab = () => {
+        const facilities = getFacilitiesByProgram(programId || '');
+        const facilitiesPerPage = 12; // 4열 그리드에 맞게 12개로 설정
+
+        // 페이지네이션 계산
+        const totalPages = Math.ceil(facilities.length / facilitiesPerPage);
+        const startIndex = (currentPage - 1) * facilitiesPerPage;
+        const endIndex = startIndex + facilitiesPerPage;
+        const currentFacilities = facilities.slice(startIndex, endIndex);
+
+        const handlePageChange = (page: number) => {
+            setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        const openLightbox = (facility: FacilityImage) => {
+            setLightboxImage(facility);
+        };
+
+        const closeLightbox = () => {
+            setLightboxImage(null);
+        };
+
+        // 키보드 네비게이션 - 이 useEffect는 컴포넌트 최상위 레벨로 이동해야 합니다!
+
+        if (facilities.length === 0) {
+            return (
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
+                    <div className="text-center">
+                        <Construction className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold text-gray-700 mb-2">Facility Information</h3>
+                        <p className="text-gray-500 mb-6">
+                            Training facility information for this program will be available soon.
+                        </p>
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div className="space-y-8">
+                {/* 헤더 */}
+                <div className="mb-8">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-2 flex items-center">
+                        <Construction className="w-8 h-8 mr-3" />
+                        Training Facilities
+                    </h2>
+                    <p className="text-gray-600">
+                        Explore our state-of-the-art facilities designed for {program.name}
+                    </p>
+                </div>
+
+                {/* 시설 갤러리 그리드 - 4열 그리드 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+                    {currentFacilities.map((facility) => (
+                        <div
+                            key={facility.id}
+                            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                            onClick={() => openLightbox(facility)}
+                        >
+                            {/* 시설 이미지 */}
+                            <div className="aspect-w-16 aspect-h-12 bg-gray-200 overflow-hidden">
+                                <img
+                                    src={getFacilityImagePath(facility.filename)}
+                                    alt={facility.title}
+                                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.src = '/asea-eng/images/facilities/placeholder-facility.jpg';
+                                    }}
+                                />
+                            </div>
+
+                            {/* 시설 정보 */}
+                            <div className="p-4">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                                    {facility.title}
+                                </h3>
+
+                                {/* 계열 배지 */}
+                                <div className="flex items-center">
+                                <span className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+                                    {facility.department}
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* 페이지네이션 */}
+                {totalPages > 1 && (
+                    <div className="flex justify-center items-center space-x-2 py-8">
+                        {/* 이전 페이지 버튼 */}
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                currentPage === 1
+                                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                            }`}
+                        >
+                            Previous
+                        </button>
+
+                        {/* 페이지 번호 */}
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                            <button
+                                key={page}
+                                onClick={() => handlePageChange(page)}
+                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                    page === currentPage
+                                        ? 'bg-blue-900 text-white'
+                                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                                }`}
+                            >
+                                {page}
+                            </button>
+                        ))}
+
+                        {/* 다음 페이지 버튼 */}
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                currentPage === totalPages
+                                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                            }`}
+                        >
+                            Next
+                        </button>
+                    </div>
+                )}
+
+                {/* 라이트박스 모달 */}
+                {lightboxImage && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+                        onClick={closeLightbox}
+                    >
+                        <div
+                            className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* 닫기 버튼 */}
+                            <button
+                                onClick={closeLightbox}
+                                className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
+                            >
+                                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+
+                            {/* 이미지 */}
+                            <div className="p-6">
+                                <img
+                                    src={getFacilityImagePath(lightboxImage.filename)}
+                                    alt={lightboxImage.title}
+                                    className="w-full h-auto max-h-[60vh] object-contain mx-auto rounded-lg"
+                                    onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.src = '/asea-eng/images/facilities/placeholder-facility.jpg';
+                                    }}
+                                />
+                            </div>
+
+                            {/* 시설 상세 정보 */}
+                            <div className="px-6 pb-6">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                                    {lightboxImage.title}
+                                </h3>
+
+                                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-600 mb-1">Department</h4>
+                                        <p className="text-gray-900">{lightboxImage.department}</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-600 mb-1">Campus</h4>
+                                        <p className="text-gray-900">
+                                            {lightboxImage.campus === 'seoul' ? 'Seoul Campus' : 'Icheon Campus'}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
-        </div>
-    );
+        );
+    };
 
     return (
         <div className="min-h-screen bg-gray-50">
