@@ -328,21 +328,6 @@ const FacilitiesPage: React.FC = () => {
                                     </svg>
                                     <span className="capitalize">{lightboxImage.campus} Campus</span>
                                 </div>
-
-                                {/* 프로그램 목록 */}
-                                <div>
-                                    <h4 className="text-sm font-medium text-gray-900 mb-2">Used by Programs:</h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {lightboxImage.programs.map((program, idx) => (
-                                            <span
-                                                key={idx}
-                                                className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-                                            >
-                                                {program}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
