@@ -240,18 +240,34 @@ const Header: React.FC = () => {
 
                         {/* 데스크톱 네비게이션 */}
                         <nav className="hidden lg:flex space-x-8">
-                            {Object.keys(menuStructure).map((menuName: string) => (
-                                <div
-                                    key={menuName}
-                                    className="relative"
-                                    onMouseEnter={() => handleMenuEnter(menuName)}
-                                    onMouseLeave={handleMenuLeave}
-                                >
-                                    <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                                        {menuName}
-                                    </button>
-                                </div>
-                            ))}
+                            {Object.keys(menuStructure).map((menuName: string) => {
+                                // Employment Status는 직접 클릭 가능한 버튼으로 처리
+                                if (menuName === "Employment Status") {
+                                    return (
+                                        <button
+                                            key={menuName}
+                                            onClick={() => handleNavigation("/employment-status")}
+                                            className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                                        >
+                                            {menuName}
+                                        </button>
+                                    );
+                                }
+
+                                // 다른 메뉴들은 기존 방식대로 처리
+                                return (
+                                    <div
+                                        key={menuName}
+                                        className="relative"
+                                        onMouseEnter={() => handleMenuEnter(menuName)}
+                                        onMouseLeave={handleMenuLeave}
+                                    >
+                                        <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                                            {menuName}
+                                        </button>
+                                    </div>
+                                );
+                            })}
                         </nav>
 
                         {/* 모바일 메뉴 버튼 */}
