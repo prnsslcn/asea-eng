@@ -1,4 +1,3 @@
-// 라우트 경로 상수 정의
 export const ROUTES = {
     HOME: '/',
     ABOUT: {
@@ -41,10 +40,10 @@ export const ROUTES = {
         ROOT: '/campus-life',
         FRESHMAN_SCHOLARSHIPS: '/campus-life/freshman-scholarships',
         ENROLLED_SCHOLARSHIPS: '/campus-life/enrolled-scholarships',
-        FACILITIES: '/campus-life/facilities',
-        TRAINING_LABS: '/campus-life/training-labs',
+        FACILITIES: '/campus-life/facilities', // 시설안내는 유지
         DORMITORY: '/campus-life/dormitory',
         WILDCARD: '/campus-life/*',
+        // TRAINING_LABS 제거됨
     },
 } as const;
 
