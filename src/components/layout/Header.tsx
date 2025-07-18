@@ -60,18 +60,13 @@ const menuStructure = {
             { name: "Police Officer Course", link: "/departments/defense-police-ai/programs/police-officer" }
         ]
     },
-    "Career Outcomes": [
-        { name: "Job Placement", link: "/career/job-placement" },
-        { name: "Transfer Results", link: "/career/transfer-results" },
-        { name: "NCO Admission", link: "/career/nco-admission" },
-        { name: "Army Academy Admission", link: "/career/army-academy-admission" }
-    ],
     "Campus Life": [
         { name: "Scholarships for Freshmen", link: "/campus-life/freshman-scholarships" },
         { name: "Scholarships for Enrolled Students", link: "/campus-life/enrolled-scholarships" },
         { name: "Campus Facilities", link: "/campus-life/facilities" },
         { name: "Student Housing", link: "/campus-life/dormitory" }
-    ]
+    ],
+    "Employment Status": "/employment-status"
 };
 
 const Header: React.FC = () => {
@@ -289,15 +284,19 @@ const Header: React.FC = () => {
                                     <button
                                         className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left"
                                         onClick={() => {
-                                            // 모바일에서는 첫 번째 서브메뉴로 이동하거나 토글 기능 구현
+                                            // 모바일에서는 직접 페이지로 이동
                                             if (menuName === "Departments") {
                                                 handleNavigation("/departments");
+                                            } else if (menuName === "Employment Status") {
+                                                handleNavigation("/employment-status");
                                             } else {
                                                 const firstSubmenu = Array.isArray(menuStructure[menuName as keyof typeof menuStructure])
                                                     ? (menuStructure[menuName as keyof typeof menuStructure] as MenuItem[])[0]?.link
                                                     : null;
                                                 if (firstSubmenu) {
                                                     handleNavigation(firstSubmenu);
+                                                } else if (typeof menuStructure[menuName as keyof typeof menuStructure] === 'string') {
+                                                    handleNavigation(menuStructure[menuName as keyof typeof menuStructure] as string);
                                                 }
                                             }
                                         }}

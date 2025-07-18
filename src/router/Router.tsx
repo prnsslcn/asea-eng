@@ -12,7 +12,7 @@ import ApplicationProcessPage from '../pages/admission/ApplicationProcessPage';
 import CareerRoadmapPage from '../pages/admission/CareerRoadmapPage';
 import AdmissionLayout from '../pages/admission/shared/AdmissionLayout';
 
-// About 관련 컴포넌트들 (Facilities 제거됨)
+// About 관련 컴포넌트들
 import {
     AboutLayout,
     AseaPage,
@@ -23,13 +23,12 @@ import {
     LocationPage
 } from '../pages/about';
 
-// Campus Life Pages (TrainingLabsPage 제거됨)
+// Campus Life Pages
 import CampusLifeLayout from "../pages/campus-life/shared/CampusLifeLayout.tsx";
-import FreshmanScholarshipsPage from '../pages/campus-life/FreshmanScholarshipsPage'; // 이동됨
-import FacilitiesPage from '../pages/campus-life/FacilitiesPage'; // 이동됨
+import FreshmanScholarshipsPage from '../pages/campus-life/FreshmanScholarshipsPage';
+import FacilitiesPage from '../pages/campus-life/FacilitiesPage';
 import EnrolledScholarshipsPage from "../pages/campus-life/EnrolledScholarshipsPage.tsx";
 import DormitoryPage from "../pages/campus-life/DormitoryPage.tsx";
-// TrainingLabsPage import 제거됨
 
 // Departments Layout
 import DepartmentsLayout from '../pages/departments/shared/DepartmentsLayout';
@@ -45,39 +44,21 @@ import DefensePoliceAIPage from '../pages/departments/DefensePoliceAIPage';
 // Programs (세부 전공)
 import ProgramDetailPage from '../pages/departments/programs/ProgramDetailPage';
 
-// Career Pages - 임시 개별 컴포넌트들
-const JobPlacementPage: React.FC = () => (
+// Employment Status Page - 새로 추가
+const EmploymentStatusPage: React.FC = () => (
     <div className="min-h-screen py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-blue-900 mb-8">Job Placement</h1>
-            <p className="text-lg text-gray-600">취업현황 페이지가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
-const TransferResultsPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-emerald-700 mb-8">Transfer Results</h1>
-            <p className="text-lg text-gray-600">편입현황 페이지가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
-const NCOAdmissionPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-rose-700 mb-8">NCO Admission</h1>
-            <p className="text-lg text-gray-600">부사관 합격현황 페이지가 곧 업데이트됩니다.</p>
-        </div>
-    </div>
-);
-
-const ArmyAcademyAdmissionPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-amber-700 mb-8">Army Academy Admission</h1>
-            <p className="text-lg text-gray-600">육군3사관학교 합격현황 페이지가 곧 업데이트됩니다.</p>
+            <h1 className="text-4xl font-bold text-blue-900 mb-8">Employment Status</h1>
+            <p className="text-lg text-gray-600">
+                Comprehensive employment statistics and career outcomes for ASEA Aviation College graduates.
+            </p>
+            <div className="mt-8 bg-blue-50 rounded-lg p-6">
+                <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2>
+                <p className="text-blue-800">
+                    Detailed employment statistics, job placement rates, transfer results,
+                    NCO admission data, and Army Academy admission results will be available soon.
+                </p>
+            </div>
         </div>
     </div>
 );
@@ -106,7 +87,7 @@ const Router: React.FC = () => {
                 {/* 메인 페이지 */}
                 <Route path={ROUTES.HOME} element={<HomePage />} />
 
-                {/* About Us 중첩 라우팅 - Facilities 제거됨 */}
+                {/* About Us 중첩 라우팅 */}
                 <Route path={ROUTES.ABOUT.ROOT} element={<AboutLayout />}>
                     <Route path="asea" element={<AseaPage />} />
                     <Route path="goals" element={<EducationalGoalsPage />} />
@@ -116,7 +97,7 @@ const Router: React.FC = () => {
                     <Route path="location" element={<LocationPage />} />
                 </Route>
 
-                {/* Departments (교육과정) 중첩 라우팅 - DepartmentsLayout 적용 */}
+                {/* Departments (교육과정) 중첩 라우팅 */}
                 <Route path={ROUTES.DEPARTMENTS.ROOT} element={<DepartmentsLayout />}>
                     <Route index element={<DepartmentsOverviewPage />} />
                     <Route path="aviation-maintenance" element={<AviationMaintenancePage />} />
@@ -125,24 +106,21 @@ const Router: React.FC = () => {
                     <Route path="aviation-security" element={<AviationSecurityPage />} />
                     <Route path="defense-police-ai" element={<DefensePoliceAIPage />} />
 
-                    {/* 세부 프로그램들도 DepartmentsLayout 내부로 이동 */}
+                    {/* 세부 프로그램들 */}
                     <Route path=":departmentId/programs/:programId" element={<ProgramDetailPage />} />
                 </Route>
 
-                {/* 입학안내 중첩 라우팅 - Freshman Scholarships 제거됨 */}
+                {/* 입학안내 중첩 라우팅 */}
                 <Route path={ROUTES.ADMISSION.ROOT} element={<AdmissionLayout />}>
                     <Route path="guide" element={<AdmissionGuidePage />} />
                     <Route path="process" element={<ApplicationProcessPage />} />
                     <Route path="roadmap" element={<CareerRoadmapPage />} />
                 </Route>
 
-                {/* Career Outcomes 라우팅 (개별 페이지들) */}
-                <Route path={ROUTES.CAREER.JOB_PLACEMENT} element={<JobPlacementPage />} />
-                <Route path={ROUTES.CAREER.TRANSFER_RESULTS} element={<TransferResultsPage />} />
-                <Route path={ROUTES.CAREER.NCO_ADMISSION} element={<NCOAdmissionPage />} />
-                <Route path={ROUTES.CAREER.ARMY_ACADEMY_ADMISSION} element={<ArmyAcademyAdmissionPage />} />
+                {/* Employment Status - 단일 페이지 */}
+                <Route path={ROUTES.EMPLOYMENT_STATUS} element={<EmploymentStatusPage />} />
 
-                {/* Campus Life 중첩 라우팅 - TrainingLabsPage 제거됨 */}
+                {/* Campus Life 중첩 라우팅 */}
                 <Route path={ROUTES.CAMPUS_LIFE.ROOT} element={<CampusLifeLayout />}>
                     <Route path="freshman-scholarships" element={<FreshmanScholarshipsPage />} />
                     <Route path="enrolled-scholarships" element={<EnrolledScholarshipsPage />} />

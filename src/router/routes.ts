@@ -28,22 +28,15 @@ export const ROUTES = {
         ROADMAP: '/admission/roadmap',
         WILDCARD: '/admission/*',
     },
-    CAREER: {
-        ROOT: '/career',
-        JOB_PLACEMENT: '/career/job-placement',
-        TRANSFER_RESULTS: '/career/transfer-results',
-        NCO_ADMISSION: '/career/nco-admission',
-        ARMY_ACADEMY_ADMISSION: '/career/army-academy-admission',
-        WILDCARD: '/career/*',
-    },
+    // Career 섹션을 Employment Status로 단순화
+    EMPLOYMENT_STATUS: '/employment-status',
     CAMPUS_LIFE: {
         ROOT: '/campus-life',
         FRESHMAN_SCHOLARSHIPS: '/campus-life/freshman-scholarships',
         ENROLLED_SCHOLARSHIPS: '/campus-life/enrolled-scholarships',
-        FACILITIES: '/campus-life/facilities', // 시설안내는 유지
+        FACILITIES: '/campus-life/facilities',
         DORMITORY: '/campus-life/dormitory',
         WILDCARD: '/campus-life/*',
-        // TRAINING_LABS 제거됨
     },
 } as const;
 
