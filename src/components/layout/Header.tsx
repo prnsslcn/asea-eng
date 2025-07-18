@@ -70,7 +70,6 @@ const menuStructure = {
         { name: "Scholarships for Freshmen", link: "/campus-life/freshman-scholarships" },
         { name: "Scholarships for Enrolled Students", link: "/campus-life/enrolled-scholarships" },
         { name: "Campus Facilities", link: "/campus-life/facilities" },
-        { name: "Practical Training Facilities", link: "/campus-life/training-labs" },
         { name: "Student Housing", link: "/campus-life/dormitory" }
     ]
 };
