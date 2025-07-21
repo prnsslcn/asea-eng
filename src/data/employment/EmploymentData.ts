@@ -358,11 +358,11 @@ export const getEmployeesByDepartment = (departmentId: string): EmployeeProfile[
 };
 
 export const getEmployeePhoto = (filename: string): string => {
-    return `/asea-eng/public/images/employment/${filename}`;
+    return `/asea-eng/images/employment/${filename}`;
 };
 
 export const getCompanyLogo = (filename: string): string => {
-    return `/asea-eng/public/images/employment/logos/${filename}`;
+    return `/asea-eng/images/employment/logos/${filename}`;
 };
 
 export const getDepartmentEmployees = (departmentId: string): EmployeeProfile[] => {
