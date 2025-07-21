@@ -105,7 +105,7 @@ const EmploymentStatusPage: React.FC = () => {
                 </div>
 
                 {/* 취업자 그리드 (5x8 = 40명) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mb-12">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mb-12">
                     {getCurrentDepartmentEmployees().map((employee) => (
                         <EmployeeCard key={employee.id} employee={employee} />
                     ))}
