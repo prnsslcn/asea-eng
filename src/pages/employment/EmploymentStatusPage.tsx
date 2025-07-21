@@ -10,8 +10,8 @@ const EmploymentStatusPage: React.FC = () => {
         { id: '01', name: 'Aviation Maintenance' },
         { id: '02', name: 'Smart Safety Diagnostics' },
         { id: '03', name: 'Aviation Tourism' },
-        { id: '04', name: 'Aviation Security' },
-        { id: '05', name: 'Defense & Police AI' }
+        { id: '05', name: 'Aviation Security' },
+        { id: '06', name: 'Defense & Police AI' }
     ];
 
     // 현재 활성 탭의 취업자 데이터 가져오기
