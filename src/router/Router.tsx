@@ -44,24 +44,26 @@ import DefensePoliceAIPage from '../pages/departments/DefensePoliceAIPage';
 // Programs (세부 전공)
 import ProgramDetailPage from '../pages/departments/programs/ProgramDetailPage';
 
+import EmploymentStatusPage from "../pages/employment/EmploymentStatusPage.tsx";
+
 // Employment Status Page - 새로 추가
-const EmploymentStatusPage: React.FC = () => (
-    <div className="min-h-screen py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-blue-900 mb-8">Employment Status</h1>
-            <p className="text-lg text-gray-600">
-                Comprehensive employment statistics and career outcomes for ASEA Aviation College graduates.
-            </p>
-            <div className="mt-8 bg-blue-50 rounded-lg p-6">
-                <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2>
-                <p className="text-blue-800">
-                    Detailed employment statistics, job placement rates, transfer results,
-                    NCO admission data, and Army Academy admission results will be available soon.
-                </p>
-            </div>
-        </div>
-    </div>
-);
+// const EmploymentStatusPage: React.FC = () => (
+//     <div className="min-h-screen py-16">
+//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//             <h1 className="text-4xl font-bold text-blue-900 mb-8">Employment Status</h1>
+//             <p className="text-lg text-gray-600">
+//                 Comprehensive employment statistics and career outcomes for ASEA Aviation College graduates.
+//             </p>
+//             <div className="mt-8 bg-blue-50 rounded-lg p-6">
+//                 <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2>
+//                 <p className="text-blue-800">
+//                     Detailed employment statistics, job placement rates, transfer results,
+//                     NCO admission data, and Army Academy admission results will be available soon.
+//                 </p>
+//             </div>
+//         </div>
+//     </div>
+// );
 
 const NotFoundPage: React.FC = () => (
     <div className="min-h-screen flex items-center justify-center">
