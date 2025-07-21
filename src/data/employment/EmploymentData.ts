@@ -347,6 +347,332 @@ export const employmentData: EmploymentData = {
                     position: "Aircraft Maintenance Engineer"
                 }
             ]
+        },
+        {
+            departmentId: "02",
+            departmentName: "Smart Safety Diagnostics",
+            employees: [
+                {
+                    id: "emp-02-001",
+                    name: "Wonyoung Noh",
+                    photo: "F_BoardJob_17187022451.jpg",
+                    companyLogo: "1717056815a249.png",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-002",
+                    name: "Kim",
+                    photo: "F_BoardJob_17120218440.jpg",
+                    companyLogo: "1712021845b219.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-003",
+                    name: "Chu",
+                    photo: "F_BoardJob_17120225430.jpg",
+                    companyLogo: "17120225435343.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-004",
+                    name: "Park",
+                    photo: "F_BoardJob_17120221470.jpg",
+                    companyLogo: "171202214742a8.JPG",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-005",
+                    name: "Kim",
+                    photo: "F_BoardJob_16977054700.jpg",
+                    companyLogo: "1697705470d84d.jfif",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-006",
+                    name: "Lee",
+                    photo: "F_BoardJob_17001077230.jpg",
+                    companyLogo: "1700107723b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-007",
+                    name: "Yoon",
+                    photo: "F_BoardJob_17001075910.jpg",
+                    companyLogo: "1700107591b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-008",
+                    name: "Choi",
+                    photo: "F_BoardJob_16807619710.png",
+                    companyLogo: "16807619712305.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-009",
+                    name: "Kim",
+                    photo: "F_BoardJob_17005258450.jpg",
+                    companyLogo: "17005258465827.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-010",
+                    name: "Park",
+                    photo: "F_BoardJob_16493053080.jpg",
+                    companyLogo: "1649305308b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-011",
+                    name: "Kim",
+                    photo: "F_BoardJob_16493050590.jpg",
+                    companyLogo: "1649305059a4bf.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-012",
+                    name: "Kang",
+                    photo: "F_BoardJob_16492982400.jpg",
+                    companyLogo: "16492982406f63.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-013",
+                    name: "Kim",
+                    photo: "F_BoardJob_16393572480.jpg",
+                    companyLogo: "1639357248d8f9.JPG",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-014",
+                    name: "Taehun Kim",
+                    photo: "F_BoardJob_16516463930.jpg",
+                    companyLogo: "1626312299b0f0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-015",
+                    name: "Yewon Ra",
+                    photo: "F_BoardJob_16263120020.jpg",
+                    companyLogo: "1626312002b0f0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-016",
+                    name: "Juho Yoon",
+                    photo: "F_BoardJob_16516463740.jpg",
+                    companyLogo: "1626311919b0f0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-017",
+                    name: "Sohyun Park",
+                    photo: "F_BoardJob_16151891730.jpg",
+                    companyLogo: "1615796028b2e8.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-018",
+                    name: "Daniel Kim",
+                    photo: "F_BoardJob_16030696230.jpg",
+                    companyLogo: "1603069623b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-019",
+                    name: "Kwanghun Kim",
+                    photo: "F_BoardJob_15953788930.jpg",
+                    companyLogo: "1670897187ff18.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-020",
+                    name: "Sungeun Kim",
+                    photo: "F_BoardJob_15946118120.jpg",
+                    companyLogo: "15946118122c9d.JPG",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-021",
+                    name: "Seokmin Lee",
+                    photo: "F_BoardJob_15828726020.jpg",
+                    companyLogo: "1582872602b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-022",
+                    name: "Minki Lee",
+                    photo: "F_BoardJob_15828709430.JPG",
+                    companyLogo: "15828709434711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-023",
+                    name: "Minwook Kim",
+                    photo: "F_BoardJob_15828705600.JPG",
+                    companyLogo: "15828705604711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-024",
+                    name: "Hyobeom Choi",
+                    photo: "F_BoardJob_15828705080.jpg",
+                    companyLogo: "15828705084711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-025",
+                    name: "Woongki Baek",
+                    photo: "F_BoardJob_15828704550.jpg",
+                    companyLogo: "1582870456b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-026",
+                    name: "Geonui Lee",
+                    photo: "F_BoardJob_15828704110.jpg",
+                    companyLogo: "15828704114711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-027",
+                    name: "Kiwon Yu",
+                    photo: "F_BoardJob_15828703310.jpg",
+                    companyLogo: "15828703316f63.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-028",
+                    name: "Sangha Gan",
+                    photo: "F_BoardJob_15828702860.jpg",
+                    companyLogo: "15828702864711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-029",
+                    name: "Sanghyun Kim",
+                    photo: "F_BoardJob_15828702340.jpg",
+                    companyLogo: "1582870234b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-030",
+                    name: "Geon Han",
+                    photo: "F_BoardJob_15828701970.jpg",
+                    companyLogo: "15828701974711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-031",
+                    name: "Donghyun Choi",
+                    photo: "F_BoardJob_15828701450.jpg",
+                    companyLogo: "15828701454711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-032",
+                    name: "Yongsin Jo",
+                    photo: "F_BoardJob_15816651120.jpg",
+                    companyLogo: "1581665112b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-033",
+                    name: "Myungjin Jung",
+                    photo: "F_BoardJob_15816641560.jpg",
+                    companyLogo: "1581664156b7d0.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-034",
+                    name: "Sungchun Lee",
+                    photo: "F_BoardJob_15816641060.jpg",
+                    companyLogo: "15816641064711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-035",
+                    name: "Taehyung Yu",
+                    photo: "F_BoardJob_15816640570.jpg",
+                    companyLogo: "15816640586f63.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-036",
+                    name: "Jonghan Kim",
+                    photo: "F_BoardJob_15816639900.jpg",
+                    companyLogo: "15816639904711.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-037",
+                    name: "Kyungwoo Park",
+                    photo: "F_BoardJob_15816639390.jpg",
+                    companyLogo: "1581663939b219.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-038",
+                    name: "Minseo Park",
+                    photo: "F_BoardJob_15802636130.jpg",
+                    companyLogo: "1580263613bdd5.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-039",
+                    name: "Jiye Heo",
+                    photo: "F_BoardJob_15802635200.jpg",
+                    companyLogo: "15802635201f8a.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                },
+                {
+                    id: "emp-02-040",
+                    name: "Jaejung Lim",
+                    photo: "F_BoardJob_15802630200.jpg",
+                    companyLogo: "15802630201f8a.jpg",
+                    department: "Smart Safety Diagnostics",
+                    position: "Safety Diagnostics Engineer"
+                }
+            ]
         }
     ]
 };
