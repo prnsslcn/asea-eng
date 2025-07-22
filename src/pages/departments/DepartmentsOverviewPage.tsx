@@ -142,7 +142,7 @@ const DepartmentsOverviewPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Departments Grid - DepartmentsSection 디자인 적용 */}
+            {/* Departments Section - 5개 카드 1행 균등 배치 */}
             <div className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
@@ -156,8 +156,8 @@ const DepartmentsOverviewPage: React.FC = () => {
                         <div className="mt-8 w-24 h-1 bg-blue-900 mx-auto"></div>
                     </div>
 
-                    {/* Departments Grid - 5개 계열만 표시, 2-2-1 레이아웃 */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 justify-center">
+                    {/* 카드를 max-w 전체 너비로 세로 1열 배치 */}
+                    <div className="space-y-8">
                         {Object.values(departmentsData).map((department) => {
                             const colors = getColorClasses(department.id);
                             const highlights = getDefaultHighlights(department.id);
@@ -166,75 +166,69 @@ const DepartmentsOverviewPage: React.FC = () => {
                                 <div
                                     key={department.id}
                                     onClick={() => handleDepartmentClick(department.id)}
-                                    className="bg-white rounded-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 max-w-sm mx-auto h-full flex flex-col"
+                                    className="bg-white rounded-3xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-full flex flex-col lg:flex-row"
                                 >
-                                    {/* Card Header - 고정 높이 */}
-                                    <div className={`${colors.bg} text-white p-6 rounded-t-2xl h-48 flex flex-col`}>
-                                        <div className="flex items-center justify-between mb-4">
-                                            <span className="text-white">
+                                    {/* Card Header - 모바일: 상단, 데스크톱: 좌측 */}
+                                    <div className={`${colors.bg} text-white p-6 lg:p-8 rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none w-full lg:w-1/3 flex flex-col justify-center`}>
+                                        <div className="flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start mb-4 lg:mb-6">
+                                            <span className="text-white mb-4 sm:mb-0 sm:mr-4 lg:mr-0 lg:mb-4">
                                                 {getDepartmentIcon(department.id)}
                                             </span>
-                                            <div className="text-right">
-                                                <h3 className="text-lg font-bold mb-1">{department.name}</h3>
-                                                <p className="text-sm opacity-90">{department.koreanName}</p>
+                                            <div className="text-center sm:text-left lg:text-left">
+                                                <h3 className="text-xl lg:text-2xl font-bold">{department.name}</h3>
                                             </div>
                                         </div>
-                                        <div className="flex-1 flex items-center">
-                                            <p className="text-sm leading-relaxed opacity-95">
-                                                {department.description}
-                                            </p>
-                                        </div>
+                                        <p className="text-sm lg:text-base leading-relaxed opacity-95 text-center sm:text-left lg:text-left">
+                                            {department.description}
+                                        </p>
                                     </div>
 
-                                    {/* Card Body - flex-1로 남은 공간 채우기 */}
-                                    <div className="p-6 flex-1 flex flex-col">
-                                        {/* Key Highlights */}
-                                        <div className="mb-6">
-                                            <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                                                <span className="w-2 h-2 bg-blue-900 rounded-full mr-2"></span>
-                                                Key Highlights
-                                            </h4>
-                                            <ul className="space-y-2">
-                                                {highlights.slice(0, 3).map((highlight, index) => (
-                                                    <li key={index} className="text-sm text-gray-600 flex items-start">
-                                                        <span className="text-blue-900 mr-2 mt-1">•</span>
-                                                        {highlight}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                    {/* Card Body - 모바일: 하단, 데스크톱: 우측 */}
+                                    <div className="p-6 lg:p-8 flex-1 flex flex-col justify-between">
+                                        <div>
+                                            {/* Key Highlights */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-900 mb-3 lg:mb-4 flex items-center text-base lg:text-lg">
+                                                    <span className={`w-2 h-2 lg:w-3 lg:h-3 ${colors.bg} rounded-full mr-2 lg:mr-3`}></span>
+                                                    Key Highlights
+                                                </h4>
+                                                <ul className="space-y-2 lg:space-y-3">
+                                                    {highlights.map((highlight, index) => (
+                                                        <li key={index} className="text-sm lg:text-base text-gray-600 flex items-start">
+                                                            <span className={`${colors.text} mr-2 lg:mr-3 mt-1 text-sm lg:text-lg`}>•</span>
+                                                            {highlight}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
 
-                                        {/* Programs Preview */}
-                                        <div className="mb-6">
-                                            <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                                                <span className="w-2 h-2 bg-blue-900 rounded-full mr-2"></span>
-                                                Programs ({department.programs.length})
-                                            </h4>
-                                            <div className="flex flex-wrap gap-2">
-                                                {department.programs.slice(0, 3).map((program, index) => (
-                                                    <span
-                                                        key={index}
-                                                        className={`text-xs px-3 py-1 rounded-full ${colors.text} bg-gray-100`}
-                                                    >
-                                                        {program.name}
-                                                    </span>
-                                                ))}
-                                                {department.programs.length > 3 && (
-                                                    <span className="text-xs px-3 py-1 rounded-full text-gray-500 bg-gray-100">
-                                                        +{department.programs.length - 3} more
-                                                    </span>
-                                                )}
+                                            {/* Programs Preview */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-900 mb-3 lg:mb-4 flex items-center text-base lg:text-lg">
+                                                    <span className={`w-2 h-2 lg:w-3 lg:h-3 ${colors.bg} rounded-full mr-2 lg:mr-3`}></span>
+                                                    Programs ({department.programs.length})
+                                                </h4>
+                                                <div className="flex flex-wrap gap-2 lg:gap-3">
+                                                    {department.programs.map((program, index) => (
+                                                        <span
+                                                            key={index}
+                                                            className={`text-xs lg:text-sm px-3 lg:px-4 py-1 lg:py-2 rounded-full ${colors.text} bg-gray-100 font-medium`}
+                                                        >
+                                                            {program.name}
+                                                        </span>
+                                                    ))}
+                                                </div>
                                             </div>
                                         </div>
 
-                                        {/* CTA Button - 하단 고정 */}
-                                        <div className="mt-auto">
+                                        {/* CTA Button */}
+                                        <div className="flex justify-center lg:justify-end">
                                             <button
-                                                className={`w-full py-3 px-6 rounded-lg border-2 ${colors.border} ${colors.text} ${colors.hover} hover:text-white font-semibold transition-all duration-300 flex items-center justify-center group`}
+                                                className={`w-full sm:w-auto py-3 px-6 lg:px-8 rounded-lg border-2 ${colors.border} ${colors.text} ${colors.hover} hover:text-white font-semibold transition-all duration-300 flex items-center justify-center group`}
                                             >
                                                 <span>Explore Department</span>
                                                 <svg
-                                                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                                                    className="w-4 h-4 lg:w-5 lg:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
                                                     fill="none"
                                                     stroke="currentColor"
                                                     viewBox="0 0 24 24"
