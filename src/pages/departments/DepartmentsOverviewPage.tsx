@@ -6,16 +6,6 @@ import { ROUTES } from '../../router/routes';
 
 const DepartmentsOverviewPage: React.FC = () => {
     const navigate = useNavigate();
-
-    const departmentStats = {
-        totalDepartments: 5,
-        totalPrograms: 19,
-        establishedYear: 1993,
-        graduationRate: 95,
-        employmentRate: 91,
-        students: 420
-    };
-
     const handleDepartmentClick = (departmentId: string) => {
         navigate(ROUTES.DEPARTMENTS.DEPARTMENT(departmentId));
     };
@@ -118,26 +108,6 @@ const DepartmentsOverviewPage: React.FC = () => {
                         <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">
                             Discover world-class aviation and specialized programs designed to launch your career in the skies and beyond
                         </p>
-                        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-4xl mx-auto">
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                                <div>
-                                    <div className="text-3xl font-bold text-yellow-300">{departmentStats.totalDepartments}</div>
-                                    <div className="text-sm text-blue-100">Departments</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-yellow-300">{departmentStats.totalPrograms}</div>
-                                    <div className="text-sm text-blue-100">Programs</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-yellow-300">{departmentStats.students}</div>
-                                    <div className="text-sm text-blue-100">Max Students</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-yellow-300">{departmentStats.employmentRate}%</div>
-                                    <div className="text-sm text-blue-100">Employment Rate</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
