@@ -16,29 +16,6 @@ const DepartmentsOverviewPage: React.FC = () => {
         students: 420
     };
 
-    const whyChooseASEA = [
-        {
-            icon: "🏆",
-            title: "33 Years of Excellence",
-            description: "Established in 1993, leading aviation education for over three decades"
-        },
-        {
-            icon: "✈️",
-            title: "Ministry Designated",
-            description: "Official aircraft maintenance technician training institute designated by MOLIT"
-        },
-        {
-            icon: "🎯",
-            title: "91% Employment Rate",
-            description: "Outstanding employment success rate across all departments"
-        },
-        {
-            icon: "🌟",
-            title: "Industry Partnerships",
-            description: "Strong connections with major airlines, defense, and tourism companies"
-        }
-    ];
-
     const handleDepartmentClick = (departmentId: string) => {
         navigate(ROUTES.DEPARTMENTS.DEPARTMENT(departmentId));
     };
@@ -274,65 +251,6 @@ const DepartmentsOverviewPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Statistics Section */}
-            <div className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">ASEA by the Numbers</h2>
-                        <p className="text-lg text-gray-600">Our commitment to excellence reflected in our achievements</p>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-900 mb-2">{departmentStats.establishedYear}</div>
-                            <div className="text-sm text-gray-600">Established</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-900 mb-2">{33}</div>
-                            <div className="text-sm text-gray-600">Years Experience</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-900 mb-2">{departmentStats.totalDepartments}</div>
-                            <div className="text-sm text-gray-600">Departments</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-900 mb-2">{departmentStats.totalPrograms}</div>
-                            <div className="text-sm text-gray-600">Programs</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-900 mb-2">{departmentStats.students}</div>
-                            <div className="text-sm text-gray-600">Max Students</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-900 mb-2">{departmentStats.employmentRate}%</div>
-                            <div className="text-sm text-gray-600">Employment</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Why Choose ASEA Section */}
-            <div className="py-16 bg-blue-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose ASEA Aviation College?</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Discover what makes ASEA the premier choice for aviation and specialized career education in Korea.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {whyChooseASEA.map((item, index) => (
-                            <div key={index} className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
-                                <div className="text-4xl mb-4">{item.icon}</div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
             {/* Call to Action */}
             <div className="py-16 bg-blue-900 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -342,12 +260,6 @@ const DepartmentsOverviewPage: React.FC = () => {
                         Choose your department and begin your transformation at ASEA Aviation College.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                            onClick={() => navigate('/admission')}
-                            className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
-                        >
-                            Start Your Application
-                        </button>
                         <button
                             onClick={() => navigate('/about/asea')}
                             className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition-colors"
