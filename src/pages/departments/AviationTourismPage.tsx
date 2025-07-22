@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDepartmentById } from '../../data/departments/ProgramData';
 import { ROUTES } from '../../router/routes';
+import { getFacilitiesByDepartment, getFacilityImagePath } from '../../data/facilities/FacilitiesData';
+import { employmentData, getEmployeePhoto, getCompanyLogo } from '../../data/employment/EmploymentData';
 
 const AviationTourismPage: React.FC = () => {
     const navigate = useNavigate();
@@ -15,67 +17,87 @@ const AviationTourismPage: React.FC = () => {
         navigate(ROUTES.DEPARTMENTS.PROGRAM('aviation-tourism', programId));
     };
 
+    // 항공관광계열 시설 데이터 가져오기
+    const facilities = getFacilitiesByDepartment('Aviation Tourism');
+
+    // 항공관광계열 취업자 데이터 가져오기
+    const employmentDepartment = employmentData.departments.find(dept => dept.departmentId === '03');
+    const employees = employmentDepartment ? employmentDepartment.employees.slice(0, 12) : []; // 12명만 표시
+
     const employmentAreas = [
         {
-            category: "국내외 항공사 객실승무원",
-            companies: "대한항공, 아시아나항공, 제주항공, 에어부산, 진에어, 피치항공, 에어로K, 플라이강원, 에어서울 외 다수"
+            category: "Domestic & International Airlines - Cabin Crew",
+            companies: "Korean Air, Asiana Airlines, Jeju Air, Air Busan, Jin Air, T'way Air, Aero K, Fly Gangwon, Air Seoul and many more"
         },
         {
-            category: "일반 서비스직",
-            companies: "KTX/SRT/AREX 객실승무원, 공항 VIP라운지 등의 의전서비스, 병원코디네이터, 전문서비스강사, 기업영업 분서 외 다수"
+            category: "General Service Positions",
+            companies: "KTX/SRT/AREX Cabin Crew, Airport VIP Lounge Protocol Services, Hospital Coordinators, Professional Service Instructors, Corporate Executive Secretaries and many more"
         },
         {
-            category: "여행사",
-            companies: "하나투어, 노랑풍선, 트래픽투어, 모두투어, 국외여행인솔자, 하릴링 현지 가이드(해외취업) 외 다수"
+            category: "Travel Agencies",
+            companies: "Hana Tour, Yellow Balloon, Trip.com, Modo Tour, International Tour Escorts, Philippines Local Guides (Overseas Employment) and many more"
         },
         {
-            category: "호텔리조트",
-            companies: "신라호텔, 롯데호텔, 메리어트 호텔브랜드, 하얏트 호텔, 힐튼 호텔 브랜드, 아코르 호텔 브랜드, 제주신화월드, 국내/국외 호텔 취업 외 다수"
+            category: "Hospitality Industry",
+            companies: "Shilla Hotel, Lotte Hotel, Marriott Hotel Brands, Hyatt Hotel, Hilton Hotel Brands, Accor Hotel Brands, Jeju Shinhwa World, Domestic/International Hotel Employment and many more"
         },
         {
-            category: "크루즈 승무원",
-            companies: "로얄캐리비안크루즈, 프린세스 크루즈, 코스타 크루즈, 스타 크루즈, 드림 크루즈, 퀸턴드 크루즈, 셀러브리티, 스타라인, 아자마라 외 다수"
+            category: "Cruise Crew",
+            companies: "Royal Caribbean, Princess Cruises, Costa Cruises, Star Cruises, Dream Cruises, Cunard Cruises, Celebrity, Steiner, Azamara and many more"
         },
         {
-            category: "공항 지상직",
-            companies: "인천/김포/김해/제주 등 국내 공항 및 해외 공항, 제주에어서비스, 샬틴에이비에이션서비스, 스위스포트 코리아, 피치에어서비스, 에어코리아, KA 외 다수"
+            category: "Airport Ground Staff",
+            companies: "Incheon/Gimpo/Gimhae/Jeju and other domestic airports & overseas airports, Jeju Air Service, Sharp Aviation Care, Swissport Korea, T'way Air Service, Air Korea, KA and many more"
         }
     ];
 
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+            <div className="relative bg-gradient-to-r from-rose-700 to-rose-600 text-white">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                            {department.name}
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                            Diverse Career Choices Through<br />
+                            Aviation/Tourism Convergence System!
                         </h1>
-                        <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">
-                            {department.description}
-                        </p>
+                        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-rose-100">
+                            Learn Both Flight Attendant & Tourism/Hotel Fields!
+                        </h2>
+                        <div className="space-y-4 mb-8">
+                            <p className="text-lg md:text-xl">
+                                Operating <span className="font-bold text-yellow-300">Airport Training Lab</span> & <span className="font-bold text-yellow-300">In-flight Training Lab</span> & <span className="font-bold text-yellow-300">Hotel F&B Training Lab</span>
+                            </p>
+                            <p className="text-lg md:text-xl">
+                                <span className="font-bold text-yellow-300">Hotel & Tourism Triple Crown Winner</span> - Selected & Certified by Ministry of Oceans and Fisheries, Ministry of Culture, Sports and Tourism, Korea Tourism Organization
+                            </p>
+                            <p className="text-lg md:text-xl">
+                                Providing opportunities for student <span className="font-bold text-yellow-300">overseas language training</span> and <span className="font-bold text-yellow-300">overseas hotel internships</span>
+                            </p>
+                            <p className="text-lg md:text-xl">
+                                <span className="font-bold text-yellow-300">Metropolitan area's only</span> Ministry of Oceans and Fisheries selected <span className="font-bold text-yellow-300">Cruise Professional Training Institution</span>
+                            </p>
+                        </div>
 
-                        {/* Key Highlights */}
+                        {/* Key Statistics */}
                         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-5xl mx-auto">
-                            <div className="text-2xl font-bold mb-4">항공/관광 조합시스템을 통한 다양한 진로선택!</div>
-                            <div className="text-lg mb-4">승무원, 관광•호텔 분야를 모두 배워서 있다!</div>
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                                <div className="bg-white bg-opacity-20 rounded-lg p-3">
-                                    <div className="font-bold text-cyan-300">공항지상실습</div>
-                                    <div className="text-xs">기계실습실험 & 호텔실습실 운영</div>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                                <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                                    <div className="text-xl font-bold text-yellow-300">Airport Training</div>
+                                    <div className="text-sm">Equipment Lab & Hotel Lab</div>
                                 </div>
-                                <div className="bg-white bg-opacity-20 rounded-lg p-3">
-                                    <div className="font-bold text-cyan-300">3+2제도 운영</div>
-                                    <div className="text-xs">해외수학여행 & 해외호텔실습</div>
+                                <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                                    <div className="text-xl font-bold text-yellow-300">3+2 System</div>
+                                    <div className="text-sm">Overseas Study Tour & Hotel Internship</div>
                                 </div>
-                                <div className="bg-white bg-opacity-20 rounded-lg p-3">
-                                    <div className="font-bold text-cyan-300">5성급 호텔연계</div>
-                                    <div className="text-xs">개인인턴 및 학기중 주말인턴</div>
+                                <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                                    <div className="text-xl font-bold text-yellow-300">5-Star Hotel</div>
+                                    <div className="text-sm">Internship & Weekend Programs</div>
                                 </div>
-                                <div className="bg-white bg-opacity-20 rounded-lg p-3">
-                                    <div className="font-bold text-cyan-300">수도권 유일</div>
-                                    <div className="text-xs">크루즈전문인력양성기관</div>
+                                <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                                    <div className="text-xl font-bold text-yellow-300">Seoul Area Only</div>
+                                    <div className="text-sm">Cruise Professional Training</div>
                                 </div>
                             </div>
                         </div>
@@ -88,47 +110,84 @@ const AviationTourismPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Aviation Tourism Programs</h2>
-                        <p className="text-lg text-gray-600">과정소개 자세히보기</p>
+                        <p className="text-lg text-gray-600">Detailed Program Information</p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6 mb-16">
-                        {department.programs.map((program, index) => (
-                            <button
-                                key={program.id}
-                                onClick={() => handleProgramClick(program.id)}
-                                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 text-left group hover:bg-blue-50"
-                            >
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="bg-blue-100 text-blue-900 rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
-                                        {index + 1}
+                    {/* 깔끔하고 우아한 프로그램 카드 */}
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl">
+                            {department.programs.map((program, index) => (
+                                <button
+                                    key={program.id}
+                                    onClick={() => handleProgramClick(program.id)}
+                                    className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 p-8 text-center group border border-gray-100 w-72 h-64"
+                                >
+                                    <div className="relative flex flex-col items-center justify-center h-full">
+                                        {/* 게이지 효과가 있는 번호 원 */}
+                                        <div className="relative mb-6">
+                                            {/* 게이지 원 (호버 시 애니메이션) */}
+                                            <svg className="absolute inset-0 w-24 h-24 -rotate-90 transform -translate-x-2 -translate-y-2" viewBox="0 0 100 100">
+                                                <circle
+                                                    cx="50"
+                                                    cy="50"
+                                                    r="45"
+                                                    fill="none"
+                                                    stroke="#e5e7eb"
+                                                    strokeWidth="2"
+                                                />
+                                                <circle
+                                                    cx="50"
+                                                    cy="50"
+                                                    r="45"
+                                                    fill="none"
+                                                    stroke="#be185d"
+                                                    strokeWidth="3"
+                                                    strokeDasharray="283"
+                                                    strokeDashoffset="283"
+                                                    className="group-hover:stroke-dashoffset-0 transition-all duration-700 ease-out"
+                                                />
+                                            </svg>
+
+                                            {/* 번호 원 */}
+                                            <div className="bg-gray-50 text-rose-700 rounded-full w-20 h-20 flex items-center justify-center font-bold text-2xl group-hover:bg-rose-700 group-hover:text-white transition-colors duration-200 relative z-10">
+                                                {index + 1}
+                                            </div>
+                                        </div>
+
+                                        {/* 프로그램 이름 */}
+                                        <h3 className="text-xl font-bold text-gray-900 mb-6 group-hover:text-rose-700 transition-colors duration-200 leading-tight px-2">
+                                            {program.name}
+                                        </h3>
+
+                                        {/* 우아한 화살표 */}
+                                        <div className="flex items-center space-x-1 text-gray-400 group-hover:text-rose-600 transition-colors duration-200">
+                                            <div className="w-4 h-px bg-current"></div>
+                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
+                                            <div className="w-4 h-px bg-current"></div>
+                                        </div>
                                     </div>
-                                    <svg className="w-6 h-6 text-gray-400 group-hover:text-blue-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
-                                    {program.name}
-                                </h3>
-                                <p className="text-sm text-gray-600">
-                                    {program.description}
-                                </p>
-                            </button>
-                        ))}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     {/* YouTube Video Section */}
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div className="p-6 border-b border-gray-200">
-                            <h3 className="text-xl font-bold text-gray-900">Department Introduction Video</h3>
-                        </div>
-                        <div className="aspect-w-16 aspect-h-9">
-                            <iframe
-                                src="https://www.youtube.com/embed/Bv7fSjsjIqQ?rel=0&vq=hd720&showinfo=0"
-                                className="w-full h-96"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
+                    <div className="mt-16">
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div className="p-6 border-b border-gray-200">
+                                <h3 className="text-xl font-bold text-gray-900">Department Introduction Video</h3>
+                            </div>
+                            <div className="aspect-w-16 aspect-h-9">
+                                <iframe
+                                    src="https://www.youtube.com/embed/Bv7fSjsjIqQ?rel=0&vq=hd720&showinfo=0"
+                                    className="w-full h-96"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,111 +198,71 @@ const AviationTourismPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Educational Goals</h2>
-                        <p className="text-lg text-gray-600 mb-2">항공관광사업에 필요한 글로벌 인재양성</p>
-                        <p className="text-gray-500">전문학사 학위 과정</p>
+                        <p className="text-lg text-gray-600 mb-2">Training global talent needed for aviation tourism industry</p>
+                        <p className="text-gray-500">Associate Degree Program</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        {/* 1학년 */}
+                        {/* 1st Year */}
+                        <div className="bg-rose-50 rounded-lg p-8">
+                            <div className="text-center mb-6">
+                                <div className="bg-rose-700 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                    <span className="text-xl font-bold">1st</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-rose-700">First Year</h3>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="bg-white rounded-lg p-6">
+                                    <h4 className="text-lg font-bold text-gray-900 mb-3">1. Basic Major Foundation</h4>
+                                    <p className="text-gray-600 mb-4">Acquiring comprehensive knowledge of aviation and tourism basic fields</p>
+                                    <ul className="space-y-2 text-sm text-gray-700">
+                                        <li>• Introduction to Tourism</li>
+                                        <li>• Introduction to Aviation Cabin Services</li>
+                                        <li>• Hotel Management Theory</li>
+                                    </ul>
+                                </div>
+
+                                <div className="bg-white rounded-lg p-6">
+                                    <h4 className="text-lg font-bold text-gray-900 mb-3">2. Specialized Introduction Course</h4>
+                                    <p className="text-gray-600 mb-4">Knowledge acquisition of various job categories based on comprehensive understanding of aviation and tourism</p>
+                                    <ul className="space-y-2 text-sm text-gray-700">
+                                        <li>• Aviation Tourism Service</li>
+                                        <li>• Food & Beverage Practice</li>
+                                        <li>• Field Internship</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 2nd Year */}
                         <div className="bg-blue-50 rounded-lg p-8">
                             <div className="text-center mb-6">
                                 <div className="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                                    <span className="text-xl font-bold">1st</span>
-                                </div>
-                                <h3 className="text-2xl font-bold text-blue-900">1학년</h3>
-                            </div>
-
-                            <div className="space-y-6">
-                                <div className="bg-white rounded-lg p-6">
-                                    <h4 className="text-lg font-bold text-gray-900 mb-3">1. 전공기본함양</h4>
-                                    <p className="text-gray-600 mb-4">항공, 관광 기본 분야에 대한 전반적 지식 습득</p>
-                                    <ul className="space-y-2 text-sm text-gray-700">
-                                        <li>• 관광학개론</li>
-                                        <li>• 항공객실업무개론</li>
-                                        <li>• 호텔경영론</li>
-                                    </ul>
-                                </div>
-
-                                <div className="bg-white rounded-lg p-6">
-                                    <h4 className="text-lg font-bold text-gray-900 mb-3">2. 전공입문과정</h4>
-                                    <p className="text-gray-600 mb-4">항공, 관광에 대탄 전반적 이해를 바탕으로 한 다양한 직종군 지식습득</p>
-                                    <ul className="space-y-2 text-sm text-gray-700">
-                                        <li>• 항공관광서비스</li>
-                                        <li>• 식음료실무</li>
-                                        <li>• 현장실습</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* 2학년 */}
-                        <div className="bg-emerald-50 rounded-lg p-8">
-                            <div className="text-center mb-6">
-                                <div className="bg-emerald-700 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                     <span className="text-xl font-bold">2nd</span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-emerald-700">2학년</h3>
+                                <h3 className="text-2xl font-bold text-blue-900">Second Year</h3>
                             </div>
 
                             <div className="space-y-6">
                                 <div className="bg-white rounded-lg p-6">
-                                    <h4 className="text-lg font-bold text-gray-900 mb-3">1. 전공심화과정</h4>
-                                    <p className="text-gray-600 mb-4">항공, 관광 현장에서 즉시 적용 가능한 지식 습득 및 목표 취업처 선택</p>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-3">1. Advanced Major Course</h4>
+                                    <p className="text-gray-600 mb-4">Acquiring knowledge immediately applicable to aviation and tourism fields and selecting target employment destinations</p>
                                     <ul className="space-y-2 text-sm text-gray-700">
-                                        <li>• 문화관광론</li>
-                                        <li>• 분석안전실무</li>
-                                        <li>• 해외어학연수</li>
+                                        <li>• Cultural Tourism Theory</li>
+                                        <li>• Flight Safety Practice</li>
+                                        <li>• Overseas Language Training</li>
                                     </ul>
                                 </div>
 
                                 <div className="bg-white rounded-lg p-6">
-                                    <h4 className="text-lg font-bold text-gray-900 mb-3">2. 실무능력강화</h4>
-                                    <p className="text-gray-600 mb-4">항공, 관광 목표 취업처에 따른 집중 교육</p>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-3">2. Practical Skills Enhancement</h4>
+                                    <p className="text-gray-600 mb-4">Intensive education according to aviation and tourism target employment destinations</p>
                                     <ul className="space-y-2 text-sm text-gray-700">
-                                        <li>• 여행업실무</li>
-                                        <li>• 여객운송실무</li>
-                                        <li>• 항공, 가이드, 호텔 분야별 맞춤 취업반 운영</li>
+                                        <li>• Travel Industry Practice</li>
+                                        <li>• Passenger Ticketing Practice</li>
+                                        <li>• Customized employment programs by field: Aviation, Guide, Hotel</li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Specialization Image Section */}
-            <div className="py-16 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-white rounded-lg shadow-md p-8 text-center">
-                        <div className="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg p-12">
-                            <div className="max-w-3xl mx-auto">
-                                <div className="flex justify-center space-x-8 mb-6">
-                                    <div className="text-5xl">✈️</div>
-                                    <div className="text-5xl">🏨</div>
-                                    <div className="text-5xl">🌍</div>
-                                    <div className="text-5xl">🚢</div>
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Aviation Tourism Specialization</h3>
-                                <p className="text-gray-600 text-lg">
-                                    항공•관광 융합시스템을 통한 글로벌 서비스 전문가 양성
-                                </p>
-                                <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                                    <div className="bg-white rounded-lg p-3">
-                                        <div className="font-bold text-blue-600">항공</div>
-                                        <div className="text-gray-600">승무원 & 지상직</div>
-                                    </div>
-                                    <div className="bg-white rounded-lg p-3">
-                                        <div className="font-bold text-blue-600">호텔</div>
-                                        <div className="text-gray-600">리조트 & 관광</div>
-                                    </div>
-                                    <div className="bg-white rounded-lg p-3">
-                                        <div className="font-bold text-blue-600">여행</div>
-                                        <div className="text-gray-600">가이드 & 여행사</div>
-                                    </div>
-                                    <div className="bg-white rounded-lg p-3">
-                                        <div className="font-bold text-blue-600">크루즈</div>
-                                        <div className="text-gray-600">승무원 & 서비스</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -252,22 +271,22 @@ const AviationTourismPage: React.FC = () => {
             </div>
 
             {/* Employment Areas */}
-            <div className="py-16 bg-white">
+            <div className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Employment Opportunities</h2>
-                        <p className="text-lg text-gray-600">졸업 후 진로</p>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Career Opportunities After Graduation</h2>
+                        <p className="text-lg text-gray-600">Career paths after graduation</p>
                     </div>
 
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <div className="overflow-x-auto">
                             <table className="w-full">
-                                <thead className="bg-blue-50">
+                                <thead className="bg-rose-50">
                                 <tr>
-                                    <th className="px-6 py-4 text-left text-lg font-bold text-blue-900 w-1/4">
+                                    <th className="px-6 py-4 text-left text-lg font-bold text-rose-700 w-1/4">
                                         Career Field
                                     </th>
-                                    <th className="px-6 py-4 text-left text-lg font-bold text-blue-900">
+                                    <th className="px-6 py-4 text-left text-lg font-bold text-rose-700">
                                         Companies & Organizations
                                     </th>
                                 </tr>
@@ -290,17 +309,17 @@ const AviationTourismPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Training Facilities */}
+            {/* Training Facilities Section */}
             <div className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between mb-12">
                         <div>
                             <h2 className="text-3xl font-bold text-gray-900 mb-4">Training Facilities</h2>
-                            <p className="text-lg text-gray-600">실습실 소개</p>
+                            <p className="text-lg text-gray-600">Laboratory Introduction</p>
                         </div>
                         <button
                             onClick={() => navigate('/campus-life/facilities')}
-                            className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors flex items-center space-x-2"
+                            className="bg-rose-700 text-white px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center space-x-2"
                         >
                             <span>View All Facilities</span>
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -309,53 +328,163 @@ const AviationTourismPage: React.FC = () => {
                         </button>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[
-                            { name: "객실승무원실습실", icon: "✈️" },
-                            { name: "호텔실습실", icon: "🏨" },
-                            { name: "식음료실습실", icon: "🍽️" },
-                            { name: "바리스타실습실", icon: "☕" },
-                            { name: "여행실무실습실", icon: "🌍" },
-                            { name: "크루즈실습실", icon: "🚢" }
-                        ].map((facility, index) => (
-                            <div key={index} className="bg-white rounded-lg overflow-hidden group hover:shadow-lg transition-shadow">
-                                <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-100 to-cyan-100">
-                                    <div className="flex items-center justify-center">
-                                        <div className="text-center">
-                                            <div className="text-4xl mb-2">{facility.icon}</div>
-                                            <p className="text-blue-600 font-medium">{facility.name}</p>
+                    {/* 좌우 스크롤 Facilities */}
+                    <div className="relative">
+                        <div className="overflow-x-auto pb-4">
+                            <div className="flex space-x-6" style={{ width: 'max-content' }}>
+                                {facilities.map((facility, index) => (
+                                    <div key={index} className="flex-none w-80 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                                        <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
+                                            <img
+                                                src={getFacilityImagePath(facility.filename)}
+                                                alt={facility.title}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    const target = e.target as HTMLImageElement;
+                                                    target.style.display = 'none';
+                                                    const parent = target.parentElement;
+                                                    if (parent) {
+                                                        parent.innerHTML = `
+                                                            <div class="text-center">
+                                                                <svg class="w-16 h-16 text-rose-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H5m0 0h2M7 7h10M7 10h10M7 13h10M7 16h10" />
+                                                                </svg>
+                                                                <p class="text-rose-600 font-medium">Training Facility</p>
+                                                            </div>
+                                                        `;
+                                                    }
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="font-bold text-gray-900">
+                                                {facility.title}
+                                            </h3>
+                                            <p className="text-sm text-gray-600 mt-2">
+                                                {facility.department}
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="font-bold text-gray-900 group-hover:text-blue-900 transition-colors">
-                                        {facility.name}
-                                    </h3>
-                                    <p className="text-sm text-gray-600 mt-1">실무중심 체험형 교육시설</p>
-                                </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+
+                        {/* 스크롤 힌트 */}
+                        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 rounded-l-lg p-2 shadow-md">
+                            <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Employment Status Section */}
+            <div className="py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between mb-12">
+                        <div>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Employment Status</h2>
+                            <p className="text-lg text-gray-600">Recent employment achievements from Aviation Tourism Department</p>
+                        </div>
+                        <button
+                            onClick={() => navigate('/employment-status')}
+                            className="bg-rose-700 text-white px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center space-x-2"
+                        >
+                            <span>View All Employment Status</span>
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    {/* 좌우 스크롤 Employment Cards */}
+                    <div className="relative">
+                        <div className="overflow-x-auto pb-4">
+                            <div className="flex space-x-4" style={{ width: 'max-content' }}>
+                                {employees.map((employee) => (
+                                    <div key={employee.id} className="flex-none w-48 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                                        {/* 취업자 사진 */}
+                                        <div className="w-full h-56 bg-gray-200 flex items-center justify-center">
+                                            <img
+                                                src={getEmployeePhoto(employee.photo)}
+                                                alt={employee.name}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    const target = e.target as HTMLImageElement;
+                                                    target.style.display = 'none';
+                                                    const parent = target.parentElement;
+                                                    if (parent) {
+                                                        parent.innerHTML = `
+                                                            <div class="text-center">
+                                                                <svg class="w-12 h-12 text-rose-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                                                </svg>
+                                                                <p class="text-xs text-rose-600 font-medium">Graduate Photo</p>
+                                                            </div>
+                                                        `;
+                                                    }
+                                                }}
+                                            />
+                                        </div>
+
+                                        {/* 취업자 정보 */}
+                                        <div className="p-4">
+                                            {/* 회사 로고 */}
+                                            <div className="flex justify-center mb-3 h-6">
+                                                <img
+                                                    src={getCompanyLogo(employee.companyLogo)}
+                                                    alt="Company Logo"
+                                                    className="h-6 object-contain"
+                                                    onError={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.style.display = 'none';
+                                                    }}
+                                                />
+                                            </div>
+
+                                            {/* 이름 */}
+                                            <h3 className="text-sm font-semibold text-gray-900 text-center mb-1">
+                                                {employee.name}
+                                            </h3>
+
+                                            {/* 직책 */}
+                                            <p className="text-xs text-gray-600 text-center">
+                                                {employee.position}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* 스크롤 힌트 */}
+                        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 rounded-l-lg p-2 shadow-md">
+                            <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* Call to Action */}
-            <div className="py-16 bg-blue-900 text-white">
+            <div className="py-16 bg-rose-700 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold mb-4">Ready to Explore the Aviation Tourism World?</h2>
-                    <p className="text-xl mb-8 text-blue-100">
+                    <p className="text-xl mb-8 text-rose-100">
                         Join ASEA's Aviation Tourism program and discover endless career possibilities!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button
                             onClick={() => navigate('/admission')}
-                            className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                            className="bg-white text-rose-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
                         >
                             Apply Now
                         </button>
                         <button
                             onClick={() => navigate('/about/asea')}
-                            className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition-colors"
+                            className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-rose-700 transition-colors"
                         >
                             Learn More About ASEA
                         </button>
