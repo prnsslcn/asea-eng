@@ -9,12 +9,75 @@ import { getDepartmentIdFromUrl } from '../../../router/routes';
 import { getProfessorsByProgram } from '../../../data/professors/ProfessorData';
 import { getFacilitiesByProgram, getFacilityImagePath, type FacilityImage } from '../../../data/facilities/FacilitiesData';
 
+// 계열별 색상 테마 정의
+const getDepartmentColorTheme = (departmentId: string) => {
+    switch (departmentId) {
+        case 'aviation-maintenance':
+            return {
+                primary: 'blue-900',
+                secondary: 'blue-800',
+                light: 'blue-50',
+                text: 'blue-900',
+                accent: 'blue-100',
+                hover: 'blue-800'
+            };
+        case 'smart-safety':
+            return {
+                primary: 'emerald-700',
+                secondary: 'emerald-600',
+                light: 'emerald-50',
+                text: 'emerald-700',
+                accent: 'emerald-100',
+                hover: 'emerald-600'
+            };
+        case 'aviation-tourism':
+            return {
+                primary: 'rose-700',
+                secondary: 'rose-600',
+                light: 'rose-50',
+                text: 'rose-700',
+                accent: 'rose-100',
+                hover: 'rose-600'
+            };
+        case 'aviation-security':
+            return {
+                primary: 'slate-800',
+                secondary: 'slate-700',
+                light: 'slate-50',
+                text: 'slate-800',
+                accent: 'slate-100',
+                hover: 'slate-700'
+            };
+        case 'defense-police-ai':
+            return {
+                primary: 'amber-700',
+                secondary: 'amber-600',
+                light: 'amber-50',
+                text: 'amber-700',
+                accent: 'amber-100',
+                hover: 'amber-600'
+            };
+        default:
+            return {
+                primary: 'blue-900',
+                secondary: 'blue-800',
+                light: 'blue-50',
+                text: 'blue-900',
+                accent: 'blue-100',
+                hover: 'blue-800'
+            };
+    }
+};
+
 const ProgramDetailPage: React.FC = () => {
     const { departmentId, programId } = useParams();
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('overview');
     const [currentPage, setCurrentPage] = useState(1);
     const [lightboxImage, setLightboxImage] = useState<FacilityImage | null>(null);
+
+    // 색상 테마 가져오기
+    const colorTheme = getDepartmentColorTheme(departmentId || '');
 
     // 다른 엔드포인트로 이동할 때 첫 번째 탭으로 초기화
     useEffect(() => {
@@ -43,7 +106,7 @@ const ProgramDetailPage: React.FC = () => {
                     <p className="text-gray-600 mb-8">The program you requested does not exist.</p>
                     <button
                         onClick={() => navigate('/departments')}
-                        className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                        className={`bg-${colorTheme.primary} hover:bg-${colorTheme.hover} text-white px-6 py-3 rounded-lg font-semibold transition-colors`}
                     >
                         Back to Departments
                     </button>
@@ -118,7 +181,7 @@ const ProgramDetailPage: React.FC = () => {
                     <ul className="space-y-4">
                         {program.features.map((feature, index) => (
                             <li key={index} className="flex items-start">
-                                <CheckCircle className="w-5 h-5 text-blue-600 mt-1 mr-3 flex-shrink-0" />
+                                <CheckCircle className={`w-5 h-5 text-${colorTheme.text} mt-1 mr-3 flex-shrink-0`} />
                                 <span className="text-gray-700 leading-relaxed">{feature}</span>
                             </li>
                         ))}
@@ -223,7 +286,7 @@ const ProgramDetailPage: React.FC = () => {
                                                 {area.companies.map((company, companyIndex) => (
                                                     <span
                                                         key={companyIndex}
-                                                        className="inline-block bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium"
+                                                        className={`inline-block bg-${colorTheme.light} text-${colorTheme.text} px-3 py-1 rounded-full text-sm font-medium`}
                                                     >
                                                             {company}
                                                         </span>
@@ -240,12 +303,12 @@ const ProgramDetailPage: React.FC = () => {
                         <div className="md:hidden space-y-4">
                             {program.employmentAreas.map((area, index) => (
                                 <div key={index} className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-emerald-700 mb-3">{area.category}</h4>
+                                    <h4 className={`font-semibold text-${colorTheme.text} mb-3`}>{area.category}</h4>
                                     <div className="flex flex-wrap gap-2">
                                         {area.companies.map((company, companyIndex) => (
                                             <span
                                                 key={companyIndex}
-                                                className="inline-block bg-emerald-50 text-emerald-800 px-2 py-1 rounded-full text-xs font-medium"
+                                                className={`inline-block bg-${colorTheme.light} text-${colorTheme.text} px-2 py-1 rounded-full text-xs font-medium`}
                                             >
                                                 {company}
                                             </span>
@@ -264,7 +327,7 @@ const ProgramDetailPage: React.FC = () => {
                                 {program.transferUniversities.map((university, index) => (
                                     <span
                                         key={index}
-                                        className="inline-block bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                                        className={`inline-block bg-${colorTheme.accent} text-${colorTheme.text} px-3 py-1 rounded-full text-sm font-medium`}
                                     >
                                         {university}
                                     </span>
@@ -321,16 +384,16 @@ const ProgramDetailPage: React.FC = () => {
 
         return (
             <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
+                <h2 className={`text-3xl font-bold text-${colorTheme.text} mb-8 flex items-center`}>
                     <GraduationCap className="w-8 h-8 mr-3" />
                     Curriculum Structure
                 </h2>
 
                 {Object.entries(semesterGroups).map(([semester, courses]) => (
                     <div key={semester} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                        <div className="bg-blue-900 text-white px-6 py-4">
+                        <div className={`bg-${colorTheme.primary} text-white px-6 py-4`}>
                             <h3 className="text-xl font-bold">{semester}</h3>
-                            <p className="text-blue-100 text-sm">{courses.length} courses</p>
+                            <p className={`text-${colorTheme.light} text-sm`}>{courses.length} courses</p>
                         </div>
 
                         <div className="hidden md:block overflow-x-auto">
@@ -351,7 +414,7 @@ const ProgramDetailPage: React.FC = () => {
                                                 course.category === 'Major Required'
                                                     ? 'bg-red-100 text-red-800'
                                                     : course.category === 'Major Elective'
-                                                        ? 'bg-blue-100 text-blue-800'
+                                                        ? `bg-${colorTheme.accent} text-${colorTheme.text}`
                                                         : course.category === 'Advanced Major'
                                                             ? 'bg-purple-100 text-purple-800'
                                                             : 'bg-gray-100 text-gray-800'
@@ -383,7 +446,7 @@ const ProgramDetailPage: React.FC = () => {
                                             course.category === 'Major Required'
                                                 ? 'bg-red-100 text-red-800'
                                                 : course.category === 'Major Elective'
-                                                    ? 'bg-blue-100 text-blue-800'
+                                                    ? `bg-${colorTheme.accent} text-${colorTheme.text}`
                                                     : course.category === 'Advanced Major'
                                                         ? 'bg-purple-100 text-purple-800'
                                                         : 'bg-gray-100 text-gray-800'
@@ -439,7 +502,7 @@ const ProgramDetailPage: React.FC = () => {
             <div className="space-y-8">
                 {/* 헤더 */}
                 <div className="mb-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-2 flex items-center">
+                    <h2 className={`text-3xl font-bold text-${colorTheme.text} mb-2 flex items-center`}>
                         <UserCheck className="w-8 h-8 mr-3" />
                         Faculty Members
                     </h2>
@@ -521,7 +584,7 @@ const ProgramDetailPage: React.FC = () => {
                                 onClick={() => handlePageChange(page)}
                                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                                     page === currentPage
-                                        ? 'bg-blue-900 text-white'
+                                        ? `bg-${colorTheme.primary} text-white`
                                         : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                                 }`}
                             >
@@ -565,7 +628,7 @@ const ProgramDetailPage: React.FC = () => {
 
         return (
             <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-blue-900 mb-8 flex items-center">
+                <h2 className={`text-3xl font-bold text-${colorTheme.text} mb-8 flex items-center`}>
                     <Award className="w-8 h-8 mr-3" />
                     Certifications & Licenses
                 </h2>
@@ -573,9 +636,9 @@ const ProgramDetailPage: React.FC = () => {
                 <div className="space-y-6">
                     {certificationData.map((cert, index) => (
                         <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                            <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white px-6 py-4">
+                            <div className={`bg-gradient-to-r from-${colorTheme.primary} to-${colorTheme.secondary} text-white px-6 py-4`}>
                                 <h3 className="text-xl font-bold mb-1">{cert.name}</h3>
-                                <p className="text-blue-100 text-sm">{cert.authority}</p>
+                                <p className={`text-${colorTheme.light} text-sm`}>{cert.authority}</p>
                             </div>
 
                             <div className="p-6">
@@ -591,7 +654,7 @@ const ProgramDetailPage: React.FC = () => {
                                                 href={cert.website}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                                                className={`text-${colorTheme.text} hover:text-${colorTheme.secondary} font-medium flex items-center`}
                                             >
                                                 Visit Website
                                                 <ExternalLink className="w-4 h-4 ml-1" />
@@ -636,8 +699,6 @@ const ProgramDetailPage: React.FC = () => {
             setLightboxImage(null);
         };
 
-        // 키보드 네비게이션 - 이 useEffect는 컴포넌트 최상위 레벨로 이동해야 합니다!
-
         if (facilities.length === 0) {
             return (
                 <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-12">
@@ -656,7 +717,7 @@ const ProgramDetailPage: React.FC = () => {
             <div className="space-y-8">
                 {/* 헤더 */}
                 <div className="mb-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-2 flex items-center">
+                    <h2 className={`text-3xl font-bold text-${colorTheme.text} mb-2 flex items-center`}>
                         <Construction className="w-8 h-8 mr-3" />
                         Training Facilities
                     </h2>
@@ -694,7 +755,7 @@ const ProgramDetailPage: React.FC = () => {
 
                                 {/* 계열 배지 */}
                                 <div className="flex items-center">
-                                <span className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+                                <span className={`inline-block bg-${colorTheme.accent} text-${colorTheme.text} px-2 py-1 rounded-full text-xs font-medium`}>
                                     {facility.department}
                                 </span>
                                 </div>
@@ -726,7 +787,7 @@ const ProgramDetailPage: React.FC = () => {
                                 onClick={() => handlePageChange(page)}
                                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                                     page === currentPage
-                                        ? 'bg-blue-900 text-white'
+                                        ? `bg-${colorTheme.primary} text-white`
                                         : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                                 }`}
                             >
@@ -811,11 +872,11 @@ const ProgramDetailPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section - HTML의 title 부분을 반영 */}
-            <div className="bg-blue-900 text-white">
+            <div className={`bg-${colorTheme.primary} text-white`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <button
                         onClick={() => navigate(`/departments/${departmentId}`)}
-                        className="flex items-center text-blue-200 hover:text-white mb-6 transition-colors"
+                        className={`flex items-center text-${colorTheme.light} hover:text-white mb-6 transition-colors`}
                     >
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Back to {department.name}
@@ -825,14 +886,13 @@ const ProgramDetailPage: React.FC = () => {
                     <div className="space-y-6">
                         <div>
                             <h1 className="text-4xl md:text-5xl font-bold mb-2">{program.name}</h1>
-                            <p className="text-xl text-blue-100">{program.koreanName}</p>
                         </div>
 
                         {/* HTML의 주요 특장점 (btn 클래스 부분) */}
                         {program.highlights && program.highlights.length > 0 && (
-                            <div className="bg-blue-800 rounded-xl p-6 space-y-4">
+                            <div className={`bg-${colorTheme.secondary} rounded-xl p-6 space-y-4`}>
                                 {program.highlights.map((highlight, index) => (
-                                    <div key={index} className="text-blue-50">
+                                    <div key={index} className={`text-${colorTheme.light}`}>
                                         <p className="text-lg font-semibold">{highlight}</p>
                                     </div>
                                 ))}
@@ -840,9 +900,9 @@ const ProgramDetailPage: React.FC = () => {
                         )}
 
                         {/* HTML의 text1 부분 (학위 정보) */}
-                        <div className="bg-blue-800 rounded-lg p-4">
-                            <p className="text-blue-100 text-lg">
-                                <span className="text-blue-50 font-semibold">{program.duration}</span>
+                        <div className={`bg-${colorTheme.secondary} rounded-lg p-4`}>
+                            <p className={`text-${colorTheme.light} text-lg`}>
+                                <span className={`text-${colorTheme.light} font-semibold`}>{program.duration}</span>
                             </p>
                         </div>
                     </div>
@@ -859,7 +919,7 @@ const ProgramDetailPage: React.FC = () => {
                                 onClick={() => handleTabChange(tab.id)}
                                 className={`flex items-center px-6 py-4 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                                     activeTab === tab.id
-                                        ? 'border-blue-900 text-blue-900 bg-blue-50'
+                                        ? `border-${colorTheme.primary} text-${colorTheme.text} bg-${colorTheme.light}`
                                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                                 }`}
                             >
