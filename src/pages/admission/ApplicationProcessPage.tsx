@@ -48,7 +48,7 @@ const ApplicationProcessPage: React.FC = () => {
     ];
 
     return (
-        <div className="space-y-12">
+        <div className="space-y-36">
             {/* Hero Section */}
             <div className="text-center">
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-blue-900 mt-10 sm:mt-16 lg:mt-20 mb-2 px-4">
