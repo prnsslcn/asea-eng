@@ -299,8 +299,8 @@ const AdmissionGuidePage: React.FC = () => {
 
                 {/* International Students */}
                 <section className="mb-16">
-                    <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
-                        <h2 className="text-3xl font-bold text-blue-900 mb-8">International Students & Exchange Students</h2>
+                    <h2 className="text-3xl font-bold text-blue-900 mb-8">International Students & Exchange Students</h2>
+                    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
                         <div className="overflow-x-auto">
                             <table className="w-full">
                                 <thead className="bg-blue-900 text-white">
