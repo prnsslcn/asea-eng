@@ -1,4 +1,5 @@
 import React from 'react';
+import { Phone, MapPin, Train } from 'lucide-react';
 import aseaData, { getDepartmentColorClasses } from '../../data/about/aseaData.ts';
 
 // 타입 정의 (aseaData.ts와 동일)
@@ -166,7 +167,7 @@ const AseaPage: React.FC = () => {
                 <div className="flex justify-center">
                     <div className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-4 sm:p-6 text-center max-w-sm sm:max-w-md w-full">
                         <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 text-white rounded-full mb-3 sm:mb-4">
-                            <span className="text-lg sm:text-xl">📞</span>
+                            <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                         </div>
                         <h4 className="font-bold text-blue-900 mb-2">
                             {aseaData.contacts[0].title}
@@ -188,7 +189,7 @@ const AseaPage: React.FC = () => {
                 </h3>
                 <div className="bg-green-50 border border-green-200 rounded-xl p-6 sm:p-8 text-center max-w-xl sm:max-w-2xl mx-auto">
                     <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-green-600 text-white rounded-full mb-4 sm:mb-6">
-                        <span className="text-xl sm:text-2xl">📍</span>
+                        <MapPin className="w-6 h-6 sm:w-8 sm:h-8" />
                     </div>
                     <h4 className="text-lg sm:text-xl font-bold text-green-900 mb-2">
                         {aseaData.location.schoolName}
@@ -198,7 +199,7 @@ const AseaPage: React.FC = () => {
                     </div>
                     <div className="bg-white border border-green-200 rounded-lg p-3 sm:p-4">
                         <div className="flex items-center justify-center space-x-2 text-green-700">
-                            <span className="text-base sm:text-lg">🚇</span>
+                            <Train className="w-4 h-4 sm:w-5 sm:h-5" />
                             <span className="font-medium text-sm sm:text-base">{aseaData.location.mapInfo}</span>
                         </div>
                     </div>
