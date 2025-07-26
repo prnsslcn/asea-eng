@@ -17,7 +17,8 @@ export interface DepartmentProgram {
 }
 
 export interface Benefit {
-    icon: string;
+    iconType: 'lucide'; // 아이콘 타입을 지정
+    iconName: string;   // lucide 아이콘 이름
     title: string;
     subtitle: string;
     description: string;
@@ -199,31 +200,36 @@ export const aseaData: AseaData = {
 
     benefits: [
         {
-            icon: "🏛️",
+            iconType: 'lucide',
+            iconName: 'School',
             title: "Korea's Largest Aviation Specialized Educational Institution",
             subtitle: "Associate and Bachelor's Degrees Conferred by Minister of Education",
             description: "Ministry of Land, Infrastructure and Transport designated aviation specialized educational institution, #1 in enrolled students among national aviation colleges, operating Korea's largest aviation maintenance program (420 student enrollment quota)"
         },
         {
-            icon: "💼",
+            iconType: 'lucide',
+            iconName: 'Briefcase',
             title: "Employment-Focused Practical Education",
             subtitle: "Educational institution with the highest number of graduates employed among national aviation colleges",
             description: "100% employment success for 2023 on-campus job fair participants, annual graduate employment at major airlines including Korean Air and Asiana Airlines, and low-cost carriers"
         },
         {
-            icon: "🌏",
+            iconType: 'lucide',
+            iconName: 'Globe',
             title: "Overseas Language Training & Study Abroad Programs",
             subtitle: "Various overseas programs to enhance global competency",
             description: "Overseas language training & hotel internships during vacations, US FAA & Canada TC aviation maintenance study abroad programs, support for Canada NDT non-destructive testing national certification"
         },
         {
-            icon: "🎓",
+            iconType: 'lucide',
+            iconName: 'GraduationCap',
             title: "Student-Centered ASEA Advantages!",
             subtitle: "Optimal educational environment and student support systems",
             description: "ASEA exclusive dormitories, various scholarship programs, 1-minute walk from Yeouido-gu Office Station for transportation convenience, customized student management system & dedicated advisor professor system"
         },
         {
-            icon: "🪖",
+            iconType: 'lucide',
+            iconName: 'Shield',
             title: "Korea Army Academy at Yeongcheon Transfer & NCO Training Specialized Institution",
             subtitle: "10 consecutive years ranked #1 nationally for Korea Army Academy at Yeongcheon admissions",
             description: "Female cadets produced for 7 consecutive years, military scholarship students ranked #1 in Seoul/metropolitan area for 7 consecutive years, 91% of graduates entered as officers/NCOs over the past 9 years"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Train } from 'lucide-react';
+import { Phone, MapPin, Train, School, Briefcase, Globe, GraduationCap, Shield } from 'lucide-react';
 import aseaData, { getDepartmentColorClasses } from '../../data/about/aseaData.ts';
 
 // 타입 정의 (aseaData.ts와 동일)
@@ -17,13 +17,35 @@ interface DepartmentProgram {
 }
 
 interface Benefit {
-    icon: string;
+    iconType: 'lucide';
+    iconName: string;
     title: string;
     subtitle: string;
     description: string;
 }
 
+// Lucide 아이콘 매핑
+const lucideIcons = {
+    School,
+    Briefcase,
+    Globe,
+    GraduationCap,
+    Shield,
+    Phone,
+    MapPin,
+    Train
+};
+
 const AseaPage: React.FC = () => {
+    // 아이콘 렌더링 헬퍼 함수
+    const renderIcon = (benefit: Benefit, className: string = "w-8 h-8") => {
+        const IconComponent = lucideIcons[benefit.iconName as keyof typeof lucideIcons];
+        if (IconComponent) {
+            return <IconComponent className={className} />;
+        }
+        return null;
+    };
+
     return (
         <div className="space-y-12">
             {/* Hero Section */}
@@ -112,7 +134,9 @@ const AseaPage: React.FC = () => {
                             className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow"
                         >
                             <div className="flex items-start space-x-3 sm:space-x-4">
-                                <div className="text-3xl sm:text-4xl flex-shrink-0 mt-1">{benefit.icon}</div>
+                                <div className="text-blue-600 flex-shrink-0 mt-1">
+                                    {renderIcon(benefit, "w-8 h-8 sm:w-10 sm:h-10")}
+                                </div>
                                 <div className="flex-1 min-w-0">
                                     <h4 className="font-bold text-gray-900 mb-3 text-lg sm:text-xl leading-tight">
                                         {benefit.title}
