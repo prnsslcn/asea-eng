@@ -48,7 +48,7 @@ const DormitoryPage: React.FC = () => {
 
     // 이미지 경로 생성 함수
     const getImagePath = (imageName: string) => {
-        return `/asea-eng/images/dormitory/${imageName}`;
+        return `/images/dormitory/${imageName}`;
     };
 
     const currentDormitory = getCurrentDormitory();

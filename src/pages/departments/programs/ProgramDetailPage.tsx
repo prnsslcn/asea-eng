@@ -531,7 +531,7 @@ const ProgramDetailPage: React.FC = () => {
                                     className="w-full h-auto object-cover"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
-                                        target.src = '/asea-eng/images/professors/default-professor.png';
+                                        target.src = '/images/professors/default-professor.png';
                                     }}
                                 />
                             </div>
@@ -742,7 +742,7 @@ const ProgramDetailPage: React.FC = () => {
                                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
-                                        target.src = '/asea-eng/images/facilities/placeholder-facility.jpg';
+                                        target.src = '/images/facilities/placeholder-facility.jpg';
                                     }}
                                 />
                             </div>
@@ -838,7 +838,7 @@ const ProgramDetailPage: React.FC = () => {
                                     className="w-full h-auto max-h-[60vh] object-contain mx-auto rounded-lg"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
-                                        target.src = '/asea-eng/images/facilities/placeholder-facility.jpg';
+                                        target.src = '/images/facilities/placeholder-facility.jpg';
                                     }}
                                 />
                             </div>

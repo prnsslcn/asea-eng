@@ -227,7 +227,7 @@ const Header: React.FC = () => {
                         <div className="flex-shrink-0">
                             <button onClick={() => handleNavigation('/')} className="flex items-center text-left">
                                 <img
-                                    src="/asea-eng/images/asea-em-1.png"
+                                    src="/images/asea-em-1.png"
                                     alt="ASEA Logo"
                                     className="w-16 h-16 mr-3 object-contain"
                                 />

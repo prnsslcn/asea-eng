@@ -1904,5 +1904,5 @@ export const getFacilitiesByProgram = (programId: string): FacilityImage[] => {
 
 // GitHub Pages 이미지 경로 생성
 export const getFacilityImagePath = (filename: string): string => {
-    return `/asea-eng/images/facilities/${filename}`;
+    return `/images/facilities/${filename}`;
 };

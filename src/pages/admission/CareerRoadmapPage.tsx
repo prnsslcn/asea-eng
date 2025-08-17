@@ -75,7 +75,7 @@ const CareerRoadmapPage: React.FC = () => {
                         <div className="mt-16 flex justify-center">
                             <div className="w-full">
                                 <img
-                                    src="/asea-eng/images/career-path-diagram/career-path-diagram.png"
+                                    src="/images/career-path-diagram/career-path-diagram.png"
                                     alt="Career Path Diagram"
                                     className="w-full h-auto rounded-lg"
                                 />

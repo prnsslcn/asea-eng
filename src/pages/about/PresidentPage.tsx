@@ -19,7 +19,7 @@ const PresidentPage: React.FC = () => {
                         <div className="lg:w-2/5 flex justify-center items-start p-6 lg:p-8">
                             <div className="w-full max-w-sm">
                                 <img
-                                    src="/asea-eng/images/president/president-photo.png"
+                                    src="/images/president/president-photo.png"
                                     alt="President Kwon Oh-gun"
                                     className="w-full h-auto rounded-lg object-cover"
                                     onError={(e) => {

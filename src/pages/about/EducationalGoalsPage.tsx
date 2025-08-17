@@ -57,7 +57,7 @@ const EducationalGoalsPage: React.FC = () => {
                     <div className="bg-emerald-100 border border-emerald-800 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                         <div className="flex items-start space-x-4">
                             <div className="flex-shrink-0">
-                                <img src="/asea-eng/images/new/sub/information/info2_ico2.png" alt="Creative Technician" className="w-16 h-16 object-contain" />
+                                <img src="/images/new/sub/information/info2_ico2.png" alt="Creative Technician" className="w-16 h-16 object-contain" />
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl sm:text-2xl font-bold text-emerald-900 mb-3">
@@ -76,7 +76,7 @@ const EducationalGoalsPage: React.FC = () => {
                     <div className="bg-rose-100 border border-rose-800 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                         <div className="flex items-start space-x-4">
                             <div className="flex-shrink-0">
-                                <img src="/asea-eng/images/new/sub/information/info2_ico3.png" alt="Service-Oriented Social Contributor" className="w-16 h-16 object-contain" />
+                                <img src="/images/new/sub/information/info2_ico3.png" alt="Service-Oriented Social Contributor" className="w-16 h-16 object-contain" />
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl sm:text-2xl font-bold text-rose-900 mb-3">
@@ -95,7 +95,7 @@ const EducationalGoalsPage: React.FC = () => {
                     <div className="bg-gray-100 border border-gray-800 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                         <div className="flex items-start space-x-4">
                             <div className="flex-shrink-0">
-                                <img src="/asea-eng/images/new/sub/information/info2_ico4.png" alt="Independent Intellectual" className="w-16 h-16 object-contain" />
+                                <img src="/images/new/sub/information/info2_ico4.png" alt="Independent Intellectual" className="w-16 h-16 object-contain" />
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">

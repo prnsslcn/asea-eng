@@ -1663,11 +1663,11 @@ export const getEmployeesByDepartment = (departmentId: string): EmployeeProfile[
 };
 
 export const getEmployeePhoto = (filename: string): string => {
-    return `/asea-eng/images/employment/${filename}`;
+    return `/images/employment/${filename}`;
 };
 
 export const getCompanyLogo = (filename: string): string => {
-    return `/asea-eng/images/employment/logos/${filename}`;
+    return `/images/employment/logos/${filename}`;
 };
 
 export const getDepartmentEmployees = (departmentId: string): EmployeeProfile[] => {

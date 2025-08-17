@@ -54,7 +54,7 @@ const PartnershipShowcaseSection: React.FC = () => {
     const PartnerCard: React.FC<{ partner: Partner }> = ({ partner }) => (
         <div className="flex-none w-48 h-32 bg-white rounded-3xl shadow-md overflow-hidden flex items-center justify-center p-6">
             <img
-                src={`/asea-eng/images/partners/${partner.logo}`}
+                src={`/images/partners/${partner.logo}`}
                 alt={partner.name}
                 className="max-w-full max-h-full object-contain"
                 onError={(e) => {

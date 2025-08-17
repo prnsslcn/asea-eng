@@ -35,7 +35,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Instrument Systems',
                     'Aviation Electronics Practice'
                 ],
-                photo: '/asea-eng/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
+                photo: '/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
             },
             {
                 id: 'prof-aircraft-maintenance-002',
@@ -51,7 +51,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Materials',
                     'Introduction to Aerospace'
                 ],
-                photo: '/asea-eng/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
+                photo: '/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-003',
@@ -65,7 +65,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Aircraft Power Plant II'
                 ],
-                photo: '/asea-eng/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
+                photo: '/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-004',
@@ -82,7 +82,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant II',
                     'General Helicopter'
                 ],
-                photo: '/asea-eng/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
+                photo: '/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-005',
@@ -97,7 +97,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Composite Materials',
                     'Aviation Regulations'
                 ],
-                photo: '/asea-eng/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
+                photo: '/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-006',
@@ -108,7 +108,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aircraft Airframe I'
                 ],
-                photo: '/asea-eng/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
+                photo: '/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-007',
@@ -121,7 +121,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aerospace',
                     'Aircraft Airframe'
                 ],
-                photo: '/asea-eng/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
+                photo: '/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-008',
@@ -132,7 +132,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Electronics and Electrical Engineering'
                 ],
-                photo: '/asea-eng/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
+                photo: '/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-009',
@@ -147,7 +147,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe',
                     'Engine Practice'
                 ],
-                photo: '/asea-eng/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
+                photo: '/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-010',
@@ -159,7 +159,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Maintenance Practice',
                     'Aircraft Instruments and Electrical Equipment'
                 ],
-                photo: '/asea-eng/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
+                photo: '/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-011',
@@ -172,7 +172,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Basic Practice II',
                     'Aircraft Power Plant I'
                 ],
-                photo: '/asea-eng/images/professors/110498f74d309728ad38c51219211f68.png'
+                photo: '/images/professors/110498f74d309728ad38c51219211f68.png'
             },
             {
                 id: 'prof-aircraft-maintenance-012',
@@ -184,7 +184,7 @@ export const professorsData: ProgramProfessors[] = [
                     'TOEIC',
                     'Grammar'
                 ],
-                photo: '/asea-eng/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
+                photo: '/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
             },
             // Page 2 - 6 professors
             {
@@ -197,7 +197,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Helicopter Power Transmission System'
                 ],
-                photo: '/asea-eng/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
+                photo: '/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-014',
@@ -209,7 +209,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Electronics Basic Practice I',
                     'Aircraft Electronics Major Practice I'
                 ],
-                photo: '/asea-eng/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
+                photo: '/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
             },
             {
                 id: 'prof-aircraft-maintenance-015',
@@ -222,7 +222,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe Practice II',
                     'General Maintenance Practice'
                 ],
-                photo: '/asea-eng/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
+                photo: '/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
             },
             {
                 id: 'prof-aircraft-maintenance-016',
@@ -235,7 +235,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Electronics and Electrical Instruments II',
                     'Aviation Electronics and Electrical Instruments Practice I'
                 ],
-                photo: '/asea-eng/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
+                photo: '/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
             },
             {
                 id: 'prof-aircraft-maintenance-017',
@@ -249,7 +249,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Hydraulic and Pneumatic Equipment',
                     'Introduction to Non-Destructive Testing'
                 ],
-                photo: '/asea-eng/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
+                photo: '/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
             },
             {
                 id: 'prof-aircraft-maintenance-018',
@@ -261,7 +261,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Engine Practice',
                     'Engineering Mechanics'
                 ],
-                photo: '/asea-eng/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
+                photo: '/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
             }
         ]
     },
@@ -283,7 +283,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Current Affairs Special Lecture',
                     'Life Etiquette'
                 ],
-                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+                photo: '/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
             },
             {
                 id: 'prof-national-defense-officer-002',
@@ -299,7 +299,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Military Ethics',
                     'Teaching Methods'
                 ],
-                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+                photo: '/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
             },
             {
                 id: 'prof-national-defense-officer-003',
@@ -313,7 +313,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Corrections',
                     'Civil Law General Principles'
                 ],
-                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+                photo: '/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
             },
             {
                 id: 'prof-national-defense-officer-004',
@@ -326,7 +326,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Special Forces Martial Arts',
                     'Taekwondo'
                 ],
-                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+                photo: '/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
             },
             {
                 id: 'prof-national-defense-officer-005',
@@ -339,7 +339,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Administration',
                     'Police Comprehensive Practice'
                 ],
-                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+                photo: '/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
             },
             {
                 id: 'prof-national-defense-officer-006',
@@ -351,7 +351,7 @@ export const professorsData: ProgramProfessors[] = [
                     'NCO Role and Practice',
                     'Unit Management'
                 ],
-                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+                photo: '/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
             },
             {
                 id: 'prof-national-defense-officer-007',
@@ -367,7 +367,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Protocol Studies',
                     'Police Comprehensive Practice I-IV'
                 ],
-                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+                photo: '/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
             },
             {
                 id: 'prof-national-defense-officer-008',
@@ -379,7 +379,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Terrorism Studies',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+                photo: '/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
             },
             {
                 id: 'prof-national-defense-officer-009',
@@ -391,7 +391,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Investigation Theory',
                     'Criminal Law I'
                 ],
-                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+                photo: '/images/professors/a303a80de2a32cc622a2185321587536.png'
             },
             {
                 id: 'prof-national-defense-officer-010',
@@ -403,7 +403,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Law',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+                photo: '/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
             }
         ]
     },
@@ -425,7 +425,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Current Affairs Special Lecture',
                     'Life Etiquette'
                 ],
-                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+                photo: '/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
             },
             {
                 id: 'prof-national-defense-nco-002',
@@ -441,7 +441,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Military Ethics',
                     'Teaching Methods'
                 ],
-                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+                photo: '/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
             },
             {
                 id: 'prof-national-defense-nco-003',
@@ -455,7 +455,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Corrections',
                     'Civil Law General Principles'
                 ],
-                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+                photo: '/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
             },
             {
                 id: 'prof-national-defense-nco-004',
@@ -468,7 +468,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Special Forces Martial Arts',
                     'Taekwondo'
                 ],
-                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+                photo: '/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
             },
             {
                 id: 'prof-national-defense-nco-005',
@@ -481,7 +481,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Administration',
                     'Police Comprehensive Practice'
                 ],
-                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+                photo: '/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
             },
             {
                 id: 'prof-national-defense-nco-006',
@@ -493,7 +493,7 @@ export const professorsData: ProgramProfessors[] = [
                     'NCO Role and Practice',
                     'Unit Management'
                 ],
-                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+                photo: '/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
             },
             {
                 id: 'prof-national-defense-nco-007',
@@ -509,7 +509,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Protocol Studies',
                     'Police Comprehensive Practice I-IV'
                 ],
-                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+                photo: '/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
             },
             {
                 id: 'prof-national-defense-nco-008',
@@ -521,7 +521,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Terrorism Studies',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+                photo: '/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
             },
             {
                 id: 'prof-national-defense-nco-009',
@@ -533,7 +533,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Investigation Theory',
                     'Criminal Law I'
                 ],
-                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+                photo: '/images/professors/a303a80de2a32cc622a2185321587536.png'
             },
             {
                 id: 'prof-national-defense-nco-010',
@@ -545,7 +545,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Law',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+                photo: '/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
             }
         ]
     },
@@ -567,7 +567,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Current Affairs Special Lecture',
                     'Life Etiquette'
                 ],
-                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+                photo: '/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
             },
             {
                 id: 'prof-national-defense-ai-002',
@@ -583,7 +583,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Military Ethics',
                     'Teaching Methods'
                 ],
-                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+                photo: '/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
             },
             {
                 id: 'prof-national-defense-ai-003',
@@ -597,7 +597,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Corrections',
                     'Civil Law General Principles'
                 ],
-                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+                photo: '/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
             },
             {
                 id: 'prof-national-defense-ai-004',
@@ -610,7 +610,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Special Forces Martial Arts',
                     'Taekwondo'
                 ],
-                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+                photo: '/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
             },
             {
                 id: 'prof-national-defense-ai-005',
@@ -623,7 +623,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Administration',
                     'Police Comprehensive Practice'
                 ],
-                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+                photo: '/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
             },
             {
                 id: 'prof-national-defense-ai-006',
@@ -635,7 +635,7 @@ export const professorsData: ProgramProfessors[] = [
                     'NCO Role and Practice',
                     'Unit Management'
                 ],
-                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+                photo: '/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
             },
             {
                 id: 'prof-national-defense-ai-007',
@@ -651,7 +651,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Protocol Studies',
                     'Police Comprehensive Practice I-IV'
                 ],
-                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+                photo: '/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
             },
             {
                 id: 'prof-national-defense-ai-008',
@@ -663,7 +663,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Terrorism Studies',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+                photo: '/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
             },
             {
                 id: 'prof-national-defense-ai-009',
@@ -675,7 +675,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Investigation Theory',
                     'Criminal Law I'
                 ],
-                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+                photo: '/images/professors/a303a80de2a32cc622a2185321587536.png'
             },
             {
                 id: 'prof-national-defense-ai-010',
@@ -687,7 +687,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Law',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+                photo: '/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
             }
         ]
     },
@@ -709,7 +709,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Current Affairs Special Lecture',
                     'Life Etiquette'
                 ],
-                photo: '/asea-eng/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
+                photo: '/images/professors/f79525412bad700cdd8b271e2fb493bc.jpg'
             },
             {
                 id: 'prof-police-officer-002',
@@ -725,7 +725,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Military Ethics',
                     'Teaching Methods'
                 ],
-                photo: '/asea-eng/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
+                photo: '/images/professors/30fbe27a477f54ca86ec46b85f472a8b.jpg'
             },
             {
                 id: 'prof-police-officer-003',
@@ -739,7 +739,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Corrections',
                     'Civil Law General Principles'
                 ],
-                photo: '/asea-eng/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
+                photo: '/images/professors/88841f154571390ef4ceec3edac7d11f.jpg'
             },
             {
                 id: 'prof-police-officer-004',
@@ -752,7 +752,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Special Forces Martial Arts',
                     'Taekwondo'
                 ],
-                photo: '/asea-eng/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
+                photo: '/images/professors/4f8ebe655b023c2ea529c3caf1363280.jpg'
             },
             {
                 id: 'prof-police-officer-005',
@@ -765,7 +765,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Administration',
                     'Police Comprehensive Practice'
                 ],
-                photo: '/asea-eng/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
+                photo: '/images/professors/75c28e8a1e05bbd9d46db36966230398.jpg'
             },
             {
                 id: 'prof-police-officer-006',
@@ -777,7 +777,7 @@ export const professorsData: ProgramProfessors[] = [
                     'NCO Role and Practice',
                     'Unit Management'
                 ],
-                photo: '/asea-eng/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
+                photo: '/images/professors/584133f5603e9ffdf1c9e9b38dd9e2c6.jpg'
             },
             {
                 id: 'prof-police-officer-007',
@@ -793,7 +793,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Protocol Studies',
                     'Police Comprehensive Practice I-IV'
                 ],
-                photo: '/asea-eng/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
+                photo: '/images/professors/7f772f2abeab79c1922404e0a7bdd32e.png'
             },
             {
                 id: 'prof-police-officer-008',
@@ -805,7 +805,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Terrorism Studies',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
+                photo: '/images/professors/f2c681c5a1606b802da326f00a48aca7.jpg'
             },
             {
                 id: 'prof-police-officer-009',
@@ -817,7 +817,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Police Investigation Theory',
                     'Criminal Law I'
                 ],
-                photo: '/asea-eng/images/professors/a303a80de2a32cc622a2185321587536.png'
+                photo: '/images/professors/a303a80de2a32cc622a2185321587536.png'
             },
             {
                 id: 'prof-police-officer-010',
@@ -829,7 +829,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Law',
                     'Criminal Procedure Law'
                 ],
-                photo: '/asea-eng/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
+                photo: '/images/professors/9b2ccb6e12bb1eae9c830e831b2fdf34.jpg'
             }
         ]
     },
@@ -850,7 +850,7 @@ export const professorsData: ProgramProfessors[] = [
                     'First Aid',
                     'Live Fire Training'
                 ],
-                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+                photo: '/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
             },
             {
                 id: 'prof-airport-security-002',
@@ -863,7 +863,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Martial Arts I',
                     'Security Martial Arts II'
                 ],
-                photo: '/asea-eng/images/professors/73dc2ab2e904c17bc532596096edc32d.png'
+                photo: '/images/professors/73dc2ab2e904c17bc532596096edc32d.png'
             },
             {
                 id: 'prof-airport-security-003',
@@ -876,7 +876,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Stage Acting Practice',
                     'Camera Acting Practice'
                 ],
-                photo: '/asea-eng/images/professors/778e91a08bb47d5ac6dca4c183c019e4.jpg'
+                photo: '/images/professors/778e91a08bb47d5ac6dca4c183c019e4.jpg'
             },
             {
                 id: 'prof-airport-security-004',
@@ -889,7 +889,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Industry Law',
                     'Safety Management Theory'
                 ],
-                photo: '/asea-eng/images/professors/2bd042a629007b4cbd08bbfcb48533fb.jpg'
+                photo: '/images/professors/2bd042a629007b4cbd08bbfcb48533fb.jpg'
             },
             {
                 id: 'prof-airport-security-005',
@@ -901,7 +901,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Methodology',
                     'Terrorism Studies'
                 ],
-                photo: '/asea-eng/images/professors/ef3fc2a9826ed04c59eb3e2ec874f227.png'
+                photo: '/images/professors/ef3fc2a9826ed04c59eb3e2ec874f227.png'
             },
             {
                 id: 'prof-airport-security-006',
@@ -913,7 +913,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Practice',
                     'Security Safety Detection Practice'
                 ],
-                photo: '/asea-eng/images/professors/be4e3d56100a79587e4c29fbb22c6686.jpg'
+                photo: '/images/professors/be4e3d56100a79587e4c29fbb22c6686.jpg'
             },
             {
                 id: 'prof-airport-security-007',
@@ -925,7 +925,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Training Methodology',
                     'Introduction to Exercise Therapy'
                 ],
-                photo: '/asea-eng/images/professors/9e54949de666885357bbdfe559f98e06.jpg'
+                photo: '/images/professors/9e54949de666885357bbdfe559f98e06.jpg'
             },
             {
                 id: 'prof-airport-security-008',
@@ -937,7 +937,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Counter-terrorism Practice',
                     'Security Field Operation Theory'
                 ],
-                photo: '/asea-eng/images/professors/34f27d1d388bed5aad18496d33d91741.png'
+                photo: '/images/professors/34f27d1d388bed5aad18496d33d91741.png'
             },
             {
                 id: 'prof-airport-security-009',
@@ -950,7 +950,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Security Screening Practice',
                     'AI X-RAY CBT Analysis'
                 ],
-                photo: '/asea-eng/images/professors/f78390eee12dedcd401bb77b425a99cb.png'
+                photo: '/images/professors/f78390eee12dedcd401bb77b425a99cb.png'
             },
             {
                 id: 'prof-airport-security-010',
@@ -962,7 +962,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Security Regulations',
                     'Airport Operations Theory'
                 ],
-                photo: '/asea-eng/images/professors/b15dc1de09bd3de1a3bc1070e90e478a.jpg'
+                photo: '/images/professors/b15dc1de09bd3de1a3bc1070e90e478a.jpg'
             },
             {
                 id: 'prof-airport-security-011',
@@ -974,7 +974,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Understanding Security Industry',
                     'Counter-terrorism Strategy'
                 ],
-                photo: '/asea-eng/images/professors/f9489a61a234184fceb847a1b5ca6134.png'
+                photo: '/images/professors/f9489a61a234184fceb847a1b5ca6134.png'
             },
             {
                 id: 'prof-airport-security-012',
@@ -986,7 +986,7 @@ export const professorsData: ProgramProfessors[] = [
                     'War History',
                     'Explosive Terrorism Response'
                 ],
-                photo: '/asea-eng/images/professors/5ba8f2e0b6b7ec6af72e51d3d4f26d79.png'
+                photo: '/images/professors/5ba8f2e0b6b7ec6af72e51d3d4f26d79.png'
             },
             // Page 2 - 11명
             {
@@ -1001,7 +1001,7 @@ export const professorsData: ProgramProfessors[] = [
                     'North Korean Studies',
                     'National Security Theory'
                 ],
-                photo: '/asea-eng/images/professors/0c17d3469ecb6cf98eb6e224140126aa.png'
+                photo: '/images/professors/0c17d3469ecb6cf98eb6e224140126aa.png'
             },
             {
                 id: 'prof-airport-security-014',
@@ -1014,7 +1014,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Basic Acting II',
                     'Action and Reaction'
                 ],
-                photo: '/asea-eng/images/professors/9b03e784dcebb9738a3b9a3bc666d46c.jpg'
+                photo: '/images/professors/9b03e784dcebb9738a3b9a3bc666d46c.jpg'
             },
             {
                 id: 'prof-airport-security-015',
@@ -1026,7 +1026,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Basic Acting I',
                     'Advanced Analysis'
                 ],
-                photo: '/asea-eng/images/professors/b637e978a35798eb7fb67a552efd4a06.jpg'
+                photo: '/images/professors/b637e978a35798eb7fb67a552efd4a06.jpg'
             },
             {
                 id: 'prof-airport-security-016',
@@ -1040,7 +1040,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Understanding Film Appreciation',
                     'Video Production Practice'
                 ],
-                photo: '/asea-eng/images/professors/e4839e0735420cb23c0b4265cf34673d.jpg'
+                photo: '/images/professors/e4839e0735420cb23c0b4265cf34673d.jpg'
             },
             {
                 id: 'prof-airport-security-017',
@@ -1053,7 +1053,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Wire Action Acting',
                     'Counter-terrorism Action Acting'
                 ],
-                photo: '/asea-eng/images/professors/bd23d7f7c97b9a214dcef845847e776b.jpg'
+                photo: '/images/professors/bd23d7f7c97b9a214dcef845847e776b.jpg'
             },
             {
                 id: 'prof-airport-security-018',
@@ -1064,7 +1064,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Film Studies'
                 ],
-                photo: '/asea-eng/images/professors/ddd55e4decbcbfa7e5dd09344aba52ca.jpg'
+                photo: '/images/professors/ddd55e4decbcbfa7e5dd09344aba52ca.jpg'
             },
             {
                 id: 'prof-airport-security-019',
@@ -1075,7 +1075,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Action and Shot Research'
                 ],
-                photo: '/asea-eng/images/professors/986558e031dca362af8ca739295d042f.jpg'
+                photo: '/images/professors/986558e031dca362af8ca739295d042f.jpg'
             },
             {
                 id: 'prof-airport-security-020',
@@ -1089,7 +1089,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Taekwondo I',
                     'Personal Protection Officer'
                 ],
-                photo: '/asea-eng/images/professors/1abcc7fbf695f7130f4c89a215898170.png'
+                photo: '/images/professors/1abcc7fbf695f7130f4c89a215898170.png'
             },
             {
                 id: 'prof-airport-security-021',
@@ -1101,7 +1101,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Physical Training I',
                     'Security Physical Training II'
                 ],
-                photo: '/asea-eng/images/professors/1f950fe2de439ffc511990b95eb822cd.jpg'
+                photo: '/images/professors/1f950fe2de439ffc511990b95eb822cd.jpg'
             },
             {
                 id: 'prof-airport-security-022',
@@ -1112,7 +1112,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Criminal Psychology'
                 ],
-                photo: '/asea-eng/images/professors/a565297f739f6ba665caa6576082137c.jpg'
+                photo: '/images/professors/a565297f739f6ba665caa6576082137c.jpg'
             },
             {
                 id: 'prof-airport-security-023',
@@ -1123,7 +1123,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Criminology'
                 ],
-                photo: '/asea-eng/images/professors/bd220392ad050ee230a06fdc8b123a06.png'
+                photo: '/images/professors/bd220392ad050ee230a06fdc8b123a06.png'
             }
         ]
     },
@@ -1143,7 +1143,7 @@ export const professorsData: ProgramProfessors[] = [
                     'First Aid',
                     'Live Fire Training'
                 ],
-                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+                photo: '/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
             },
             {
                 id: 'prof-vip-security-002',
@@ -1156,7 +1156,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Martial Arts I',
                     'Security Martial Arts II'
                 ],
-                photo: '/asea-eng/images/professors/73dc2ab2e904c17bc532596096edc32d.png'
+                photo: '/images/professors/73dc2ab2e904c17bc532596096edc32d.png'
             },
             {
                 id: 'prof-vip-security-003',
@@ -1169,7 +1169,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Stage Acting Practice',
                     'Camera Acting Practice'
                 ],
-                photo: '/asea-eng/images/professors/778e91a08bb47d5ac6dca4c183c019e4.jpg'
+                photo: '/images/professors/778e91a08bb47d5ac6dca4c183c019e4.jpg'
             },
             {
                 id: 'prof-vip-security-004',
@@ -1182,7 +1182,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Industry Law',
                     'Safety Management Theory'
                 ],
-                photo: '/asea-eng/images/professors/2bd042a629007b4cbd08bbfcb48533fb.jpg'
+                photo: '/images/professors/2bd042a629007b4cbd08bbfcb48533fb.jpg'
             },
             {
                 id: 'prof-vip-security-005',
@@ -1194,7 +1194,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Methodology',
                     'Terrorism Studies'
                 ],
-                photo: '/asea-eng/images/professors/ef3fc2a9826ed04c59eb3e2ec874f227.png'
+                photo: '/images/professors/ef3fc2a9826ed04c59eb3e2ec874f227.png'
             },
             {
                 id: 'prof-vip-security-006',
@@ -1206,7 +1206,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Practice',
                     'Security Safety Detection Practice'
                 ],
-                photo: '/asea-eng/images/professors/be4e3d56100a79587e4c29fbb22c6686.jpg'
+                photo: '/images/professors/be4e3d56100a79587e4c29fbb22c6686.jpg'
             },
             {
                 id: 'prof-vip-security-007',
@@ -1218,7 +1218,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Training Methodology',
                     'Introduction to Exercise Therapy'
                 ],
-                photo: '/asea-eng/images/professors/9e54949de666885357bbdfe559f98e06.jpg'
+                photo: '/images/professors/9e54949de666885357bbdfe559f98e06.jpg'
             },
             {
                 id: 'prof-vip-security-008',
@@ -1230,7 +1230,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Counter-terrorism Practice',
                     'Security Field Operation Theory'
                 ],
-                photo: '/asea-eng/images/professors/34f27d1d388bed5aad18496d33d91741.png'
+                photo: '/images/professors/34f27d1d388bed5aad18496d33d91741.png'
             },
             {
                 id: 'prof-vip-security-009',
@@ -1243,7 +1243,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Security Screening Practice',
                     'AI X-RAY CBT Analysis'
                 ],
-                photo: '/asea-eng/images/professors/f78390eee12dedcd401bb77b425a99cb.png'
+                photo: '/images/professors/f78390eee12dedcd401bb77b425a99cb.png'
             },
             {
                 id: 'prof-vip-security-010',
@@ -1255,7 +1255,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Security Regulations',
                     'Airport Operations Theory'
                 ],
-                photo: '/asea-eng/images/professors/b15dc1de09bd3de1a3bc1070e90e478a.jpg'
+                photo: '/images/professors/b15dc1de09bd3de1a3bc1070e90e478a.jpg'
             },
             {
                 id: 'prof-vip-security-011',
@@ -1267,7 +1267,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Understanding Security Industry',
                     'Counter-terrorism Strategy'
                 ],
-                photo: '/asea-eng/images/professors/f9489a61a234184fceb847a1b5ca6134.png'
+                photo: '/images/professors/f9489a61a234184fceb847a1b5ca6134.png'
             },
             {
                 id: 'prof-vip-security-012',
@@ -1279,7 +1279,7 @@ export const professorsData: ProgramProfessors[] = [
                     'War History',
                     'Explosive Terrorism Response'
                 ],
-                photo: '/asea-eng/images/professors/5ba8f2e0b6b7ec6af72e51d3d4f26d79.png'
+                photo: '/images/professors/5ba8f2e0b6b7ec6af72e51d3d4f26d79.png'
             },
             {
                 id: 'prof-vip-security-013',
@@ -1293,7 +1293,7 @@ export const professorsData: ProgramProfessors[] = [
                     'North Korean Studies',
                     'National Security Theory'
                 ],
-                photo: '/asea-eng/images/professors/0c17d3469ecb6cf98eb6e224140126aa.png'
+                photo: '/images/professors/0c17d3469ecb6cf98eb6e224140126aa.png'
             },
             {
                 id: 'prof-vip-security-014',
@@ -1306,7 +1306,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Basic Acting II',
                     'Action and Reaction'
                 ],
-                photo: '/asea-eng/images/professors/9b03e784dcebb9738a3b9a3bc666d46c.jpg'
+                photo: '/images/professors/9b03e784dcebb9738a3b9a3bc666d46c.jpg'
             },
             {
                 id: 'prof-vip-security-015',
@@ -1318,7 +1318,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Basic Acting I',
                     'Advanced Analysis'
                 ],
-                photo: '/asea-eng/images/professors/b637e978a35798eb7fb67a552efd4a06.jpg'
+                photo: '/images/professors/b637e978a35798eb7fb67a552efd4a06.jpg'
             },
             {
                 id: 'prof-vip-security-016',
@@ -1332,7 +1332,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Understanding Film Appreciation',
                     'Video Production Practice'
                 ],
-                photo: '/asea-eng/images/professors/e4839e0735420cb23c0b4265cf34673d.jpg'
+                photo: '/images/professors/e4839e0735420cb23c0b4265cf34673d.jpg'
             },
             {
                 id: 'prof-vip-security-017',
@@ -1345,7 +1345,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Wire Action Acting',
                     'Counter-terrorism Action Acting'
                 ],
-                photo: '/asea-eng/images/professors/bd23d7f7c97b9a214dcef845847e776b.jpg'
+                photo: '/images/professors/bd23d7f7c97b9a214dcef845847e776b.jpg'
             },
             {
                 id: 'prof-vip-security-018',
@@ -1356,7 +1356,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Film Studies'
                 ],
-                photo: '/asea-eng/images/professors/ddd55e4decbcbfa7e5dd09344aba52ca.jpg'
+                photo: '/images/professors/ddd55e4decbcbfa7e5dd09344aba52ca.jpg'
             },
             {
                 id: 'prof-vip-security-019',
@@ -1367,7 +1367,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Action and Shot Research'
                 ],
-                photo: '/asea-eng/images/professors/986558e031dca362af8ca739295d042f.jpg'
+                photo: '/images/professors/986558e031dca362af8ca739295d042f.jpg'
             },
             {
                 id: 'prof-vip-security-020',
@@ -1381,7 +1381,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Taekwondo I',
                     'Personal Protection Officer'
                 ],
-                photo: '/asea-eng/images/professors/1abcc7fbf695f7130f4c89a215898170.png'
+                photo: '/images/professors/1abcc7fbf695f7130f4c89a215898170.png'
             },
             {
                 id: 'prof-vip-security-021',
@@ -1393,7 +1393,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Security Physical Training I',
                     'Security Physical Training II'
                 ],
-                photo: '/asea-eng/images/professors/1f950fe2de439ffc511990b95eb822cd.jpg'
+                photo: '/images/professors/1f950fe2de439ffc511990b95eb822cd.jpg'
             },
             {
                 id: 'prof-vip-security-022',
@@ -1404,7 +1404,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Criminal Psychology'
                 ],
-                photo: '/asea-eng/images/professors/a565297f739f6ba665caa6576082137c.jpg'
+                photo: '/images/professors/a565297f739f6ba665caa6576082137c.jpg'
             },
             {
                 id: 'prof-vip-security-023',
@@ -1415,7 +1415,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Criminology'
                 ],
-                photo: '/asea-eng/images/professors/bd220392ad050ee230a06fdc8b123a06.png'
+                photo: '/images/professors/bd220392ad050ee230a06fdc8b123a06.png'
             }
         ]
     },
@@ -1436,7 +1436,7 @@ export const professorsData: ProgramProfessors[] = [
                     'First Aid',
                     'Live Fire Training'
                 ],
-                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+                photo: '/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
             }
             // ... (나머지 22명 동일)
         ]
@@ -1458,7 +1458,7 @@ export const professorsData: ProgramProfessors[] = [
                     'First Aid',
                     'Live Fire Training'
                 ],
-                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+                photo: '/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
             }
             // ... (나머지 22명 동일)
         ]
@@ -1480,7 +1480,7 @@ export const professorsData: ProgramProfessors[] = [
                     'First Aid',
                     'Live Fire Training'
                 ],
-                photo: '/asea-eng/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
+                photo: '/images/professors/b94f22dc72fcc4a9e4662f0f8efa4bb1.png'
             }
             // ... (나머지 22명 동일)
         ]
@@ -1502,7 +1502,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Cultural Tourism',
                     'Tourism Regulations'
                 ],
-                photo: '/asea-eng/images/professors/315154fde807de185018697610f0701a.jpg'
+                photo: '/images/professors/315154fde807de185018697610f0701a.jpg'
             },
             {
                 id: 'prof-tourism-specialist-002',
@@ -1519,7 +1519,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Tourism English',
                     'Aircraft In-flight Announcement'
                 ],
-                photo: '/asea-eng/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
+                photo: '/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
             },
             {
                 id: 'prof-tourism-specialist-003',
@@ -1532,7 +1532,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Cultural Heritage Tourism Resources',
                     'Tourism Regulations'
                 ],
-                photo: '/asea-eng/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
+                photo: '/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
             },
             {
                 id: 'prof-tourism-specialist-004',
@@ -1545,7 +1545,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Local Guide',
                     'Customer Satisfaction Service Management'
                 ],
-                photo: '/asea-eng/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
+                photo: '/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
             },
             {
                 id: 'prof-tourism-specialist-005',
@@ -1558,7 +1558,7 @@ export const professorsData: ProgramProfessors[] = [
                     'International Travel Escort',
                     'Tourism English'
                 ],
-                photo: '/asea-eng/images/professors/64a266aa667d7c98d7490e27558f1166.png'
+                photo: '/images/professors/64a266aa667d7c98d7490e27558f1166.png'
             },
             {
                 id: 'prof-tourism-specialist-006',
@@ -1569,7 +1569,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Barista Practice'
                 ],
-                photo: '/asea-eng/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
+                photo: '/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
             },
             {
                 id: 'prof-tourism-specialist-007',
@@ -1581,7 +1581,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Hotel Management',
                     'Food and Beverage Service Practice'
                 ],
-                photo: '/asea-eng/images/professors/b095dfb06c66a5107a006525e127d962.png'
+                photo: '/images/professors/b095dfb06c66a5107a006525e127d962.png'
             },
             {
                 id: 'prof-tourism-specialist-008',
@@ -1592,7 +1592,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Casino Management'
                 ],
-                photo: '/asea-eng/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
+                photo: '/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
             },
             {
                 id: 'prof-tourism-specialist-009',
@@ -1609,7 +1609,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Business Chinese',
                     'HSK'
                 ],
-                photo: '/asea-eng/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
+                photo: '/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
             },
             {
                 id: 'prof-tourism-specialist-010',
@@ -1624,7 +1624,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Marine Tourism',
                     'World Tourism Geography'
                 ],
-                photo: '/asea-eng/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
+                photo: '/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
             },
             {
                 id: 'prof-tourism-specialist-011',
@@ -1635,7 +1635,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aviation Service Practical Skills'
                 ],
-                photo: '/asea-eng/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
+                photo: '/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
             },
             {
                 id: 'prof-tourism-specialist-012',
@@ -1648,7 +1648,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Tourism Marketing',
                     'Hotel Room Service Practice'
                 ],
-                photo: '/asea-eng/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
+                photo: '/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
             },
             {
                 id: 'prof-tourism-specialist-013',
@@ -1660,7 +1660,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aircraft Cabin Structure',
                     'Flight Safety Practice'
                 ],
-                photo: '/asea-eng/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
+                photo: '/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
             },
             {
                 id: 'prof-tourism-specialist-014',
@@ -1671,7 +1671,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Leisure and Recreation'
                 ],
-                photo: '/asea-eng/images/professors/39645eb52457c5793a006468353eb42f.jpg'
+                photo: '/images/professors/39645eb52457c5793a006468353eb42f.jpg'
             },
             {
                 id: 'prof-tourism-specialist-015',
@@ -1683,7 +1683,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Barista Theory and Practice',
                     'Coffee Barista Certification Instruction'
                 ],
-                photo: '/asea-eng/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
+                photo: '/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
             },
             {
                 id: 'prof-tourism-specialist-016',
@@ -1695,7 +1695,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Casino Management',
                     'Casino Practice'
                 ],
-                photo: '/asea-eng/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
+                photo: '/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
             },
             {
                 id: 'prof-tourism-specialist-017',
@@ -1710,7 +1710,7 @@ export const professorsData: ProgramProfessors[] = [
                     'World Tourism Geography',
                     'Convention Banquet Planning Cocktail Practice'
                 ],
-                photo: '/asea-eng/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
+                photo: '/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
             }
         ]
     },
@@ -1731,7 +1731,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Cultural Tourism',
                     'Tourism Regulations'
                 ],
-                photo: '/asea-eng/images/professors/315154fde807de185018697610f0701a.jpg'
+                photo: '/images/professors/315154fde807de185018697610f0701a.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-002',
@@ -1748,7 +1748,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Tourism English',
                     'Aircraft In-flight Announcement'
                 ],
-                photo: '/asea-eng/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
+                photo: '/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-003',
@@ -1761,7 +1761,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Cultural Heritage Tourism Resources',
                     'Tourism Regulations'
                 ],
-                photo: '/asea-eng/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
+                photo: '/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-004',
@@ -1774,7 +1774,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Local Guide',
                     'Customer Satisfaction Service Management'
                 ],
-                photo: '/asea-eng/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
+                photo: '/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-005',
@@ -1787,7 +1787,7 @@ export const professorsData: ProgramProfessors[] = [
                     'International Travel Escort',
                     'Tourism English'
                 ],
-                photo: '/asea-eng/images/professors/64a266aa667d7c98d7490e27558f1166.png'
+                photo: '/images/professors/64a266aa667d7c98d7490e27558f1166.png'
             },
             {
                 id: 'prof-food-beverage-specialist-006',
@@ -1798,7 +1798,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Barista Practice'
                 ],
-                photo: '/asea-eng/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
+                photo: '/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
             },
             {
                 id: 'prof-food-beverage-specialist-007',
@@ -1810,7 +1810,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Hotel Management',
                     'Food and Beverage Service Practice'
                 ],
-                photo: '/asea-eng/images/professors/b095dfb06c66a5107a006525e127d962.png'
+                photo: '/images/professors/b095dfb06c66a5107a006525e127d962.png'
             },
             {
                 id: 'prof-food-beverage-specialist-008',
@@ -1821,7 +1821,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Casino Management'
                 ],
-                photo: '/asea-eng/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
+                photo: '/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-009',
@@ -1838,7 +1838,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Business Chinese',
                     'HSK'
                 ],
-                photo: '/asea-eng/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
+                photo: '/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
             },
             {
                 id: 'prof-food-beverage-specialist-010',
@@ -1853,7 +1853,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Marine Tourism',
                     'World Tourism Geography'
                 ],
-                photo: '/asea-eng/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
+                photo: '/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-011',
@@ -1864,7 +1864,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aviation Service Practical Skills'
                 ],
-                photo: '/asea-eng/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
+                photo: '/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-012',
@@ -1877,7 +1877,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Tourism Marketing',
                     'Hotel Room Service Practice'
                 ],
-                photo: '/asea-eng/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
+                photo: '/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-013',
@@ -1889,7 +1889,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aircraft Cabin Structure',
                     'Flight Safety Practice'
                 ],
-                photo: '/asea-eng/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
+                photo: '/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-014',
@@ -1900,7 +1900,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Leisure and Recreation'
                 ],
-                photo: '/asea-eng/images/professors/39645eb52457c5793a006468353eb42f.jpg'
+                photo: '/images/professors/39645eb52457c5793a006468353eb42f.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-015',
@@ -1912,7 +1912,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Barista Theory and Practice',
                     'Coffee Barista Certification Instruction'
                 ],
-                photo: '/asea-eng/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
+                photo: '/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-016',
@@ -1924,7 +1924,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Casino Management',
                     'Casino Practice'
                 ],
-                photo: '/asea-eng/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
+                photo: '/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
             },
             {
                 id: 'prof-food-beverage-specialist-017',
@@ -1939,7 +1939,7 @@ export const professorsData: ProgramProfessors[] = [
                     'World Tourism Geography',
                     'Convention Banquet Planning Cocktail Practice'
                 ],
-                photo: '/asea-eng/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
+                photo: '/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
             }
         ]
     },
@@ -1961,7 +1961,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Cultural Tourism',
                     'Tourism Regulations'
                 ],
-                photo: '/asea-eng/images/professors/315154fde807de185018697610f0701a.jpg'
+                photo: '/images/professors/315154fde807de185018697610f0701a.jpg'
             },
             {
                 id: 'prof-flight-attendant-002',
@@ -1978,7 +1978,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Tourism English',
                     'Aircraft In-flight Announcement'
                 ],
-                photo: '/asea-eng/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
+                photo: '/images/professors/554e480df49d05af0c69a36e5e0ae86f.jpg'
             },
             {
                 id: 'prof-flight-attendant-003',
@@ -1991,7 +1991,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Cultural Heritage Tourism Resources',
                     'Tourism Regulations'
                 ],
-                photo: '/asea-eng/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
+                photo: '/images/professors/f828ce7672654086ca92c81deb6ea270.jpg'
             },
             {
                 id: 'prof-flight-attendant-004',
@@ -2004,7 +2004,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Local Guide',
                     'Customer Satisfaction Service Management'
                 ],
-                photo: '/asea-eng/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
+                photo: '/images/professors/445744f85c23415dafdf83decc4c702e.jpg'
             },
             {
                 id: 'prof-flight-attendant-005',
@@ -2017,7 +2017,7 @@ export const professorsData: ProgramProfessors[] = [
                     'International Travel Escort',
                     'Tourism English'
                 ],
-                photo: '/asea-eng/images/professors/64a266aa667d7c98d7490e27558f1166.png'
+                photo: '/images/professors/64a266aa667d7c98d7490e27558f1166.png'
             },
             {
                 id: 'prof-flight-attendant-006',
@@ -2028,7 +2028,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Barista Practice'
                 ],
-                photo: '/asea-eng/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
+                photo: '/images/professors/85ab02cd321fff04b4a7b8cf428afd7a.png'
             },
             {
                 id: 'prof-flight-attendant-007',
@@ -2040,7 +2040,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Hotel Management',
                     'Food and Beverage Service Practice'
                 ],
-                photo: '/asea-eng/images/professors/b095dfb06c66a5107a006525e127d962.png'
+                photo: '/images/professors/b095dfb06c66a5107a006525e127d962.png'
             },
             {
                 id: 'prof-flight-attendant-008',
@@ -2051,7 +2051,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Casino Management'
                 ],
-                photo: '/asea-eng/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
+                photo: '/images/professors/ab619e8d9253d4363b6b926a77616ebe.jpg'
             },
             {
                 id: 'prof-flight-attendant-009',
@@ -2068,7 +2068,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Business Chinese',
                     'HSK'
                 ],
-                photo: '/asea-eng/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
+                photo: '/images/professors/513dfdbf5cae7773e599c4f08cdd52a9.png'
             },
             {
                 id: 'prof-flight-attendant-010',
@@ -2083,7 +2083,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Marine Tourism',
                     'World Tourism Geography'
                 ],
-                photo: '/asea-eng/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
+                photo: '/images/professors/0ea157c6603575b28e7f7c48c90d51f7.jpg'
             },
             {
                 id: 'prof-flight-attendant-011',
@@ -2094,7 +2094,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aviation Service Practical Skills'
                 ],
-                photo: '/asea-eng/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
+                photo: '/images/professors/fc4e32571783403c30f9294a2d6a91ee.jpg'
             },
             {
                 id: 'prof-flight-attendant-012',
@@ -2107,7 +2107,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Tourism Marketing',
                     'Hotel Room Service Practice'
                 ],
-                photo: '/asea-eng/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
+                photo: '/images/professors/6a55ad1c7d18c793fde13a0636b327dc.jpg'
             },
             // Page 2 - 5명
             {
@@ -2120,7 +2120,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aircraft Cabin Structure',
                     'Flight Safety Practice'
                 ],
-                photo: '/asea-eng/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
+                photo: '/images/professors/826549bae68d71fbdb3e60334afc0d02.jpg'
             },
             {
                 id: 'prof-flight-attendant-014',
@@ -2131,7 +2131,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Leisure and Recreation'
                 ],
-                photo: '/asea-eng/images/professors/39645eb52457c5793a006468353eb42f.jpg'
+                photo: '/images/professors/39645eb52457c5793a006468353eb42f.jpg'
             },
             {
                 id: 'prof-flight-attendant-015',
@@ -2143,7 +2143,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Barista Theory and Practice',
                     'Coffee Barista Certification Instruction'
                 ],
-                photo: '/asea-eng/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
+                photo: '/images/professors/6141c116d28b2f6439cce9442dac9c82.jpg'
             },
             {
                 id: 'prof-flight-attendant-016',
@@ -2155,7 +2155,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Casino Management',
                     'Casino Practice'
                 ],
-                photo: '/asea-eng/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
+                photo: '/images/professors/46634eb9e56369f64c0677f095000e6e.jpg'
             },
             {
                 id: 'prof-flight-attendant-017',
@@ -2170,7 +2170,7 @@ export const professorsData: ProgramProfessors[] = [
                     'World Tourism Geography',
                     'Convention Banquet Planning Cocktail Practice'
                 ],
-                photo: '/asea-eng/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
+                photo: '/images/professors/bb9e2f964ed043365313823ba44a5dae.jpg'
             }
         ]
     },
@@ -2189,7 +2189,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Penetrant Testing Practice',
                     'Leak Testing'
                 ],
-                photo: '/asea-eng/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
+                photo: '/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
             },
             {
                 id: 'prof-ultrasonic-diagnostics-002',
@@ -2201,7 +2201,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Ultrasonic Testing',
                     'Ultrasonic Testing Practice'
                 ],
-                photo: '/asea-eng/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
+                photo: '/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
             },
             {
                 id: 'prof-ultrasonic-diagnostics-003',
@@ -2214,7 +2214,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Welding Engineering',
                     'Blueprint Reading'
                 ],
-                photo: '/asea-eng/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
+                photo: '/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
             },
             {
                 id: 'prof-ultrasonic-diagnostics-004',
@@ -2228,7 +2228,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Radiographic Testing',
                     'Radiographic Testing Practice'
                 ],
-                photo: '/asea-eng/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
+                photo: '/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
             }
         ]
     },
@@ -2247,7 +2247,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Penetrant Testing Practice',
                     'Leak Testing'
                 ],
-                photo: '/asea-eng/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
+                photo: '/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
             },
             {
                 id: 'prof-metallurgical-engineering-002',
@@ -2259,7 +2259,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Ultrasonic Testing',
                     'Ultrasonic Testing Practice'
                 ],
-                photo: '/asea-eng/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
+                photo: '/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
             },
             {
                 id: 'prof-metallurgical-engineering-003',
@@ -2272,7 +2272,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Welding Engineering',
                     'Blueprint Reading'
                 ],
-                photo: '/asea-eng/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
+                photo: '/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
             },
             {
                 id: 'prof-metallurgical-engineering-004',
@@ -2286,7 +2286,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Radiographic Testing',
                     'Radiographic Testing Practice'
                 ],
-                photo: '/asea-eng/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
+                photo: '/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
             }
         ]
     },
@@ -2305,7 +2305,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Penetrant Testing Practice',
                     'Leak Testing'
                 ],
-                photo: '/asea-eng/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
+                photo: '/images/professors/18f70c2dd2d14901fbec1093fb13a5c5.jpg'
             },
             {
                 id: 'prof-aviation-ndt-002',
@@ -2317,7 +2317,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Ultrasonic Testing',
                     'Ultrasonic Testing Practice'
                 ],
-                photo: '/asea-eng/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
+                photo: '/images/professors/d0d93231b8e30ca2a0c93939e0c5d64f.jpg'
             },
             {
                 id: 'prof-aviation-ndt-003',
@@ -2330,7 +2330,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Welding Engineering',
                     'Blueprint Reading'
                 ],
-                photo: '/asea-eng/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
+                photo: '/images/professors/5a5693d6dd99c2652e256ad8074fa560.jpg'
             },
             {
                 id: 'prof-aviation-ndt-004',
@@ -2344,7 +2344,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Radiographic Testing',
                     'Radiographic Testing Practice'
                 ],
-                photo: '/asea-eng/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
+                photo: '/images/professors/f0c01fd5edaa2d7ad2474d36d1191a3f.jpg'
             }
         ]
     },
@@ -2367,7 +2367,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Instrument Systems',
                     'Aviation Electronics Practice'
                 ],
-                photo: '/asea-eng/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
+                photo: '/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
             },
             {
                 id: 'prof-drone-operation-002',
@@ -2383,7 +2383,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Materials',
                     'Introduction to Aerospace'
                 ],
-                photo: '/asea-eng/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
+                photo: '/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
             },
             {
                 id: 'prof-drone-operation-003',
@@ -2397,7 +2397,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Aircraft Power Plant II'
                 ],
-                photo: '/asea-eng/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
+                photo: '/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
             },
             {
                 id: 'prof-drone-operation-004',
@@ -2414,7 +2414,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant II',
                     'General Helicopter'
                 ],
-                photo: '/asea-eng/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
+                photo: '/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
             },
             {
                 id: 'prof-drone-operation-005',
@@ -2429,7 +2429,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Composite Materials',
                     'Aviation Regulations'
                 ],
-                photo: '/asea-eng/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
+                photo: '/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
             },
             {
                 id: 'prof-drone-operation-006',
@@ -2440,7 +2440,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aircraft Airframe I'
                 ],
-                photo: '/asea-eng/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
+                photo: '/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
             },
             {
                 id: 'prof-drone-operation-007',
@@ -2453,7 +2453,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aerospace',
                     'Aircraft Airframe'
                 ],
-                photo: '/asea-eng/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
+                photo: '/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
             },
             {
                 id: 'prof-drone-operation-008',
@@ -2464,7 +2464,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Electronics and Electrical Engineering'
                 ],
-                photo: '/asea-eng/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
+                photo: '/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
             },
             {
                 id: 'prof-drone-operation-009',
@@ -2479,7 +2479,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe',
                     'Engine Practice'
                 ],
-                photo: '/asea-eng/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
+                photo: '/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
             },
             {
                 id: 'prof-drone-operation-010',
@@ -2491,7 +2491,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Maintenance Practice',
                     'Aircraft Instruments and Electrical Equipment'
                 ],
-                photo: '/asea-eng/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
+                photo: '/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
             },
             {
                 id: 'prof-drone-operation-011',
@@ -2504,7 +2504,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Basic Practice II',
                     'Aircraft Power Plant I'
                 ],
-                photo: '/asea-eng/images/professors/110498f74d309728ad38c51219211f68.png'
+                photo: '/images/professors/110498f74d309728ad38c51219211f68.png'
             },
             {
                 id: 'prof-drone-operation-012',
@@ -2516,7 +2516,7 @@ export const professorsData: ProgramProfessors[] = [
                     'TOEIC',
                     'Grammar'
                 ],
-                photo: '/asea-eng/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
+                photo: '/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
             },
             {
                 id: 'prof-drone-operation-013',
@@ -2528,7 +2528,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Helicopter Power Transmission System'
                 ],
-                photo: '/asea-eng/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
+                photo: '/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
             },
             {
                 id: 'prof-drone-operation-014',
@@ -2540,7 +2540,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Electronics Basic Practice I',
                     'Aircraft Electronics Major Practice I'
                 ],
-                photo: '/asea-eng/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
+                photo: '/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
             },
             {
                 id: 'prof-drone-operation-015',
@@ -2553,7 +2553,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe Practice II',
                     'General Maintenance Practice'
                 ],
-                photo: '/asea-eng/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
+                photo: '/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
             },
             {
                 id: 'prof-drone-operation-016',
@@ -2566,7 +2566,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Electronics and Electrical Instruments II',
                     'Aviation Electronics and Electrical Instruments Practice I'
                 ],
-                photo: '/asea-eng/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
+                photo: '/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
             },
             {
                 id: 'prof-drone-operation-017',
@@ -2580,7 +2580,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Hydraulic and Pneumatic Equipment',
                     'Introduction to Non-Destructive Testing'
                 ],
-                photo: '/asea-eng/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
+                photo: '/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
             },
             {
                 id: 'prof-drone-operation-018',
@@ -2592,7 +2592,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Engine Practice',
                     'Engineering Mechanics'
                 ],
-                photo: '/asea-eng/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
+                photo: '/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
             }
         ]
     },
@@ -2615,7 +2615,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Instrument Systems',
                     'Aviation Electronics Practice'
                 ],
-                photo: '/asea-eng/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
+                photo: '/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
             },
             {
                 id: 'prof-aviation-nco-002',
@@ -2631,7 +2631,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Materials',
                     'Introduction to Aerospace'
                 ],
-                photo: '/asea-eng/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
+                photo: '/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
             },
             {
                 id: 'prof-aviation-nco-003',
@@ -2645,7 +2645,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Aircraft Power Plant II'
                 ],
-                photo: '/asea-eng/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
+                photo: '/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
             },
             {
                 id: 'prof-aviation-nco-004',
@@ -2662,7 +2662,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant II',
                     'General Helicopter'
                 ],
-                photo: '/asea-eng/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
+                photo: '/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
             },
             {
                 id: 'prof-aviation-nco-005',
@@ -2677,7 +2677,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Composite Materials',
                     'Aviation Regulations'
                 ],
-                photo: '/asea-eng/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
+                photo: '/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
             },
             {
                 id: 'prof-aviation-nco-006',
@@ -2688,7 +2688,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aircraft Airframe I'
                 ],
-                photo: '/asea-eng/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
+                photo: '/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
             },
             {
                 id: 'prof-aviation-nco-007',
@@ -2701,7 +2701,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aerospace',
                     'Aircraft Airframe'
                 ],
-                photo: '/asea-eng/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
+                photo: '/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
             },
             {
                 id: 'prof-aviation-nco-008',
@@ -2712,7 +2712,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Electronics and Electrical Engineering'
                 ],
-                photo: '/asea-eng/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
+                photo: '/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
             },
             {
                 id: 'prof-aviation-nco-009',
@@ -2727,7 +2727,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe',
                     'Engine Practice'
                 ],
-                photo: '/asea-eng/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
+                photo: '/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
             },
             {
                 id: 'prof-aviation-nco-010',
@@ -2739,7 +2739,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Maintenance Practice',
                     'Aircraft Instruments and Electrical Equipment'
                 ],
-                photo: '/asea-eng/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
+                photo: '/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
             },
             {
                 id: 'prof-aviation-nco-011',
@@ -2752,7 +2752,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Basic Practice II',
                     'Aircraft Power Plant I'
                 ],
-                photo: '/asea-eng/images/professors/110498f74d309728ad38c51219211f68.png'
+                photo: '/images/professors/110498f74d309728ad38c51219211f68.png'
             },
             {
                 id: 'prof-aviation-nco-012',
@@ -2764,7 +2764,7 @@ export const professorsData: ProgramProfessors[] = [
                     'TOEIC',
                     'Grammar'
                 ],
-                photo: '/asea-eng/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
+                photo: '/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
             },
             {
                 id: 'prof-aviation-nco-013',
@@ -2776,7 +2776,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Helicopter Power Transmission System'
                 ],
-                photo: '/asea-eng/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
+                photo: '/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
             },
             {
                 id: 'prof-aviation-nco-014',
@@ -2788,7 +2788,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Electronics Basic Practice I',
                     'Aircraft Electronics Major Practice I'
                 ],
-                photo: '/asea-eng/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
+                photo: '/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
             },
             {
                 id: 'prof-aviation-nco-015',
@@ -2801,7 +2801,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe Practice II',
                     'General Maintenance Practice'
                 ],
-                photo: '/asea-eng/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
+                photo: '/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
             },
             {
                 id: 'prof-aviation-nco-016',
@@ -2814,7 +2814,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Electronics and Electrical Instruments II',
                     'Aviation Electronics and Electrical Instruments Practice I'
                 ],
-                photo: '/asea-eng/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
+                photo: '/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
             },
             {
                 id: 'prof-aviation-nco-017',
@@ -2828,7 +2828,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Hydraulic and Pneumatic Equipment',
                     'Introduction to Non-Destructive Testing'
                 ],
-                photo: '/asea-eng/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
+                photo: '/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
             },
             {
                 id: 'prof-aviation-nco-018',
@@ -2840,7 +2840,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Engine Practice',
                     'Engineering Mechanics'
                 ],
-                photo: '/asea-eng/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
+                photo: '/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
             }
         ]
     },
@@ -2863,7 +2863,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Instrument Systems',
                     'Aviation Electronics Practice'
                 ],
-                photo: '/asea-eng/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
+                photo: '/images/professors/b437dbf3faec6a3d6163cc9bb7daebdd.png'
             },
             {
                 id: 'prof-aviation-mechanical-002',
@@ -2879,7 +2879,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Materials',
                     'Introduction to Aerospace'
                 ],
-                photo: '/asea-eng/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
+                photo: '/images/professors/977d6eaaabfd15b7e4164bd07778369c.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-003',
@@ -2893,7 +2893,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Aircraft Power Plant II'
                 ],
-                photo: '/asea-eng/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
+                photo: '/images/professors/6808744f47d8df0b3c2ce3f05225fd17.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-004',
@@ -2910,7 +2910,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant II',
                     'General Helicopter'
                 ],
-                photo: '/asea-eng/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
+                photo: '/images/professors/10aa2f5bfa41dca86f70b8c190e81b82.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-005',
@@ -2925,7 +2925,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Composite Materials',
                     'Aviation Regulations'
                 ],
-                photo: '/asea-eng/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
+                photo: '/images/professors/7f68f947ddc48bb591542420d7842275.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-006',
@@ -2936,7 +2936,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Aircraft Airframe I'
                 ],
-                photo: '/asea-eng/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
+                photo: '/images/professors/81b3b3961655d7e2ac1d20dfc8ed9176.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-007',
@@ -2949,7 +2949,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Introduction to Aerospace',
                     'Aircraft Airframe'
                 ],
-                photo: '/asea-eng/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
+                photo: '/images/professors/323fe875c9845bc979e9e969ab9a719b.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-008',
@@ -2960,7 +2960,7 @@ export const professorsData: ProgramProfessors[] = [
                 courses: [
                     'Introduction to Electronics and Electrical Engineering'
                 ],
-                photo: '/asea-eng/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
+                photo: '/images/professors/3245de619ca8233db9d564cb0cbd721f.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-009',
@@ -2975,7 +2975,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe',
                     'Engine Practice'
                 ],
-                photo: '/asea-eng/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
+                photo: '/images/professors/6f6fd15037850b8536075905cd3d6da6.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-010',
@@ -2987,7 +2987,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Maintenance Practice',
                     'Aircraft Instruments and Electrical Equipment'
                 ],
-                photo: '/asea-eng/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
+                photo: '/images/professors/14d10601d6f466651a7bb9adeae140da.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-011',
@@ -3000,7 +3000,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Basic Practice II',
                     'Aircraft Power Plant I'
                 ],
-                photo: '/asea-eng/images/professors/110498f74d309728ad38c51219211f68.png'
+                photo: '/images/professors/110498f74d309728ad38c51219211f68.png'
             },
             {
                 id: 'prof-aviation-mechanical-012',
@@ -3012,7 +3012,7 @@ export const professorsData: ProgramProfessors[] = [
                     'TOEIC',
                     'Grammar'
                 ],
-                photo: '/asea-eng/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
+                photo: '/images/professors/d8e4f4cfa3fa508e6cd74bba98c1756e.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-013',
@@ -3024,7 +3024,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Power Plant I',
                     'Helicopter Power Transmission System'
                 ],
-                photo: '/asea-eng/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
+                photo: '/images/professors/ba2d5a8151b7f017c31c597bb6db6e48.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-014',
@@ -3036,7 +3036,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Electronics Basic Practice I',
                     'Aircraft Electronics Major Practice I'
                 ],
-                photo: '/asea-eng/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
+                photo: '/images/professors/cf63565a6d4233386a13a5b8ee3af94c.jpg'
             },
             {
                 id: 'prof-aviation-mechanical-015',
@@ -3049,7 +3049,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Airframe Practice II',
                     'General Maintenance Practice'
                 ],
-                photo: '/asea-eng/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
+                photo: '/images/professors/07c79d7e6ac8d690bebee20e60c5e543.png'
             },
             {
                 id: 'prof-aviation-mechanical-016',
@@ -3062,7 +3062,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aviation Electronics and Electrical Instruments II',
                     'Aviation Electronics and Electrical Instruments Practice I'
                 ],
-                photo: '/asea-eng/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
+                photo: '/images/professors/abaf4eecf4cc08c9c5d48001f69e1ae0.png'
             },
             {
                 id: 'prof-aviation-mechanical-017',
@@ -3076,7 +3076,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Hydraulic and Pneumatic Equipment',
                     'Introduction to Non-Destructive Testing'
                 ],
-                photo: '/asea-eng/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
+                photo: '/images/professors/05f1d80f042ea6d2aa05264f57b8eab1.png'
             },
             {
                 id: 'prof-aviation-mechanical-018',
@@ -3088,7 +3088,7 @@ export const professorsData: ProgramProfessors[] = [
                     'Aircraft Engine Practice',
                     'Engineering Mechanics'
                 ],
-                photo: '/asea-eng/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
+                photo: '/images/professors/85c9ac8c41a4b774545560223fac89f3.png'
             }
         ]
     }
