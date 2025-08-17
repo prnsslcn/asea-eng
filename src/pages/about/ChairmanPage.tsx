@@ -19,7 +19,7 @@ const ChairmanPage: React.FC = () => {
                         <div className="lg:w-2/5 flex justify-center items-start p-6 lg:p-8">
                             <div className="w-full max-w-sm">
                                 <img
-                                    src="/asea-eng/images/chairman/chairman-photo.png"
+                                    src="/images/chairman/chairman-photo.png"
                                     alt="Chairman Jeon Young-sook"
                                     className="w-full h-auto rounded-lg object-cover"
                                     onError={(e) => {

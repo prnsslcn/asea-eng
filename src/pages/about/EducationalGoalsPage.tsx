@@ -38,7 +38,7 @@ const EducationalGoalsPage: React.FC = () => {
                     <div className="bg-blue-100 border border-blue-800 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                         <div className="flex items-start space-x-4">
                             <div className="flex-shrink-0">
-                                <img src="/asea-eng/images/new/sub/information/info2_ico1.png" alt="Technical/Personal/Social Professional" className="w-16 h-16 object-contain" />
+                                <img src="/images/new/sub/information/info2_ico1.png" alt="Technical/Personal/Social Professional" className="w-16 h-16 object-contain" />
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl sm:text-2xl font-bold text-blue-900 mb-3">

@@ -5,7 +5,7 @@ import Router from './router/Router';
 
 function App() {
     return (
-        <BrowserRouter basename="/asea-eng">
+        <BrowserRouter>
             <div className="App min-h-screen flex flex-col">
                 <Header />
                 <main className="flex-grow">

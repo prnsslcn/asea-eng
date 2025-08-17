@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                     <div className="lg:col-span-2">
                         <div className="flex items-center mb-4">
                             <img
-                                src="/asea-eng/images/asea-em-1.png"
+                                src="/images/asea-em-1.png"
                                 alt="ASEA Aviation College Logo"
                                 className="w-12 h-12 mr-3 object-contain"
                             />
