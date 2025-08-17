@@ -49,9 +49,9 @@ const EmploymentStatusPage: React.FC = () => {
                 </h3>
 
                 {/* 직책 */}
-                <p className="text-sm text-gray-600 text-center">
-                    {employee.position}
-                </p>
+                {/*<p className="text-sm text-gray-600 text-center">*/}
+                {/*    {employee.position}*/}
+                {/*</p>*/}
             </div>
         </div>
     );
