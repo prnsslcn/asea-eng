@@ -5,13 +5,13 @@
 <div align="center">
   <img src="public/images/asea-em-1.png" alt="ASEA Aviation College Logo" width="120" height="120">
 
-[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen)](https://prnsslcn.github.io/asea-eng/)
+[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen)](https://asea-eng.netlify.app/)
 [![React](https://img.shields.io/badge/React-18.0-blue?logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38bdf8?logo=tailwind-css)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-5.0-646cff?logo=vite)](https://vitejs.dev/)
 
-**🌐 [라이브 사이트](https://prnsslcn.github.io/asea-eng/) | 📚 [한국어 사이트](https://asea.or.kr/)**
+**🌐 [공식 웹페이지](https://eng.asea.or.kr/) | 📚 [개인 서버 배포](https://asea-eng.netlify.app/)**
 </div>
 
 ## 📋 프로젝트 개요
