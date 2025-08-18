@@ -146,13 +146,6 @@ const Footer: React.FC = () => {
                                     </svg>
                                 </a>
                             </div>
-
-                            {/* Key Stats */}
-                            <div className="space-y-1 text-sm text-gray-300">
-                                <div><span className="font-medium">Established:</span> 1993 (33 years)</div>
-                                <div><span className="font-medium">Students:</span> 420 (Largest enrollment)</div>
-                                <div><span className="font-medium">Business Registration:</span> 106-82-06370</div>
-                            </div>
                         </div>
                     </div>
                 </div>
